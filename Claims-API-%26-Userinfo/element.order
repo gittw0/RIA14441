@@ -1,5 +1,5 @@
-Test-Driver-%7C-Claims-%26-Userinfo-response-for-existing-accounts-w%2F-full-data-set.xml
 Test-Driver-%7C-Claims-%26-Userinfo-response-for-a-New-account-created-%28w%2F-lol-region%29.xml
+Test-Driver-%7C-Claims-%26-Userinfo-response-for-existing-accounts-w%2F-full-data-set.xml
 Test-Driver-%7CClaims-%26-Userinfo-response-for-a-Regionless-account-%28riot-id-w%2F-no-region%29.xml
 Test-Driver-%7CClaims-%26-Userinfo-response-for-a-New-account-%28w%2F-multiple-active-lol-regions%29.xml
 Test-Driver-%7C-Claims-for-a-Federated-account-%28no-riot-id%29.xml
