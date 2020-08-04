@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase timeout="0" searchProperties="true" name="Verify | access token | header" keepSession="false" id="e8ca7958-1411-47dc-a85e-007bd1830787" failTestCaseOnErrors="true" failOnError="false" discardOkResults="false" disabled="true" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="e8ca7958-1411-47dc-a85e-007bd1830787fileName">Verify-%7C-access-token-%7C-header</con:setting>
+  </con:settings>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:testStep type="properties" name="json" id="08f3cfec-edc7-4ada-bda3-a044431f3a95">
+    <con:settings/>
+    <con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:properties>
+        <con:property>
+          <con:name>cid</con:name>
+          <con:value>test-automation-lolregion-wrint</con:value>
+        </con:property>
+        <con:property>
+          <con:name>clm[0]</con:name>
+          <con:value>lol_region</con:value>
+        </con:property>
+        <con:property>
+          <con:name>clm[1]</con:name>
+          <con:value>openid</con:value>
+        </con:property>
+        <con:property>
+          <con:name>dat.c</con:name>
+          <con:value>wrint</con:value>
+        </con:property>
+        <con:property>
+          <con:name>exp</con:name>
+          <con:value>1596066028</con:value>
+        </con:property>
+        <con:property>
+          <con:name>iat</con:name>
+          <con:value>1596062428</con:value>
+        </con:property>
+        <con:property>
+          <con:name>iss</con:name>
+          <con:value>https://auth.wr-int.rpg.riotgames.com</con:value>
+        </con:property>
+        <con:property>
+          <con:name>jti</con:name>
+          <con:value>s17c7jWTYMo</con:value>
+        </con:property>
+        <con:property>
+          <con:name>scp[0]</con:name>
+          <con:value>openid</con:value>
+        </con:property>
+        <con:property>
+          <con:name>scp[1]</con:name>
+          <con:value>lol_region</con:value>
+        </con:property>
+        <con:property>
+          <con:name>sub</con:name>
+          <con:value>c6c5f0be-30b0-5b43-adba-cbb7cb6334f9</con:value>
+        </con:property>
+      </con:properties>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="groovy" name="Verify header" id="89d96e0e-50ad-424a-ad61-6c06fc266ecf">
+    <con:settings/>
+    <con:config>
+      <script>def json = testRunner.testCase.getTestStepByName("json")
+
+assert json.hasProperty("sub")
+
+if (context.testCase.getPropertyValue("grant_type")=="password" || context.testCase.getPropertyValue("grant_type")=="implicit")
+{
+	assert json.getPropertyNames().any { a -> a.contains("clm") }
+	assert json.hasProperty("dat.c")
+
+	/*if (context.testCase.getPropertyValue("grant_type")=="implicit")
+	{
+		assert json.hasProperty("dat.p")
+		assert json.hasProperty("dat.r")
+		assert json.hasProperty("dat.u")
+	}*/
+}
+
+assert json.hasProperty("iss")
+assert json.hasProperty("exp")
+assert json.hasProperty("iat")
+assert json.hasProperty("jti")
+assert json.hasProperty("cid")
+
+def expectedScopes = testRunner.testCase.getPropertyValue("scope").tokenize("[], ")
+
+for (i=0; i&lt;expectedScopes.size(); i++) {
+	assert json.getPropertyValue("scp["+i+"]") == expectedScopes[i]
+}</script>
+    </con:config>
+  </con:testStep>
+  <con:setupScript/>
+  <con:properties>
+    <con:property>
+      <con:name>grant_type</con:name>
+      <con:value>implicit</con:value>
+    </con:property>
+    <con:property>
+      <con:name>scope</con:name>
+      <con:value>openid lol_region</con:value>
+    </con:property>
+  </con:properties>
+  <con:reportParameters/>
+  <con:environmentSpec>
+    <con:entry environmentId="b407e352-14e8-440f-bf25-abe254c02b61">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+    <con:entry environmentId="cd04cfb9-4faf-4b69-9ec6-24af2181f7ae">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+  </con:environmentSpec>
+</con:testCase>

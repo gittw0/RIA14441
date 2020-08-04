@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase timeout="0" searchProperties="true" name="Test Driver | Underage Signup | Regionless" keepSession="false" id="751fc267-76d5-45c2-bd89-4a93786b65c5" failTestCaseOnErrors="true" failOnError="false" discardOkResults="false" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="751fc267-76d5-45c2-bd89-4a93786b65c5fileName">Test-Driver-%7C-Underage-Signup-%7C-Regionless</con:setting>
+  </con:settings>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:testStep type="transfer" name="> transfer puuid0" id="74744e80-d18e-4cdb-bbd4-cc00d46e4f5d">
+    <con:settings/>
+    <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:transfers transferToAll="false" transferTextContent="true" transferChildNodes="false" setNullOnMissingSource="true" ignoreEmpty="false" failOnError="true" entitize="false">
+        <con:name>puuid</con:name>
+        <con:sourceType xsi:nil="true"/>
+        <con:sourceStep xsi:nil="true"/>
+        <con:sourcePath>$[0]['puuid']</con:sourcePath>
+        <con:targetType xsi:nil="true"/>
+        <con:targetStep xsi:nil="true"/>
+        <con:targetPath/>
+        <con:type>JSONPATH</con:type>
+        <con:upgraded>true</con:upgraded>
+      </con:transfers>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="transfer" name="> transfer puuid" id="72336037-6dab-45ca-9c85-e7f9b20b97f5">
+    <con:settings/>
+    <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+        <con:name>puuid</con:name>
+        <con:sourceType xsi:nil="true"/>
+        <con:sourceStep xsi:nil="true"/>
+        <con:sourcePath>$['puuid']</con:sourcePath>
+        <con:targetType>thePuuid</con:targetType>
+        <con:targetStep>Run | Underage Signup test case</con:targetStep>
+        <con:targetPath/>
+        <con:type>JSONPATH</con:type>
+        <con:upgraded>true</con:upgraded>
+      </con:transfers>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="calltestcase" name="Run | Underage Signup test case" id="4f875360-0358-472b-9f4f-47822d29817f">
+    <con:settings/>
+    <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:targetTestCase>129877e4-c1c3-459e-84c5-632140161c0e</con:targetTestCase>
+      <con:properties>
+        <con:property>
+          <con:name>thePuuid</con:name>
+          <con:value/>
+        </con:property>
+      </con:properties>
+      <con:returnProperties/>
+      <con:runMode>SINGLETON_AND_WAIT</con:runMode>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+  <con:breakPoints>
+    <con:testStepId>73698acb-ca4d-4925-b942-7fc5ffd50273</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>b3a3acd7-a5b5-4438-9ffb-457cd5176b5f</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+</con:testCase>

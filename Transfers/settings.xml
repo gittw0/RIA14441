@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testSuite name="Transfers" id="7fa53f3b-7b68-4ab9-b729-68fc72d4db7d" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="7fa53f3b-7b68-4ab9-b729-68fc72d4db7dfileName">Transfers</con:setting>
+  </con:settings>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:runType>SEQUENTIAL</con:runType>
+  <con:properties>
+    <con:property>
+      <con:name>testRegion1</con:name>
+      <con:value>${#Project#srcRegion}</con:value>
+    </con:property>
+    <con:property>
+      <con:name>testRegion2</con:name>
+      <con:value>${#Project#destRegion}</con:value>
+    </con:property>
+    <con:property>
+      <con:name>testRegion3</con:name>
+      <con:value>${#Project#otherRegion}</con:value>
+    </con:property>
+  </con:properties>
+  <con:reportParameters/>
+  <con:environmentSpec>
+    <con:entry environmentId="b407e352-14e8-440f-bf25-abe254c02b61">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+    <con:entry environmentId="cd04cfb9-4faf-4b69-9ec6-24af2181f7ae">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+  </con:environmentSpec>
+</con:testSuite>

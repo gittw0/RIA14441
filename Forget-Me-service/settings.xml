@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testSuite name="Forget Me service" id="b69a71d5-119e-44aa-a72f-a57e8a282ed0" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="b69a71d5-119e-44aa-a72f-a57e8a282ed0fileName">Forget-Me-service</con:setting>
+  </con:settings>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:runType>SEQUENTIAL</con:runType>
+  <con:properties>
+    <con:property>
+      <con:name>client</con:name>
+      <con:value>${#Project#test-automation-env}</con:value>
+    </con:property>
+    <con:property>
+      <con:name>client-secret</con:name>
+      <con:value>${#Project#test-automation-env-secret}</con:value>
+    </con:property>
+    <con:property>
+      <con:name>scope</con:name>
+      <con:value/>
+    </con:property>
+    <con:property>
+      <con:name>region</con:name>
+      <con:value>${#Project#srcRegion}</con:value>
+    </con:property>
+  </con:properties>
+  <con:setupScript/>
+  <con:reportParameters/>
+  <con:environmentSpec>
+    <con:entry environmentId="b407e352-14e8-440f-bf25-abe254c02b61">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+    <con:entry environmentId="cd04cfb9-4faf-4b69-9ec6-24af2181f7ae">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+  </con:environmentSpec>
+</con:testSuite>

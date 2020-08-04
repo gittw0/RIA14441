@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testSuite id="20efaa73-2eb2-46ee-9c73-c7a31ea24278" name="Social Auth | Google" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="cbbf09da-d088-4d86-afa3-f42dd7a49434fileName">Google-social-auth-v2</con:setting>
+    <con:setting id="20efaa73-2eb2-46ee-9c73-c7a31ea24278fileName">Social-Auth-%7C-Google</con:setting>
+  </con:settings>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:runType>SEQUENTIAL</con:runType>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testSuite>

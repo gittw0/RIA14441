@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testSuite name="Get tokens for Claims and Userinfo" id="5768e8bf-fc5d-42ad-9fd2-ec6481f5c933" disabled="true" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="5768e8bf-fc5d-42ad-9fd2-ec6481f5c933fileName">Get-tokens-for-Claims-and-Userinfo</con:setting>
+  </con:settings>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:runType>SEQUENTIAL</con:runType>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testSuite>

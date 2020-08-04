@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase zephyrTestName="" zephyrTestId="" wsrmVersion="1.0" wsrmEnabled="false" wsrmAckTo="" timeout="0" searchProperties="true" name="email | Claims" keepSession="false" id="f996d20d-73e7-49e0-aa2e-ea40d78487b6" failTestCaseOnErrors="true" failOnError="false" discardOkResults="false" disabled="true" amfPassword="" amfLogin="" amfEndpoint="" amfAuthorisation="false" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="f996d20d-73e7-49e0-aa2e-ea40d78487b6fileName">email-%7C-Claims</con:setting>
+  </con:settings>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:testStep type="calltestcase" name="Run | Get token (client creds)" id="98fa1b52-8eda-4998-82c9-1e9243975d45">
+    <con:settings/>
+    <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:targetTestCase>8808d750-7ca6-49f7-a2f7-38494af92449</con:targetTestCase>
+      <con:properties>
+        <con:property>
+          <con:name>client</con:name>
+          <con:value>${#TestCase#client}</con:value>
+        </con:property>
+        <con:property>
+          <con:name>client-secret</con:name>
+          <con:value>${#TestCase#client-secret}</con:value>
+        </con:property>
+        <con:property>
+          <con:name>scope</con:name>
+          <con:value>${#TestCase#scope}</con:value>
+        </con:property>
+        <con:property>
+          <con:name>grant_type</con:name>
+          <con:value>${#TestSuite#grant_type}</con:value>
+        </con:property>
+        <con:property>
+          <con:name>accessToken</con:name>
+          <con:value>eyJraWQiOiJzMSIsInR5cCI6ImF0K2p3dCIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiJ0ZXN0LWF1dG9tYXRpb24tcHJvZCIsInNjcCI6WyJvcGVuaWQiLCJlbWFpbCJdLCJpc3MiOiJodHRwczpcL1wvYXV0aC5yaW90Z2FtZXMuY29tIiwiZXhwIjoxNTk2MDY3MzY0LCJpYXQiOjE1OTYwNjM3NjQsImp0aSI6IjNkODBDdnNzeU1nIiwiY2lkIjoidGVzdC1hdXRvbWF0aW9uLXByb2QifQ.IoEAeBWlUd-LNuKXj_E_7kuGM27y-lVfT1hsr_SQ086tfciGX9lnOtHVJwMSnrxh5O2Cxahbm9hg-bgybWi_xWw1DGP-acAQj67VF9YCRKNcVjVJxaeXJchImSBcceD7UprulPkxG7o78c4saqvug8iFJ7srbR9JWiIT8VdZrPc</con:value>
+        </con:property>
+      </con:properties>
+      <con:returnProperties>
+        <con:entry>accessToken</con:entry>
+      </con:returnProperties>
+      <con:runMode>SINGLETON_AND_WAIT</con:runMode>
+    </con:config>
+  </con:testStep>
+  <con:properties>
+    <con:property>
+      <con:name>client</con:name>
+      <con:value/>
+    </con:property>
+    <con:property>
+      <con:name>client-secret</con:name>
+      <con:value/>
+    </con:property>
+    <con:property>
+      <con:name>scope</con:name>
+      <con:value/>
+    </con:property>
+    <con:property>
+      <con:name>thePuuid</con:name>
+      <con:value/>
+    </con:property>
+  </con:properties>
+  <con:reportParameters/>
+  <con:breakPoints>
+    <con:testStepId>cd3ead2c-cee9-4e50-988d-007c1454e632</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:environmentSpec>
+    <con:entry environmentId="b407e352-14e8-440f-bf25-abe254c02b61">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+    <con:entry environmentId="cd04cfb9-4faf-4b69-9ec6-24af2181f7ae">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+  </con:environmentSpec>
+</con:testCase>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testSuite name="Social Auth | Facebook" id="270c606d-07d5-4810-967d-443d10f79070" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="270c606d-07d5-4810-967d-443d10f79070fileName">Social-Auth-%7C-Facebook</con:setting>
+  </con:settings>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:runType>SEQUENTIAL</con:runType>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testSuite>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase zephyrTestName="" zephyrTestId="" wsrmVersion="1.0" wsrmEnabled="false" wsrmAckTo="" timeout="0" searchProperties="true" name="link | Userinfo" keepSession="false" id="d5fdd09d-b042-4d54-be14-4e18bec3188b" failTestCaseOnErrors="true" failOnError="false" discardOkResults="false" disabled="true" amfPassword="" amfLogin="" amfEndpoint="" amfAuthorisation="false" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="d5fdd09d-b042-4d54-be14-4e18bec3188bfileName">link-%7C-Userinfo</con:setting>
+  </con:settings>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:testStep type="calltestcase" name="Run | Get token (password)" id="28e28fa5-9fff-47e7-920f-9a61342ba3d0">
+    <con:settings/>
+    <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:targetTestCase>7a51e9e9-1495-4bac-8bc6-f44b9033f671</con:targetTestCase>
+      <con:properties>
+        <con:property>
+          <con:name>client</con:name>
+          <con:value>${#TestCase#client}</con:value>
+        </con:property>
+        <con:property>
+          <con:name>client-secret</con:name>
+          <con:value>${#TestCase#client-secret}</con:value>
+        </con:property>
+        <con:property>
+          <con:name>scope</con:name>
+          <con:value>${#TestCase#scope}</con:value>
+        </con:property>
+        <con:property>
+          <con:name>grant_type</con:name>
+          <con:value>${#TestSuite#grant_type}</con:value>
+        </con:property>
+        <con:property>
+          <con:name>accessToken</con:name>
+          <con:value>eyJraWQiOiJzMSIsInR5cCI6ImF0K2p3dCIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiJiMjllZTlkMS0wYzk3LTUyODktYWVkNC05MDY2Yjk1MzVlZGYiLCJzY3AiOlsib3BlbmlkIiwibGluayJdLCJjbG0iOlsib3BlbmlkIl0sImRhdCI6eyJsbmsiOlt7ImxpbmtfdHlwZSI6InJpb3RlciIsImxpbmtfaWRfZW5jIjoiZXlKcmFXUWlPaUpoWlhOZk1TSXNJbU4wZVNJNkluQnNZV2x1ZEdWNGRDSXNJbVZ1WXlJNklrRXhNamhIUTAwaUxDSjBZV2NpT2lKMFFrSjRhMXBKWTBWVlltdFpOMlZFV0hsaFZHRjNJaXdpWVd4bklqb2lRVEV5T0VkRFRVdFhJaXdpYVhZaU9pSjVZVkpyWVUxNWNtSktRbTV2VmpSVkluMC5udEctb0RmR0V5WDZESXpNazNjd3dBLnRENmxNb0ZSSklYN0FxMm8uaGNtQjYwcy5YWk1JaXlOS2wzS1o2Ylg2a0tXQ2R3In1dLCJjIjoidWUxIn0sImlzcyI6Imh0dHBzOlwvXC9hdXRoLnJpb3RnYW1lcy5jb20iLCJleHAiOjE1OTYwNjQzODQsImlhdCI6MTU5NjA2Mzc4NCwianRpIjoiMXBrN2dPcUJfa3ciLCJjaWQiOiJ0ZXN0LWF1dG9tYXRpb24tcHJvZCJ9.KEjszrAE3GZDU4FXh2yXFhPV6VpN3myhgngCCu6kpeuLkSXbxHPlw7IFtkcxKucRi9DVMRpuRKfuGBELRZlq2beSYufy5VJDS9CXQ0-4brSU7AYpXSK7IGbpaT9bkvI5x0Jb2rxq0bJI57SQChhAm_6Dp3JDpa_7u5Shg8jbUYg</con:value>
+        </con:property>
+        <con:property>
+          <con:name>idToken</con:name>
+        </con:property>
+        <con:property>
+          <con:name>theUsername</con:name>
+          <con:value>${#TestCase#theUsername}</con:value>
+        </con:property>
+        <con:property>
+          <con:name>thePassword</con:name>
+          <con:value>${#TestCase#thePassword}</con:value>
+        </con:property>
+      </con:properties>
+      <con:returnProperties>
+        <con:entry>accessToken</con:entry>
+      </con:returnProperties>
+      <con:runMode>SINGLETON_AND_WAIT</con:runMode>
+    </con:config>
+  </con:testStep>
+  <con:properties>
+    <con:property>
+      <con:name>client</con:name>
+      <con:value/>
+    </con:property>
+    <con:property>
+      <con:name>client-secret</con:name>
+      <con:value/>
+    </con:property>
+    <con:property>
+      <con:name>scope</con:name>
+      <con:value/>
+    </con:property>
+    <con:property>
+      <con:name>theUsername</con:name>
+      <con:value/>
+    </con:property>
+    <con:property>
+      <con:name>thePassword</con:name>
+      <con:value/>
+    </con:property>
+  </con:properties>
+  <con:reportParameters/>
+  <con:breakPoints>
+    <con:testStepId>4c23bc73-bdcf-4756-a996-958c308998aa</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>76bf8597-c586-4124-847e-35a13b5145c6</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>6f472e8d-e77f-4927-a70a-2075db5a0a42</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>bc5bf5f8-ff16-4b20-b67e-c134e873645b</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>33432814-0417-404c-8833-53500521ab69</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>32b10550-d833-4fa3-8de8-67e5161266fd</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:environmentSpec>
+    <con:entry environmentId="b407e352-14e8-440f-bf25-abe254c02b61">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+    <con:entry environmentId="cd04cfb9-4faf-4b69-9ec6-24af2181f7ae">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+  </con:environmentSpec>
+</con:testCase>

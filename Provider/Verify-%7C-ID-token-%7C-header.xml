@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase timeout="0" searchProperties="true" name="Verify | ID token | header" keepSession="false" id="5343345c-d685-46c1-92df-234ba4e8fcbe" failTestCaseOnErrors="true" failOnError="false" discardOkResults="false" disabled="true" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="5343345c-d685-46c1-92df-234ba4e8fcbefileName">Verify-%7C-ID-token-%7C-header</con:setting>
+  </con:settings>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:testStep type="properties" name="json" id="6865eaa5-10d6-48e8-876c-5d76716c0106">
+    <con:settings/>
+    <con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:properties>
+        <con:property>
+          <con:name>acr</con:name>
+          <con:value>urn:riot:bronze</con:value>
+        </con:property>
+        <con:property>
+          <con:name>amr[0]</con:name>
+          <con:value>password</con:value>
+        </con:property>
+        <con:property>
+          <con:name>at_hash</con:name>
+          <con:value>qCUQJBED8Ib5qrKzCeK05w</con:value>
+        </con:property>
+        <con:property>
+          <con:name>aud</con:name>
+          <con:value>test-automation-lolregion-wrint</con:value>
+        </con:property>
+        <con:property>
+          <con:name>exp</con:name>
+          <con:value>1596063328</con:value>
+        </con:property>
+        <con:property>
+          <con:name>iat</con:name>
+          <con:value>1596062428</con:value>
+        </con:property>
+        <con:property>
+          <con:name>iss</con:name>
+          <con:value>https://auth.wr-int.rpg.riotgames.com</con:value>
+        </con:property>
+        <con:property>
+          <con:name>jti</con:name>
+          <con:value>ysGY_2hmF3A</con:value>
+        </con:property>
+        <con:property>
+          <con:name>lol_region[0].active</con:name>
+          <con:value>true</con:value>
+        </con:property>
+        <con:property>
+          <con:name>lol_region[0].cpid</con:name>
+          <con:value>WRINT</con:value>
+        </con:property>
+        <con:property>
+          <con:name>lol_region[0].cuid</con:name>
+          <con:value>2483455148991968</con:value>
+        </con:property>
+        <con:property>
+          <con:name>lol_region[0].lp</con:name>
+          <con:value>false</con:value>
+        </con:property>
+        <con:property>
+          <con:name>lol_region[0].pid</con:name>
+          <con:value>WRINT</con:value>
+        </con:property>
+        <con:property>
+          <con:name>lol_region[0].uid</con:name>
+          <con:value>2483455148991968</con:value>
+        </con:property>
+        <con:property>
+          <con:name>nonce</con:name>
+          <con:value>8B36C0F4AB4D4D51B05F1F8968488D70</con:value>
+        </con:property>
+        <con:property>
+          <con:name>sub</con:name>
+          <con:value>c6c5f0be-30b0-5b43-adba-cbb7cb6334f9</con:value>
+        </con:property>
+      </con:properties>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="groovy" name="Verify header" id="71ecb53f-88ec-43ce-99f3-c7819ce05e1e">
+    <con:settings/>
+    <con:config>
+      <script>def json = testRunner.testCase.getTestStepByName("json")
+
+assert json.hasProperty("at_hash")
+assert json.hasProperty("sub")
+assert json.hasProperty("aud")
+assert json.hasProperty("amr[0]")
+assert json.hasProperty("iss")
+assert json.hasProperty("exp")
+assert json.hasProperty("iat")
+
+/*if (context.testCase.getPropertyValue("grant_type")=="implicit")
+{
+	assert json.hasProperty("acr")
+	assert json.hasProperty("nonce")
+}*/</script>
+    </con:config>
+  </con:testStep>
+  <con:setupScript/>
+  <con:properties>
+    <con:property>
+      <con:name>grant_type</con:name>
+      <con:value>implicit</con:value>
+    </con:property>
+    <con:property>
+      <con:name>scope</con:name>
+      <con:value>openid lol_region</con:value>
+    </con:property>
+  </con:properties>
+  <con:reportParameters/>
+  <con:environmentSpec>
+    <con:entry environmentId="b407e352-14e8-440f-bf25-abe254c02b61">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+    <con:entry environmentId="cd04cfb9-4faf-4b69-9ec6-24af2181f7ae">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+  </con:environmentSpec>
+</con:testCase>

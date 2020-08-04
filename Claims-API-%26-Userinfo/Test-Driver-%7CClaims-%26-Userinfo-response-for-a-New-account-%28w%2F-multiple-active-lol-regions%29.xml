@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase timeout="0" searchProperties="true" name="Test Driver |Claims &amp; Userinfo response for a New account (w/ multiple active lol regions)" keepSession="false" id="faf937dd-15ae-4a49-a2ae-a1202bd353ea" failTestCaseOnErrors="true" failOnError="true" discardOkResults="false" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="faf937dd-15ae-4a49-a2ae-a1202bd353eafileName">Test-Driver-%7CClaims-%26-Userinfo-response-for-a-New-account-%28w%2F-multiple-active-lol-regions%29</con:setting>
+  </con:settings>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:testStep type="transfer" name="> transfer puuid" id="c8a9f6ff-61d9-4a8f-8384-6338e8056eef">
+    <con:settings/>
+    <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+        <con:name>puuid</con:name>
+        <con:sourceType xsi:nil="true"/>
+        <con:sourceStep xsi:nil="true"/>
+        <con:sourcePath>$[0]['puuid']</con:sourcePath>
+        <con:targetType xsi:nil="true"/>
+        <con:targetStep xsi:nil="true"/>
+        <con:targetPath/>
+        <con:type>JSONPATH</con:type>
+        <con:upgraded>true</con:upgraded>
+      </con:transfers>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="properties" name="thePuuid" id="67911db7-043b-427e-baed-acf8bf9f5c9d">
+    <con:settings/>
+    <con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:properties>
+        <con:property>
+          <con:name>thePuuid</con:name>
+          <con:value>17cb87d1-53a4-55d1-bd9e-cb5f1bcd4cba</con:value>
+        </con:property>
+      </con:properties>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="transfer" name="> transfer puuid to thePuuid" id="515463f1-f003-42b7-b5c8-8bf534507cb3">
+    <con:settings/>
+    <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+        <con:name>puuid</con:name>
+        <con:sourceType xsi:nil="true"/>
+        <con:sourceStep xsi:nil="true"/>
+        <con:sourcePath>$['puuid']</con:sourcePath>
+        <con:targetType>thePuuid</con:targetType>
+        <con:targetStep>thePuuid</con:targetStep>
+        <con:targetPath/>
+        <con:type>JSONPATH</con:type>
+        <con:upgraded>true</con:upgraded>
+      </con:transfers>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="calltestcase" name="Run | Claims Test Case" id="60297f4d-fcd7-42f7-9f4e-deb2678e2914">
+    <con:settings/>
+    <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:targetTestCase>c4d7c597-e9f3-4cbb-9276-fd7f9f5a13b7</con:targetTestCase>
+      <con:properties>
+        <con:property>
+          <con:name>puuid</con:name>
+          <con:value>${#thePuuid}</con:value>
+        </con:property>
+        <con:property>
+          <con:name>hasLolRegion</con:name>
+          <con:value>true</con:value>
+        </con:property>
+        <con:property>
+          <con:name>hasSummoner</con:name>
+          <con:value>false</con:value>
+        </con:property>
+        <con:property>
+          <con:name>numberActiveRegions</con:name>
+          <con:value>2</con:value>
+        </con:property>
+        <con:property>
+          <con:name>numberRestrictions</con:name>
+          <con:value>0</con:value>
+        </con:property>
+        <con:property>
+          <con:name>numberTotalRegions</con:name>
+          <con:value>2</con:value>
+        </con:property>
+      </con:properties>
+      <con:returnProperties/>
+      <con:runMode>SINGLETON_AND_WAIT</con:runMode>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="calltestcase" name="Run | Userinfo Test Case" id="27fce209-e415-46d3-aee8-d060534f3969">
+    <con:settings/>
+    <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:targetTestCase>8bffa3b3-297d-471e-8a41-934e48f0e474</con:targetTestCase>
+      <con:properties>
+        <con:property>
+          <con:name>username</con:name>
+          <con:value>ripautomation${#Project#accountIndex}</con:value>
+        </con:property>
+        <con:property>
+          <con:name>password</con:name>
+          <con:value>zxasqw12!@</con:value>
+        </con:property>
+        <con:property>
+          <con:name>hasLolRegion</con:name>
+          <con:value>true</con:value>
+        </con:property>
+        <con:property>
+          <con:name>hasSummoner</con:name>
+          <con:value>false</con:value>
+        </con:property>
+        <con:property>
+          <con:name>numberActiveRegions</con:name>
+          <con:value>2</con:value>
+        </con:property>
+        <con:property>
+          <con:name>numberRestrictions</con:name>
+          <con:value>0</con:value>
+        </con:property>
+        <con:property>
+          <con:name>numberTotalRegions</con:name>
+          <con:value>2</con:value>
+        </con:property>
+      </con:properties>
+      <con:returnProperties/>
+      <con:runMode>SINGLETON_AND_WAIT</con:runMode>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+  <con:breakPoints>
+    <con:testStepId>d8982d7f-7f16-4208-9d76-1acd9aa61680</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>b6e910d4-c878-47bd-8273-736fdc6e390f</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+</con:testCase>

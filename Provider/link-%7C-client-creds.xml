@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase zephyrTestName="" zephyrTestId="" wsrmVersion="1.0" wsrmEnabled="false" wsrmAckTo="" timeout="0" searchProperties="true" name="link | client creds" keepSession="false" id="2eb4c651-6195-42b9-8c83-97f195cc42ca" failTestCaseOnErrors="true" failOnError="false" discardOkResults="false" disabled="true" amfPassword="" amfLogin="" amfEndpoint="" amfAuthorisation="false" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="2eb4c651-6195-42b9-8c83-97f195cc42cafileName">link-%7C-client-creds</con:setting>
+  </con:settings>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:testStep type="calltestcase" name="Run | Get token (client creds)" id="ae099cc1-364e-45c0-965b-4360a2e2e705">
+    <con:settings/>
+    <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:targetTestCase>8808d750-7ca6-49f7-a2f7-38494af92449</con:targetTestCase>
+      <con:properties>
+        <con:property>
+          <con:name>client</con:name>
+          <con:value>${#TestCase#client}</con:value>
+        </con:property>
+        <con:property>
+          <con:name>client-secret</con:name>
+          <con:value>${#TestCase#client-secret}</con:value>
+        </con:property>
+        <con:property>
+          <con:name>scope</con:name>
+          <con:value>${#TestCase#scope}</con:value>
+        </con:property>
+        <con:property>
+          <con:name>grant_type</con:name>
+          <con:value>${#TestCase#grant_type}</con:value>
+        </con:property>
+        <con:property>
+          <con:name>accessToken</con:name>
+          <con:value>eyJraWQiOiJzMSIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiJ0ZXN0LWF1dG9tYXRpb24td3JpbnQiLCJzY3AiOlsib3BlbmlkIiwibGluayJdLCJpc3MiOiJodHRwczpcL1wvYXV0aC53ci1pbnQucnBnLnJpb3RnYW1lcy5jb20iLCJleHAiOjE1OTYwNjYwMjEsImlhdCI6MTU5NjA2MjQyMSwianRpIjoiU0RtenJSMUQ0SUUiLCJjaWQiOiJ0ZXN0LWF1dG9tYXRpb24td3JpbnQifQ.AKTxTfX5_NSdVz0V2AMfmTNwsBubo0H5ORLwM1oFwSqpNbmPXWeMz8jDaOY4hXm_7yG3nU4cHEAnf1VEtRtdPDZ9xgSyt3l1tMsObwAKa_5yspvrYkh1daueFK82kWunPUIEeYF6RyopjTyI5fg0ZPoqCmYrwEPtUs8sR_QIh7zbgtCype_lVKPN7lnjgE-nSlEWYDOyNePiWe86TtlQR6BAL9VCK2_ApK3EhqIsgMjc3Gn0qIJ894C68CKlfhCRItP4fdcSxsCTHp55wHPR-W4SXAgpAITyXoJQA30LRQkE02EAd_GsXtPgxZ1Cs0kBYi7baNgy0iVWztA06mY4bA</con:value>
+        </con:property>
+      </con:properties>
+      <con:returnProperties>
+        <con:entry>accessToken</con:entry>
+      </con:returnProperties>
+      <con:runMode>SINGLETON_AND_WAIT</con:runMode>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="groovy" name="Decode | accessToken" id="596740ea-9a79-4387-bf6b-8b9db0db4f9d">
+    <con:settings/>
+    <con:config>
+      <script>// create global library instance
+globals = testRunner.testCase.testSuite.project.testSuites["Library"].testCases["lib"].testSteps["Globals"]
+globals.run(testRunner, context)
+def globals = context.globals
+
+// decode token
+def json = globals.DecodeToken(testRunner.testCase.testSteps["Run | Get token (client creds)"].getPropertyValue("accessToken"))
+
+// clear properties
+def decodedTokenTestStep = testRunner.testCase.getTestStepByName("> Decoded access token");
+for( name in decodedTokenTestStep.propertyNames )
+    decodedTokenTestStep.removeProperty( name )
+
+def verifyTokenHeaderTestStep = context.testCase.testSuite.getTestCaseByName("Verify | access token | header").getTestStepByName("json")
+for( name in verifyTokenHeaderTestStep.propertyNames )
+    verifyTokenHeaderTestStep.removeProperty( name )
+    
+// populate data
+json.each 
+{
+	key, value ->
+
+	if (value in Map) {	
+		for (i=0;  i &lt; value.size(); i++) {
+			clm = value.keySet()[i]
+			decodedTokenTestStep.setPropertyValue(key.toString() + "." + clm, value.get(clm).toString())
+			verifyTokenHeaderTestStep.setPropertyValue(key.toString() + "." + clm, value.get(clm).toString())
+		}
+	} else if (value in List) {
+		for (i=0;  i &lt; value.size(); i++) {
+			def element = value[i];
+
+			if (element in Map)  {	
+				for (j=0;  j &lt; element.size(); j++) {
+					clm = element.keySet()[j]
+					decodedTokenTestStep.setPropertyValue(key.toString()+"["+i+"]" + "." + clm, element.get(clm).toString())
+					verifyTokenHeaderTestStep.setPropertyValue(key.toString()+"["+i+"]" + "." + clm, element.get(clm).toString())
+				}
+			} else {
+				decodedTokenTestStep.setPropertyValue(key.toString()+"["+i+"]", value[i].toString())
+				verifyTokenHeaderTestStep.setPropertyValue(key.toString()+"["+i+"]", value[i].toString())
+			}
+		}
+	} else {
+		decodedTokenTestStep.setPropertyValue(key.toString(), value.toString())
+		verifyTokenHeaderTestStep.setPropertyValue(key.toString(), value.toString())	
+	}
+}</script>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="properties" name="> Decoded access token" id="c8461719-1efd-4c7e-8198-d25be8c46a34">
+    <con:settings/>
+    <con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:properties>
+        <con:property>
+          <con:name>cid</con:name>
+          <con:value>test-automation-wrint</con:value>
+        </con:property>
+        <con:property>
+          <con:name>exp</con:name>
+          <con:value>1596066021</con:value>
+        </con:property>
+        <con:property>
+          <con:name>iat</con:name>
+          <con:value>1596062421</con:value>
+        </con:property>
+        <con:property>
+          <con:name>iss</con:name>
+          <con:value>https://auth.wr-int.rpg.riotgames.com</con:value>
+        </con:property>
+        <con:property>
+          <con:name>jti</con:name>
+          <con:value>SDmzrR1D4IE</con:value>
+        </con:property>
+        <con:property>
+          <con:name>scp[0]</con:name>
+          <con:value>openid</con:value>
+        </con:property>
+        <con:property>
+          <con:name>scp[1]</con:name>
+          <con:value>link</con:value>
+        </con:property>
+        <con:property>
+          <con:name>sub</con:name>
+          <con:value>test-automation-wrint</con:value>
+        </con:property>
+      </con:properties>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="calltestcase" name="Verify | access token | header" id="8688b649-bb77-4205-b1fb-1a76fbd31d78">
+    <con:settings/>
+    <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:targetTestCase>e8ca7958-1411-47dc-a85e-007bd1830787</con:targetTestCase>
+      <con:properties>
+        <con:property>
+          <con:name>grant_type</con:name>
+          <con:value>${#TestCase#grant_type}</con:value>
+        </con:property>
+        <con:property>
+          <con:name>scope</con:name>
+          <con:value>${#TestCase#scope}</con:value>
+        </con:property>
+      </con:properties>
+      <con:returnProperties/>
+      <con:runMode>SINGLETON_AND_WAIT</con:runMode>
+    </con:config>
+  </con:testStep>
+  <con:setupScript/>
+  <con:properties>
+    <con:property>
+      <con:name>client</con:name>
+      <con:value>test-automation-wrint</con:value>
+    </con:property>
+    <con:property>
+      <con:name>client-secret</con:name>
+      <con:value>TsY2MvbCoe85-acId3llHlQOa8ANBVSzsz_jFSHe9lE</con:value>
+    </con:property>
+    <con:property>
+      <con:name>scope</con:name>
+      <con:value>openid link</con:value>
+    </con:property>
+    <con:property>
+      <con:name>grant_type</con:name>
+      <con:value>client_credentials</con:value>
+    </con:property>
+  </con:properties>
+  <con:reportParameters/>
+  <con:breakPoints>
+    <con:testStepId>4d8dc04f-8719-42fb-8152-d278a8fa527d</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>fb6197eb-d56e-4770-9224-f3f4059daadc</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>80029f7f-1745-4003-808e-4bd878eb3e4f</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>cd3ead2c-cee9-4e50-988d-007c1454e632</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>aa270974-9d50-4dd4-a468-fd5b47794c36</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>17878ce6-e031-4cf2-aea0-4ba6a29c4998</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>36b7888c-0e56-4877-90e1-293618fd99d0</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:environmentSpec>
+    <con:entry environmentId="b407e352-14e8-440f-bf25-abe254c02b61">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+    <con:entry environmentId="cd04cfb9-4faf-4b69-9ec6-24af2181f7ae">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+  </con:environmentSpec>
+</con:testCase>

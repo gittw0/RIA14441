@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase timeout="0" searchProperties="true" name="Test Driver | Claims for a Federated account (no riot id)" keepSession="false" id="14af3179-557f-4971-a82e-9940b278c1e4" failTestCaseOnErrors="true" failOnError="false" discardOkResults="false" disabled="true" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="14af3179-557f-4971-a82e-9940b278c1e4fileName">Test-Driver-%7C-Claims-for-a-Federated-account-%28no-riot-id%29</con:setting>
+  </con:settings>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:testStep type="calltestcase" name="Run | Claims test case | For Regionless account" id="77ab01c3-72e1-46de-91c7-39941eeb4e38">
+    <con:settings/>
+    <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:targetTestCase>c4d7c597-e9f3-4cbb-9276-fd7f9f5a13b7</con:targetTestCase>
+      <con:properties>
+        <con:property>
+          <con:name>puuid</con:name>
+          <con:value>${#Project#federated_puuid}</con:value>
+        </con:property>
+        <con:property>
+          <con:name>hasLolRegion</con:name>
+          <con:value>false</con:value>
+        </con:property>
+        <con:property>
+          <con:name>hasSummoner</con:name>
+          <con:value>false</con:value>
+        </con:property>
+        <con:property>
+          <con:name>numberActiveRegions</con:name>
+          <con:value>0</con:value>
+        </con:property>
+        <con:property>
+          <con:name>numberRestrictions</con:name>
+          <con:value>0</con:value>
+        </con:property>
+        <con:property>
+          <con:name>numberTotalRegions</con:name>
+        </con:property>
+      </con:properties>
+      <con:returnProperties/>
+      <con:runMode>SINGLETON_AND_WAIT</con:runMode>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="delay" name="[ * Userinfo not valid for fed accounts * ]" id="064a766f-6c3a-4b1d-aa50-1bfac8eea593">
+    <con:settings/>
+    <con:config>
+      <delay>10</delay>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+  <con:breakPoints>
+    <con:testStepId>7ca72a09-8c51-40a9-9fac-23b3e1741449</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>e17ae672-8925-49cc-bed1-95a88b223976</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>8c3dc9a3-1010-45f1-87bc-96b21d8561bc</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>737cc186-b290-4fc0-9c84-5cdbd1263e81</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>f019e27f-7906-4450-85ce-a36230a08df4</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>71b5ee28-e29f-4590-a1a4-c3cee353160d</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>2c3f364a-e2e9-4db3-8ef4-0aab429c0723</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>05a34449-d56c-4fcf-a67a-0de2ac20b65d</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>4fc5d8aa-61a5-4d19-817e-f2ea9a50ae6e</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>0ea4e210-6f3e-4b97-9fa0-3b4191fe3104</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>eb2f0215-41b2-4a13-b9e4-6e60041f0769</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>f03d8636-4113-4afd-be10-25ed06adfd0a</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>908f40c3-5957-451e-8d3d-4264bead6101</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:environmentSpec>
+    <con:entry environmentId="b407e352-14e8-440f-bf25-abe254c02b61">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+    <con:entry environmentId="cd04cfb9-4faf-4b69-9ec6-24af2181f7ae">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+  </con:environmentSpec>
+</con:testCase>

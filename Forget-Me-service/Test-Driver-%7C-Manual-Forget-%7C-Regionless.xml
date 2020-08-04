@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase timeout="0" searchProperties="true" name="Test Driver | Manual Forget | Regionless" keepSession="false" id="2511d765-2f07-4139-b512-d18a32f2a4ad" failTestCaseOnErrors="true" failOnError="false" discardOkResults="false" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="2511d765-2f07-4139-b512-d18a32f2a4adfileName">Test-Driver-%7C-Manual-Forget-%7C-Regionless</con:setting>
+  </con:settings>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:testStep type="transfer" name="> transfer puuid0" id="31604642-f8d0-4355-b9f8-9dbe71d293f4">
+    <con:settings/>
+    <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:transfers transferToAll="false" transferTextContent="true" transferChildNodes="false" setNullOnMissingSource="true" ignoreEmpty="false" failOnError="true" entitize="false">
+        <con:name>puuid</con:name>
+        <con:sourceType xsi:nil="true"/>
+        <con:sourceStep xsi:nil="true"/>
+        <con:sourcePath>$[0]['puuid']</con:sourcePath>
+        <con:targetType xsi:nil="true"/>
+        <con:targetStep xsi:nil="true"/>
+        <con:targetPath/>
+        <con:type>JSONPATH</con:type>
+        <con:upgraded>true</con:upgraded>
+      </con:transfers>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="transfer" name="> transfer puuid" id="e00b431c-050d-480f-8ea4-ae09805d0862">
+    <con:settings/>
+    <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:transfers transferToAll="false" transferTextContent="true" transferChildNodes="false" setNullOnMissingSource="true" ignoreEmpty="false" failOnError="true" entitize="false">
+        <con:name>puuid</con:name>
+        <con:sourceType xsi:nil="true"/>
+        <con:sourceStep xsi:nil="true"/>
+        <con:sourcePath>$['puuid']</con:sourcePath>
+        <con:targetType>thePuuid</con:targetType>
+        <con:targetStep>Run | Manual forget test case</con:targetStep>
+        <con:targetPath/>
+        <con:type>JSONPATH</con:type>
+        <con:upgraded>true</con:upgraded>
+      </con:transfers>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="calltestcase" name="Run | Manual forget test case" id="8dbbdaf7-7dee-44e5-9d0a-d720cfd12452">
+    <con:settings/>
+    <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:targetTestCase>d9faa50f-20b0-4674-8fd9-b1b1940f5816</con:targetTestCase>
+      <con:properties>
+        <con:property>
+          <con:name>thePuuid</con:name>
+          <con:value/>
+        </con:property>
+      </con:properties>
+      <con:returnProperties/>
+      <con:runMode>SINGLETON_AND_WAIT</con:runMode>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+  <con:breakPoints>
+    <con:testStepId>73698acb-ca4d-4925-b942-7fc5ffd50273</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>31604642-f8d0-4355-b9f8-9dbe71d293f4</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+</con:testCase>

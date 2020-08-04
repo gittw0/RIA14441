@@ -1,0 +1,742 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase timeout="0" searchProperties="true" name="Provider Test" keepSession="false" id="3322632f-9cf6-4a5b-a532-452dc8065584" failTestCaseOnErrors="true" failOnError="false" discardOkResults="false" disabled="true" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="3322632f-9cf6-4a5b-a532-452dc8065584fileName">Provider-Test</con:setting>
+  </con:settings>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:testStep type="calltestcase" name="Run | openid | client creds" id="3bdd3065-4587-4195-9952-5524bdb02105">
+    <con:settings/>
+    <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:targetTestCase>d95a7feb-97a4-46ce-8dde-487d92fc52b6</con:targetTestCase>
+      <con:properties>
+        <con:property>
+          <con:name>client</con:name>
+          <con:value>${#Project#test-automation-env}</con:value>
+        </con:property>
+        <con:property>
+          <con:name>client-secret</con:name>
+          <con:value>${#Project#test-automation-env-secret}</con:value>
+        </con:property>
+        <con:property>
+          <con:name>scope</con:name>
+          <con:value>openid</con:value>
+        </con:property>
+        <con:property>
+          <con:name>grant_type</con:name>
+          <con:value>client_credentials</con:value>
+        </con:property>
+      </con:properties>
+      <con:returnProperties/>
+      <con:runMode>SINGLETON_AND_WAIT</con:runMode>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="calltestcase" name="Run | openid | password" id="6841fd11-f83a-44cb-997c-b99ad4dc1533">
+    <con:settings/>
+    <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:targetTestCase>333310b6-e4b0-4ab7-8f43-b833b29f0518</con:targetTestCase>
+      <con:properties>
+        <con:property>
+          <con:name>client</con:name>
+          <con:value>${#Project#test-automation-env}</con:value>
+        </con:property>
+        <con:property>
+          <con:name>client-secret</con:name>
+          <con:value>${#Project#test-automation-env-secret}</con:value>
+        </con:property>
+        <con:property>
+          <con:name>scope</con:name>
+          <con:value>openid</con:value>
+        </con:property>
+        <con:property>
+          <con:name>grant_type</con:name>
+          <con:value>password</con:value>
+        </con:property>
+        <con:property>
+          <con:name>username</con:name>
+          <con:value>${#TestCase#region}|${#TestCase#username}</con:value>
+        </con:property>
+        <con:property>
+          <con:name>password</con:name>
+          <con:value>${#TestCase#password}</con:value>
+        </con:property>
+      </con:properties>
+      <con:returnProperties/>
+      <con:runMode>SINGLETON_AND_WAIT</con:runMode>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="calltestcase" name="Run | openid | implicit" id="95e09d05-3811-41dc-a304-8d17d2a46411">
+    <con:settings/>
+    <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:targetTestCase>53b89b83-2461-4027-8605-f42b67ee4142</con:targetTestCase>
+      <con:properties>
+        <con:property>
+          <con:name>client</con:name>
+          <con:value>${#Project#test-automation-env}</con:value>
+        </con:property>
+        <con:property>
+          <con:name>client-secret</con:name>
+          <con:value>${#Project#test-automation-env-secret}</con:value>
+        </con:property>
+        <con:property>
+          <con:name>scope</con:name>
+          <con:value>openid</con:value>
+        </con:property>
+        <con:property>
+          <con:name>grant_type</con:name>
+          <con:value>implicit</con:value>
+        </con:property>
+        <con:property>
+          <con:name>username</con:name>
+          <con:value>${#TestCase#username}</con:value>
+        </con:property>
+        <con:property>
+          <con:name>password</con:name>
+          <con:value>${#TestCase#password}</con:value>
+        </con:property>
+        <con:property>
+          <con:name>region</con:name>
+          <con:value>${#TestCase#region}</con:value>
+        </con:property>
+      </con:properties>
+      <con:returnProperties/>
+      <con:runMode>SINGLETON_AND_WAIT</con:runMode>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="calltestcase" name="Run | email | client creds" id="4f208368-ced0-4cfe-8705-68362862dc18">
+    <con:settings/>
+    <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:targetTestCase>46d7be0b-e743-4f1a-9a21-0c60bad385b2</con:targetTestCase>
+      <con:properties>
+        <con:property>
+          <con:name>client</con:name>
+          <con:value>${#Project#test-automation-env}</con:value>
+        </con:property>
+        <con:property>
+          <con:name>client-secret</con:name>
+          <con:value>${#Project#test-automation-env-secret}</con:value>
+        </con:property>
+        <con:property>
+          <con:name>scope</con:name>
+          <con:value>openid email</con:value>
+        </con:property>
+        <con:property>
+          <con:name>grant_type</con:name>
+          <con:value>client_credentials</con:value>
+        </con:property>
+      </con:properties>
+      <con:returnProperties/>
+      <con:runMode>SINGLETON_AND_WAIT</con:runMode>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="calltestcase" name="Run | email | password" id="4ed39ca7-e442-4d45-b6c4-f4af8cf3d2ca">
+    <con:settings/>
+    <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:targetTestCase>7a5e1bed-a86a-4fe3-8828-5b8da7c46c49</con:targetTestCase>
+      <con:properties>
+        <con:property>
+          <con:name>client</con:name>
+          <con:value>${#Project#test-automation-env}</con:value>
+        </con:property>
+        <con:property>
+          <con:name>client-secret</con:name>
+          <con:value>${#Project#test-automation-env-secret}</con:value>
+        </con:property>
+        <con:property>
+          <con:name>scope</con:name>
+          <con:value>openid email</con:value>
+        </con:property>
+        <con:property>
+          <con:name>grant_type</con:name>
+          <con:value>password</con:value>
+        </con:property>
+        <con:property>
+          <con:name>username</con:name>
+          <con:value>${#TestCase#region}|${#TestCase#username}</con:value>
+        </con:property>
+        <con:property>
+          <con:name>password</con:name>
+          <con:value>${#TestCase#password}</con:value>
+        </con:property>
+      </con:properties>
+      <con:returnProperties/>
+      <con:runMode>SINGLETON_AND_WAIT</con:runMode>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="calltestcase" name="Run | email | implicit" id="3f67552e-bd6a-432b-8bfe-989574a508a8">
+    <con:settings/>
+    <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:targetTestCase>9679a8df-1901-4ec4-9581-7662d88dc02b</con:targetTestCase>
+      <con:properties>
+        <con:property>
+          <con:name>client</con:name>
+          <con:value>${#Project#test-automation-env}</con:value>
+        </con:property>
+        <con:property>
+          <con:name>client-secret</con:name>
+          <con:value>${#Project#test-automation-env-secret}</con:value>
+        </con:property>
+        <con:property>
+          <con:name>scope</con:name>
+          <con:value>openid email</con:value>
+        </con:property>
+        <con:property>
+          <con:name>grant_type</con:name>
+          <con:value>implicit</con:value>
+        </con:property>
+      </con:properties>
+      <con:returnProperties/>
+      <con:runMode>SINGLETON_AND_WAIT</con:runMode>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="calltestcase" name="Run | account | client creds" id="9672514e-7df1-4db4-82a5-4098a1c94a5e">
+    <con:settings/>
+    <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:targetTestCase>b7a61747-b79c-4cd3-8152-1bc8bfb17137</con:targetTestCase>
+      <con:properties>
+        <con:property>
+          <con:name>client</con:name>
+          <con:value>${#Project#test-automation-env}</con:value>
+        </con:property>
+        <con:property>
+          <con:name>client-secret</con:name>
+          <con:value>${#Project#test-automation-env-secret}</con:value>
+        </con:property>
+        <con:property>
+          <con:name>scope</con:name>
+          <con:value>openid account</con:value>
+        </con:property>
+        <con:property>
+          <con:name>grant_type</con:name>
+          <con:value>client_credentials</con:value>
+        </con:property>
+      </con:properties>
+      <con:returnProperties/>
+      <con:runMode>SINGLETON_AND_WAIT</con:runMode>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="calltestcase" name="Run | account | password" id="ace3d15e-b802-4ad8-8419-1ad49743cd74">
+    <con:settings/>
+    <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:targetTestCase>46ca2206-a21d-4589-8886-fe8197f602e0</con:targetTestCase>
+      <con:properties>
+        <con:property>
+          <con:name>client</con:name>
+          <con:value>${#Project#test-automation-env}</con:value>
+        </con:property>
+        <con:property>
+          <con:name>client-secret</con:name>
+          <con:value>${#Project#test-automation-env-secret}</con:value>
+        </con:property>
+        <con:property>
+          <con:name>scope</con:name>
+          <con:value>openid account</con:value>
+        </con:property>
+        <con:property>
+          <con:name>grant_type</con:name>
+          <con:value>password</con:value>
+        </con:property>
+        <con:property>
+          <con:name>username</con:name>
+          <con:value>${#TestCase#region}|${#TestCase#username}</con:value>
+        </con:property>
+        <con:property>
+          <con:name>password</con:name>
+          <con:value>${#TestCase#password}</con:value>
+        </con:property>
+      </con:properties>
+      <con:returnProperties/>
+      <con:runMode>SINGLETON_AND_WAIT</con:runMode>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="calltestcase" name="Run | account | implicit" id="2d79e1a6-8d6d-4509-abf9-4377145d7332">
+    <con:settings/>
+    <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:targetTestCase>233fb092-2537-49b5-8ce1-6425591a4d03</con:targetTestCase>
+      <con:properties>
+        <con:property>
+          <con:name>client</con:name>
+          <con:value>${#Project#test-automation-env}</con:value>
+        </con:property>
+        <con:property>
+          <con:name>client-secret</con:name>
+          <con:value>${#Project#test-automation-env-secret}</con:value>
+        </con:property>
+        <con:property>
+          <con:name>scope</con:name>
+          <con:value>openid account</con:value>
+        </con:property>
+        <con:property>
+          <con:name>grant_type</con:name>
+          <con:value>implicit</con:value>
+        </con:property>
+      </con:properties>
+      <con:returnProperties/>
+      <con:runMode>SINGLETON_AND_WAIT</con:runMode>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="calltestcase" name="Run | lol | client creds" id="b494905b-439f-4e36-8fee-335ed60ab3ef">
+    <con:settings/>
+    <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:targetTestCase>ab97521a-c933-454f-bf72-b0934a1f74f5</con:targetTestCase>
+      <con:properties>
+        <con:property>
+          <con:name>client</con:name>
+          <con:value>${#Project#test-automation-lol-env}</con:value>
+        </con:property>
+        <con:property>
+          <con:name>client-secret</con:name>
+          <con:value>${#Project#test-automation-lol-env-secret}</con:value>
+        </con:property>
+        <con:property>
+          <con:name>scope</con:name>
+          <con:value>openid lol</con:value>
+        </con:property>
+        <con:property>
+          <con:name>grant_type</con:name>
+          <con:value>client_credentials</con:value>
+        </con:property>
+      </con:properties>
+      <con:returnProperties/>
+      <con:runMode>SINGLETON_AND_WAIT</con:runMode>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="calltestcase" name="Run | lol | password" id="b1eb7236-088a-49bd-b3ce-298e1620344c">
+    <con:settings/>
+    <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:targetTestCase>7a98a0a1-057a-4ff0-9895-ade175162bcd</con:targetTestCase>
+      <con:properties>
+        <con:property>
+          <con:name>client</con:name>
+          <con:value>${#Project#test-automation-lol-env}</con:value>
+        </con:property>
+        <con:property>
+          <con:name>client-secret</con:name>
+          <con:value>${#Project#test-automation-lol-env-secret}</con:value>
+        </con:property>
+        <con:property>
+          <con:name>scope</con:name>
+          <con:value>openid lol</con:value>
+        </con:property>
+        <con:property>
+          <con:name>grant_type</con:name>
+          <con:value>password</con:value>
+        </con:property>
+        <con:property>
+          <con:name>username</con:name>
+          <con:value>${#TestCase#region}|${#TestCase#username}</con:value>
+        </con:property>
+        <con:property>
+          <con:name>password</con:name>
+          <con:value>${#TestCase#password}</con:value>
+        </con:property>
+      </con:properties>
+      <con:returnProperties/>
+      <con:runMode>SINGLETON_AND_WAIT</con:runMode>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="calltestcase" name="Run | lol | implicit" id="d1b49f7c-4ead-4f36-9189-e11a510105ed">
+    <con:settings/>
+    <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:targetTestCase>004d796e-ffe0-4658-9977-485f6dd2c844</con:targetTestCase>
+      <con:properties>
+        <con:property>
+          <con:name>client</con:name>
+          <con:value>${#Project#test-automation-lol-env}</con:value>
+        </con:property>
+        <con:property>
+          <con:name>client-secret</con:name>
+          <con:value>${#Project#test-automation-lol-env-secret}</con:value>
+        </con:property>
+        <con:property>
+          <con:name>scope</con:name>
+          <con:value>openid lol</con:value>
+        </con:property>
+        <con:property>
+          <con:name>grant_type</con:name>
+          <con:value>implicit</con:value>
+        </con:property>
+        <con:property>
+          <con:name>username</con:name>
+          <con:value>${#Project#username}</con:value>
+        </con:property>
+        <con:property>
+          <con:name>password</con:name>
+          <con:value>${#Project#password}</con:value>
+        </con:property>
+        <con:property>
+          <con:name>testRegion1</con:name>
+          <con:value>${#Project#srcRegion}</con:value>
+        </con:property>
+      </con:properties>
+      <con:returnProperties/>
+      <con:runMode>SINGLETON_AND_WAIT</con:runMode>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="calltestcase" name="Run | summoner | client creds" id="e1340b13-a035-405d-8300-7f0e625686b3">
+    <con:settings/>
+    <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:targetTestCase>67b0e3c3-1f70-4a07-848e-bd4948d1e1c4</con:targetTestCase>
+      <con:properties>
+        <con:property>
+          <con:name>client</con:name>
+          <con:value>${#Project#test-automation-summoner-env}</con:value>
+        </con:property>
+        <con:property>
+          <con:name>client-secret</con:name>
+          <con:value>${#Project#test-automation-summoner-env-secret}</con:value>
+        </con:property>
+        <con:property>
+          <con:name>scope</con:name>
+          <con:value>openid summoner</con:value>
+        </con:property>
+        <con:property>
+          <con:name>grant_type</con:name>
+          <con:value>client_credentials</con:value>
+        </con:property>
+      </con:properties>
+      <con:returnProperties/>
+      <con:runMode>SINGLETON_AND_WAIT</con:runMode>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="calltestcase" name="Run | summoner | password" id="90ee900f-2b5f-48eb-9d68-85efa9d00ec6">
+    <con:settings/>
+    <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:targetTestCase>9c36e254-9f89-4478-b9cf-29e6257dd654</con:targetTestCase>
+      <con:properties>
+        <con:property>
+          <con:name>client</con:name>
+          <con:value>${#Project#test-automation-summoner-env}</con:value>
+        </con:property>
+        <con:property>
+          <con:name>client-secret</con:name>
+          <con:value>${#Project#test-automation-summoner-env-secret}</con:value>
+        </con:property>
+        <con:property>
+          <con:name>scope</con:name>
+          <con:value>openid summoner</con:value>
+        </con:property>
+        <con:property>
+          <con:name>grant_type</con:name>
+          <con:value>password</con:value>
+        </con:property>
+        <con:property>
+          <con:name>username</con:name>
+          <con:value>${#TestCase#region}|${#TestCase#username}</con:value>
+        </con:property>
+        <con:property>
+          <con:name>password</con:name>
+          <con:value>${#TestCase#password}</con:value>
+        </con:property>
+      </con:properties>
+      <con:returnProperties/>
+      <con:runMode>SINGLETON_AND_WAIT</con:runMode>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="calltestcase" name="Run | summoner | implicit" id="776a4c1c-35ba-4040-bb1d-cdc22ce1bc2e">
+    <con:settings/>
+    <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:targetTestCase>071b49f2-71b5-4093-a929-0ecffc96b174</con:targetTestCase>
+      <con:properties>
+        <con:property>
+          <con:name>client</con:name>
+          <con:value>${#Project#test-automation-summoner-env}</con:value>
+        </con:property>
+        <con:property>
+          <con:name>client-secret</con:name>
+          <con:value>${#Project#test-automation-summoner-env-secret}</con:value>
+        </con:property>
+        <con:property>
+          <con:name>scope</con:name>
+          <con:value>openid summoner</con:value>
+        </con:property>
+        <con:property>
+          <con:name>grant_type</con:name>
+          <con:value>implicit</con:value>
+        </con:property>
+      </con:properties>
+      <con:returnProperties/>
+      <con:runMode>SINGLETON_AND_WAIT</con:runMode>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="calltestcase" name="Run | loyalty | client creds" id="0094b256-49d4-45e7-ba56-8728d4d5e61d">
+    <con:settings/>
+    <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:targetTestCase>160aa702-063e-4cfa-bcf7-616c1002ea42</con:targetTestCase>
+      <con:properties>
+        <con:property>
+          <con:name>client</con:name>
+          <con:value>${#Project#test-automation-env}</con:value>
+        </con:property>
+        <con:property>
+          <con:name>client-secret</con:name>
+          <con:value>${#Project#test-automation-env-secret}</con:value>
+        </con:property>
+        <con:property>
+          <con:name>scope</con:name>
+          <con:value>openid loyalty</con:value>
+        </con:property>
+        <con:property>
+          <con:name>grant_type</con:name>
+          <con:value>client_credentials</con:value>
+        </con:property>
+      </con:properties>
+      <con:returnProperties/>
+      <con:runMode>SINGLETON_AND_WAIT</con:runMode>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="calltestcase" name="Run | loyalty | password" id="a1a062aa-5bf6-44a8-b022-c43f3427591e">
+    <con:settings/>
+    <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:targetTestCase>3d9ef63d-cfe8-4d15-93b6-9d95cb5b4b9f</con:targetTestCase>
+      <con:properties>
+        <con:property>
+          <con:name>client</con:name>
+          <con:value>${#Project#test-automation-env}</con:value>
+        </con:property>
+        <con:property>
+          <con:name>client-secret</con:name>
+          <con:value>${#Project#test-automation-env-secret}</con:value>
+        </con:property>
+        <con:property>
+          <con:name>scope</con:name>
+          <con:value>openid loyalty</con:value>
+        </con:property>
+        <con:property>
+          <con:name>grant_type</con:name>
+          <con:value>password</con:value>
+        </con:property>
+        <con:property>
+          <con:name>username</con:name>
+          <con:value>${#TestCase#region}|${#TestCase#username}</con:value>
+        </con:property>
+        <con:property>
+          <con:name>password</con:name>
+          <con:value>${#TestCase#password}</con:value>
+        </con:property>
+      </con:properties>
+      <con:returnProperties/>
+      <con:runMode>SINGLETON_AND_WAIT</con:runMode>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="calltestcase" name="Run | loyalty | implicit" id="763208b7-e700-4b0f-9246-fc0a7c181364">
+    <con:settings/>
+    <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:targetTestCase>a20ee2be-0e26-41a0-9da8-8d3d99abf14f</con:targetTestCase>
+      <con:properties>
+        <con:property>
+          <con:name>client</con:name>
+          <con:value>${#Project#test-automation-env}</con:value>
+        </con:property>
+        <con:property>
+          <con:name>client-secret</con:name>
+          <con:value>${#Project#test-automation-env-secret}</con:value>
+        </con:property>
+        <con:property>
+          <con:name>scope</con:name>
+          <con:value>openid loyalty</con:value>
+        </con:property>
+        <con:property>
+          <con:name>grant_type</con:name>
+          <con:value>implicit</con:value>
+        </con:property>
+      </con:properties>
+      <con:returnProperties/>
+      <con:runMode>SINGLETON_AND_WAIT</con:runMode>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="calltestcase" name="Run | link | client creds" id="d76d7b7e-f22e-4bf5-8a68-8915a6168fdd">
+    <con:settings/>
+    <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:targetTestCase>2eb4c651-6195-42b9-8c83-97f195cc42ca</con:targetTestCase>
+      <con:properties>
+        <con:property>
+          <con:name>client</con:name>
+          <con:value>${#Project#test-automation-env}</con:value>
+        </con:property>
+        <con:property>
+          <con:name>client-secret</con:name>
+          <con:value>${#Project#test-automation-env-secret}</con:value>
+        </con:property>
+        <con:property>
+          <con:name>scope</con:name>
+          <con:value>openid link</con:value>
+        </con:property>
+        <con:property>
+          <con:name>grant_type</con:name>
+          <con:value>client_credentials</con:value>
+        </con:property>
+      </con:properties>
+      <con:returnProperties/>
+      <con:runMode>SINGLETON_AND_WAIT</con:runMode>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="calltestcase" name="Run | link | password" id="001aa1e6-83ed-4455-8b50-fc84d937c58c">
+    <con:settings/>
+    <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:targetTestCase>30d7bc50-c576-43b8-ae25-a45deed49bdd</con:targetTestCase>
+      <con:properties>
+        <con:property>
+          <con:name>client</con:name>
+          <con:value>${#Project#test-automation-env}</con:value>
+        </con:property>
+        <con:property>
+          <con:name>client-secret</con:name>
+          <con:value>${#Project#test-automation-env-secret}</con:value>
+        </con:property>
+        <con:property>
+          <con:name>scope</con:name>
+          <con:value>openid link</con:value>
+        </con:property>
+        <con:property>
+          <con:name>grant_type</con:name>
+          <con:value>password</con:value>
+        </con:property>
+        <con:property>
+          <con:name>username</con:name>
+          <con:value>${#TestCase#region}|${#TestCase#username}</con:value>
+        </con:property>
+        <con:property>
+          <con:name>password</con:name>
+          <con:value>${#TestCase#password}</con:value>
+        </con:property>
+      </con:properties>
+      <con:returnProperties/>
+      <con:runMode>SINGLETON_AND_WAIT</con:runMode>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="calltestcase" name="Run | link | implicit" id="b0f17fd7-3a67-49bf-bbd0-f65f26d3215e">
+    <con:settings/>
+    <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:targetTestCase>8eba4e17-eb04-4f4b-9346-3c984d7ec13f</con:targetTestCase>
+      <con:properties>
+        <con:property>
+          <con:name>client</con:name>
+          <con:value>${#Project#test-automation-env}</con:value>
+        </con:property>
+        <con:property>
+          <con:name>client-secret</con:name>
+          <con:value>${#Project#test-automation-env-secret}</con:value>
+        </con:property>
+        <con:property>
+          <con:name>scope</con:name>
+          <con:value>openid link</con:value>
+        </con:property>
+        <con:property>
+          <con:name>grant_type</con:name>
+          <con:value>implicit</con:value>
+        </con:property>
+      </con:properties>
+      <con:returnProperties/>
+      <con:runMode>SINGLETON_AND_WAIT</con:runMode>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="calltestcase" name="Run | lol_region | client creds" id="3cebcdc8-6920-49a7-b10d-a3f390333cb2">
+    <con:settings/>
+    <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:targetTestCase>766eeb2d-6b9b-4e2f-b434-7b1cdd53737f</con:targetTestCase>
+      <con:properties>
+        <con:property>
+          <con:name>client</con:name>
+          <con:value>${#Project#test-automation-lolregion-env}</con:value>
+        </con:property>
+        <con:property>
+          <con:name>client-secret</con:name>
+          <con:value>${#Project#test-automation-lolregion-env-secret}</con:value>
+        </con:property>
+        <con:property>
+          <con:name>scope</con:name>
+          <con:value>openid lol_region</con:value>
+        </con:property>
+        <con:property>
+          <con:name>grant_type</con:name>
+          <con:value>client_credentials</con:value>
+        </con:property>
+      </con:properties>
+      <con:returnProperties/>
+      <con:runMode>SINGLETON_AND_WAIT</con:runMode>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="calltestcase" name="Run | lol_region | password" id="d0054e8b-c90e-4e55-a440-44e9e53944ee">
+    <con:settings/>
+    <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:targetTestCase>e5dd7b54-aba6-4439-b6c5-2118a3c43667</con:targetTestCase>
+      <con:properties>
+        <con:property>
+          <con:name>client</con:name>
+          <con:value>${#Project#test-automation-lolregion-env}</con:value>
+        </con:property>
+        <con:property>
+          <con:name>client-secret</con:name>
+          <con:value>${#Project#test-automation-lolregion-env-secret}</con:value>
+        </con:property>
+        <con:property>
+          <con:name>scope</con:name>
+          <con:value>openid lol_region</con:value>
+        </con:property>
+        <con:property>
+          <con:name>grant_type</con:name>
+          <con:value>password</con:value>
+        </con:property>
+        <con:property>
+          <con:name>username</con:name>
+          <con:value>${#TestCase#region}|${#TestCase#username}</con:value>
+        </con:property>
+        <con:property>
+          <con:name>password</con:name>
+          <con:value>${#TestCase#password}</con:value>
+        </con:property>
+      </con:properties>
+      <con:returnProperties/>
+      <con:runMode>SINGLETON_AND_WAIT</con:runMode>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="calltestcase" name="Run | lol_region | implicit" id="ea525d18-0c7c-4d82-a049-c3b0df2de0b6">
+    <con:settings/>
+    <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:targetTestCase>059580ff-f68c-4cd4-827a-eba61cfe5ec5</con:targetTestCase>
+      <con:properties>
+        <con:property>
+          <con:name>client</con:name>
+          <con:value>${#Project#test-automation-lolregion-env}</con:value>
+        </con:property>
+        <con:property>
+          <con:name>client-secret</con:name>
+          <con:value>${#Project#test-automation-lolregion-env-secret}</con:value>
+        </con:property>
+        <con:property>
+          <con:name>scope</con:name>
+          <con:value>openid lol_region</con:value>
+        </con:property>
+        <con:property>
+          <con:name>grant_type</con:name>
+          <con:value>implicit</con:value>
+        </con:property>
+      </con:properties>
+      <con:returnProperties/>
+      <con:runMode>SINGLETON_AND_WAIT</con:runMode>
+    </con:config>
+  </con:testStep>
+  <con:properties>
+    <con:property>
+      <con:name>username</con:name>
+      <con:value>ripmaxwrint</con:value>
+    </con:property>
+    <con:property>
+      <con:name>password</con:name>
+      <con:value>zxasqw12!@</con:value>
+    </con:property>
+    <con:property>
+      <con:name>region</con:name>
+      <con:value>WRINT</con:value>
+    </con:property>
+  </con:properties>
+  <con:reportParameters/>
+  <con:environmentSpec>
+    <con:entry environmentId="b407e352-14e8-440f-bf25-abe254c02b61">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+    <con:entry environmentId="cd04cfb9-4faf-4b69-9ec6-24af2181f7ae">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+  </con:environmentSpec>
+</con:testCase>

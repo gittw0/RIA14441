@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase timeout="0" searchProperties="true" name="Test Driver | Ambiguous account" keepSession="false" id="c42ce14e-34e3-40fa-8cf6-3b18c6fc22a6" failTestCaseOnErrors="true" failOnError="false" discardOkResults="false" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="c42ce14e-34e3-40fa-8cf6-3b18c6fc22a6fileName">Test-Driver-%7C-Ambiguous-account</con:setting>
+  </con:settings>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:testStep type="properties" name="> thePuuid" id="92405f67-6290-4ae0-b787-a7c00faa3b9a">
+    <con:settings/>
+    <con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:properties>
+        <con:property>
+          <con:name>thePuuid</con:name>
+          <con:value>ebc7108e-29a2-50f2-b521-2801ea392484</con:value>
+        </con:property>
+        <con:property>
+          <con:name>thePuuid2</con:name>
+          <con:value>a00020fa-b361-5108-8896-fa07628947f0</con:value>
+        </con:property>
+      </con:properties>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="transfer" name="> transfer > thePuuid" id="37672252-fece-42d5-bc46-f104f0cd5e8a">
+    <con:settings/>
+    <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:transfers transferToAll="false" transferTextContent="true" transferChildNodes="false" setNullOnMissingSource="true" ignoreEmpty="false" failOnError="true" entitize="false">
+        <con:name>puuid</con:name>
+        <con:sourceType xsi:nil="true"/>
+        <con:sourceStep xsi:nil="true"/>
+        <con:sourcePath>$['puuid']</con:sourcePath>
+        <con:targetType>thePuuid</con:targetType>
+        <con:targetStep>> thePuuid</con:targetStep>
+        <con:targetPath/>
+        <con:type>JSONPATH</con:type>
+        <con:upgraded>true</con:upgraded>
+      </con:transfers>
+      <con:transfers transferToAll="false" transferTextContent="true" transferChildNodes="false" setNullOnMissingSource="true" ignoreEmpty="false" failOnError="true" entitize="false">
+        <con:name>puuid2</con:name>
+        <con:sourceType xsi:nil="true"/>
+        <con:sourceStep xsi:nil="true"/>
+        <con:sourcePath>$['puuid']</con:sourcePath>
+        <con:targetType>thePuuid2</con:targetType>
+        <con:targetStep>> thePuuid</con:targetStep>
+        <con:type>JSONPATH</con:type>
+        <con:upgraded>true</con:upgraded>
+      </con:transfers>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="calltestcase" name="Run | Provider test | Ambiguous account" id="25671328-ea21-42c2-b91b-1a6cca4f18c6">
+    <con:settings/>
+    <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:targetTestCase>3322632f-9cf6-4a5b-a532-452dc8065584</con:targetTestCase>
+      <con:properties>
+        <con:property>
+          <con:name>username</con:name>
+          <con:value>${#TestCase#username}</con:value>
+        </con:property>
+        <con:property>
+          <con:name>password</con:name>
+          <con:value>${#TestCase#password}</con:value>
+        </con:property>
+        <con:property>
+          <con:name>region</con:name>
+          <con:value>${#TestSuite#testRegion1}</con:value>
+        </con:property>
+      </con:properties>
+      <con:returnProperties/>
+      <con:runMode>SINGLETON_AND_WAIT</con:runMode>
+    </con:config>
+  </con:testStep>
+  <con:properties>
+    <con:property>
+      <con:name>username</con:name>
+      <con:value>ripambiguous${#Project#accountIndex}</con:value>
+    </con:property>
+    <con:property>
+      <con:name>password</con:name>
+      <con:value>zxasqw12!@</con:value>
+    </con:property>
+  </con:properties>
+  <con:reportParameters/>
+  <con:breakPoints>
+    <con:testStepId>7ca72a09-8c51-40a9-9fac-23b3e1741449</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>e17ae672-8925-49cc-bed1-95a88b223976</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>8c3dc9a3-1010-45f1-87bc-96b21d8561bc</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>737cc186-b290-4fc0-9c84-5cdbd1263e81</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>f019e27f-7906-4450-85ce-a36230a08df4</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>71b5ee28-e29f-4590-a1a4-c3cee353160d</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>2c3f364a-e2e9-4db3-8ef4-0aab429c0723</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>05a34449-d56c-4fcf-a67a-0de2ac20b65d</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>4fc5d8aa-61a5-4d19-817e-f2ea9a50ae6e</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>0ea4e210-6f3e-4b97-9fa0-3b4191fe3104</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>eb2f0215-41b2-4a13-b9e4-6e60041f0769</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>f03d8636-4113-4afd-be10-25ed06adfd0a</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>21b65bfc-9aac-442f-892e-164a1fe52c2b</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:environmentSpec>
+    <con:entry environmentId="b407e352-14e8-440f-bf25-abe254c02b61">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+    <con:entry environmentId="cd04cfb9-4faf-4b69-9ec6-24af2181f7ae">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+  </con:environmentSpec>
+</con:testCase>

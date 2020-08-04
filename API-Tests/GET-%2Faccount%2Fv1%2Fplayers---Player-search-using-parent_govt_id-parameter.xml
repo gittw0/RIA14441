@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase timeout="0" searchProperties="true" name="GET /account/v1/players - Player search using parent_govt_id parameter" keepSession="false" id="968c1c54-3fe0-4c0c-9b57-5d354f3334ca" failTestCaseOnErrors="true" failOnError="true" discardOkResults="false" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="968c1c54-3fe0-4c0c-9b57-5d354f3334cafileName">GET-%2Faccount%2Fv1%2Fplayers---Player-search-using-parent_govt_id-parameter</con:setting>
+  </con:settings>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:testStep type="properties" name="Properties" id="ef2db91f-19e6-4217-9cf7-c2a02ad7e6c0">
+    <con:settings/>
+    <con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:properties>
+        <con:property>
+          <con:name>parentGovtId</con:name>
+          <con:value>parentgov1</con:value>
+        </con:property>
+      </con:properties>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="transfer" name="PropertyTransfer 1" id="fd52a920-c5c0-4212-a7e2-f882072acb5e">
+    <con:settings/>
+    <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:transfers transferToAll="false" transferTextContent="true" transferChildNodes="false" setNullOnMissingSource="true" ignoreEmpty="false" failOnError="true" entitize="false">
+        <con:name>parent_govt_id</con:name>
+        <con:sourceType xsi:nil="true"/>
+        <con:sourceStep xsi:nil="true"/>
+        <con:sourcePath>$['government']['parent_govt_id']</con:sourcePath>
+        <con:targetType>parentGovtId</con:targetType>
+        <con:targetStep>Properties</con:targetStep>
+        <con:targetPath/>
+        <con:type>JSONPATH</con:type>
+        <con:upgraded>true</con:upgraded>
+      </con:transfers>
+    </con:config>
+  </con:testStep>
+  <con:properties>
+    <con:property>
+      <con:name>username</con:name>
+      <con:value>${#Project#username}</con:value>
+    </con:property>
+    <con:property>
+      <con:name>email_address</con:name>
+      <con:value>${#Project#defaultEmail}</con:value>
+    </con:property>
+    <con:property>
+      <con:name>puuid</con:name>
+      <con:value>${#Project#puuid}</con:value>
+    </con:property>
+  </con:properties>
+  <con:reportParameters/>
+  <con:breakPoints>
+    <con:testStepId>2b538dda-b3e2-436d-b37f-4208ede2e0de</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+</con:testCase>

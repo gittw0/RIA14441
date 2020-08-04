@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase timeout="0" searchProperties="true" name="GET /account/v1/players - Player search using tag_line parameter" keepSession="false" id="679d97f0-a750-4f08-8664-73510f6b4af3" failTestCaseOnErrors="true" failOnError="true" discardOkResults="false" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="679d97f0-a750-4f08-8664-73510f6b4af3fileName">GET-%2Faccount%2Fv1%2Fplayers---Player-search-using-tag_line-parameter</con:setting>
+  </con:settings>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:testStep type="properties" name="Properties" id="d260806b-aa85-4bc6-bde2-1ad07bf5a8be">
+    <con:settings/>
+    <con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:properties>
+        <con:property>
+          <con:name>tagLine</con:name>
+          <con:value xsi:nil="true"/>
+        </con:property>
+        <con:property>
+          <con:name>gameName</con:name>
+          <con:value xsi:nil="true"/>
+        </con:property>
+      </con:properties>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="transfer" name="PropertyTransfer 1" id="63b77e39-ed4f-4694-9e91-644b549c5474">
+    <con:settings/>
+    <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:transfers transferToAll="false" transferTextContent="true" transferChildNodes="false" setNullOnMissingSource="true" ignoreEmpty="false" failOnError="true" entitize="false">
+        <con:name>parent_email</con:name>
+        <con:sourceType xsi:nil="true"/>
+        <con:sourceStep xsi:nil="true"/>
+        <con:sourcePath>$['consent']['parent_email']</con:sourcePath>
+        <con:targetType>tagLine</con:targetType>
+        <con:targetStep>Properties</con:targetStep>
+        <con:targetPath/>
+        <con:type>JSONPATH</con:type>
+        <con:upgraded>true</con:upgraded>
+      </con:transfers>
+      <con:transfers transferTextContent="true" setNullOnMissingSource="true" failOnError="true">
+        <con:name>game_name</con:name>
+        <con:sourceType xsi:nil="true"/>
+        <con:sourceStep xsi:nil="true"/>
+        <con:sourcePath>$['alias']['game_name']</con:sourcePath>
+        <con:targetType>gameName</con:targetType>
+        <con:targetStep>Properties</con:targetStep>
+        <con:targetPath/>
+        <con:type>JSONPATH</con:type>
+        <con:upgraded>true</con:upgraded>
+      </con:transfers>
+      <con:transfers transferTextContent="true" setNullOnMissingSource="true" failOnError="true">
+        <con:name>tag_line</con:name>
+        <con:sourceType xsi:nil="true"/>
+        <con:sourceStep xsi:nil="true"/>
+        <con:sourcePath>$['alias']['tag_line']</con:sourcePath>
+        <con:targetType>tagLine</con:targetType>
+        <con:targetStep>Properties</con:targetStep>
+        <con:targetPath/>
+        <con:type>JSONPATH</con:type>
+        <con:upgraded>true</con:upgraded>
+      </con:transfers>
+    </con:config>
+  </con:testStep>
+  <con:properties>
+    <con:property>
+      <con:name>username</con:name>
+      <con:value>${#Project#username}</con:value>
+    </con:property>
+    <con:property>
+      <con:name>email_address</con:name>
+      <con:value>${#Project#defaultEmail}</con:value>
+    </con:property>
+    <con:property>
+      <con:name>puuid</con:name>
+      <con:value>${#Project#puuid}</con:value>
+    </con:property>
+  </con:properties>
+  <con:reportParameters/>
+  <con:breakPoints>
+    <con:testStepId>2b538dda-b3e2-436d-b37f-4208ede2e0de</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+</con:testCase>

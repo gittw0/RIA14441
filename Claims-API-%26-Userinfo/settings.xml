@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testSuite name="Claims API &amp; Userinfo" id="c0cbe4ad-746a-4d72-82fb-1a0b5b4a8582" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="c0cbe4ad-746a-4d72-82fb-1a0b5b4a8582fileName">Claims-API-%26-Userinfo</con:setting>
+  </con:settings>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:runType>SEQUENTIAL</con:runType>
+  <con:properties>
+    <con:property>
+      <con:name>grant_type</con:name>
+      <con:value>client_credentials</con:value>
+    </con:property>
+    <con:property>
+      <con:name>testRegion1</con:name>
+      <con:value>${#Project#srcRegion}</con:value>
+    </con:property>
+    <con:property>
+      <con:name>testRegion2</con:name>
+      <con:value>${#Project#destRegion}</con:value>
+    </con:property>
+  </con:properties>
+  <con:setupScript/>
+  <con:reportParameters/>
+  <con:environmentSpec>
+    <con:entry environmentId="b407e352-14e8-440f-bf25-abe254c02b61">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+    <con:entry environmentId="cd04cfb9-4faf-4b69-9ec6-24af2181f7ae">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+  </con:environmentSpec>
+</con:testSuite>

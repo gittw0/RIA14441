@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testSuite name="RSO Authenticator" id="d2b05b87-aecb-4c78-aa2e-fc2748c0734c" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="d2b05b87-aecb-4c78-aa2e-fc2748c0734cfileName">RSO-Authenticator</con:setting>
+  </con:settings>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:runType>SEQUENTIAL</con:runType>
+  <con:properties>
+    <con:property>
+      <con:name>client</con:name>
+      <con:value/>
+    </con:property>
+    <con:property>
+      <con:name>scope</con:name>
+      <con:value/>
+    </con:property>
+  </con:properties>
+  <con:reportParameters/>
+</con:testSuite>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase timeout="0" searchProperties="true" name="Account-Service" keepSession="false" id="a72d8443-1ab0-4212-8c8e-926b77e80a89" failTestCaseOnErrors="true" failOnError="true" discardOkResults="false" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="a72d8443-1ab0-4212-8c8e-926b77e80a89fileName">Account-Service</con:setting>
+  </con:settings>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:properties/>
+  <con:reportParameters/>
+  <con:tagId>07ead7af-4cb8-4573-b98f-8022a38f3b34</con:tagId>
+</con:testCase>

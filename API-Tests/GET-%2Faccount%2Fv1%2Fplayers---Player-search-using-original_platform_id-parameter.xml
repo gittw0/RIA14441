@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase timeout="0" searchProperties="true" name="GET /account/v1/players - Player search using original_platform_id parameter" keepSession="false" id="4f6d85aa-b6d9-43e2-a94a-fef0677aaf42" failTestCaseOnErrors="true" failOnError="true" discardOkResults="false" disabled="true" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="4f6d85aa-b6d9-43e2-a94a-fef0677aaf42fileName">GET-%2Faccount%2Fv1%2Fplayers---Player-search-using-original_platform_id-parameter</con:setting>
+  </con:settings>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:properties>
+    <con:property>
+      <con:name>username</con:name>
+      <con:value>${#Project#username}</con:value>
+    </con:property>
+    <con:property>
+      <con:name>email_address</con:name>
+      <con:value>${#Project#defaultEmail}</con:value>
+    </con:property>
+  </con:properties>
+  <con:reportParameters/>
+</con:testCase>
