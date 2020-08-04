@@ -27,7 +27,7 @@
         </con:property>
         <con:property>
           <con:name>accessToken</con:name>
-          <con:value>eyJraWQiOiJzMSIsInR5cCI6ImF0K2p3dCIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiJiMjllZTlkMS0wYzk3LTUyODktYWVkNC05MDY2Yjk1MzVlZGYiLCJzY3AiOlsib3BlbmlkIiwibGluayJdLCJjbG0iOlsib3BlbmlkIl0sImRhdCI6eyJsbmsiOlt7ImxpbmtfdHlwZSI6InJpb3RlciIsImxpbmtfaWRfZW5jIjoiZXlKcmFXUWlPaUpoWlhOZk1TSXNJbU4wZVNJNkluQnNZV2x1ZEdWNGRDSXNJbVZ1WXlJNklrRXhNamhIUTAwaUxDSjBZV2NpT2lKMFFrSjRhMXBKWTBWVlltdFpOMlZFV0hsaFZHRjNJaXdpWVd4bklqb2lRVEV5T0VkRFRVdFhJaXdpYVhZaU9pSjVZVkpyWVUxNWNtSktRbTV2VmpSVkluMC5udEctb0RmR0V5WDZESXpNazNjd3dBLnRENmxNb0ZSSklYN0FxMm8uaGNtQjYwcy5YWk1JaXlOS2wzS1o2Ylg2a0tXQ2R3In1dLCJjIjoidWUxIn0sImlzcyI6Imh0dHBzOlwvXC9hdXRoLnJpb3RnYW1lcy5jb20iLCJleHAiOjE1OTYwNjQzODQsImlhdCI6MTU5NjA2Mzc4NCwianRpIjoiMXBrN2dPcUJfa3ciLCJjaWQiOiJ0ZXN0LWF1dG9tYXRpb24tcHJvZCJ9.KEjszrAE3GZDU4FXh2yXFhPV6VpN3myhgngCCu6kpeuLkSXbxHPlw7IFtkcxKucRi9DVMRpuRKfuGBELRZlq2beSYufy5VJDS9CXQ0-4brSU7AYpXSK7IGbpaT9bkvI5x0Jb2rxq0bJI57SQChhAm_6Dp3JDpa_7u5Shg8jbUYg</con:value>
+          <con:value/>
         </con:property>
         <con:property>
           <con:name>idToken</con:name>

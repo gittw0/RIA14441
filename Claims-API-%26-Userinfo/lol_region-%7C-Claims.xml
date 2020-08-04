@@ -27,7 +27,7 @@
         </con:property>
         <con:property>
           <con:name>accessToken</con:name>
-          <con:value>eyJraWQiOiJzMSIsInR5cCI6ImF0K2p3dCIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiJ0ZXN0LWF1dG9tYXRpb24tbG9scmVnaW9uLXByb2QiLCJzY3AiOlsib3BlbmlkIiwibG9sX3JlZ2lvbiJdLCJpc3MiOiJodHRwczpcL1wvYXV0aC5yaW90Z2FtZXMuY29tIiwiZXhwIjoxNTk2MDY3MzY5LCJpYXQiOjE1OTYwNjM3NjksImp0aSI6InU1ZzFHQ25GeDNNIiwiY2lkIjoidGVzdC1hdXRvbWF0aW9uLWxvbHJlZ2lvbi1wcm9kIn0.gVHaBaH2VGyMQ-od6Mzgfjm6y2baxljQwmTAuea_xqjCaJLwtzoA1W6ieVnLIvko1MUbyWw67ulaxqj8N1mXO_OIqhilE4Io_Lcj349abQt5T-ne8zCFkJjmesmHcuALv2sbKMnMImGWlTD1DFW9_H2Mkn5NRZwpg1LQT30MQoU</con:value>
+          <con:value/>
         </con:property>
       </con:properties>
       <con:returnProperties>

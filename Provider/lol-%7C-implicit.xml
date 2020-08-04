@@ -402,11 +402,11 @@ assert json.getPropertyCount() == 21</script>
   <con:properties>
     <con:property>
       <con:name>client</con:name>
-      <con:value>test-automation-lol-wrint</con:value>
+      <con:value>qa2</con:value>
     </con:property>
     <con:property>
       <con:name>client-secret</con:name>
-      <con:value>OXy1vXNvKPSwhMmyUCHUKPRc_63_qm95k27rNiYuT60</con:value>
+      <con:value>aqPass2</con:value>
     </con:property>
     <con:property>
       <con:name>scope</con:name>
@@ -418,15 +418,15 @@ assert json.getPropertyCount() == 21</script>
     </con:property>
     <con:property>
       <con:name>username</con:name>
-      <con:value>ripmaxwrint</con:value>
+      <con:value/>
     </con:property>
     <con:property>
       <con:name>password</con:name>
-      <con:value>zxasqw12!@</con:value>
+      <con:value/>
     </con:property>
     <con:property>
       <con:name>testRegion1</con:name>
-      <con:value>WRINT</con:value>
+      <con:value>US</con:value>
     </con:property>
   </con:properties>
   <con:reportParameters/>

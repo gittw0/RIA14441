@@ -27,7 +27,7 @@
         </con:property>
         <con:property>
           <con:name>accessToken</con:name>
-          <con:value>eyJraWQiOiJzMSIsInR5cCI6ImF0K2p3dCIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiJiMjllZTlkMS0wYzk3LTUyODktYWVkNC05MDY2Yjk1MzVlZGYiLCJzY3AiOlsib3BlbmlkIiwibG9sIl0sImNsbSI6WyJyZ25fT0MxIiwib3BlbmlkIiwicHciLCJsb2wiLCJhY2N0X2dudCIsImFjY3QiLCJpZF90b2tlbjpyZ25fT0MxIiwiIUZBQUMiXSwiZGF0Ijp7InIiOiJPQzEiLCJjIjoidWUxIiwidSI6MjI5ODE0NDEwNTM3NTEwNH0sImlzcyI6Imh0dHBzOlwvXC9hdXRoLnJpb3RnYW1lcy5jb20iLCJleHAiOjE1OTYwNjQzNzQsImlhdCI6MTU5NjA2Mzc3NCwianRpIjoialA1M0NYeVQ1cmMiLCJjaWQiOiJ0ZXN0LWF1dG9tYXRpb24tbG9sLXByb2QifQ.e1StfQxOBDycl6ptUaaYOOCzabmGssWP_XcqMnJzaLnbIUZVZcGtAbyDgUqqtg1NA2xH4wr_nt3116ZgNYvIlk_z9vhnaTsA0VqpPWwcsHtLREhMoOPQOcR2HDyI00vZYtQ5jTYpnZ5yot1-JiACLQe4SIWTLkMyCWMC8kWLEp4</con:value>
+          <con:value/>
         </con:property>
         <con:property>
           <con:name>idToken</con:name>

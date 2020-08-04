@@ -294,11 +294,11 @@ assert json.getPropertyCount() == 9</script>
   <con:properties>
     <con:property>
       <con:name>client</con:name>
-      <con:value>test-automation-wrint</con:value>
+      <con:value>QA</con:value>
     </con:property>
     <con:property>
       <con:name>client-secret</con:name>
-      <con:value>TsY2MvbCoe85-acId3llHlQOa8ANBVSzsz_jFSHe9lE</con:value>
+      <con:value>aqPass</con:value>
     </con:property>
     <con:property>
       <con:name>scope</con:name>

@@ -407,23 +407,23 @@
     </con:property>
     <con:property>
       <con:name>hasLolRegion</con:name>
-      <con:value>true</con:value>
+      <con:value>false</con:value>
     </con:property>
     <con:property>
       <con:name>hasSummoner</con:name>
-      <con:value>true</con:value>
+      <con:value>false</con:value>
     </con:property>
     <con:property>
       <con:name>numberActiveRegions</con:name>
-      <con:value>1</con:value>
+      <con:value>0</con:value>
     </con:property>
     <con:property>
       <con:name>numberRestrictions</con:name>
-      <con:value>6</con:value>
+      <con:value>0</con:value>
     </con:property>
     <con:property>
       <con:name>numberTotalRegions</con:name>
-      <con:value>1</con:value>
+      <con:value>0</con:value>
     </con:property>
   </con:properties>
   <con:reportParameters/>

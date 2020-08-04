@@ -27,7 +27,7 @@
         </con:property>
         <con:property>
           <con:name>accessToken</con:name>
-          <con:value>eyJraWQiOiJzMSIsInR5cCI6ImF0K2p3dCIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiJiMjllZTlkMS0wYzk3LTUyODktYWVkNC05MDY2Yjk1MzVlZGYiLCJzY3AiOlsib3BlbmlkIiwicGhvbmUiXSwiY2xtIjpbIm9wZW5pZCIsIiFHQSJdLCJkYXQiOnsiYyI6InVlMSJ9LCJpc3MiOiJodHRwczpcL1wvYXV0aC5yaW90Z2FtZXMuY29tIiwiZXhwIjoxNTk2MDY0Mzc4LCJpYXQiOjE1OTYwNjM3NzgsImp0aSI6Ikk2bmMzZ3ZqT2h3IiwiY2lkIjoidGVzdC1hdXRvbWF0aW9uLXByb2QifQ.ff9MZ9QZ2MmvXJeYLdHdIYldcCRMkLzjV0BGP2UHxCgB6LCMMMcBxYgVqmIzMQBufymfbCXxgLJpPO9YUIjU2zl4XIg2qHqb5VUcb-XQda9u-ASqLEBGPdPSFv_3EBaXAGOIkCQbyXPtUBGzDOjI04_rgrnGpF2y52Y5LWkcSUY</con:value>
+          <con:value/>
         </con:property>
         <con:property>
           <con:name>idToken</con:name>

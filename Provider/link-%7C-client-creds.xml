@@ -27,7 +27,7 @@
         </con:property>
         <con:property>
           <con:name>accessToken</con:name>
-          <con:value>eyJraWQiOiJzMSIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiJ0ZXN0LWF1dG9tYXRpb24td3JpbnQiLCJzY3AiOlsib3BlbmlkIiwibGluayJdLCJpc3MiOiJodHRwczpcL1wvYXV0aC53ci1pbnQucnBnLnJpb3RnYW1lcy5jb20iLCJleHAiOjE1OTYwNjYwMjEsImlhdCI6MTU5NjA2MjQyMSwianRpIjoiU0RtenJSMUQ0SUUiLCJjaWQiOiJ0ZXN0LWF1dG9tYXRpb24td3JpbnQifQ.AKTxTfX5_NSdVz0V2AMfmTNwsBubo0H5ORLwM1oFwSqpNbmPXWeMz8jDaOY4hXm_7yG3nU4cHEAnf1VEtRtdPDZ9xgSyt3l1tMsObwAKa_5yspvrYkh1daueFK82kWunPUIEeYF6RyopjTyI5fg0ZPoqCmYrwEPtUs8sR_QIh7zbgtCype_lVKPN7lnjgE-nSlEWYDOyNePiWe86TtlQR6BAL9VCK2_ApK3EhqIsgMjc3Gn0qIJ894C68CKlfhCRItP4fdcSxsCTHp55wHPR-W4SXAgpAITyXoJQA30LRQkE02EAd_GsXtPgxZ1Cs0kBYi7baNgy0iVWztA06mY4bA</con:value>
+          <con:value/>
         </con:property>
       </con:properties>
       <con:returnProperties>
@@ -150,11 +150,11 @@ json.each
   <con:properties>
     <con:property>
       <con:name>client</con:name>
-      <con:value>test-automation-wrint</con:value>
+      <con:value>QA</con:value>
     </con:property>
     <con:property>
       <con:name>client-secret</con:name>
-      <con:value>TsY2MvbCoe85-acId3llHlQOa8ANBVSzsz_jFSHe9lE</con:value>
+      <con:value>aqPass</con:value>
     </con:property>
     <con:property>
       <con:name>scope</con:name>

@@ -324,11 +324,11 @@ assert number == 0</script>
   <con:properties>
     <con:property>
       <con:name>client</con:name>
-      <con:value>test-automation-lolregion-wrint</con:value>
+      <con:value/>
     </con:property>
     <con:property>
       <con:name>client-secret</con:name>
-      <con:value>gyySo_VSNKxenrHat7uJhI7KxU0ahEIMM0F3x6k4Q4c</con:value>
+      <con:value/>
     </con:property>
     <con:property>
       <con:name>scope</con:name>

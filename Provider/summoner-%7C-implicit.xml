@@ -322,11 +322,11 @@ assert json.getPropertyCount() == 9</script>
   <con:properties>
     <con:property>
       <con:name>client</con:name>
-      <con:value>test-automation-summoner-wrint</con:value>
+      <con:value/>
     </con:property>
     <con:property>
       <con:name>client-secret</con:name>
-      <con:value>-V66_ZQHYhUGYWPMhjtcrVzqHCSHVDY66nOysQgBObE</con:value>
+      <con:value/>
     </con:property>
     <con:property>
       <con:name>scope</con:name>

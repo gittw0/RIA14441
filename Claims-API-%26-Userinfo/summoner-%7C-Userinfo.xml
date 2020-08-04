@@ -43,7 +43,7 @@
         </con:property>
         <con:property>
           <con:name>accessToken</con:name>
-          <con:value>eyJraWQiOiJzMSIsInR5cCI6ImF0K2p3dCIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiJiMjllZTlkMS0wYzk3LTUyODktYWVkNC05MDY2Yjk1MzVlZGYiLCJzY3AiOlsib3BlbmlkIiwic3VtbW9uZXIiXSwiY2xtIjpbImxvbF9hY2NvdW50Iiwib3BlbmlkIiwib3JpZ2luYWxfcGxhdGZvcm1faWQiLCJwaG90byIsIm9yaWdpbmFsX2FjY291bnRfaWQiLCJyZWdpb24iLCJwdnBuZXRfYWNjb3VudF9pZCIsInVzZXJuYW1lIiwiIUFBUSJdLCJkYXQiOnsiYyI6InVlMSJ9LCJpc3MiOiJodHRwczpcL1wvYXV0aC5yaW90Z2FtZXMuY29tIiwiZXhwIjoxNTk2MDY0Mzc5LCJpYXQiOjE1OTYwNjM3NzksImp0aSI6InNlVEhGQXlkUVBJIiwiY2lkIjoidGVzdC1hdXRvbWF0aW9uLXN1bW1vbmVyLXByb2QifQ.CfyKrnwHQc0tWzmcEpiDpB1uisM4snbW0-Jed6Hq-pQKzhhFjHmNs2XBLemEDEz8ysxdIzDgs5K-aCX45ifofHCd3vlrIEb-m83Qj2mH9Dx_kP6_NsgjNVZpI2ra7dgbuRjY_-gGNMaKqX83U7AQA9S7xRZm7J0b8wz2ML9gG2M</con:value>
+          <con:value/>
         </con:property>
         <con:property>
           <con:name>idToken</con:name>
