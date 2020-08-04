@@ -61,6 +61,11 @@
         <con:entry>grant_type</con:entry>
         <con:entry>assertion</con:entry>
       </con:parameterOrder>
+      <con:environmentSpec>
+        <con:entry environmentId="0b8178c0-3fb5-4680-af02-7d8c4e2b75fb">
+          <con:authProfile>No Authorization</con:authProfile>
+        </con:entry>
+      </con:environmentSpec>
     </con:request>
   </con:method>
 </con:resource>
