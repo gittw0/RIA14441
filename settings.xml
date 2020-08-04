@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:soapui-project updated="3.3.1" runType="SEQUENTIAL" resourceRoot="${projectDir}" name="Riot Identity Platform - SoapUI Support Team" id="eb1bccae-3383-465b-9a4a-397e18300fe8" encryptionMode="Not encrypted" created="3.0.0" activeEnvironment="Default environment" abortOnError="false" compositeProjectFormat="1.3" xmlns:con="http://eviware.com/soapui/config">
+<con:soapui-project updated="3.3.1" runType="SEQUENTIAL" resourceRoot="${projectDir}" name="Riot Identity Platform - SoapUI Support Team" id="eb1bccae-3383-465b-9a4a-397e18300fe8" encryptionMode="Not encrypted" created="3.0.0" activeEnvironment="clone_of_test" abortOnError="false" compositeProjectFormat="1.3" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="com.eviware.soapui.impl.wsdl.actions.iface.tools.soapui.ProTestRunnerAction@values-local"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
   <con:entry key="Report Format(s)" value="XML"/>
@@ -270,6 +270,156 @@
     <con:property>
       <con:name>test-automation-lol-env-secret</con:name>
       <con:value/>
+    </con:property>
+    <con:property>
+      <con:name>test-automation-summoner-env</con:name>
+      <con:value/>
+    </con:property>
+    <con:property>
+      <con:name>test-automation-summoner-env-secret</con:name>
+      <con:value/>
+    </con:property>
+    <con:property>
+      <con:name>signupCaptchaBypass</con:name>
+      <con:value/>
+    </con:property>
+    <con:property>
+      <con:name>atlas-env</con:name>
+      <con:value/>
+    </con:property>
+    <con:property>
+      <con:name>atlas-env-secret</con:name>
+      <con:value/>
+    </con:property>
+    <con:property>
+      <con:name>username</con:name>
+      <con:value/>
+    </con:property>
+    <con:property>
+      <con:name>password</con:name>
+      <con:value/>
+    </con:property>
+    <con:property>
+      <con:name>puuid</con:name>
+      <con:value/>
+    </con:property>
+    <con:property>
+      <con:name>ambiguous_username</con:name>
+      <con:value/>
+    </con:property>
+    <con:property>
+      <con:name>ambiguous_password</con:name>
+      <con:value/>
+    </con:property>
+    <con:property>
+      <con:name>ambiguous_puuid</con:name>
+      <con:value/>
+    </con:property>
+    <con:property>
+      <con:name>test-automation-lolregion-env</con:name>
+      <con:value/>
+    </con:property>
+    <con:property>
+      <con:name>test-automation-lolregion-env-secret</con:name>
+      <con:value/>
+    </con:property>
+    <con:property>
+      <con:name>c2id_bearer</con:name>
+      <con:value/>
+    </con:property>
+    <con:property>
+      <con:name>regionless_puuid</con:name>
+      <con:value/>
+    </con:property>
+    <con:property>
+      <con:name>regionless_username</con:name>
+      <con:value/>
+    </con:property>
+    <con:property>
+      <con:name>federated_puuid</con:name>
+      <con:value/>
+    </con:property>
+    <con:property>
+      <con:name>regionless_password</con:name>
+      <con:value/>
+    </con:property>
+    <con:property>
+      <con:name>defaultEmail</con:name>
+      <con:value/>
+    </con:property>
+    <con:property>
+      <con:name>defaultEmail2</con:name>
+      <con:value/>
+    </con:property>
+    <con:property>
+      <con:name>platformCode</con:name>
+      <con:value/>
+    </con:property>
+    <con:property>
+      <con:name>numberTotalRegions</con:name>
+      <con:value/>
+    </con:property>
+    <con:property>
+      <con:name>numberActiveRegions</con:name>
+      <con:value/>
+    </con:property>
+    <con:property>
+      <con:name>numberRestrictions</con:name>
+      <con:value/>
+    </con:property>
+    <con:databaseConnectionContainer/>
+    <con:jmsConnectionContainer/>
+  </con:environment>
+  <con:environment id="7453f232-4f30-426e-be59-5ccef1cc3293" name="clone_of_test" index="1">
+    <con:service type="REST" name="https://oauth2.googleapis.com">
+      <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">https://oauth1.googleapis.com</con:endpoint>
+    </con:service>
+    <con:service type="REST" name="https://iamcredentials.googleapis.com">
+      <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">https://idtoken.googleapis.com</con:endpoint>
+    </con:service>
+    <con:property>
+      <con:name>soapui-uber-client-basic</con:name>
+      <con:value>car1</con:value>
+    </con:property>
+    <con:property>
+      <con:name>soapui-uber-client-long-lived-token</con:name>
+      <con:value>car2</con:value>
+    </con:property>
+    <con:property>
+      <con:name>accountIndex</con:name>
+      <con:value>93isksk</con:value>
+    </con:property>
+    <con:property>
+      <con:name>srcRegion</con:name>
+      <con:value>US</con:value>
+    </con:property>
+    <con:property>
+      <con:name>destRegion</con:name>
+      <con:value>France</con:value>
+    </con:property>
+    <con:property>
+      <con:name>otherRegion</con:name>
+      <con:value>Canada</con:value>
+    </con:property>
+    <con:property>
+      <con:name>otherRegion2</con:name>
+      <con:value>Brazil</con:value>
+    </con:property>
+    <con:property>
+      <con:name>test-automation-env</con:name>
+      <con:value>QA</con:value>
+    </con:property>
+    <con:property>
+      <con:name>test-automation-env-secret</con:name>
+      <con:value>aqPass</con:value>
+    </con:property>
+    <con:property>
+      <con:name>test-automation-lol-env</con:name>
+      <con:value>qa2</con:value>
+    </con:property>
+    <con:property>
+      <con:name>test-automation-lol-env-secret</con:name>
+      <con:value>aqPass2</con:value>
     </con:property>
     <con:property>
       <con:name>test-automation-summoner-env</con:name>
