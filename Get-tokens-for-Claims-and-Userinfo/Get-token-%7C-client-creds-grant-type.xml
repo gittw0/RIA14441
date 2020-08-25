@@ -33,19 +33,19 @@
     </con:property>
     <con:property>
       <con:name>client</con:name>
-      <con:value>client-token1</con:value>
+      <con:value>client-token3</con:value>
     </con:property>
     <con:property>
       <con:name>client-secret</con:name>
-      <con:value>client-secret1</con:value>
+      <con:value>client-secret3</con:value>
     </con:property>
     <con:property>
       <con:name>scope</con:name>
-      <con:value>scope1</con:value>
+      <con:value>scope3</con:value>
     </con:property>
     <con:property>
       <con:name>grant_type</con:name>
-      <con:value>grant_type1</con:value>
+      <con:value>grant_type3</con:value>
     </con:property>
   </con:properties>
   <con:reportParameters/>
