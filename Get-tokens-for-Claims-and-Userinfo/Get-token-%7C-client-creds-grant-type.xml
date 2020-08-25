@@ -29,23 +29,23 @@
   <con:properties>
     <con:property>
       <con:name>accessToken</con:name>
-      <con:value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+      <con:value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">dflkdalfja.ljflkdsajfaljfzzz</con:value>
     </con:property>
     <con:property>
       <con:name>client</con:name>
-      <con:value/>
+      <con:value>client-token1</con:value>
     </con:property>
     <con:property>
       <con:name>client-secret</con:name>
-      <con:value/>
+      <con:value>client-secret1</con:value>
     </con:property>
     <con:property>
       <con:name>scope</con:name>
-      <con:value/>
+      <con:value>scope1</con:value>
     </con:property>
     <con:property>
       <con:name>grant_type</con:name>
-      <con:value/>
+      <con:value>grant_type1</con:value>
     </con:property>
   </con:properties>
   <con:reportParameters/>
