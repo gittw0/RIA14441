@@ -4,38 +4,6 @@
     <con:setting id="9f469c5e-73b4-4e0c-89fa-2fd136c85049fileName">Test-Driver-%7C-Manual-Forget-%7C-Regioned</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
-  <con:testStep type="transfer" name="> transfer puuid0" id="28e2f248-caed-4e1e-8506-ea50c5ebcb32">
-    <con:settings/>
-    <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:transfers transferToAll="false" transferTextContent="true" transferChildNodes="false" setNullOnMissingSource="true" ignoreEmpty="false" failOnError="true" entitize="false">
-        <con:name>puuid</con:name>
-        <con:sourceType xsi:nil="true"/>
-        <con:sourceStep xsi:nil="true"/>
-        <con:sourcePath>$[0]['puuid']</con:sourcePath>
-        <con:targetType xsi:nil="true"/>
-        <con:targetStep xsi:nil="true"/>
-        <con:targetPath/>
-        <con:type>JSONPATH</con:type>
-        <con:upgraded>true</con:upgraded>
-      </con:transfers>
-    </con:config>
-  </con:testStep>
-  <con:testStep type="transfer" name="> transfer puuid" id="288396ba-3580-4a6a-a5ff-7995930aed74">
-    <con:settings/>
-    <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:transfers transferToAll="false" transferTextContent="true" transferChildNodes="false" setNullOnMissingSource="true" ignoreEmpty="false" failOnError="true" entitize="false">
-        <con:name>puuid</con:name>
-        <con:sourceType xsi:nil="true"/>
-        <con:sourceStep xsi:nil="true"/>
-        <con:sourcePath>$['puuid']</con:sourcePath>
-        <con:targetType>thePuuid</con:targetType>
-        <con:targetStep>Run | Manual Forget test case</con:targetStep>
-        <con:targetPath/>
-        <con:type>JSONPATH</con:type>
-        <con:upgraded>true</con:upgraded>
-      </con:transfers>
-    </con:config>
-  </con:testStep>
   <con:testStep type="calltestcase" name="Run | Manual Forget test case" id="bdea79a0-ae27-41b4-951e-2ee3a027d286">
     <con:settings/>
     <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -50,15 +18,47 @@
       <con:runMode>SINGLETON_AND_WAIT</con:runMode>
     </con:config>
   </con:testStep>
+  <con:testStep type="transfer" name="> transfer puuid" id="288396ba-3580-4a6a-a5ff-7995930aed74">
+    <con:settings/>
+    <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:transfers transferToAll="false" transferTextContent="true" transferChildNodes="false" setNullOnMissingSource="true" ignoreEmpty="false" failOnError="true" entitize="false">
+        <con:name>puuid</con:name>
+        <con:sourceType/>
+        <con:sourceStep/>
+        <con:sourcePath>$['puuid']</con:sourcePath>
+        <con:targetType>thePuuid</con:targetType>
+        <con:targetStep>Run | Manual Forget test case</con:targetStep>
+        <con:targetPath/>
+        <con:type>JSONPATH</con:type>
+        <con:upgraded>true</con:upgraded>
+      </con:transfers>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="transfer" name="> transfer puuid0" id="28e2f248-caed-4e1e-8506-ea50c5ebcb32">
+    <con:settings/>
+    <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:transfers transferToAll="false" transferTextContent="true" transferChildNodes="false" setNullOnMissingSource="true" ignoreEmpty="false" failOnError="true" entitize="false">
+        <con:name>puuid</con:name>
+        <con:sourceType/>
+        <con:sourceStep/>
+        <con:sourcePath>$[0]['puuid']</con:sourcePath>
+        <con:targetType/>
+        <con:targetStep/>
+        <con:targetPath/>
+        <con:type>JSONPATH</con:type>
+        <con:upgraded>true</con:upgraded>
+      </con:transfers>
+    </con:config>
+  </con:testStep>
   <con:properties/>
   <con:reportParameters/>
   <con:breakPoints>
-    <con:testStepId>73698acb-ca4d-4925-b942-7fc5ffd50273</con:testStepId>
+    <con:testStepId>28e2f248-caed-4e1e-8506-ea50c5ebcb32</con:testStepId>
     <con:status>NONE</con:status>
     <con:properties/>
   </con:breakPoints>
   <con:breakPoints>
-    <con:testStepId>28e2f248-caed-4e1e-8506-ea50c5ebcb32</con:testStepId>
+    <con:testStepId>73698acb-ca4d-4925-b942-7fc5ffd50273</con:testStepId>
     <con:status>NONE</con:status>
     <con:properties/>
   </con:breakPoints>

@@ -4,16 +4,54 @@
     <con:setting id="754e73c5-c0c5-4050-bd60-b8097a784cbefileName">Facebook-auth-v2-%28w%2Fo-email-scope%29</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
-  <con:testStep type="transfer" name="> transfer puuid0" id="5723adfe-1cdb-4084-980d-06c6582c3d06">
+  <con:testStep type="transfer" name="> transfer puuid" id="f9da5a56-33f9-48c5-9cf0-5840d3602a08">
     <con:settings/>
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:transfers transferTextContent="true" setNullOnMissingSource="true" failOnError="true">
         <con:name>puuid</con:name>
-        <con:sourceType xsi:nil="true"/>
-        <con:sourceStep xsi:nil="true"/>
-        <con:sourcePath>$[0]['puuid']</con:sourcePath>
-        <con:targetType xsi:nil="true"/>
-        <con:targetStep xsi:nil="true"/>
+        <con:sourceType/>
+        <con:sourceStep/>
+        <con:sourcePath>$['puuid']</con:sourcePath>
+        <con:targetType>thePuuid</con:targetType>
+        <con:targetStep>accessToken, theEmail, theUid, thePuuid</con:targetStep>
+        <con:targetPath/>
+        <con:type>JSONPATH</con:type>
+        <con:upgraded>true</con:upgraded>
+      </con:transfers>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="transfer" name="> transfer accessToken, id, email" id="e6bf653b-f6a8-43cc-aea1-4f4b62ae8a57">
+    <con:settings/>
+    <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:transfers transferTextContent="true" setNullOnMissingSource="true" failOnError="true">
+        <con:name>email</con:name>
+        <con:sourceType/>
+        <con:sourceStep/>
+        <con:sourcePath>$['email']</con:sourcePath>
+        <con:targetType>theEmail</con:targetType>
+        <con:targetStep>accessToken, theEmail, theUid, thePuuid</con:targetStep>
+        <con:targetPath/>
+        <con:type>JSONPATH</con:type>
+        <con:upgraded>true</con:upgraded>
+      </con:transfers>
+      <con:transfers transferTextContent="true" setNullOnMissingSource="true" failOnError="true">
+        <con:name>id</con:name>
+        <con:sourceType/>
+        <con:sourceStep/>
+        <con:sourcePath>$['id']</con:sourcePath>
+        <con:targetType>theUid</con:targetType>
+        <con:targetStep>accessToken, theEmail, theUid, thePuuid</con:targetStep>
+        <con:targetPath/>
+        <con:type>JSONPATH</con:type>
+        <con:upgraded>true</con:upgraded>
+      </con:transfers>
+      <con:transfers transferTextContent="true" setNullOnMissingSource="true" failOnError="true">
+        <con:name>access_token</con:name>
+        <con:sourceType/>
+        <con:sourceStep/>
+        <con:sourcePath>$['access_token']</con:sourcePath>
+        <con:targetType>accessToken</con:targetType>
+        <con:targetStep>accessToken, theEmail, theUid, thePuuid</con:targetStep>
         <con:targetPath/>
         <con:type>JSONPATH</con:type>
         <con:upgraded>true</con:upgraded>
@@ -25,11 +63,7 @@
     <con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:properties>
         <con:property>
-          <con:name>accessToken</con:name>
-          <con:value/>
-        </con:property>
-        <con:property>
-          <con:name>theUid</con:name>
+          <con:name>thePuuid</con:name>
           <con:value/>
         </con:property>
         <con:property>
@@ -37,60 +71,26 @@
           <con:value/>
         </con:property>
         <con:property>
-          <con:name>thePuuid</con:name>
+          <con:name>theUid</con:name>
+          <con:value/>
+        </con:property>
+        <con:property>
+          <con:name>accessToken</con:name>
           <con:value/>
         </con:property>
       </con:properties>
     </con:config>
   </con:testStep>
-  <con:testStep type="transfer" name="> transfer accessToken, id, email" id="e6bf653b-f6a8-43cc-aea1-4f4b62ae8a57">
-    <con:settings/>
-    <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:transfers transferTextContent="true" setNullOnMissingSource="true" failOnError="true">
-        <con:name>access_token</con:name>
-        <con:sourceType xsi:nil="true"/>
-        <con:sourceStep xsi:nil="true"/>
-        <con:sourcePath>$['access_token']</con:sourcePath>
-        <con:targetType>accessToken</con:targetType>
-        <con:targetStep>accessToken, theEmail, theUid, thePuuid</con:targetStep>
-        <con:targetPath/>
-        <con:type>JSONPATH</con:type>
-        <con:upgraded>true</con:upgraded>
-      </con:transfers>
-      <con:transfers transferTextContent="true" setNullOnMissingSource="true" failOnError="true">
-        <con:name>id</con:name>
-        <con:sourceType xsi:nil="true"/>
-        <con:sourceStep xsi:nil="true"/>
-        <con:sourcePath>$['id']</con:sourcePath>
-        <con:targetType>theUid</con:targetType>
-        <con:targetStep>accessToken, theEmail, theUid, thePuuid</con:targetStep>
-        <con:targetPath/>
-        <con:type>JSONPATH</con:type>
-        <con:upgraded>true</con:upgraded>
-      </con:transfers>
-      <con:transfers transferTextContent="true" setNullOnMissingSource="true" failOnError="true">
-        <con:name>email</con:name>
-        <con:sourceType xsi:nil="true"/>
-        <con:sourceStep xsi:nil="true"/>
-        <con:sourcePath>$['email']</con:sourcePath>
-        <con:targetType>theEmail</con:targetType>
-        <con:targetStep>accessToken, theEmail, theUid, thePuuid</con:targetStep>
-        <con:targetPath/>
-        <con:type>JSONPATH</con:type>
-        <con:upgraded>true</con:upgraded>
-      </con:transfers>
-    </con:config>
-  </con:testStep>
-  <con:testStep type="transfer" name="> transfer puuid" id="f9da5a56-33f9-48c5-9cf0-5840d3602a08">
+  <con:testStep type="transfer" name="> transfer puuid0" id="5723adfe-1cdb-4084-980d-06c6582c3d06">
     <con:settings/>
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:transfers transferTextContent="true" setNullOnMissingSource="true" failOnError="true">
         <con:name>puuid</con:name>
-        <con:sourceType xsi:nil="true"/>
-        <con:sourceStep xsi:nil="true"/>
-        <con:sourcePath>$['puuid']</con:sourcePath>
-        <con:targetType>thePuuid</con:targetType>
-        <con:targetStep>accessToken, theEmail, theUid, thePuuid</con:targetStep>
+        <con:sourceType/>
+        <con:sourceStep/>
+        <con:sourcePath>$[0]['puuid']</con:sourcePath>
+        <con:targetType/>
+        <con:targetStep/>
         <con:targetPath/>
         <con:type>JSONPATH</con:type>
         <con:upgraded>true</con:upgraded>

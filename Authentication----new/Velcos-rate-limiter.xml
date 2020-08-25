@@ -1,24 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <con:testCase timeout="0" searchProperties="true" name="Velcos rate limiter" keepSession="false" id="da9138e0-4821-49b3-9650-e8c3f2b4bdd8" failTestCaseOnErrors="true" failOnError="true" discardOkResults="false" disabled="true" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
-    <con:setting id="08eafbab-5c09-489a-aae9-fa08a8e361c9fileName">Velcos-rate-limiter</con:setting>
     <con:setting id="da9138e0-4821-49b3-9650-e8c3f2b4bdd8fileName">Velcos-rate-limiter</con:setting>
+    <con:setting id="08eafbab-5c09-489a-aae9-fa08a8e361c9fileName">Velcos-rate-limiter</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
-  <con:testStep type="groovy" name="Initialize and increment" id="27983452-2030-43c0-8401-718236366caa">
-    <con:settings/>
-    <con:config>
-      <script>def rateLimit = context.expand( '${#TestCase#rateLimit}' );
-
-rateLimit = rateLimit.toInteger();
-
-if (rateLimit &lt;= 0) {
-	testRunner.cancel( "rateLimit = 0" )
-} 
-
-log.info "rateLimit: "+rateLimit;</script>
-    </con:config>
-  </con:testStep>
   <con:testStep type="groovy" name="Repeat" id="e38f74ff-a905-42b2-bcc7-54f7d800a79a">
     <con:settings/>
     <con:config>
@@ -36,6 +22,20 @@ if (rateLimit &lt;= 0) {
 }</script>
     </con:config>
   </con:testStep>
+  <con:testStep type="groovy" name="Initialize and increment" id="27983452-2030-43c0-8401-718236366caa">
+    <con:settings/>
+    <con:config>
+      <script>def rateLimit = context.expand( '${#TestCase#rateLimit}' );
+
+rateLimit = rateLimit.toInteger();
+
+if (rateLimit &lt;= 0) {
+	testRunner.cancel( "rateLimit = 0" )
+} 
+
+log.info "rateLimit: "+rateLimit;</script>
+    </con:config>
+  </con:testStep>
   <con:properties>
     <con:property>
       <con:name>rateLimit</con:name>
@@ -44,12 +44,12 @@ if (rateLimit &lt;= 0) {
   </con:properties>
   <con:reportParameters/>
   <con:breakPoints>
-    <con:testStepId>208cf9f2-a23a-4fa3-8ee9-5f39f6937082</con:testStepId>
+    <con:testStepId>23b6b015-4e4b-4660-b527-11e5884ad5ec</con:testStepId>
     <con:status>NONE</con:status>
     <con:properties/>
   </con:breakPoints>
   <con:breakPoints>
-    <con:testStepId>23b6b015-4e4b-4660-b527-11e5884ad5ec</con:testStepId>
+    <con:testStepId>208cf9f2-a23a-4fa3-8ee9-5f39f6937082</con:testStepId>
     <con:status>NONE</con:status>
     <con:properties/>
   </con:breakPoints>

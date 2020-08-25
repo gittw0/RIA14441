@@ -4,12 +4,47 @@
     <con:setting id="4dbf30ec-fe21-40a3-8867-321a0962803cfileName">summoner-%7C-Userinfo</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
-  <con:testStep type="groovy" name="Exit if running on dev" id="c191a3eb-887b-4f4d-a160-1d7efcff3124">
+  <con:testStep type="calltestcase" name="Run | Get token (password)" id="0547509e-28a3-4e7b-b50c-68943b1e7fe8">
     <con:settings/>
-    <con:config>
-      <script>if (testRunner.testCase.testSuite.project.getActiveEnvironment().name.contains("dev-aws")) {
-	testRunner.cancel("dev-aws test skipped")
-}</script>
+    <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:targetTestCase>7a51e9e9-1495-4bac-8bc6-f44b9033f671</con:targetTestCase>
+      <con:properties>
+        <con:property>
+          <con:name>thePassword</con:name>
+          <con:value>${#TestCase#thePassword}</con:value>
+        </con:property>
+        <con:property>
+          <con:name>theUsername</con:name>
+          <con:value>${#TestCase#theUsername}</con:value>
+        </con:property>
+        <con:property>
+          <con:name>idToken</con:name>
+        </con:property>
+        <con:property>
+          <con:name>accessToken</con:name>
+          <con:value/>
+        </con:property>
+        <con:property>
+          <con:name>grant_type</con:name>
+          <con:value>${#TestSuite#grant_type}</con:value>
+        </con:property>
+        <con:property>
+          <con:name>scope</con:name>
+          <con:value>${#TestCase#scope}</con:value>
+        </con:property>
+        <con:property>
+          <con:name>client-secret</con:name>
+          <con:value>${#TestCase#client-secret}</con:value>
+        </con:property>
+        <con:property>
+          <con:name>client</con:name>
+          <con:value>${#TestCase#client}</con:value>
+        </con:property>
+      </con:properties>
+      <con:returnProperties>
+        <con:entry>accessToken</con:entry>
+      </con:returnProperties>
+      <con:runMode>SINGLETON_AND_WAIT</con:runMode>
     </con:config>
   </con:testStep>
   <con:testStep type="groovy" name="Exit if running on wrint" id="42c259da-ba60-47b4-8c3f-b4372f248c5c">
@@ -20,64 +55,17 @@
 }</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="calltestcase" name="Run | Get token (password)" id="0547509e-28a3-4e7b-b50c-68943b1e7fe8">
+  <con:testStep type="groovy" name="Exit if running on dev" id="c191a3eb-887b-4f4d-a160-1d7efcff3124">
     <con:settings/>
-    <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:targetTestCase>7a51e9e9-1495-4bac-8bc6-f44b9033f671</con:targetTestCase>
-      <con:properties>
-        <con:property>
-          <con:name>client</con:name>
-          <con:value>${#TestCase#client}</con:value>
-        </con:property>
-        <con:property>
-          <con:name>client-secret</con:name>
-          <con:value>${#TestCase#client-secret}</con:value>
-        </con:property>
-        <con:property>
-          <con:name>scope</con:name>
-          <con:value>${#TestCase#scope}</con:value>
-        </con:property>
-        <con:property>
-          <con:name>grant_type</con:name>
-          <con:value>${#TestSuite#grant_type}</con:value>
-        </con:property>
-        <con:property>
-          <con:name>accessToken</con:name>
-          <con:value/>
-        </con:property>
-        <con:property>
-          <con:name>idToken</con:name>
-        </con:property>
-        <con:property>
-          <con:name>theUsername</con:name>
-          <con:value>${#TestCase#theUsername}</con:value>
-        </con:property>
-        <con:property>
-          <con:name>thePassword</con:name>
-          <con:value>${#TestCase#thePassword}</con:value>
-        </con:property>
-      </con:properties>
-      <con:returnProperties>
-        <con:entry>accessToken</con:entry>
-      </con:returnProperties>
-      <con:runMode>SINGLETON_AND_WAIT</con:runMode>
+    <con:config>
+      <script>if (testRunner.testCase.testSuite.project.getActiveEnvironment().name.contains("dev-aws")) {
+	testRunner.cancel("dev-aws test skipped")
+}</script>
     </con:config>
   </con:testStep>
   <con:properties>
     <con:property>
-      <con:name>client</con:name>
-      <con:value/>
-    </con:property>
-    <con:property>
-      <con:name>client-secret</con:name>
-      <con:value/>
-    </con:property>
-    <con:property>
-      <con:name>scope</con:name>
-      <con:value/>
-    </con:property>
-    <con:property>
-      <con:name>hasSummoner</con:name>
+      <con:name>thePassword</con:name>
       <con:value/>
     </con:property>
     <con:property>
@@ -85,38 +73,25 @@
       <con:value/>
     </con:property>
     <con:property>
-      <con:name>thePassword</con:name>
+      <con:name>hasSummoner</con:name>
+      <con:value/>
+    </con:property>
+    <con:property>
+      <con:name>scope</con:name>
+      <con:value/>
+    </con:property>
+    <con:property>
+      <con:name>client-secret</con:name>
+      <con:value/>
+    </con:property>
+    <con:property>
+      <con:name>client</con:name>
       <con:value/>
     </con:property>
   </con:properties>
   <con:reportParameters/>
   <con:breakPoints>
-    <con:testStepId>4c23bc73-bdcf-4756-a996-958c308998aa</con:testStepId>
-    <con:status>NONE</con:status>
-    <con:properties/>
-  </con:breakPoints>
-  <con:breakPoints>
-    <con:testStepId>76bf8597-c586-4124-847e-35a13b5145c6</con:testStepId>
-    <con:status>NONE</con:status>
-    <con:properties/>
-  </con:breakPoints>
-  <con:breakPoints>
-    <con:testStepId>6f472e8d-e77f-4927-a70a-2075db5a0a42</con:testStepId>
-    <con:status>NONE</con:status>
-    <con:properties/>
-  </con:breakPoints>
-  <con:breakPoints>
-    <con:testStepId>bc5bf5f8-ff16-4b20-b67e-c134e873645b</con:testStepId>
-    <con:status>NONE</con:status>
-    <con:properties/>
-  </con:breakPoints>
-  <con:breakPoints>
-    <con:testStepId>33432814-0417-404c-8833-53500521ab69</con:testStepId>
-    <con:status>NONE</con:status>
-    <con:properties/>
-  </con:breakPoints>
-  <con:breakPoints>
-    <con:testStepId>32b10550-d833-4fa3-8de8-67e5161266fd</con:testStepId>
+    <con:testStepId>42c259da-ba60-47b4-8c3f-b4372f248c5c</con:testStepId>
     <con:status>NONE</con:status>
     <con:properties/>
   </con:breakPoints>
@@ -126,15 +101,40 @@
     <con:properties/>
   </con:breakPoints>
   <con:breakPoints>
-    <con:testStepId>42c259da-ba60-47b4-8c3f-b4372f248c5c</con:testStepId>
+    <con:testStepId>32b10550-d833-4fa3-8de8-67e5161266fd</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>33432814-0417-404c-8833-53500521ab69</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>bc5bf5f8-ff16-4b20-b67e-c134e873645b</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>6f472e8d-e77f-4927-a70a-2075db5a0a42</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>76bf8597-c586-4124-847e-35a13b5145c6</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>4c23bc73-bdcf-4756-a996-958c308998aa</con:testStepId>
     <con:status>NONE</con:status>
     <con:properties/>
   </con:breakPoints>
   <con:environmentSpec>
-    <con:entry environmentId="b407e352-14e8-440f-bf25-abe254c02b61">
+    <con:entry environmentId="cd04cfb9-4faf-4b69-9ec6-24af2181f7ae">
       <con:authProfile>Inherit From Parent</con:authProfile>
     </con:entry>
-    <con:entry environmentId="cd04cfb9-4faf-4b69-9ec6-24af2181f7ae">
+    <con:entry environmentId="b407e352-14e8-440f-bf25-abe254c02b61">
       <con:authProfile>Inherit From Parent</con:authProfile>
     </con:entry>
   </con:environmentSpec>

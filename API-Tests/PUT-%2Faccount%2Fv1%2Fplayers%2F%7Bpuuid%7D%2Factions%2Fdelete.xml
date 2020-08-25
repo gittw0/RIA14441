@@ -4,38 +4,6 @@
     <con:setting id="76dd263e-3eb6-41aa-9ca1-3d1eb20c1133fileName">PUT-%2Faccount%2Fv1%2Fplayers%2F%7Bpuuid%7D%2Factions%2Fdelete</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
-  <con:testStep type="transfer" name="> transfer puuid to cleanup" id="9f20dae7-3110-48b1-b1ba-7d66929af732">
-    <con:settings/>
-    <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:transfers transferTextContent="true" setNullOnMissingSource="true" failOnError="true">
-        <con:name>puuid</con:name>
-        <con:sourceType xsi:nil="true"/>
-        <con:sourceStep xsi:nil="true"/>
-        <con:sourcePath>$[0]['puuid']</con:sourcePath>
-        <con:targetType xsi:nil="true"/>
-        <con:targetStep xsi:nil="true"/>
-        <con:targetPath/>
-        <con:type>JSONPATH</con:type>
-        <con:upgraded>true</con:upgraded>
-      </con:transfers>
-    </con:config>
-  </con:testStep>
-  <con:testStep type="transfer" name="> transfer" id="de9326db-198d-4c5c-9859-d1f07ef2fe40">
-    <con:settings/>
-    <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:transfers transferToAll="false" transferTextContent="true" transferChildNodes="false" setNullOnMissingSource="true" ignoreEmpty="false" failOnError="true" entitize="false">
-        <con:name>puuid</con:name>
-        <con:sourceType xsi:nil="true"/>
-        <con:sourceStep xsi:nil="true"/>
-        <con:sourcePath>$['puuid']</con:sourcePath>
-        <con:targetType>thePuuid</con:targetType>
-        <con:targetStep>> thePuuid</con:targetStep>
-        <con:targetPath/>
-        <con:type>JSONPATH</con:type>
-        <con:upgraded>true</con:upgraded>
-      </con:transfers>
-    </con:config>
-  </con:testStep>
   <con:testStep type="properties" name="> thePuuid" id="db8f87fc-240c-4b29-922c-a6a883def646">
     <con:settings/>
     <con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -47,6 +15,38 @@
       </con:properties>
     </con:config>
   </con:testStep>
+  <con:testStep type="transfer" name="> transfer" id="de9326db-198d-4c5c-9859-d1f07ef2fe40">
+    <con:settings/>
+    <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:transfers transferToAll="false" transferTextContent="true" transferChildNodes="false" setNullOnMissingSource="true" ignoreEmpty="false" failOnError="true" entitize="false">
+        <con:name>puuid</con:name>
+        <con:sourceType/>
+        <con:sourceStep/>
+        <con:sourcePath>$['puuid']</con:sourcePath>
+        <con:targetType>thePuuid</con:targetType>
+        <con:targetStep>> thePuuid</con:targetStep>
+        <con:targetPath/>
+        <con:type>JSONPATH</con:type>
+        <con:upgraded>true</con:upgraded>
+      </con:transfers>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="transfer" name="> transfer puuid to cleanup" id="9f20dae7-3110-48b1-b1ba-7d66929af732">
+    <con:settings/>
+    <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:transfers transferTextContent="true" setNullOnMissingSource="true" failOnError="true">
+        <con:name>puuid</con:name>
+        <con:sourceType/>
+        <con:sourceStep/>
+        <con:sourcePath>$[0]['puuid']</con:sourcePath>
+        <con:targetType/>
+        <con:targetStep/>
+        <con:targetPath/>
+        <con:type>JSONPATH</con:type>
+        <con:upgraded>true</con:upgraded>
+      </con:transfers>
+    </con:config>
+  </con:testStep>
   <con:properties/>
   <con:reportParameters/>
   <con:breakPoints>
@@ -55,10 +55,10 @@
     <con:properties/>
   </con:breakPoints>
   <con:environmentSpec>
-    <con:entry environmentId="b407e352-14e8-440f-bf25-abe254c02b61">
+    <con:entry environmentId="cd04cfb9-4faf-4b69-9ec6-24af2181f7ae">
       <con:authProfile>Inherit From Parent</con:authProfile>
     </con:entry>
-    <con:entry environmentId="cd04cfb9-4faf-4b69-9ec6-24af2181f7ae">
+    <con:entry environmentId="b407e352-14e8-440f-bf25-abe254c02b61">
       <con:authProfile>Inherit From Parent</con:authProfile>
     </con:entry>
   </con:environmentSpec>

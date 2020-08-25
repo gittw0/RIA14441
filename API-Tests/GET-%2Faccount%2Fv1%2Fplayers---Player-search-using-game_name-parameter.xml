@@ -4,35 +4,13 @@
     <con:setting id="7c3f67f1-9635-4da6-9e7b-952e2fd2e402fileName">GET-%2Faccount%2Fv1%2Fplayers---Player-search-using-game_name-parameter</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
-  <con:testStep type="properties" name="Properties" id="a91fecfd-70dd-44af-ae09-a996b1b5b55e">
-    <con:settings/>
-    <con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:properties>
-        <con:property>
-          <con:name>gameName</con:name>
-          <con:value xsi:nil="true"/>
-        </con:property>
-      </con:properties>
-    </con:config>
-  </con:testStep>
   <con:testStep type="transfer" name="PropertyTransfer 1" id="c6be537a-c2e3-4850-84b6-5e5a23db7c4e">
     <con:settings/>
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:transfers transferToAll="false" transferTextContent="true" transferChildNodes="false" setNullOnMissingSource="true" ignoreEmpty="false" failOnError="true" entitize="false">
-        <con:name>parent_email</con:name>
-        <con:sourceType xsi:nil="true"/>
-        <con:sourceStep xsi:nil="true"/>
-        <con:sourcePath>$['consent']['parent_email']</con:sourcePath>
-        <con:targetType>gameName</con:targetType>
-        <con:targetStep>Properties</con:targetStep>
-        <con:targetPath/>
-        <con:type>JSONPATH</con:type>
-        <con:upgraded>true</con:upgraded>
-      </con:transfers>
       <con:transfers transferTextContent="true" setNullOnMissingSource="true" failOnError="true">
         <con:name>game_name</con:name>
-        <con:sourceType xsi:nil="true"/>
-        <con:sourceStep xsi:nil="true"/>
+        <con:sourceType/>
+        <con:sourceStep/>
         <con:sourcePath>$['alias']['game_name']</con:sourcePath>
         <con:targetType>gameName</con:targetType>
         <con:targetStep>Properties</con:targetStep>
@@ -40,20 +18,42 @@
         <con:type>JSONPATH</con:type>
         <con:upgraded>true</con:upgraded>
       </con:transfers>
+      <con:transfers transferToAll="false" transferTextContent="true" transferChildNodes="false" setNullOnMissingSource="true" ignoreEmpty="false" failOnError="true" entitize="false">
+        <con:name>parent_email</con:name>
+        <con:sourceType/>
+        <con:sourceStep/>
+        <con:sourcePath>$['consent']['parent_email']</con:sourcePath>
+        <con:targetType>gameName</con:targetType>
+        <con:targetStep>Properties</con:targetStep>
+        <con:targetPath/>
+        <con:type>JSONPATH</con:type>
+        <con:upgraded>true</con:upgraded>
+      </con:transfers>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="properties" name="Properties" id="a91fecfd-70dd-44af-ae09-a996b1b5b55e">
+    <con:settings/>
+    <con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:properties>
+        <con:property>
+          <con:name>gameName</con:name>
+          <con:value/>
+        </con:property>
+      </con:properties>
     </con:config>
   </con:testStep>
   <con:properties>
     <con:property>
-      <con:name>username</con:name>
-      <con:value>${#Project#username}</con:value>
+      <con:name>puuid</con:name>
+      <con:value>${#Project#puuid}</con:value>
     </con:property>
     <con:property>
       <con:name>email_address</con:name>
       <con:value>${#Project#defaultEmail}</con:value>
     </con:property>
     <con:property>
-      <con:name>puuid</con:name>
-      <con:value>${#Project#puuid}</con:value>
+      <con:name>username</con:name>
+      <con:value>${#Project#username}</con:value>
     </con:property>
   </con:properties>
   <con:reportParameters/>

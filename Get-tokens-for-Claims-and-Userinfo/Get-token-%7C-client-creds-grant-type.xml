@@ -4,19 +4,13 @@
     <con:setting id="8808d750-7ca6-49f7-a2f7-38494af92449fileName">Get-token-%7C-client-creds-grant-type</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
-  <con:testStep type="groovy" name="Clear data" id="f4395aea-929b-4897-9b82-df5c10dfea35">
-    <con:settings/>
-    <con:config>
-      <script>testRunner.testCase.setPropertyValue("accessToken", '')</script>
-    </con:config>
-  </con:testStep>
   <con:testStep type="transfer" name="> transfer" id="cc4e5e2f-beb9-4c94-a803-74fdae767f98">
     <con:settings/>
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:transfers transferToAll="false" transferTextContent="true" transferChildNodes="false" setNullOnMissingSource="true" ignoreEmpty="false" failOnError="true" entitize="false">
         <con:name>access_token</con:name>
-        <con:sourceType xsi:nil="true"/>
-        <con:sourceStep xsi:nil="true"/>
+        <con:sourceType/>
+        <con:sourceStep/>
         <con:sourcePath>$['access_token']</con:sourcePath>
         <con:targetType>accessToken</con:targetType>
         <con:targetStep>#TestCase#</con:targetStep>
@@ -26,11 +20,13 @@
       </con:transfers>
     </con:config>
   </con:testStep>
+  <con:testStep type="groovy" name="Clear data" id="f4395aea-929b-4897-9b82-df5c10dfea35">
+    <con:settings/>
+    <con:config>
+      <script>testRunner.testCase.setPropertyValue("accessToken", '')</script>
+    </con:config>
+  </con:testStep>
   <con:properties>
-    <con:property>
-      <con:name>accessToken</con:name>
-      <con:value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">dflkdalfja.ljflkdsajfaljfzzz</con:value>
-    </con:property>
     <con:property>
       <con:name>client</con:name>
       <con:value>client-token3</con:value>
@@ -47,13 +43,17 @@
       <con:name>grant_type</con:name>
       <con:value>grant_type3</con:value>
     </con:property>
+    <con:property>
+      <con:name>accessToken</con:name>
+      <con:value>dflkdalfja.ljflkdsaflajksz</con:value>
+    </con:property>
   </con:properties>
   <con:reportParameters/>
   <con:environmentSpec>
-    <con:entry environmentId="b407e352-14e8-440f-bf25-abe254c02b61">
+    <con:entry environmentId="cd04cfb9-4faf-4b69-9ec6-24af2181f7ae">
       <con:authProfile>Inherit From Parent</con:authProfile>
     </con:entry>
-    <con:entry environmentId="cd04cfb9-4faf-4b69-9ec6-24af2181f7ae">
+    <con:entry environmentId="b407e352-14e8-440f-bf25-abe254c02b61">
       <con:authProfile>Inherit From Parent</con:authProfile>
     </con:entry>
   </con:environmentSpec>

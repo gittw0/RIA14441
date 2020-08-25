@@ -4,77 +4,13 @@
     <con:setting id="36205294-2807-403f-a507-f95b60c43d1afileName">Facebook-login---signup-flow</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
-  <con:testStep type="properties" name="accessToken, theUid, loginToken, theEmail" id="34903449-f114-4732-bc74-7fb28fd72c41">
-    <con:settings/>
-    <con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:properties>
-        <con:property>
-          <con:name>accessToken</con:name>
-          <con:value/>
-        </con:property>
-        <con:property>
-          <con:name>theUid</con:name>
-          <con:value/>
-        </con:property>
-        <con:property>
-          <con:name>theEmail</con:name>
-          <con:value/>
-        </con:property>
-        <con:property>
-          <con:name>thePuuid</con:name>
-          <con:value/>
-        </con:property>
-        <con:property>
-          <con:name>loginToken</con:name>
-          <con:value/>
-        </con:property>
-      </con:properties>
-    </con:config>
-  </con:testStep>
-  <con:testStep type="transfer" name="> transfer accessToken, id" id="88f950a2-ad92-4613-bec3-1561390f12d6">
-    <con:settings/>
-    <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:transfers transferToAll="false" transferTextContent="true" transferChildNodes="false" setNullOnMissingSource="true" ignoreEmpty="false" failOnError="true" entitize="false">
-        <con:name>access_token</con:name>
-        <con:sourceType xsi:nil="true"/>
-        <con:sourceStep xsi:nil="true"/>
-        <con:sourcePath>$['access_token']</con:sourcePath>
-        <con:targetType>accessToken</con:targetType>
-        <con:targetStep>accessToken, theUid, loginToken, theEmail</con:targetStep>
-        <con:targetPath/>
-        <con:type>JSONPATH</con:type>
-        <con:upgraded>true</con:upgraded>
-      </con:transfers>
-      <con:transfers transferToAll="false" transferTextContent="true" transferChildNodes="false" setNullOnMissingSource="true" ignoreEmpty="false" failOnError="true" entitize="false">
-        <con:name>id</con:name>
-        <con:sourceType xsi:nil="true"/>
-        <con:sourceStep xsi:nil="true"/>
-        <con:sourcePath>$['id']</con:sourcePath>
-        <con:targetType>theUid</con:targetType>
-        <con:targetStep>accessToken, theUid, loginToken, theEmail</con:targetStep>
-        <con:type>JSONPATH</con:type>
-        <con:upgraded>true</con:upgraded>
-      </con:transfers>
-      <con:transfers transferTextContent="true" setNullOnMissingSource="true" failOnError="true">
-        <con:name>email</con:name>
-        <con:sourceType xsi:nil="true"/>
-        <con:sourceStep xsi:nil="true"/>
-        <con:sourcePath>$['email']</con:sourcePath>
-        <con:targetType>theEmail</con:targetType>
-        <con:targetStep>accessToken, theUid, loginToken, theEmail</con:targetStep>
-        <con:targetPath/>
-        <con:type>JSONPATH</con:type>
-        <con:upgraded>true</con:upgraded>
-      </con:transfers>
-    </con:config>
-  </con:testStep>
   <con:testStep type="transfer" name="> transfer login token" id="1db0761a-6d31-4832-af93-605460c70dc9">
     <con:settings/>
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:transfers transferToAll="false" transferTextContent="true" transferChildNodes="false" setNullOnMissingSource="true" ignoreEmpty="false" failOnError="true" entitize="false">
         <con:name>login_token</con:name>
-        <con:sourceType xsi:nil="true"/>
-        <con:sourceStep xsi:nil="true"/>
+        <con:sourceType/>
+        <con:sourceStep/>
         <con:sourcePath>$['success']['login_token']</con:sourcePath>
         <con:targetType>loginToken</con:targetType>
         <con:targetStep>accessToken, theUid, loginToken, theEmail</con:targetStep>
@@ -82,6 +18,70 @@
         <con:type>JSONPATH</con:type>
         <con:upgraded>true</con:upgraded>
       </con:transfers>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="transfer" name="> transfer accessToken, id" id="88f950a2-ad92-4613-bec3-1561390f12d6">
+    <con:settings/>
+    <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:transfers transferTextContent="true" setNullOnMissingSource="true" failOnError="true">
+        <con:name>email</con:name>
+        <con:sourceType/>
+        <con:sourceStep/>
+        <con:sourcePath>$['email']</con:sourcePath>
+        <con:targetType>theEmail</con:targetType>
+        <con:targetStep>accessToken, theUid, loginToken, theEmail</con:targetStep>
+        <con:targetPath/>
+        <con:type>JSONPATH</con:type>
+        <con:upgraded>true</con:upgraded>
+      </con:transfers>
+      <con:transfers transferToAll="false" transferTextContent="true" transferChildNodes="false" setNullOnMissingSource="true" ignoreEmpty="false" failOnError="true" entitize="false">
+        <con:name>id</con:name>
+        <con:sourceType/>
+        <con:sourceStep/>
+        <con:sourcePath>$['id']</con:sourcePath>
+        <con:targetType>theUid</con:targetType>
+        <con:targetStep>accessToken, theUid, loginToken, theEmail</con:targetStep>
+        <con:type>JSONPATH</con:type>
+        <con:upgraded>true</con:upgraded>
+      </con:transfers>
+      <con:transfers transferToAll="false" transferTextContent="true" transferChildNodes="false" setNullOnMissingSource="true" ignoreEmpty="false" failOnError="true" entitize="false">
+        <con:name>access_token</con:name>
+        <con:sourceType/>
+        <con:sourceStep/>
+        <con:sourcePath>$['access_token']</con:sourcePath>
+        <con:targetType>accessToken</con:targetType>
+        <con:targetStep>accessToken, theUid, loginToken, theEmail</con:targetStep>
+        <con:targetPath/>
+        <con:type>JSONPATH</con:type>
+        <con:upgraded>true</con:upgraded>
+      </con:transfers>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="properties" name="accessToken, theUid, loginToken, theEmail" id="34903449-f114-4732-bc74-7fb28fd72c41">
+    <con:settings/>
+    <con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:properties>
+        <con:property>
+          <con:name>loginToken</con:name>
+          <con:value/>
+        </con:property>
+        <con:property>
+          <con:name>thePuuid</con:name>
+          <con:value/>
+        </con:property>
+        <con:property>
+          <con:name>theEmail</con:name>
+          <con:value/>
+        </con:property>
+        <con:property>
+          <con:name>theUid</con:name>
+          <con:value/>
+        </con:property>
+        <con:property>
+          <con:name>accessToken</con:name>
+          <con:value/>
+        </con:property>
+      </con:properties>
     </con:config>
   </con:testStep>
   <con:properties/>

@@ -1,49 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="Token" path="/token" id="310190ad-ca76-411c-a501-eabc7d21ac7f" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+<con:resource path="/token" name="Token" id="310190ad-ca76-411c-a501-eabc7d21ac7f" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
-    <con:setting id="79ce6d38-5261-475c-b1da-42f42c85534bfileName">Token</con:setting>
     <con:setting id="310190ad-ca76-411c-a501-eabc7d21ac7ffileName">Token</con:setting>
+    <con:setting id="79ce6d38-5261-475c-b1da-42f42c85534bfileName">Token</con:setting>
   </con:settings>
   <con:parameters/>
-  <con:method name="Token" id="29e60ff4-ccea-4f56-953e-8d33c28427b6" method="POST">
+  <con:method name="Token" method="POST" id="29e60ff4-ccea-4f56-953e-8d33c28427b6">
     <con:settings/>
     <con:parameters>
-      <con:parameter required="true">
-        <con:name>grant_type</con:name>
-        <con:value/>
-        <con:style>QUERY</con:style>
-        <con:default/>
-      </con:parameter>
       <con:parameter required="true">
         <con:name>assertion</con:name>
         <con:value/>
         <con:style>QUERY</con:style>
         <con:default/>
       </con:parameter>
+      <con:parameter required="true">
+        <con:name>grant_type</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
     </con:parameters>
     <con:representation type="FAULT">
-      <con:mediaType>application/json; charset=utf-8</con:mediaType>
-      <con:status>401 400</con:status>
+      <con:mediaType>application/json; charset=UTF-8</con:mediaType>
+      <con:status>400</con:status>
       <con:params/>
-      <con:element xmlns:tok="https://oauth2.googleapis.com/token">tok:Fault</con:element>
-    </con:representation>
-    <con:representation type="REQUEST">
-      <con:mediaType>application/x-www-form-urlencoded</con:mediaType>
-      <con:params/>
+      <con:element>tok:Fault</con:element>
     </con:representation>
     <con:representation type="RESPONSE">
       <con:mediaType>application/json; charset=UTF-8</con:mediaType>
       <con:status>200</con:status>
       <con:params/>
-      <con:element xmlns:tok="https://oauth2.googleapis.com/token">tok:Response</con:element>
+      <con:element>tok:Response</con:element>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/x-www-form-urlencoded</con:mediaType>
+      <con:params/>
     </con:representation>
     <con:representation type="FAULT">
-      <con:mediaType>application/json; charset=UTF-8</con:mediaType>
-      <con:status>400</con:status>
+      <con:mediaType>application/json; charset=utf-8</con:mediaType>
+      <con:status>401 400</con:status>
       <con:params/>
-      <con:element xmlns:tok="https://oauth2.googleapis.com/token">tok:Fault</con:element>
+      <con:element>tok:Fault</con:element>
     </con:representation>
-    <con:request name="Request 1" id="3f38d9aa-184b-4094-9d74-b222d687402a" mediaType="application/x-www-form-urlencoded" postQueryString="true">
+    <con:request postQueryString="true" name="Request 1" mediaType="application/x-www-form-urlencoded" id="3f38d9aa-184b-4094-9d74-b222d687402a">
       <con:settings>
         <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
       </con:settings>
@@ -55,17 +55,17 @@
       </con:credentials>
       <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
       <con:parameters>
-        <con:entry key="grant_type" value="urn:ietf:params:oauth:grant-type:jwt-bearer"/>
+        <con:entry value="urn:ietf:params:oauth:grant-type:jwt-bearer" key="grant_type"/>
       </con:parameters>
       <con:parameterOrder>
-        <con:entry>grant_type</con:entry>
         <con:entry>assertion</con:entry>
+        <con:entry>grant_type</con:entry>
       </con:parameterOrder>
       <con:environmentSpec>
-        <con:entry environmentId="0b8178c0-3fb5-4680-af02-7d8c4e2b75fb">
+        <con:entry environmentId="7453f232-4f30-426e-be59-5ccef1cc3293">
           <con:authProfile>No Authorization</con:authProfile>
         </con:entry>
-        <con:entry environmentId="7453f232-4f30-426e-be59-5ccef1cc3293">
+        <con:entry environmentId="0b8178c0-3fb5-4680-af02-7d8c4e2b75fb">
           <con:authProfile>No Authorization</con:authProfile>
         </con:entry>
       </con:environmentSpec>

@@ -7,11 +7,11 @@
   <con:runType>SEQUENTIAL</con:runType>
   <con:properties>
     <con:property>
-      <con:name>client</con:name>
+      <con:name>scope</con:name>
       <con:value/>
     </con:property>
     <con:property>
-      <con:name>scope</con:name>
+      <con:name>client</con:name>
       <con:value/>
     </con:property>
   </con:properties>

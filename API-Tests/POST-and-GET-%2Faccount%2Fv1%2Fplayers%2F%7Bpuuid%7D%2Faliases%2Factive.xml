@@ -4,16 +4,69 @@
     <con:setting id="0fb9bdea-b10c-405e-8bb6-2458d9308235fileName">POST-and-GET-%2Faccount%2Fv1%2Fplayers%2F%7Bpuuid%7D%2Faliases%2Factive</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
-  <con:testStep type="transfer" name="> transfer puuid0" id="9452c163-7a27-4ea7-a671-4e1a3185584c">
+  <con:testStep type="transfer" name="> transfer G1nT1" id="c5700fc9-64e5-454d-ad96-1ec50e2298c6">
+    <con:settings/>
+    <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:transfers transferToAll="false" transferTextContent="true" transferChildNodes="false" setNullOnMissingSource="true" ignoreEmpty="false" failOnError="true" entitize="false">
+        <con:name>tag_line</con:name>
+        <con:sourceType/>
+        <con:sourceStep/>
+        <con:sourcePath>$['tag_line']</con:sourcePath>
+        <con:targetType>tagLine1</con:targetType>
+        <con:targetStep>thePuuid, gameName, tagLine</con:targetStep>
+        <con:type>JSONPATH</con:type>
+        <con:upgraded>true</con:upgraded>
+      </con:transfers>
+      <con:transfers transferToAll="false" transferTextContent="true" transferChildNodes="false" setNullOnMissingSource="true" ignoreEmpty="false" failOnError="true" entitize="false">
+        <con:name>game_name</con:name>
+        <con:sourceType/>
+        <con:sourceStep/>
+        <con:sourcePath>$['game_name']</con:sourcePath>
+        <con:targetType>gameName1</con:targetType>
+        <con:targetStep>thePuuid, gameName, tagLine</con:targetStep>
+        <con:targetPath/>
+        <con:type>JSONPATH</con:type>
+        <con:upgraded>true</con:upgraded>
+      </con:transfers>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="transfer" name="> transfer GnT" id="bca70b89-424a-4348-aa70-e7d7ee6a4ac0">
+    <con:settings/>
+    <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:transfers transferTextContent="true" setNullOnMissingSource="true" failOnError="true">
+        <con:name>tag_line</con:name>
+        <con:sourceType/>
+        <con:sourceStep/>
+        <con:sourcePath>$['tag_line']</con:sourcePath>
+        <con:targetType>tagLine</con:targetType>
+        <con:targetStep>thePuuid, gameName, tagLine</con:targetStep>
+        <con:targetPath/>
+        <con:type>JSONPATH</con:type>
+        <con:upgraded>true</con:upgraded>
+      </con:transfers>
+      <con:transfers transferToAll="false" transferTextContent="true" transferChildNodes="false" setNullOnMissingSource="true" ignoreEmpty="false" failOnError="true" entitize="false">
+        <con:name>game_name</con:name>
+        <con:sourceType/>
+        <con:sourceStep/>
+        <con:sourcePath>$['game_name']</con:sourcePath>
+        <con:targetType>gameName</con:targetType>
+        <con:targetStep>thePuuid, gameName, tagLine</con:targetStep>
+        <con:targetPath/>
+        <con:type>JSONPATH</con:type>
+        <con:upgraded>true</con:upgraded>
+      </con:transfers>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="transfer" name="> transfer puuid" id="b4dabe9b-04a3-4919-b4a8-6f9a7d7e82e4">
     <con:settings/>
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:transfers transferTextContent="true" setNullOnMissingSource="true" failOnError="true">
         <con:name>puuid</con:name>
-        <con:sourceType xsi:nil="true"/>
-        <con:sourceStep xsi:nil="true"/>
-        <con:sourcePath>$[0]['puuid']</con:sourcePath>
-        <con:targetType xsi:nil="true"/>
-        <con:targetStep xsi:nil="true"/>
+        <con:sourceType/>
+        <con:sourceStep/>
+        <con:sourcePath>$['puuid']</con:sourcePath>
+        <con:targetType>thePuuid</con:targetType>
+        <con:targetStep>thePuuid, gameName, tagLine</con:targetStep>
         <con:targetPath/>
         <con:type>JSONPATH</con:type>
         <con:upgraded>true</con:upgraded>
@@ -25,15 +78,7 @@
     <con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:properties>
         <con:property>
-          <con:name>thePuuid</con:name>
-          <con:value/>
-        </con:property>
-        <con:property>
-          <con:name>gameName</con:name>
-          <con:value/>
-        </con:property>
-        <con:property>
-          <con:name>tagLine</con:name>
+          <con:name>tagLine1</con:name>
           <con:value/>
         </con:property>
         <con:property>
@@ -41,76 +86,31 @@
           <con:value/>
         </con:property>
         <con:property>
-          <con:name>tagLine1</con:name>
+          <con:name>tagLine</con:name>
+          <con:value/>
+        </con:property>
+        <con:property>
+          <con:name>gameName</con:name>
+          <con:value/>
+        </con:property>
+        <con:property>
+          <con:name>thePuuid</con:name>
           <con:value/>
         </con:property>
       </con:properties>
     </con:config>
   </con:testStep>
-  <con:testStep type="transfer" name="> transfer puuid" id="b4dabe9b-04a3-4919-b4a8-6f9a7d7e82e4">
+  <con:testStep type="transfer" name="> transfer puuid0" id="9452c163-7a27-4ea7-a671-4e1a3185584c">
     <con:settings/>
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:transfers transferTextContent="true" setNullOnMissingSource="true" failOnError="true">
         <con:name>puuid</con:name>
-        <con:sourceType xsi:nil="true"/>
-        <con:sourceStep xsi:nil="true"/>
-        <con:sourcePath>$['puuid']</con:sourcePath>
-        <con:targetType>thePuuid</con:targetType>
-        <con:targetStep>thePuuid, gameName, tagLine</con:targetStep>
+        <con:sourceType/>
+        <con:sourceStep/>
+        <con:sourcePath>$[0]['puuid']</con:sourcePath>
+        <con:targetType/>
+        <con:targetStep/>
         <con:targetPath/>
-        <con:type>JSONPATH</con:type>
-        <con:upgraded>true</con:upgraded>
-      </con:transfers>
-    </con:config>
-  </con:testStep>
-  <con:testStep type="transfer" name="> transfer GnT" id="bca70b89-424a-4348-aa70-e7d7ee6a4ac0">
-    <con:settings/>
-    <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:transfers transferToAll="false" transferTextContent="true" transferChildNodes="false" setNullOnMissingSource="true" ignoreEmpty="false" failOnError="true" entitize="false">
-        <con:name>game_name</con:name>
-        <con:sourceType xsi:nil="true"/>
-        <con:sourceStep xsi:nil="true"/>
-        <con:sourcePath>$['game_name']</con:sourcePath>
-        <con:targetType>gameName</con:targetType>
-        <con:targetStep>thePuuid, gameName, tagLine</con:targetStep>
-        <con:targetPath/>
-        <con:type>JSONPATH</con:type>
-        <con:upgraded>true</con:upgraded>
-      </con:transfers>
-      <con:transfers transferTextContent="true" setNullOnMissingSource="true" failOnError="true">
-        <con:name>tag_line</con:name>
-        <con:sourceType xsi:nil="true"/>
-        <con:sourceStep xsi:nil="true"/>
-        <con:sourcePath>$['tag_line']</con:sourcePath>
-        <con:targetType>tagLine</con:targetType>
-        <con:targetStep>thePuuid, gameName, tagLine</con:targetStep>
-        <con:targetPath/>
-        <con:type>JSONPATH</con:type>
-        <con:upgraded>true</con:upgraded>
-      </con:transfers>
-    </con:config>
-  </con:testStep>
-  <con:testStep type="transfer" name="> transfer G1nT1" id="c5700fc9-64e5-454d-ad96-1ec50e2298c6">
-    <con:settings/>
-    <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:transfers transferToAll="false" transferTextContent="true" transferChildNodes="false" setNullOnMissingSource="true" ignoreEmpty="false" failOnError="true" entitize="false">
-        <con:name>game_name</con:name>
-        <con:sourceType xsi:nil="true"/>
-        <con:sourceStep xsi:nil="true"/>
-        <con:sourcePath>$['game_name']</con:sourcePath>
-        <con:targetType>gameName1</con:targetType>
-        <con:targetStep>thePuuid, gameName, tagLine</con:targetStep>
-        <con:targetPath/>
-        <con:type>JSONPATH</con:type>
-        <con:upgraded>true</con:upgraded>
-      </con:transfers>
-      <con:transfers transferToAll="false" transferTextContent="true" transferChildNodes="false" setNullOnMissingSource="true" ignoreEmpty="false" failOnError="true" entitize="false">
-        <con:name>tag_line</con:name>
-        <con:sourceType xsi:nil="true"/>
-        <con:sourceStep xsi:nil="true"/>
-        <con:sourcePath>$['tag_line']</con:sourcePath>
-        <con:targetType>tagLine1</con:targetType>
-        <con:targetStep>thePuuid, gameName, tagLine</con:targetStep>
         <con:type>JSONPATH</con:type>
         <con:upgraded>true</con:upgraded>
       </con:transfers>
@@ -119,17 +119,7 @@
   <con:properties/>
   <con:reportParameters/>
   <con:breakPoints>
-    <con:testStepId>b5632043-dd17-42b1-a40c-f51e0181f442</con:testStepId>
-    <con:status>NONE</con:status>
-    <con:properties/>
-  </con:breakPoints>
-  <con:breakPoints>
-    <con:testStepId>0d754b4e-21c6-4aad-acb1-d9bc4642f0be</con:testStepId>
-    <con:status>NONE</con:status>
-    <con:properties/>
-  </con:breakPoints>
-  <con:breakPoints>
-    <con:testStepId>2dfae033-c379-4411-9d48-83e0be73511a</con:testStepId>
+    <con:testStepId>ef0e75db-9810-4838-8ac2-c5c9121992bf</con:testStepId>
     <con:status>NONE</con:status>
     <con:properties/>
   </con:breakPoints>
@@ -139,7 +129,17 @@
     <con:properties/>
   </con:breakPoints>
   <con:breakPoints>
-    <con:testStepId>ef0e75db-9810-4838-8ac2-c5c9121992bf</con:testStepId>
+    <con:testStepId>2dfae033-c379-4411-9d48-83e0be73511a</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>0d754b4e-21c6-4aad-acb1-d9bc4642f0be</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>b5632043-dd17-42b1-a40c-f51e0181f442</con:testStepId>
     <con:status>NONE</con:status>
     <con:properties/>
   </con:breakPoints>
