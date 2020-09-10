@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:interface xsi:type="con:RestService" wadlVersion="http://wadl.dev.java.net/2009/02" type="rest" name="https://oauth2.googleapis.com" id="b33e3199-c434-4b81-bc29-98bd379ebf8d" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<con:interface xsi:type="con:RestService" wadlVersion="http://wadl.dev.java.net/2009/02" type="rest" name="https://oauth2.googleapis.com" id="b33e3199-c434-4b81-bc29-98bd379ebf8d" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="107899fb-5bf8-4138-9496-18b6f87cc4b7fileName">https%3A%2F%2Foauth2.googleapis.com</con:setting>
     <con:setting id="b33e3199-c434-4b81-bc29-98bd379ebf8dfileName">https%3A%2F%2Foauth2.googleapis.com</con:setting>
