@@ -37,7 +37,7 @@
     </con:property>
     <con:property>
       <con:name>client-secret</con:name>
-      <con:value>client-secret2</con:value>
+      <con:value>jibersh 123</con:value>
     </con:property>
     <con:property>
       <con:name>scope</con:name>
@@ -45,7 +45,7 @@
     </con:property>
     <con:property>
       <con:name>grant_type</con:name>
-      <con:value>grant_type2</con:value>
+      <con:value>lfajdfdfljalkjd</con:value>
     </con:property>
   </con:properties>
   <con:reportParameters/>
