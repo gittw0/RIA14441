@@ -9,8 +9,8 @@
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:transfers transferTextContent="true" setNullOnMissingSource="true" failOnError="true">
         <con:name>puuid</con:name>
-        <con:sourceType>numberRestrictions</con:sourceType>
-        <con:sourceStep>#Project#</con:sourceStep>
+        <con:sourceType/>
+        <con:sourceStep/>
         <con:sourcePath>$['puuid']</con:sourcePath>
         <con:targetType>thePuuid</con:targetType>
         <con:targetStep>accessToken, theUid, thePuuid, theEmail</con:targetStep>
@@ -25,8 +25,8 @@
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:transfers transferTextContent="true" setNullOnMissingSource="true" failOnError="true">
         <con:name>email</con:name>
-        <con:sourceType>numberRestrictions</con:sourceType>
-        <con:sourceStep>#Project#</con:sourceStep>
+        <con:sourceType/>
+        <con:sourceStep/>
         <con:sourcePath>$['email']</con:sourcePath>
         <con:targetType>theEmail</con:targetType>
         <con:targetStep>accessToken, theUid, thePuuid, theEmail</con:targetStep>
@@ -62,11 +62,11 @@
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:transfers transferTextContent="true" setNullOnMissingSource="true" failOnError="true">
         <con:name>puuid</con:name>
-        <con:sourceType>numberRestrictions</con:sourceType>
-        <con:sourceStep>#Project#</con:sourceStep>
+        <con:sourceType/>
+        <con:sourceStep/>
         <con:sourcePath>$[0]['puuid']</con:sourcePath>
-        <con:targetType>numberRestrictions</con:targetType>
-        <con:targetStep>#Project#</con:targetStep>
+        <con:targetType/>
+        <con:targetStep/>
         <con:targetPath/>
         <con:type>JSONPATH</con:type>
         <con:upgraded>true</con:upgraded>
@@ -79,11 +79,11 @@
       <con:properties>
         <con:property>
           <con:name>thePuuid</con:name>
-          <con:value xsi:nil="true"/>
+          <con:value/>
         </con:property>
         <con:property>
           <con:name>theEmail</con:name>
-          <con:value xsi:nil="true"/>
+          <con:value/>
         </con:property>
         <con:property>
           <con:name>theUid</con:name>

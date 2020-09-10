@@ -369,7 +369,7 @@ json.each
       <con:properties>
         <con:property>
           <con:name>uri</con:name>
-          <con:value xsi:nil="true"/>
+          <con:value>http://localhost/redirect#access_token=eyJraWQiOiJzMSIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiJjNmM1ZjBiZS0zMGIwLTViNDMtYWRiYS1jYmI3Y2I2MzM0ZjkiLCJzY3AiOlsib3BlbmlkIiwiYWNjb3VudCJdLCJjbG0iOlsicmduX1dSSU5UIiwib3BlbmlkIiwicHciLCJhY2N0X2dudCIsImFjY3QiLCIhRkFBQyJdLCJkYXQiOnsicCI6IiIsInIiOiJXUklOVCIsImMiOiJ3cmludCIsInUiOjI0ODM0NTUxNDg5OTE5Njh9LCJpc3MiOiJodHRwczpcL1wvYXV0aC53ci1pbnQucnBnLnJpb3RnYW1lcy5jb20iLCJleHAiOjE1OTYwNjYwMDgsImlhdCI6MTU5NjA2MjQwOCwianRpIjoiZ0FuUG15REJROVEiLCJjaWQiOiJ0ZXN0LWF1dG9tYXRpb24td3JpbnQifQ.SLZgXj5Rw4uN16h_Z20sipvUOfdId0_wDewhioeq_JPReX6LjxsnqgTxZ2ghhld6DfG0y-NY1jLKpNeZfVSeNgZosPSE_1FEpdo4Xo3YS6InZmmzLZ3AeZrhxJVwaPqwLCMLxORDkRU_J-FTwj3BwDRtnbmrOPXd-k0jFXtQu8gnMAYbvZPf1obh0NOk38PxntOS8oqlLvjlgOyiDf1Hx3z5uNuSnhURKkGUULjoge7VQASCqofU6T8yTCCrPNh0Bykdzy3wj057Diy6-IQT3cSrEn6oGh5jeCCBOx87ADy9Xgvr_qmCi88hqfxSSVw8a0x0eyfjP5gC8xBHlphlXA&amp;scope=openid+account&amp;id_token=eyJraWQiOiJzMSIsImFsZyI6IlJTMjU2In0.eyJhdF9oYXNoIjoieXlLdG5RRUdpWVdFMXFVRlU2OGFJUSIsInN1YiI6ImM2YzVmMGJlLTMwYjAtNWI0My1hZGJhLWNiYjdjYjYzMzRmOSIsImNvdW50cnkiOiJ1c2EiLCJwbGF5ZXJfcGxvY2FsZSI6ImVuLUVOIiwiY291bnRyeV9hdCI6MTU5MTk5MTEyMDAwMCwiYW1yIjpbInBhc3N3b3JkIl0sImlzcyI6Imh0dHBzOlwvXC9hdXRoLndyLWludC5ycGcucmlvdGdhbWVzLmNvbSIsImxvbCI6W3siY3VpZCI6MjQ4MzQ1NTE0ODk5MTk2OCwiY3BpZCI6IldSSU5UIiwidWlkIjoyNDgzNDU1MTQ4OTkxOTY4LCJ1bmFtZSI6InJpcG1heHdyaW50IiwicHRyaWQiOm51bGwsInBpZCI6IldSSU5UIiwic3RhdGUiOiJFTkFCTEVEIn1dLCJub25jZSI6IjhCMzZDMEY0QUI0RDRENTFCMDVGMUY4OTY4NDg4RDcwIiwiYXVkIjoidGVzdC1hdXRvbWF0aW9uLXdyaW50IiwiYWNyIjoidXJuOnJpb3Q6YnJvbnplIiwicGxheWVyX2xvY2FsZSI6ImVuLUVOIiwiZXhwIjoxNTk2MDYzMzA4LCJpYXQiOjE1OTYwNjI0MDgsImFjY3QiOnsiZ2FtZV9uYW1lIjoid3JpbnRlc3QiLCJ0YWdfbGluZSI6Ik5BMSJ9LCJqdGkiOiJTSWxrcHU5ZktEMCIsImxvZ2luX2NvdW50cnkiOiJ1c2EifQ.Xpq0bK0ZCuuy95SXSE1k65VONFTAsFPeQZf3tKTO6bgQn-a149PWme0WpsHJ8UAZlpkjjVLFB4wAcKn-5BQoI2NXcUvnUiOH9IX_YRGaUz_vjgJktcQDtsE0J-eF7bdNnUebdUX8e7ck8u73nsLvHj99xvcS76CEAecdQGfTjPEHcGVIM0Aif-S2dDOEnEKorgqaCq5LNJP_TSPBgDqx_iiiKdTTfSjqDvjrEqqeiwhNQS6rebqYbGkp1ZSZN8Rn_QdOgbnjd4s4O9p-qzWXTEsMCRP3_25OMUO_J9itNb8aGgAj4JopV1nwHVH7m9XtSYgW7jE5lsSr5nFoq4Oklw&amp;token_type=Bearer&amp;expires_in=3600</con:value>
         </con:property>
       </con:properties>
     </con:config>
@@ -379,8 +379,8 @@ json.each
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:transfers transferToAll="false" transferTextContent="true" transferChildNodes="false" setNullOnMissingSource="true" ignoreEmpty="false" failOnError="true" entitize="false">
         <con:name>uri</con:name>
-        <con:sourceType>numberRestrictions</con:sourceType>
-        <con:sourceStep>#Project#</con:sourceStep>
+        <con:sourceType/>
+        <con:sourceStep/>
         <con:sourcePath>$['response']['parameters']['uri']</con:sourcePath>
         <con:targetType>uri</con:targetType>
         <con:targetStep>> uri</con:targetStep>

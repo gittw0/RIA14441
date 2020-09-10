@@ -83,8 +83,8 @@ cookieStore.clear()</script>
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:transfers transferToAll="false" transferTextContent="true" transferChildNodes="false" setNullOnMissingSource="true" ignoreEmpty="false" failOnError="true" entitize="false">
         <con:name>puuid</con:name>
-        <con:sourceType>test</con:sourceType>
-        <con:sourceStep>#Global#</con:sourceStep>
+        <con:sourceType/>
+        <con:sourceStep/>
         <con:sourcePath>$['puuid']</con:sourcePath>
         <con:targetType>thePuuid2</con:targetType>
         <con:targetStep>> thePuuid, theUsername, thePassword</con:targetStep>
@@ -153,8 +153,8 @@ cookieStore.clear()</script>
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:transfers transferToAll="false" transferTextContent="true" transferChildNodes="false" setNullOnMissingSource="true" ignoreEmpty="false" failOnError="true" entitize="false">
         <con:name>puuid</con:name>
-        <con:sourceType>client-secret</con:sourceType>
-        <con:sourceStep>#TestSuite#</con:sourceStep>
+        <con:sourceType/>
+        <con:sourceStep/>
         <con:sourcePath>$['puuid']</con:sourcePath>
         <con:targetType>thePuuid</con:targetType>
         <con:targetStep>> thePuuid, theUsername, thePassword</con:targetStep>
@@ -182,7 +182,7 @@ cookieStore.clear()</script>
         </con:property>
         <con:property>
           <con:name>thePuuid</con:name>
-          <con:value xsi:nil="true"/>
+          <con:value/>
         </con:property>
       </con:properties>
     </con:config>
@@ -206,23 +206,18 @@ cookieStore.clear()</script>
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:transfers transferTextContent="true" setNullOnMissingSource="true" failOnError="true">
         <con:name>puuid</con:name>
-        <con:sourceType>numberRestrictions</con:sourceType>
-        <con:sourceStep>#Project#</con:sourceStep>
+        <con:sourceType/>
+        <con:sourceStep/>
         <con:sourcePath>$[0]['puuid']</con:sourcePath>
-        <con:targetType>defaultEmail</con:targetType>
-        <con:targetStep>#Project#</con:targetStep>
+        <con:targetType/>
+        <con:targetStep/>
         <con:targetPath/>
         <con:type>JSONPATH</con:type>
         <con:upgraded>true</con:upgraded>
       </con:transfers>
     </con:config>
   </con:testStep>
-  <con:properties>
-    <con:property>
-      <con:name>check</con:name>
-      <con:value>check1</con:value>
-    </con:property>
-  </con:properties>
+  <con:properties/>
   <con:reportParameters/>
   <con:breakPoints>
     <con:testStepId>87fe1871-73b8-4e41-be8d-57de94f40021</con:testStepId>

@@ -298,7 +298,7 @@ json.each
       <con:properties>
         <con:property>
           <con:name>uri</con:name>
-          <con:value xsi:nil="true"/>
+          <con:value>http://localhost/redirect#access_token=eyJraWQiOiJzMSIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiJjNmM1ZjBiZS0zMGIwLTViNDMtYWRiYS1jYmI3Y2I2MzM0ZjkiLCJzY3AiOlsib3BlbmlkIiwic3VtbW9uZXIiXSwiY2xtIjpbImxvbF9hY2NvdW50Iiwib3BlbmlkIiwib3JpZ2luYWxfcGxhdGZvcm1faWQiLCJwaG90byIsIm9yaWdpbmFsX2FjY291bnRfaWQiLCJyZWdpb24iLCJwdnBuZXRfYWNjb3VudF9pZCIsInVzZXJuYW1lIiwiIUFBUSJdLCJkYXQiOnsiYyI6IndyaW50In0sImlzcyI6Imh0dHBzOlwvXC9hdXRoLndyLWludC5ycGcucmlvdGdhbWVzLmNvbSIsImV4cCI6MTU5NjA2NjAxNiwiaWF0IjoxNTk2MDYyNDE2LCJqdGkiOiI2MjA2ams2b1pHOCIsImNpZCI6InRlc3QtYXV0b21hdGlvbi1zdW1tb25lci13cmludCJ9.WJPUzncccWB0C5hsps83PBuBLNcOjwqi483at3tVMKET_MulkYJv5H_KfHwldpt1v5T2bj7-REtd_DiRcfuXz7ytUxXqMczGQl8wH8IFYbO4x9f_NGpLFPzaZ24JKdVb2OFM1e6cWrgi7I-vWFiJFIGFg5-HgnLoC0Ih7A0otD8Zjxu-Zij7UKrX_I5oiZEDEtbxumwxoacaYzS_F31ZU_rbCUkkTbzOCXP9luWb70ohYbFZ4qKZ19WY46avC0vR0y8xQS1nrFStLR9BYoSDp4kbxvIhqpkO_gRP7T_HkEzRR80M6Fvu_6Jmie_QbzX4QRQpSqA0q6d3FrKoY-tilw&amp;scope=openid+summoner&amp;id_token=eyJraWQiOiJzMSIsImFsZyI6IlJTMjU2In0.eyJhdF9oYXNoIjoiR1pnRVBsZVB4NkNKWFVWeXNiN0hrZyIsInN1YiI6ImM2YzVmMGJlLTMwYjAtNWI0My1hZGJhLWNiYjdjYjYzMzRmOSIsImF1ZCI6InRlc3QtYXV0b21hdGlvbi1zdW1tb25lci13cmludCIsImFjciI6InVybjpyaW90OmJyb256ZSIsImFtciI6WyJwYXNzd29yZCJdLCJpc3MiOiJodHRwczpcL1wvYXV0aC53ci1pbnQucnBnLnJpb3RnYW1lcy5jb20iLCJleHAiOjE1OTYwNjMzMTYsImlhdCI6MTU5NjA2MjQxNiwibm9uY2UiOiI4QjM2QzBGNEFCNEQ0RDUxQjA1RjFGODk2ODQ4OEQ3MCJ9.tOcEeeafdNBbftoHFaL92PrevqEmK3xupn86Z3TKSqAeGHiWoMLX8bdOYrUncWHoQRUrGIUqeYWVMYqJc6k_7xpTo19VzPfUqswljRQ7oB33n0rAUFqEdGo8ueJ63Atph8d3_fzZpXrbpoffYFpBkJLgdBYzCbm4K39kLUPbmvEkI5u6op7GhWP5A_O1WwW4QJw4HqvAD_WqkgCIBjrlb2B7VR4GWyuQS96sKbeyLQirB4OGGhVrqBK8ix5RHu4nZu-tRhUqBnj9JXnXeF_DzDldtkwua5JGH-slBUdyshFE-cGXq-wBW-OB7HBYRZgLeP1MWNboyUs475jCJAkgCQ&amp;token_type=Bearer&amp;expires_in=3600</con:value>
         </con:property>
       </con:properties>
     </con:config>
@@ -308,8 +308,8 @@ json.each
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:transfers transferToAll="false" transferTextContent="true" transferChildNodes="false" setNullOnMissingSource="true" ignoreEmpty="false" failOnError="true" entitize="false">
         <con:name>uri</con:name>
-        <con:sourceType>numberRestrictions</con:sourceType>
-        <con:sourceStep>#Project#</con:sourceStep>
+        <con:sourceType/>
+        <con:sourceStep/>
         <con:sourcePath>$['response']['parameters']['uri']</con:sourcePath>
         <con:targetType>uri</con:targetType>
         <con:targetStep>> uri</con:targetStep>

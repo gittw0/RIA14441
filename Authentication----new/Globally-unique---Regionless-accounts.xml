@@ -152,8 +152,8 @@ json.each
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:transfers transferToAll="false" transferTextContent="true" transferChildNodes="false" setNullOnMissingSource="true" ignoreEmpty="false" failOnError="true" entitize="false" disabled="false">
         <con:name>uri</con:name>
-        <con:sourceType>defaultEmail2</con:sourceType>
-        <con:sourceStep>#Project#</con:sourceStep>
+        <con:sourceType/>
+        <con:sourceStep/>
         <con:sourcePath>$['response']['parameters']['uri']</con:sourcePath>
         <con:targetType>uri</con:targetType>
         <con:targetStep>> thePuuid, theUsername, thePassword, uri</con:targetStep>
@@ -258,8 +258,8 @@ cookieStore.clear()</script>
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:transfers transferToAll="false" transferTextContent="true" transferChildNodes="false" setNullOnMissingSource="true" ignoreEmpty="false" failOnError="true" entitize="false" disabled="false">
         <con:name>sub</con:name>
-        <con:sourceType>client</con:sourceType>
-        <con:sourceStep>#TestSuite#</con:sourceStep>
+        <con:sourceType/>
+        <con:sourceStep/>
         <con:sourcePath>$['puuid']</con:sourcePath>
         <con:targetType>thePuuid</con:targetType>
         <con:targetStep>> thePuuid, theUsername, thePassword, uri</con:targetStep>
@@ -275,7 +275,7 @@ cookieStore.clear()</script>
       <con:properties>
         <con:property>
           <con:name>uri</con:name>
-          <con:value xsi:nil="true"/>
+          <con:value/>
         </con:property>
         <con:property>
           <con:name>thePassword</con:name>
@@ -287,7 +287,7 @@ cookieStore.clear()</script>
         </con:property>
         <con:property>
           <con:name>thePuuid</con:name>
-          <con:value xsi:nil="true"/>
+          <con:value/>
         </con:property>
       </con:properties>
     </con:config>
@@ -303,11 +303,11 @@ cookieStore.clear()</script>
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:transfers transferTextContent="true" setNullOnMissingSource="true" failOnError="true">
         <con:name>puuid</con:name>
-        <con:sourceType>testRegion1</con:sourceType>
-        <con:sourceStep>#TestSuite#</con:sourceStep>
+        <con:sourceType/>
+        <con:sourceStep/>
         <con:sourcePath>$[0]['puuid']</con:sourcePath>
-        <con:targetType>regionless_password</con:targetType>
-        <con:targetStep>#Project#</con:targetStep>
+        <con:targetType/>
+        <con:targetStep/>
         <con:targetPath/>
         <con:type>JSONPATH</con:type>
         <con:upgraded>true</con:upgraded>

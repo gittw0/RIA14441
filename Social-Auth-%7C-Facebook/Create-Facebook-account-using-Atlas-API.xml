@@ -9,8 +9,8 @@
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:transfers transferTextContent="true" setNullOnMissingSource="true" failOnError="true">
         <con:name>puuid</con:name>
-        <con:sourceType>numberRestrictions</con:sourceType>
-        <con:sourceStep>#Project#</con:sourceStep>
+        <con:sourceType/>
+        <con:sourceStep/>
         <con:sourcePath>$['puuid']</con:sourcePath>
         <con:targetType>thePuuid2</con:targetType>
         <con:targetStep>accessToken, thePuuid, thePuuid2, theUid</con:targetStep>
@@ -25,8 +25,8 @@
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:transfers transferTextContent="true" setNullOnMissingSource="true" failOnError="true">
         <con:name>> transfer puuid</con:name>
-        <con:sourceType>numberRestrictions</con:sourceType>
-        <con:sourceStep>#Project#</con:sourceStep>
+        <con:sourceType/>
+        <con:sourceStep/>
         <con:sourcePath>$['puuid']</con:sourcePath>
         <con:targetType>thePuuid</con:targetType>
         <con:targetStep>accessToken, thePuuid, thePuuid2, theUid</con:targetStep>
@@ -39,7 +39,7 @@
   <con:testStep type="transfer" name="> transfer accessToken, id" id="25f942a3-9c79-4ba0-acbd-8aaed6b37c16">
     <con:settings/>
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:transfers transferToAll="false" transferTextContent="true" transferChildNodes="false" setNullOnMissingSource="true" ignoreEmpty="false" failOnError="true" entitize="false" disabled="true">
+      <con:transfers transferToAll="false" transferTextContent="true" transferChildNodes="false" setNullOnMissingSource="true" ignoreEmpty="false" failOnError="true" entitize="false">
         <con:name>id</con:name>
         <con:sourceType/>
         <con:sourceStep/>
@@ -73,11 +73,11 @@
         </con:property>
         <con:property>
           <con:name>thePuuid2</con:name>
-          <con:value xsi:nil="true"/>
+          <con:value/>
         </con:property>
         <con:property>
           <con:name>thePuuid</con:name>
-          <con:value xsi:nil="true"/>
+          <con:value/>
         </con:property>
         <con:property>
           <con:name>accessToken</con:name>

@@ -300,7 +300,7 @@ json.each
       <con:properties>
         <con:property>
           <con:name>uri</con:name>
-          <con:value xsi:nil="true"/>
+          <con:value>http://localhost/redirect#access_token=eyJraWQiOiJzMSIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiJjNmM1ZjBiZS0zMGIwLTViNDMtYWRiYS1jYmI3Y2I2MzM0ZjkiLCJzY3AiOlsib3BlbmlkIiwibG9sX3JlZ2lvbiJdLCJjbG0iOlsibG9sX3JlZ2lvbiIsIm9wZW5pZCJdLCJkYXQiOnsiYyI6IndyaW50In0sImlzcyI6Imh0dHBzOlwvXC9hdXRoLndyLWludC5ycGcucmlvdGdhbWVzLmNvbSIsImV4cCI6MTU5NjA2NjAyOCwiaWF0IjoxNTk2MDYyNDI4LCJqdGkiOiJzMTdjN2pXVFlNbyIsImNpZCI6InRlc3QtYXV0b21hdGlvbi1sb2xyZWdpb24td3JpbnQifQ.sRTPmt5WPwMwrAjD3rMCavhpRTJQfZrS4X6A-WpGeG4Hb1xWZqSbgoYQ5FqSle-RS_UIkC8FQKF_ERZAx7MmTXY7pmcKLxqgPP-m4YWfa48SVVPfLGzfuwgun99ksGrpFLLahoFtHoBiMQ4PEk2t0dcB7omNjansSMiaCNPX3oXAsXf6qsW6NU76m5HX_WE-CT4J8eqmUG2rt-GykWRcjjvDGgE7FOy4DbeU2e64fZ6m-TSmY9IY5xveoLV-uzuStT_gA_5ymdBjUx9luHpKhTACLCQsbeuhERUqWoywx_oubR9mfvgc_rxTepZz0HBU9IGENAzyAd4fD_R77Asiag&amp;scope=openid+lol_region&amp;id_token=eyJraWQiOiJzMSIsImFsZyI6IlJTMjU2In0.eyJhdF9oYXNoIjoicUNVUUpCRUQ4SWI1cXJLekNlSzA1dyIsInN1YiI6ImM2YzVmMGJlLTMwYjAtNWI0My1hZGJhLWNiYjdjYjYzMzRmOSIsImF1ZCI6InRlc3QtYXV0b21hdGlvbi1sb2xyZWdpb24td3JpbnQiLCJhY3IiOiJ1cm46cmlvdDpicm9uemUiLCJsb2xfcmVnaW9uIjpbeyJjdWlkIjoyNDgzNDU1MTQ4OTkxOTY4LCJjcGlkIjoiV1JJTlQiLCJ1aWQiOjI0ODM0NTUxNDg5OTE5NjgsInBpZCI6IldSSU5UIiwibHAiOmZhbHNlLCJhY3RpdmUiOnRydWV9XSwiYW1yIjpbInBhc3N3b3JkIl0sImlzcyI6Imh0dHBzOlwvXC9hdXRoLndyLWludC5ycGcucmlvdGdhbWVzLmNvbSIsImV4cCI6MTU5NjA2MzMyOCwiaWF0IjoxNTk2MDYyNDI4LCJub25jZSI6IjhCMzZDMEY0QUI0RDRENTFCMDVGMUY4OTY4NDg4RDcwIiwianRpIjoieXNHWV8yaG1GM0EifQ.h7TOVvydoCFvxUa9scUHFcpIaswhhhBb-uML-sfqnGHACEnOV8LGCm_yKq4GciASvHO0PV6vSe2AQGBKZmJhYxB-aXuoO1HFF4X8ZmyA5wuxGwHyqJExkyI7-rX9V3SoJH1Be4t-ANLtbGkmyr5KcSe-RXhoi1UjBfSwRgs5U9Qe8T8SA8EaSmRG63NVp_rZaSeSogp0tvmS8TR5JXgzCi9m9PThGi0YojZskZNav2-spDB4GKqJH11s330KZi1VbCWJhMoNcw2HZ9fgng3J3L_7fRQLjHejL9ikGJLbvSoK0QvPkFxZWgHXGSmOb51NbwhJi8ap8fcLVIKn-MQ4Mw&amp;token_type=Bearer&amp;expires_in=3600</con:value>
         </con:property>
       </con:properties>
     </con:config>
@@ -310,8 +310,8 @@ json.each
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:transfers transferToAll="false" transferTextContent="true" transferChildNodes="false" setNullOnMissingSource="true" ignoreEmpty="false" failOnError="true" entitize="false">
         <con:name>uri</con:name>
-        <con:sourceType>numberRestrictions</con:sourceType>
-        <con:sourceStep>#Project#</con:sourceStep>
+        <con:sourceType/>
+        <con:sourceStep/>
         <con:sourcePath>$['response']['parameters']['uri']</con:sourcePath>
         <con:targetType>uri</con:targetType>
         <con:targetStep>> uri</con:targetStep>

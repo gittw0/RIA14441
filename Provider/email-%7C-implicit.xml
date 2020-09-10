@@ -266,7 +266,7 @@ json.each
       <con:properties>
         <con:property>
           <con:name>uri</con:name>
-          <con:value xsi:nil="true"/>
+          <con:value>http://localhost/redirect#access_token=eyJraWQiOiJzMSIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiJjNmM1ZjBiZS0zMGIwLTViNDMtYWRiYS1jYmI3Y2I2MzM0ZjkiLCJzY3AiOlsib3BlbmlkIiwiZW1haWwiXSwiY2xtIjpbIm9wZW5pZCIsIiFCZyJdLCJkYXQiOnsiYyI6IndyaW50In0sImlzcyI6Imh0dHBzOlwvXC9hdXRoLndyLWludC5ycGcucmlvdGdhbWVzLmNvbSIsImV4cCI6MTU5NjA2NjAwNCwiaWF0IjoxNTk2MDYyNDA0LCJqdGkiOiJkdWpwc3NpVVZoRSIsImNpZCI6InRlc3QtYXV0b21hdGlvbi13cmludCJ9.HLwIWrONeE5UTiq804HfvEnxSXH7d3cQ3sHw5DE40y4jQ5cXAM79XdxlkfqGKb88zAH5ZM_GoIfd4lli0p5tF_hYSJl_qsY-jnoDx1xi9soUB_af0eElCN2GFehz3ikQWSAxImM0WH_GpwshNRAJTS_h9J185oqL7JdUlu8yUowlM1jxIDlRUAuxMvE-AMLPCkmfXFa_HQuCNMSWI3CpAE7yINqIcOphzRXsLRKbcONRQ1mS8Hhp9PLbcpRZucewDHYev5hlpZCmDmFJ6Jp6zPZYGJZWZbcOEd3Sf_qq2BOY6CdOiOZ2y8l1EYKZs7XE1aYp9GzbpLIknZlBXPaXyw&amp;scope=openid+email&amp;id_token=eyJraWQiOiJzMSIsImFsZyI6IlJTMjU2In0.eyJhdF9oYXNoIjoiM0hxdHNDZUJnVm04M2hGR2MyV0pYUSIsInN1YiI6ImM2YzVmMGJlLTMwYjAtNWI0My1hZGJhLWNiYjdjYjYzMzRmOSIsImF1ZCI6InRlc3QtYXV0b21hdGlvbi13cmludCIsImFjciI6InVybjpyaW90OmJyb256ZSIsImFtciI6WyJwYXNzd29yZCJdLCJpc3MiOiJodHRwczpcL1wvYXV0aC53ci1pbnQucnBnLnJpb3RnYW1lcy5jb20iLCJleHAiOjE1OTYwNjMzMDQsImlhdCI6MTU5NjA2MjQwNCwibm9uY2UiOiI4QjM2QzBGNEFCNEQ0RDUxQjA1RjFGODk2ODQ4OEQ3MCJ9.vfaakqb92yU2kcUDK4cv4z6he7wIt3PUGFoFz711BU07t2gxGtBYZ5l6wOnEgdee8IbuD-PqmvSvh7BXSVaQFCIhUUOgHMUIc4LgDAdMuQawKow61hQcyvvTWhi1yN3qWtJb5Fcs5gQ5ROkTzT2D6YmLg8KZXncCEH3lmx-ikGSiPr4mTcZXFOmozsmgzKwO5Bqy5iRF4w0kQV923TI6-q6nhlj5_Lh9sagbUhIwtBzROse72xbyMPf6FvjLTytaRSijP4BF933VpQNqqhkaQTLGEfSDjsAfUZNNH57Tp3cUxblFsIwjeSuY_b_NuUpOBMhDSfzhllnvApqjujpSOQ&amp;token_type=Bearer&amp;expires_in=3600</con:value>
         </con:property>
       </con:properties>
     </con:config>
@@ -276,8 +276,8 @@ json.each
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:transfers transferToAll="false" transferTextContent="true" transferChildNodes="false" setNullOnMissingSource="true" ignoreEmpty="false" failOnError="true" entitize="false">
         <con:name>uri</con:name>
-        <con:sourceType>numberRestrictions</con:sourceType>
-        <con:sourceStep>#Project#</con:sourceStep>
+        <con:sourceType/>
+        <con:sourceStep/>
         <con:sourcePath>$['response']['parameters']['uri']</con:sourcePath>
         <con:targetType>uri</con:targetType>
         <con:targetStep>> uri</con:targetStep>
