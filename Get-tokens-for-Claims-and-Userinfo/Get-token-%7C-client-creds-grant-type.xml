@@ -35,7 +35,7 @@
   <con:properties>
     <con:property>
       <con:name>client-secret</con:name>
-      <con:value>jibersh 123abcdefg</con:value>
+      <con:value>jibersh 123abcdefgabc123</con:value>
     </con:property>
     <con:property>
       <con:name>grant_type</con:name>
@@ -43,7 +43,7 @@
     </con:property>
     <con:property>
       <con:name>accessToken</con:name>
-      <con:value/>
+      <con:value>abcde123lkfjlkfjeidke</con:value>
     </con:property>
     <con:property>
       <con:name>scope</con:name>
