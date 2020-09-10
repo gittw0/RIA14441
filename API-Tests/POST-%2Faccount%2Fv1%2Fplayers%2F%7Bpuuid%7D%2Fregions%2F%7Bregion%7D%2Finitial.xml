@@ -4,15 +4,20 @@
     <con:setting id="377f2476-d12f-4141-ad3c-fdd10dbd7130fileName">POST-%2Faccount%2Fv1%2Fplayers%2F%7Bpuuid%7D%2Fregions%2F%7Bregion%7D%2Finitial</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
-  <con:testStep type="properties" name="> thePuuid" id="1b5ec338-d8b9-4fe3-b4db-5347da1c8278">
+  <con:testStep type="transfer" name="> transfer  puuid0" id="a7e0ef8b-10e3-419f-ba3c-5e19f132971d">
     <con:settings/>
-    <con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:properties>
-        <con:property>
-          <con:name>thePuuid</con:name>
-          <con:value/>
-        </con:property>
-      </con:properties>
+    <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:transfers transferTextContent="true" setNullOnMissingSource="true" failOnError="true">
+        <con:name>puuid</con:name>
+        <con:sourceType/>
+        <con:sourceStep/>
+        <con:sourcePath>$[0]['puuid']</con:sourcePath>
+        <con:targetType/>
+        <con:targetStep/>
+        <con:targetPath/>
+        <con:type>JSONPATH</con:type>
+        <con:upgraded>true</con:upgraded>
+      </con:transfers>
     </con:config>
   </con:testStep>
   <con:testStep type="transfer" name="> transfer" id="b416f739-9f0d-4996-a762-c23861bf0027">
@@ -31,26 +36,21 @@
       </con:transfers>
     </con:config>
   </con:testStep>
-  <con:testStep type="transfer" name="> transfer  puuid0" id="a7e0ef8b-10e3-419f-ba3c-5e19f132971d">
+  <con:testStep type="properties" name="> thePuuid" id="1b5ec338-d8b9-4fe3-b4db-5347da1c8278">
     <con:settings/>
-    <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:transfers transferTextContent="true" setNullOnMissingSource="true" failOnError="true">
-        <con:name>puuid</con:name>
-        <con:sourceType/>
-        <con:sourceStep/>
-        <con:sourcePath>$[0]['puuid']</con:sourcePath>
-        <con:targetType/>
-        <con:targetStep/>
-        <con:targetPath/>
-        <con:type>JSONPATH</con:type>
-        <con:upgraded>true</con:upgraded>
-      </con:transfers>
+    <con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:properties>
+        <con:property>
+          <con:name>thePuuid</con:name>
+          <con:value/>
+        </con:property>
+      </con:properties>
     </con:config>
   </con:testStep>
   <con:properties/>
   <con:reportParameters/>
   <con:breakPoints>
-    <con:testStepId>812cc117-9071-4aff-b3f8-88428163e596</con:testStepId>
+    <con:testStepId>77216606-4003-4b30-8b80-968dac1cea78</con:testStepId>
     <con:status>NONE</con:status>
     <con:properties/>
   </con:breakPoints>
@@ -60,15 +60,15 @@
     <con:properties/>
   </con:breakPoints>
   <con:breakPoints>
-    <con:testStepId>77216606-4003-4b30-8b80-968dac1cea78</con:testStepId>
+    <con:testStepId>812cc117-9071-4aff-b3f8-88428163e596</con:testStepId>
     <con:status>NONE</con:status>
     <con:properties/>
   </con:breakPoints>
   <con:environmentSpec>
-    <con:entry environmentId="cd04cfb9-4faf-4b69-9ec6-24af2181f7ae">
+    <con:entry environmentId="b407e352-14e8-440f-bf25-abe254c02b61">
       <con:authProfile>Inherit From Parent</con:authProfile>
     </con:entry>
-    <con:entry environmentId="b407e352-14e8-440f-bf25-abe254c02b61">
+    <con:entry environmentId="cd04cfb9-4faf-4b69-9ec6-24af2181f7ae">
       <con:authProfile>Inherit From Parent</con:authProfile>
     </con:entry>
   </con:environmentSpec>

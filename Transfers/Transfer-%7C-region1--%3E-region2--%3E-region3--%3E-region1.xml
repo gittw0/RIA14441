@@ -4,7 +4,7 @@
     <con:setting id="78d5688d-07c4-418c-a9dd-7256ec58f40afileName">Transfer-%7C-region1--%3E-region2--%3E-region3--%3E-region1</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
-  <con:testStep type="transfer" name="> transfer puuid to cleanup" id="ea20dade-3b51-4fc7-9c9e-bca086038de0">
+  <con:testStep type="transfer" name="> transfer puuid to cleanup 2" id="ea20dade-3b51-4fc7-9c9e-bca086038de0">
     <con:settings/>
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:transfers transferTextContent="true" setNullOnMissingSource="true" failOnError="true">
@@ -20,78 +20,10 @@
       </con:transfers>
     </con:config>
   </con:testStep>
-  <con:testStep type="delay" name="******** Account setup ********" id="6ec1ec96-3301-40da-a8b1-bd9a0fdc51f2">
+  <con:testStep type="delay" name="******** Account setup ******** 2" id="6ec1ec96-3301-40da-a8b1-bd9a0fdc51f2">
     <con:settings/>
     <con:config>
       <delay>10</delay>
-    </con:config>
-  </con:testStep>
-  <con:testStep type="transfer" name="> transfer puuid" id="351a9842-0eac-443e-8659-4423d15f0cb7">
-    <con:settings/>
-    <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:transfers transferToAll="false" transferTextContent="true" transferChildNodes="false" setNullOnMissingSource="true" ignoreEmpty="false" failOnError="true" entitize="false">
-        <con:name>sub</con:name>
-        <con:sourceType/>
-        <con:sourceStep/>
-        <con:sourcePath>$['puuid']</con:sourcePath>
-        <con:targetType>thePuuid</con:targetType>
-        <con:targetStep>> thePuuid</con:targetStep>
-        <con:targetPath/>
-        <con:type>JSONPATH</con:type>
-        <con:upgraded>true</con:upgraded>
-      </con:transfers>
-    </con:config>
-  </con:testStep>
-  <con:testStep type="properties" name="> thePuuid" id="514f8755-d24d-47b7-80c6-4c6fcd0d8c2e">
-    <con:settings/>
-    <con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:properties>
-        <con:property>
-          <con:name>thePuuid</con:name>
-          <con:value/>
-        </con:property>
-      </con:properties>
-    </con:config>
-  </con:testStep>
-  <con:testStep type="delay" name="*********** A -> B ***********" id="226aac6b-4959-460c-8898-6fc517a6b9d1">
-    <con:settings/>
-    <con:config>
-      <delay>10</delay>
-    </con:config>
-  </con:testStep>
-  <con:testStep type="delay" name="*********** B -> C ***********" id="45aee237-a005-43bc-ae51-2979da8f6324">
-    <con:settings/>
-    <con:config>
-      <delay>10</delay>
-    </con:config>
-  </con:testStep>
-  <con:testStep type="delay" name="*********** C -> A ***********" id="c94ed44d-7abf-4559-ac8b-8ff527289a2e">
-    <con:settings/>
-    <con:config>
-      <delay>10</delay>
-    </con:config>
-  </con:testStep>
-  <con:testStep type="delay" name="*********** B -> C *********** 2" id="45aee237-a005-43bc-ae51-2979da8f6324">
-    <con:settings/>
-    <con:config>
-      <delay>10</delay>
-    </con:config>
-  </con:testStep>
-  <con:testStep type="delay" name="*********** A -> B *********** 2" id="226aac6b-4959-460c-8898-6fc517a6b9d1">
-    <con:settings/>
-    <con:config>
-      <delay>10</delay>
-    </con:config>
-  </con:testStep>
-  <con:testStep type="properties" name="> thePuuid 2" id="514f8755-d24d-47b7-80c6-4c6fcd0d8c2e">
-    <con:settings/>
-    <con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:properties>
-        <con:property>
-          <con:name>thePuuid</con:name>
-          <con:value/>
-        </con:property>
-      </con:properties>
     </con:config>
   </con:testStep>
   <con:testStep type="transfer" name="> transfer puuid 2" id="351a9842-0eac-443e-8659-4423d15f0cb7">
@@ -110,13 +42,81 @@
       </con:transfers>
     </con:config>
   </con:testStep>
-  <con:testStep type="delay" name="******** Account setup ******** 2" id="6ec1ec96-3301-40da-a8b1-bd9a0fdc51f2">
+  <con:testStep type="properties" name="> thePuuid 2" id="514f8755-d24d-47b7-80c6-4c6fcd0d8c2e">
+    <con:settings/>
+    <con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:properties>
+        <con:property>
+          <con:name>thePuuid</con:name>
+          <con:value/>
+        </con:property>
+      </con:properties>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="delay" name="*********** A -> B *********** 2" id="226aac6b-4959-460c-8898-6fc517a6b9d1">
     <con:settings/>
     <con:config>
       <delay>10</delay>
     </con:config>
   </con:testStep>
-  <con:testStep type="transfer" name="> transfer puuid to cleanup 2" id="ea20dade-3b51-4fc7-9c9e-bca086038de0">
+  <con:testStep type="delay" name="*********** B -> C *********** 2" id="45aee237-a005-43bc-ae51-2979da8f6324">
+    <con:settings/>
+    <con:config>
+      <delay>10</delay>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="delay" name="*********** C -> A ***********" id="c94ed44d-7abf-4559-ac8b-8ff527289a2e">
+    <con:settings/>
+    <con:config>
+      <delay>10</delay>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="delay" name="*********** B -> C ***********" id="45aee237-a005-43bc-ae51-2979da8f6324">
+    <con:settings/>
+    <con:config>
+      <delay>10</delay>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="delay" name="*********** A -> B ***********" id="226aac6b-4959-460c-8898-6fc517a6b9d1">
+    <con:settings/>
+    <con:config>
+      <delay>10</delay>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="properties" name="> thePuuid" id="514f8755-d24d-47b7-80c6-4c6fcd0d8c2e">
+    <con:settings/>
+    <con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:properties>
+        <con:property>
+          <con:name>thePuuid</con:name>
+          <con:value/>
+        </con:property>
+      </con:properties>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="transfer" name="> transfer puuid" id="351a9842-0eac-443e-8659-4423d15f0cb7">
+    <con:settings/>
+    <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:transfers transferToAll="false" transferTextContent="true" transferChildNodes="false" setNullOnMissingSource="true" ignoreEmpty="false" failOnError="true" entitize="false">
+        <con:name>sub</con:name>
+        <con:sourceType/>
+        <con:sourceStep/>
+        <con:sourcePath>$['puuid']</con:sourcePath>
+        <con:targetType>thePuuid</con:targetType>
+        <con:targetStep>> thePuuid</con:targetStep>
+        <con:targetPath/>
+        <con:type>JSONPATH</con:type>
+        <con:upgraded>true</con:upgraded>
+      </con:transfers>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="delay" name="******** Account setup ********" id="6ec1ec96-3301-40da-a8b1-bd9a0fdc51f2">
+    <con:settings/>
+    <con:config>
+      <delay>10</delay>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="transfer" name="> transfer puuid to cleanup" id="ea20dade-3b51-4fc7-9c9e-bca086038de0">
     <con:settings/>
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:transfers transferTextContent="true" setNullOnMissingSource="true" failOnError="true">
@@ -140,52 +140,7 @@
   </con:properties>
   <con:reportParameters/>
   <con:breakPoints>
-    <con:testStepId>9b797298-c1ac-4d81-b105-9dab87892230</con:testStepId>
-    <con:status>NONE</con:status>
-    <con:properties/>
-  </con:breakPoints>
-  <con:breakPoints>
-    <con:testStepId>7ac23a7d-2cbb-4cb0-a2b2-30eeee73ee2e</con:testStepId>
-    <con:status>NONE</con:status>
-    <con:properties/>
-  </con:breakPoints>
-  <con:breakPoints>
-    <con:testStepId>448e64b3-7dbf-4ec3-b469-9fd6982fd497</con:testStepId>
-    <con:status>NONE</con:status>
-    <con:properties/>
-  </con:breakPoints>
-  <con:breakPoints>
-    <con:testStepId>0853983f-9f3f-4dfc-a04b-a9123d56cc87</con:testStepId>
-    <con:status>NONE</con:status>
-    <con:properties/>
-  </con:breakPoints>
-  <con:breakPoints>
-    <con:testStepId>14d5aae9-7210-41d0-a76a-0cda05f0e3b1</con:testStepId>
-    <con:status>NONE</con:status>
-    <con:properties/>
-  </con:breakPoints>
-  <con:breakPoints>
-    <con:testStepId>84fb07e2-b5b2-4730-bb67-85519b1e4d5b</con:testStepId>
-    <con:status>NONE</con:status>
-    <con:properties/>
-  </con:breakPoints>
-  <con:breakPoints>
-    <con:testStepId>67bc797d-56f3-4be1-b32d-c6f601603e45</con:testStepId>
-    <con:status>NONE</con:status>
-    <con:properties/>
-  </con:breakPoints>
-  <con:breakPoints>
-    <con:testStepId>6a67fe66-82e3-47fe-9920-0e63c0361f7b</con:testStepId>
-    <con:status>NONE</con:status>
-    <con:properties/>
-  </con:breakPoints>
-  <con:breakPoints>
-    <con:testStepId>fe496ada-8bff-408a-afc6-c69ae62d876c</con:testStepId>
-    <con:status>NONE</con:status>
-    <con:properties/>
-  </con:breakPoints>
-  <con:breakPoints>
-    <con:testStepId>9a4512b8-8482-4685-9230-0cdbeb001198</con:testStepId>
+    <con:testStepId>6ec1ec96-3301-40da-a8b1-bd9a0fdc51f2</con:testStepId>
     <con:status>NONE</con:status>
     <con:properties/>
   </con:breakPoints>
@@ -195,15 +150,60 @@
     <con:properties/>
   </con:breakPoints>
   <con:breakPoints>
-    <con:testStepId>6ec1ec96-3301-40da-a8b1-bd9a0fdc51f2</con:testStepId>
+    <con:testStepId>9a4512b8-8482-4685-9230-0cdbeb001198</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>fe496ada-8bff-408a-afc6-c69ae62d876c</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>6a67fe66-82e3-47fe-9920-0e63c0361f7b</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>67bc797d-56f3-4be1-b32d-c6f601603e45</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>84fb07e2-b5b2-4730-bb67-85519b1e4d5b</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>14d5aae9-7210-41d0-a76a-0cda05f0e3b1</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>0853983f-9f3f-4dfc-a04b-a9123d56cc87</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>448e64b3-7dbf-4ec3-b469-9fd6982fd497</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>7ac23a7d-2cbb-4cb0-a2b2-30eeee73ee2e</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>9b797298-c1ac-4d81-b105-9dab87892230</con:testStepId>
     <con:status>NONE</con:status>
     <con:properties/>
   </con:breakPoints>
   <con:environmentSpec>
-    <con:entry environmentId="b407e352-14e8-440f-bf25-abe254c02b61">
+    <con:entry environmentId="cd04cfb9-4faf-4b69-9ec6-24af2181f7ae">
       <con:authProfile>Inherit From Parent</con:authProfile>
     </con:entry>
-    <con:entry environmentId="cd04cfb9-4faf-4b69-9ec6-24af2181f7ae">
+    <con:entry environmentId="b407e352-14e8-440f-bf25-abe254c02b61">
       <con:authProfile>Inherit From Parent</con:authProfile>
     </con:entry>
   </con:environmentSpec>

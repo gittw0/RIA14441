@@ -4,20 +4,35 @@
     <con:setting id="799204b4-2355-4342-96b9-864ea9aa86a0fileName">Test-Driver-%7C-Revive-account-%7C-Regioned</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
-  <con:testStep type="transfer" name=">transfer access token" id="0f4ca695-2044-47fa-bb08-0ee7764e3e5b">
+  <con:testStep type="transfer" name="> transfer puuid to  cleanup" id="076b49c6-a27f-4a7f-babc-2e78c4fd2ce2">
     <con:settings/>
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:transfers transferToAll="false" transferTextContent="true" transferChildNodes="false" setNullOnMissingSource="true" ignoreEmpty="false" failOnError="true" entitize="false">
-        <con:name>access_token</con:name>
+      <con:transfers transferTextContent="true" setNullOnMissingSource="true" failOnError="true">
+        <con:name>puuid</con:name>
         <con:sourceType/>
         <con:sourceStep/>
-        <con:sourcePath>$['access_token']</con:sourcePath>
-        <con:targetType>accessToken</con:targetType>
-        <con:targetStep>>thePuuid, accessToken</con:targetStep>
+        <con:sourcePath>$[0]['puuid']</con:sourcePath>
+        <con:targetType/>
+        <con:targetStep/>
         <con:targetPath/>
         <con:type>JSONPATH</con:type>
         <con:upgraded>true</con:upgraded>
       </con:transfers>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="properties" name=">thePuuid, accessToken" id="ac808cb7-dbd5-4571-8455-bbf3d363d08c">
+    <con:settings/>
+    <con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:properties>
+        <con:property>
+          <con:name>thePuuid</con:name>
+          <con:value/>
+        </con:property>
+        <con:property>
+          <con:name>accessToken</con:name>
+          <con:value/>
+        </con:property>
+      </con:properties>
     </con:config>
   </con:testStep>
   <con:testStep type="transfer" name="> transfer puuid" id="c53f0ee2-e355-45ae-8a1b-c9e885f92839">
@@ -36,31 +51,16 @@
       </con:transfers>
     </con:config>
   </con:testStep>
-  <con:testStep type="properties" name=">thePuuid, accessToken" id="ac808cb7-dbd5-4571-8455-bbf3d363d08c">
-    <con:settings/>
-    <con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:properties>
-        <con:property>
-          <con:name>accessToken</con:name>
-          <con:value/>
-        </con:property>
-        <con:property>
-          <con:name>thePuuid</con:name>
-          <con:value/>
-        </con:property>
-      </con:properties>
-    </con:config>
-  </con:testStep>
-  <con:testStep type="transfer" name="> transfer puuid to  cleanup" id="076b49c6-a27f-4a7f-babc-2e78c4fd2ce2">
+  <con:testStep type="transfer" name=">transfer access token" id="0f4ca695-2044-47fa-bb08-0ee7764e3e5b">
     <con:settings/>
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:transfers transferTextContent="true" setNullOnMissingSource="true" failOnError="true">
-        <con:name>puuid</con:name>
+      <con:transfers transferToAll="false" transferTextContent="true" transferChildNodes="false" setNullOnMissingSource="true" ignoreEmpty="false" failOnError="true" entitize="false">
+        <con:name>access_token</con:name>
         <con:sourceType/>
         <con:sourceStep/>
-        <con:sourcePath>$[0]['puuid']</con:sourcePath>
-        <con:targetType/>
-        <con:targetStep/>
+        <con:sourcePath>$['access_token']</con:sourcePath>
+        <con:targetType>accessToken</con:targetType>
+        <con:targetStep>>thePuuid, accessToken</con:targetStep>
         <con:targetPath/>
         <con:type>JSONPATH</con:type>
         <con:upgraded>true</con:upgraded>
@@ -70,12 +70,12 @@
   <con:properties/>
   <con:reportParameters/>
   <con:breakPoints>
-    <con:testStepId>1bef5692-0e75-4611-bf65-e33edf53e6ee</con:testStepId>
+    <con:testStepId>73698acb-ca4d-4925-b942-7fc5ffd50273</con:testStepId>
     <con:status>NONE</con:status>
     <con:properties/>
   </con:breakPoints>
   <con:breakPoints>
-    <con:testStepId>73698acb-ca4d-4925-b942-7fc5ffd50273</con:testStepId>
+    <con:testStepId>1bef5692-0e75-4611-bf65-e33edf53e6ee</con:testStepId>
     <con:status>NONE</con:status>
     <con:properties/>
   </con:breakPoints>

@@ -4,6 +4,17 @@
     <con:setting id="206ad5db-468f-43f9-9ac8-de5b51d54387fileName">GET-%2Faccount%2Fv1%2Fplayers---Player-search-using-govt_id-parameter</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:testStep type="properties" name="Properties" id="7a867d04-9688-40a8-a57b-d32c03037d47">
+    <con:settings/>
+    <con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:properties>
+        <con:property>
+          <con:name>govtId</con:name>
+          <con:value/>
+        </con:property>
+      </con:properties>
+    </con:config>
+  </con:testStep>
   <con:testStep type="transfer" name="PropertyTransfer 1" id="ad3aced2-74b1-403b-8548-90c841c27eb3">
     <con:settings/>
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -20,29 +31,18 @@
       </con:transfers>
     </con:config>
   </con:testStep>
-  <con:testStep type="properties" name="Properties" id="7a867d04-9688-40a8-a57b-d32c03037d47">
-    <con:settings/>
-    <con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:properties>
-        <con:property>
-          <con:name>govtId</con:name>
-          <con:value/>
-        </con:property>
-      </con:properties>
-    </con:config>
-  </con:testStep>
   <con:properties>
     <con:property>
-      <con:name>puuid</con:name>
-      <con:value>${#Project#puuid}</con:value>
+      <con:name>username</con:name>
+      <con:value>${#Project#username}</con:value>
     </con:property>
     <con:property>
       <con:name>email_address</con:name>
       <con:value>${#Project#defaultEmail}</con:value>
     </con:property>
     <con:property>
-      <con:name>username</con:name>
-      <con:value>${#Project#username}</con:value>
+      <con:name>puuid</con:name>
+      <con:value>${#Project#puuid}</con:value>
     </con:property>
   </con:properties>
   <con:reportParameters/>

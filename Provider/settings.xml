@@ -7,20 +7,20 @@
   <con:runType>SEQUENTIAL</con:runType>
   <con:properties>
     <con:property>
-      <con:name>testRegion1</con:name>
-      <con:value>${#Project#srcRegion}</con:value>
-    </con:property>
-    <con:property>
       <con:name>testRegion2</con:name>
       <con:value>${#Project#destRegion}</con:value>
+    </con:property>
+    <con:property>
+      <con:name>testRegion1</con:name>
+      <con:value>${#Project#srcRegion}</con:value>
     </con:property>
   </con:properties>
   <con:reportParameters/>
   <con:environmentSpec>
-    <con:entry environmentId="b407e352-14e8-440f-bf25-abe254c02b61">
+    <con:entry environmentId="cd04cfb9-4faf-4b69-9ec6-24af2181f7ae">
       <con:authProfile>Inherit From Parent</con:authProfile>
     </con:entry>
-    <con:entry environmentId="cd04cfb9-4faf-4b69-9ec6-24af2181f7ae">
+    <con:entry environmentId="b407e352-14e8-440f-bf25-abe254c02b61">
       <con:authProfile>Inherit From Parent</con:authProfile>
     </con:entry>
   </con:environmentSpec>

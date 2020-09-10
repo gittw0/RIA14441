@@ -4,77 +4,20 @@
     <con:setting id="84cfc94d-1b90-4bd5-9e24-7c98d2433212fileName">PUT-%2Faccount%2Fv1%2Fplayers%2F%7Bpuuid%7D%2Fidentity%2Friot</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
-  <con:testStep type="calltestcase" name="Run | password grant auth w/ new username/pw" id="2c0c0a2a-1048-4c1b-afd8-29f16986aa7b">
-    <con:settings/>
-    <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:targetTestCase>7a51e9e9-1495-4bac-8bc6-f44b9033f671</con:targetTestCase>
-      <con:properties>
-        <con:property>
-          <con:name>thePassword</con:name>
-          <con:value/>
-        </con:property>
-        <con:property>
-          <con:name>theUsername</con:name>
-          <con:value/>
-        </con:property>
-        <con:property>
-          <con:name>idToken</con:name>
-          <con:value/>
-        </con:property>
-        <con:property>
-          <con:name>accessToken</con:name>
-          <con:value/>
-        </con:property>
-        <con:property>
-          <con:name>grant_type</con:name>
-          <con:value/>
-        </con:property>
-        <con:property>
-          <con:name>scope</con:name>
-          <con:value/>
-        </con:property>
-        <con:property>
-          <con:name>client-secret</con:name>
-          <con:value/>
-        </con:property>
-        <con:property>
-          <con:name>client</con:name>
-          <con:value/>
-        </con:property>
-      </con:properties>
-      <con:returnProperties/>
-      <con:runMode>SINGLETON_AND_WAIT</con:runMode>
-    </con:config>
-  </con:testStep>
-  <con:testStep type="transfer" name="> date_last_password_changed" id="0084c407-4077-452d-8ec4-4cb242f8efed">
+  <con:testStep type="transfer" name="> transfer puuid0" id="f08f97ee-460f-4200-9738-07ff5c922d34">
     <con:settings/>
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:transfers transferToAll="false" transferTextContent="true" transferChildNodes="false" setNullOnMissingSource="true" ignoreEmpty="false" failOnError="true" entitize="false">
-        <con:name>date_last_password_changed</con:name>
+      <con:transfers transferTextContent="true" setNullOnMissingSource="true" failOnError="true">
+        <con:name>puuid</con:name>
         <con:sourceType/>
         <con:sourceStep/>
-        <con:sourcePath>$['riot_identity']['date_last_password_changed']</con:sourcePath>
-        <con:targetType>date_last_password_changed</con:targetType>
-        <con:targetStep>> thePuuid</con:targetStep>
+        <con:sourcePath>$[0]['puuid']</con:sourcePath>
+        <con:targetType/>
+        <con:targetStep/>
         <con:targetPath/>
         <con:type>JSONPATH</con:type>
         <con:upgraded>true</con:upgraded>
       </con:transfers>
-    </con:config>
-  </con:testStep>
-  <con:testStep type="properties" name="> thePuuid" id="6aab929d-c5dd-4c5d-9887-e902248ae848">
-    <con:settings/>
-    <con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:properties>
-        <con:property>
-          <con:name>date_last_password_changed</con:name>
-          <con:value/>
-        </con:property>
-        <con:property>
-          <con:name>thePuuid</con:name>
-          <con:value/>
-        </con:property>
-      </con:properties>
     </con:config>
   </con:testStep>
   <con:testStep type="transfer" name="> transfer" id="5bc0da01-9d07-481d-bda6-d94fc92f8a29">
@@ -93,41 +36,83 @@
       </con:transfers>
     </con:config>
   </con:testStep>
-  <con:testStep type="transfer" name="> transfer puuid0" id="f08f97ee-460f-4200-9738-07ff5c922d34">
+  <con:testStep type="properties" name="> thePuuid" id="6aab929d-c5dd-4c5d-9887-e902248ae848">
+    <con:settings/>
+    <con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:properties>
+        <con:property>
+          <con:name>thePuuid</con:name>
+          <con:value/>
+        </con:property>
+        <con:property>
+          <con:name>date_last_password_changed</con:name>
+          <con:value/>
+        </con:property>
+      </con:properties>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="transfer" name="> date_last_password_changed" id="0084c407-4077-452d-8ec4-4cb242f8efed">
     <con:settings/>
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:transfers transferTextContent="true" setNullOnMissingSource="true" failOnError="true">
-        <con:name>puuid</con:name>
+      <con:transfers transferToAll="false" transferTextContent="true" transferChildNodes="false" setNullOnMissingSource="true" ignoreEmpty="false" failOnError="true" entitize="false">
+        <con:name>date_last_password_changed</con:name>
         <con:sourceType/>
         <con:sourceStep/>
-        <con:sourcePath>$[0]['puuid']</con:sourcePath>
-        <con:targetType/>
-        <con:targetStep/>
+        <con:sourcePath>$['riot_identity']['date_last_password_changed']</con:sourcePath>
+        <con:targetType>date_last_password_changed</con:targetType>
+        <con:targetStep>> thePuuid</con:targetStep>
         <con:targetPath/>
         <con:type>JSONPATH</con:type>
         <con:upgraded>true</con:upgraded>
       </con:transfers>
     </con:config>
   </con:testStep>
+  <con:testStep type="calltestcase" name="Run | password grant auth w/ new username/pw" id="2c0c0a2a-1048-4c1b-afd8-29f16986aa7b">
+    <con:settings/>
+    <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:targetTestCase>7a51e9e9-1495-4bac-8bc6-f44b9033f671</con:targetTestCase>
+      <con:properties>
+        <con:property>
+          <con:name>client</con:name>
+          <con:value/>
+        </con:property>
+        <con:property>
+          <con:name>client-secret</con:name>
+          <con:value/>
+        </con:property>
+        <con:property>
+          <con:name>scope</con:name>
+          <con:value/>
+        </con:property>
+        <con:property>
+          <con:name>grant_type</con:name>
+          <con:value/>
+        </con:property>
+        <con:property>
+          <con:name>accessToken</con:name>
+          <con:value/>
+        </con:property>
+        <con:property>
+          <con:name>idToken</con:name>
+          <con:value/>
+        </con:property>
+        <con:property>
+          <con:name>theUsername</con:name>
+          <con:value/>
+        </con:property>
+        <con:property>
+          <con:name>thePassword</con:name>
+          <con:value/>
+        </con:property>
+      </con:properties>
+      <con:returnProperties/>
+      <con:runMode>SINGLETON_AND_WAIT</con:runMode>
+    </con:config>
+  </con:testStep>
   <con:properties/>
   <con:reportParameters/>
   <con:breakPoints>
-    <con:testStepId>76ac0938-11f7-4e98-8cd7-6f9968100f6c</con:testStepId>
-    <con:status>NONE</con:status>
-    <con:properties/>
-  </con:breakPoints>
-  <con:breakPoints>
-    <con:testStepId>2a4149d0-3070-446f-8d6a-73df61e69224</con:testStepId>
-    <con:status>NONE</con:status>
-    <con:properties/>
-  </con:breakPoints>
-  <con:breakPoints>
-    <con:testStepId>5fcb2e7e-cfed-4d4e-a580-1b7ebe5469ef</con:testStepId>
-    <con:status>NONE</con:status>
-    <con:properties/>
-  </con:breakPoints>
-  <con:breakPoints>
-    <con:testStepId>62a2a6c1-38b3-432e-a495-5b66584338fc</con:testStepId>
+    <con:testStepId>83b3abc3-44c3-4ed9-b627-55c488dd2ea9</con:testStepId>
     <con:status>NONE</con:status>
     <con:properties/>
   </con:breakPoints>
@@ -137,15 +122,30 @@
     <con:properties/>
   </con:breakPoints>
   <con:breakPoints>
-    <con:testStepId>83b3abc3-44c3-4ed9-b627-55c488dd2ea9</con:testStepId>
+    <con:testStepId>62a2a6c1-38b3-432e-a495-5b66584338fc</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>5fcb2e7e-cfed-4d4e-a580-1b7ebe5469ef</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>2a4149d0-3070-446f-8d6a-73df61e69224</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>76ac0938-11f7-4e98-8cd7-6f9968100f6c</con:testStepId>
     <con:status>NONE</con:status>
     <con:properties/>
   </con:breakPoints>
   <con:environmentSpec>
-    <con:entry environmentId="cd04cfb9-4faf-4b69-9ec6-24af2181f7ae">
+    <con:entry environmentId="b407e352-14e8-440f-bf25-abe254c02b61">
       <con:authProfile>Inherit From Parent</con:authProfile>
     </con:entry>
-    <con:entry environmentId="b407e352-14e8-440f-bf25-abe254c02b61">
+    <con:entry environmentId="cd04cfb9-4faf-4b69-9ec6-24af2181f7ae">
       <con:authProfile>Inherit From Parent</con:authProfile>
     </con:entry>
   </con:environmentSpec>

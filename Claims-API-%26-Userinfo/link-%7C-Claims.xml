@@ -10,24 +10,24 @@
       <con:targetTestCase>8808d750-7ca6-49f7-a2f7-38494af92449</con:targetTestCase>
       <con:properties>
         <con:property>
-          <con:name>accessToken</con:name>
-          <con:value/>
-        </con:property>
-        <con:property>
-          <con:name>grant_type</con:name>
-          <con:value>${#TestSuite#grant_type}</con:value>
-        </con:property>
-        <con:property>
-          <con:name>scope</con:name>
-          <con:value>${#TestCase#scope}</con:value>
+          <con:name>client</con:name>
+          <con:value>${#TestCase#client}</con:value>
         </con:property>
         <con:property>
           <con:name>client-secret</con:name>
           <con:value>${#TestCase#client-secret}</con:value>
         </con:property>
         <con:property>
-          <con:name>client</con:name>
-          <con:value>${#TestCase#client}</con:value>
+          <con:name>scope</con:name>
+          <con:value>${#TestCase#scope}</con:value>
+        </con:property>
+        <con:property>
+          <con:name>grant_type</con:name>
+          <con:value>${#TestSuite#grant_type}</con:value>
+        </con:property>
+        <con:property>
+          <con:name>accessToken</con:name>
+          <con:value/>
         </con:property>
       </con:properties>
       <con:returnProperties>
@@ -38,11 +38,7 @@
   </con:testStep>
   <con:properties>
     <con:property>
-      <con:name>thePuuid</con:name>
-      <con:value/>
-    </con:property>
-    <con:property>
-      <con:name>scope</con:name>
+      <con:name>client</con:name>
       <con:value/>
     </con:property>
     <con:property>
@@ -50,7 +46,11 @@
       <con:value/>
     </con:property>
     <con:property>
-      <con:name>client</con:name>
+      <con:name>scope</con:name>
+      <con:value/>
+    </con:property>
+    <con:property>
+      <con:name>thePuuid</con:name>
       <con:value/>
     </con:property>
   </con:properties>
@@ -61,10 +61,10 @@
     <con:properties/>
   </con:breakPoints>
   <con:environmentSpec>
-    <con:entry environmentId="cd04cfb9-4faf-4b69-9ec6-24af2181f7ae">
+    <con:entry environmentId="b407e352-14e8-440f-bf25-abe254c02b61">
       <con:authProfile>Inherit From Parent</con:authProfile>
     </con:entry>
-    <con:entry environmentId="b407e352-14e8-440f-bf25-abe254c02b61">
+    <con:entry environmentId="cd04cfb9-4faf-4b69-9ec6-24af2181f7ae">
       <con:authProfile>Inherit From Parent</con:authProfile>
     </con:entry>
   </con:environmentSpec>
