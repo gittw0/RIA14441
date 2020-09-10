@@ -4,49 +4,15 @@
     <con:setting id="f6f0e232-43fa-47c4-94b9-b937fa72f40ffileName">Create-Facebook-account-using-Atlas-API</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
-  <con:testStep type="properties" name="accessToken, thePuuid, thePuuid2, theUid" id="5d56cc4e-5ce1-4018-b667-f8410aa53981">
-    <con:settings/>
-    <con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:properties>
-        <con:property>
-          <con:name>accessToken</con:name>
-          <con:value/>
-        </con:property>
-        <con:property>
-          <con:name>thePuuid</con:name>
-          <con:value/>
-        </con:property>
-        <con:property>
-          <con:name>thePuuid2</con:name>
-          <con:value/>
-        </con:property>
-        <con:property>
-          <con:name>theUid</con:name>
-          <con:value/>
-        </con:property>
-      </con:properties>
-    </con:config>
-  </con:testStep>
-  <con:testStep type="transfer" name="> transfer accessToken, id" id="25f942a3-9c79-4ba0-acbd-8aaed6b37c16">
+  <con:testStep type="transfer" name=">transfer puuid 2" id="415f060d-928c-48e0-9a49-a0c7548bc707">
     <con:settings/>
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:transfers transferToAll="false" transferTextContent="true" transferChildNodes="false" setNullOnMissingSource="true" ignoreEmpty="false" failOnError="true" entitize="false">
-        <con:name>access_token</con:name>
+      <con:transfers transferTextContent="true" setNullOnMissingSource="true" failOnError="true">
+        <con:name>puuid</con:name>
         <con:sourceType/>
         <con:sourceStep/>
-        <con:sourcePath>$['access_token']</con:sourcePath>
-        <con:targetType>accessToken</con:targetType>
-        <con:targetStep>accessToken, thePuuid, thePuuid2, theUid</con:targetStep>
-        <con:targetPath/>
-        <con:type>JSONPATH</con:type>
-        <con:upgraded>true</con:upgraded>
-      </con:transfers>
-      <con:transfers transferToAll="false" transferTextContent="true" transferChildNodes="false" setNullOnMissingSource="true" ignoreEmpty="false" failOnError="true" entitize="false">
-        <con:name>id</con:name>
-        <con:sourceType/>
-        <con:sourceStep/>
-        <con:sourcePath>$['id']</con:sourcePath>
-        <con:targetType>theUid</con:targetType>
+        <con:sourcePath>$['puuid']</con:sourcePath>
+        <con:targetType>thePuuid2</con:targetType>
         <con:targetStep>accessToken, thePuuid, thePuuid2, theUid</con:targetStep>
         <con:targetPath/>
         <con:type>JSONPATH</con:type>
@@ -70,20 +36,54 @@
       </con:transfers>
     </con:config>
   </con:testStep>
-  <con:testStep type="transfer" name=">transfer puuid 2" id="415f060d-928c-48e0-9a49-a0c7548bc707">
+  <con:testStep type="transfer" name="> transfer accessToken, id" id="25f942a3-9c79-4ba0-acbd-8aaed6b37c16">
     <con:settings/>
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:transfers transferTextContent="true" setNullOnMissingSource="true" failOnError="true">
-        <con:name>puuid</con:name>
+      <con:transfers transferToAll="false" transferTextContent="true" transferChildNodes="false" setNullOnMissingSource="true" ignoreEmpty="false" failOnError="true" entitize="false">
+        <con:name>id</con:name>
         <con:sourceType/>
         <con:sourceStep/>
-        <con:sourcePath>$['puuid']</con:sourcePath>
-        <con:targetType>thePuuid2</con:targetType>
+        <con:sourcePath>$['id']</con:sourcePath>
+        <con:targetType>theUid</con:targetType>
         <con:targetStep>accessToken, thePuuid, thePuuid2, theUid</con:targetStep>
         <con:targetPath/>
         <con:type>JSONPATH</con:type>
         <con:upgraded>true</con:upgraded>
       </con:transfers>
+      <con:transfers transferToAll="false" transferTextContent="true" transferChildNodes="false" setNullOnMissingSource="true" ignoreEmpty="false" failOnError="true" entitize="false">
+        <con:name>access_token</con:name>
+        <con:sourceType/>
+        <con:sourceStep/>
+        <con:sourcePath>$['access_token']</con:sourcePath>
+        <con:targetType>accessToken</con:targetType>
+        <con:targetStep>accessToken, thePuuid, thePuuid2, theUid</con:targetStep>
+        <con:targetPath/>
+        <con:type>JSONPATH</con:type>
+        <con:upgraded>true</con:upgraded>
+      </con:transfers>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="properties" name="accessToken, thePuuid, thePuuid2, theUid" id="5d56cc4e-5ce1-4018-b667-f8410aa53981">
+    <con:settings/>
+    <con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:properties>
+        <con:property>
+          <con:name>theUid</con:name>
+          <con:value/>
+        </con:property>
+        <con:property>
+          <con:name>thePuuid2</con:name>
+          <con:value/>
+        </con:property>
+        <con:property>
+          <con:name>thePuuid</con:name>
+          <con:value/>
+        </con:property>
+        <con:property>
+          <con:name>accessToken</con:name>
+          <con:value/>
+        </con:property>
+      </con:properties>
     </con:config>
   </con:testStep>
   <con:properties/>

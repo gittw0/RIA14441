@@ -4,19 +4,21 @@
     <con:setting id="761eed90-3715-4258-98a6-0dcee2c2630afileName">GET-%2Faccount%2Fv1%2Fplayers---Player-search-using-account_id-and-region-parameter</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
-  <con:testStep type="properties" name="Properties" id="cf8f1cc6-420c-4756-acfe-d6eaa318bf41">
+  <con:testStep type="transfer" name="PropertyTransfer 2" id="b94db35b-fa03-41b7-acde-bc2ce388c11a">
     <con:settings/>
-    <con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:properties>
-        <con:property>
-          <con:name>accountId</con:name>
-          <con:value/>
-        </con:property>
-        <con:property>
-          <con:name>theAccountId</con:name>
-          <con:value/>
-        </con:property>
-      </con:properties>
+    <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:transfers transferToAll="false" transferTextContent="true" transferChildNodes="false" setNullOnMissingSource="true" ignoreEmpty="false" failOnError="true" entitize="false">
+        <con:name>account_id</con:name>
+        <con:sourceType/>
+        <con:sourceStep/>
+        <con:sourcePath>$['lol_regions'][1]['account_id']</con:sourcePath>
+        <con:targetType>accountId</con:targetType>
+        <con:targetStep>Properties</con:targetStep>
+        <con:targetPath/>
+        <con:type>JSONPATH</con:type>
+        <con:targetTransferType>XPATH</con:targetTransferType>
+        <con:upgraded>true</con:upgraded>
+      </con:transfers>
     </con:config>
   </con:testStep>
   <con:testStep type="transfer" name="PropertyTransfer 1" id="973b3729-da68-4e2a-8624-c3ef9c1c1d7d">
@@ -36,49 +38,47 @@
       </con:transfers>
     </con:config>
   </con:testStep>
-  <con:testStep type="transfer" name="PropertyTransfer 2" id="b94db35b-fa03-41b7-acde-bc2ce388c11a">
+  <con:testStep type="properties" name="Properties" id="cf8f1cc6-420c-4756-acfe-d6eaa318bf41">
     <con:settings/>
-    <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:transfers transferToAll="false" transferTextContent="true" transferChildNodes="false" setNullOnMissingSource="true" ignoreEmpty="false" failOnError="true" entitize="false">
-        <con:name>account_id</con:name>
-        <con:sourceType/>
-        <con:sourceStep/>
-        <con:sourcePath>$['lol_regions'][1]['account_id']</con:sourcePath>
-        <con:targetType>accountId</con:targetType>
-        <con:targetStep>Properties</con:targetStep>
-        <con:targetPath/>
-        <con:type>JSONPATH</con:type>
-        <con:targetTransferType>XPATH</con:targetTransferType>
-        <con:upgraded>true</con:upgraded>
-      </con:transfers>
+    <con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:properties>
+        <con:property>
+          <con:name>theAccountId</con:name>
+          <con:value/>
+        </con:property>
+        <con:property>
+          <con:name>accountId</con:name>
+          <con:value/>
+        </con:property>
+      </con:properties>
     </con:config>
   </con:testStep>
   <con:properties>
     <con:property>
-      <con:name>username</con:name>
-      <con:value>${#Project#username}</con:value>
-    </con:property>
-    <con:property>
-      <con:name>email_address</con:name>
-      <con:value>${#Project#defaultEmail}</con:value>
+      <con:name>region</con:name>
+      <con:value>${#Project#srcRegion}</con:value>
     </con:property>
     <con:property>
       <con:name>puuid</con:name>
       <con:value>${#Project#puuid}</con:value>
     </con:property>
     <con:property>
-      <con:name>region</con:name>
-      <con:value>${#Project#srcRegion}</con:value>
+      <con:name>email_address</con:name>
+      <con:value>${#Project#defaultEmail}</con:value>
+    </con:property>
+    <con:property>
+      <con:name>username</con:name>
+      <con:value>${#Project#username}</con:value>
     </con:property>
   </con:properties>
   <con:reportParameters/>
   <con:breakPoints>
-    <con:testStepId>779a9e27-1bcb-49d6-bee6-1e06799f1191</con:testStepId>
+    <con:testStepId>b94db35b-fa03-41b7-acde-bc2ce388c11a</con:testStepId>
     <con:status>NONE</con:status>
     <con:properties/>
   </con:breakPoints>
   <con:breakPoints>
-    <con:testStepId>b94db35b-fa03-41b7-acde-bc2ce388c11a</con:testStepId>
+    <con:testStepId>779a9e27-1bcb-49d6-bee6-1e06799f1191</con:testStepId>
     <con:status>NONE</con:status>
     <con:properties/>
   </con:breakPoints>

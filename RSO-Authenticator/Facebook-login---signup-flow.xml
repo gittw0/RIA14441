@@ -4,7 +4,7 @@
     <con:setting id="36205294-2807-403f-a507-f95b60c43d1afileName">Facebook-login---signup-flow</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
-  <con:testStep type="properties" name="accessToken, theUid, loginToken, theEmail 2" id="34903449-f114-4732-bc74-7fb28fd72c41">
+  <con:testStep type="properties" name="accessToken, theUid, loginToken, theEmail" id="34903449-f114-4732-bc74-7fb28fd72c41">
     <con:settings/>
     <con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:properties>
@@ -31,7 +31,7 @@
       </con:properties>
     </con:config>
   </con:testStep>
-  <con:testStep type="transfer" name="> transfer accessToken, id 2" id="88f950a2-ad92-4613-bec3-1561390f12d6">
+  <con:testStep type="transfer" name="> transfer accessToken, id" id="88f950a2-ad92-4613-bec3-1561390f12d6">
     <con:settings/>
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:transfers transferToAll="false" transferTextContent="true" transferChildNodes="false" setNullOnMissingSource="true" ignoreEmpty="false" failOnError="true" entitize="false">
@@ -84,7 +84,7 @@
       </con:transfers>
     </con:config>
   </con:testStep>
-  <con:testStep type="transfer" name="> transfer accessToken, id" id="88f950a2-ad92-4613-bec3-1561390f12d6">
+  <con:testStep type="transfer" name="> transfer accessToken, id 2" id="88f950a2-ad92-4613-bec3-1561390f12d6">
     <con:settings/>
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:transfers transferTextContent="true" setNullOnMissingSource="true" failOnError="true">
@@ -121,7 +121,7 @@
       </con:transfers>
     </con:config>
   </con:testStep>
-  <con:testStep type="properties" name="accessToken, theUid, loginToken, theEmail" id="34903449-f114-4732-bc74-7fb28fd72c41">
+  <con:testStep type="properties" name="accessToken, theUid, loginToken, theEmail 2" id="34903449-f114-4732-bc74-7fb28fd72c41">
     <con:settings/>
     <con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:properties>

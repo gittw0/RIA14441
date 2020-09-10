@@ -6,12 +6,12 @@
   <con:savedRecentRuns>1</con:savedRecentRuns>
   <con:properties>
     <con:property>
-      <con:name>username</con:name>
-      <con:value>${#Project#username}</con:value>
-    </con:property>
-    <con:property>
       <con:name>email_address</con:name>
       <con:value>${#Project#defaultEmail}</con:value>
+    </con:property>
+    <con:property>
+      <con:name>username</con:name>
+      <con:value>${#Project#username}</con:value>
     </con:property>
   </con:properties>
   <con:reportParameters/>

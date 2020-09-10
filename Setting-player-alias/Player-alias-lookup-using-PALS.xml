@@ -4,7 +4,7 @@
     <con:setting id="06a2f0ec-3432-41a0-8320-14d81bf928e9fileName">Player-alias-lookup-using-PALS</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
-  <con:testStep type="transfer" name="> transfer puuid0 2" id="0e86d0c5-76a2-46bd-b429-f07c17ec421f">
+  <con:testStep type="transfer" name="> transfer puuid0" id="0e86d0c5-76a2-46bd-b429-f07c17ec421f">
     <con:settings/>
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:transfers transferTextContent="true" setNullOnMissingSource="true" failOnError="true">
@@ -20,7 +20,7 @@
       </con:transfers>
     </con:config>
   </con:testStep>
-  <con:testStep type="properties" name="thePuuid, gameName, tagLine 2" id="e6eb43b9-2b1e-4ef7-a964-99443828bbe5">
+  <con:testStep type="properties" name="thePuuid, gameName, tagLine" id="e6eb43b9-2b1e-4ef7-a964-99443828bbe5">
     <con:settings/>
     <con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:properties>
@@ -59,7 +59,7 @@
       </con:properties>
     </con:config>
   </con:testStep>
-  <con:testStep type="transfer" name="> transfer puuid 2" id="8bdbaf87-205d-4ad8-8573-3773e580d777">
+  <con:testStep type="transfer" name="> transfer puuid" id="8bdbaf87-205d-4ad8-8573-3773e580d777">
     <con:settings/>
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:transfers transferTextContent="true" setNullOnMissingSource="true" failOnError="true">
@@ -75,7 +75,7 @@
       </con:transfers>
     </con:config>
   </con:testStep>
-  <con:testStep type="transfer" name="> transfer GnT 2" id="cc09cf3c-86f6-48e9-b4f3-e85a8378c9da">
+  <con:testStep type="transfer" name="> transfer GnT" id="cc09cf3c-86f6-48e9-b4f3-e85a8378c9da">
     <con:settings/>
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:transfers transferToAll="false" transferTextContent="true" transferChildNodes="false" setNullOnMissingSource="true" ignoreEmpty="false" failOnError="true" entitize="false">
@@ -102,7 +102,7 @@
       </con:transfers>
     </con:config>
   </con:testStep>
-  <con:testStep type="transfer" name="> transfer G1nT1 2" id="16c32115-7c79-4986-b8d8-60bbb051dff0">
+  <con:testStep type="transfer" name="> transfer G1nT1" id="16c32115-7c79-4986-b8d8-60bbb051dff0">
     <con:settings/>
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:transfers transferTextContent="true" setNullOnMissingSource="true" failOnError="true">
@@ -129,7 +129,7 @@
       </con:transfers>
     </con:config>
   </con:testStep>
-  <con:testStep type="transfer" name="> transfer puuid1 2" id="df36f682-dfe5-406e-8afe-e07e38be6ec0">
+  <con:testStep type="transfer" name="> transfer puuid1" id="df36f682-dfe5-406e-8afe-e07e38be6ec0">
     <con:settings/>
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:transfers transferToAll="false" transferTextContent="true" transferChildNodes="false" setNullOnMissingSource="true" ignoreEmpty="false" failOnError="true" entitize="false">
@@ -183,7 +183,7 @@
       </con:transfers>
     </con:config>
   </con:testStep>
-  <con:testStep type="transfer" name="> transfer puuid1" id="df36f682-dfe5-406e-8afe-e07e38be6ec0">
+  <con:testStep type="transfer" name="> transfer puuid1 2" id="df36f682-dfe5-406e-8afe-e07e38be6ec0">
     <con:settings/>
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:transfers transferToAll="false" transferTextContent="true" transferChildNodes="false" setNullOnMissingSource="true" ignoreEmpty="false" failOnError="true" entitize="false">
@@ -199,7 +199,7 @@
       </con:transfers>
     </con:config>
   </con:testStep>
-  <con:testStep type="transfer" name="> transfer G1nT1" id="16c32115-7c79-4986-b8d8-60bbb051dff0">
+  <con:testStep type="transfer" name="> transfer G1nT1 2" id="16c32115-7c79-4986-b8d8-60bbb051dff0">
     <con:settings/>
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:transfers transferToAll="false" transferTextContent="true" transferChildNodes="false" setNullOnMissingSource="true" ignoreEmpty="false" failOnError="true" entitize="false">
@@ -226,7 +226,7 @@
       </con:transfers>
     </con:config>
   </con:testStep>
-  <con:testStep type="transfer" name="> transfer GnT" id="cc09cf3c-86f6-48e9-b4f3-e85a8378c9da">
+  <con:testStep type="transfer" name="> transfer GnT 2" id="cc09cf3c-86f6-48e9-b4f3-e85a8378c9da">
     <con:settings/>
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:transfers transferTextContent="true" setNullOnMissingSource="true" failOnError="true">
@@ -253,7 +253,7 @@
       </con:transfers>
     </con:config>
   </con:testStep>
-  <con:testStep type="transfer" name="> transfer puuid" id="8bdbaf87-205d-4ad8-8573-3773e580d777">
+  <con:testStep type="transfer" name="> transfer puuid 2" id="8bdbaf87-205d-4ad8-8573-3773e580d777">
     <con:settings/>
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:transfers transferTextContent="true" setNullOnMissingSource="true" failOnError="true">
@@ -269,7 +269,7 @@
       </con:transfers>
     </con:config>
   </con:testStep>
-  <con:testStep type="properties" name="thePuuid, gameName, tagLine" id="e6eb43b9-2b1e-4ef7-a964-99443828bbe5">
+  <con:testStep type="properties" name="thePuuid, gameName, tagLine 2" id="e6eb43b9-2b1e-4ef7-a964-99443828bbe5">
     <con:settings/>
     <con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:properties>
@@ -308,7 +308,7 @@
       </con:properties>
     </con:config>
   </con:testStep>
-  <con:testStep type="transfer" name="> transfer puuid0" id="0e86d0c5-76a2-46bd-b429-f07c17ec421f">
+  <con:testStep type="transfer" name="> transfer puuid0 2" id="0e86d0c5-76a2-46bd-b429-f07c17ec421f">
     <con:settings/>
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:transfers transferTextContent="true" setNullOnMissingSource="true" failOnError="true">
@@ -327,7 +327,7 @@
   <con:properties/>
   <con:reportParameters/>
   <con:breakPoints>
-    <con:testStepId>72a27acc-b0d5-47ae-a32e-0d6ce8c4b89a</con:testStepId>
+    <con:testStepId>e6eb43b9-2b1e-4ef7-a964-99443828bbe5</con:testStepId>
     <con:status>NONE</con:status>
     <con:properties/>
   </con:breakPoints>
@@ -337,7 +337,7 @@
     <con:properties/>
   </con:breakPoints>
   <con:breakPoints>
-    <con:testStepId>e6eb43b9-2b1e-4ef7-a964-99443828bbe5</con:testStepId>
+    <con:testStepId>72a27acc-b0d5-47ae-a32e-0d6ce8c4b89a</con:testStepId>
     <con:status>NONE</con:status>
     <con:properties/>
   </con:breakPoints>

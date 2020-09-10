@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <con:testCase zephyrTestName="" zephyrTestId="" wsrmVersion="1.0" wsrmEnabled="false" wsrmAckTo="" timeout="0" searchProperties="true" name="Globally unique" keepSession="true" id="531b6916-8637-4391-914c-7091472c8f8a" failTestCaseOnErrors="true" failOnError="false" discardOkResults="false" amfPassword="" amfLogin="" amfEndpoint="" amfAuthorisation="false" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
-    <con:setting id="531b6916-8637-4391-914c-7091472c8f8afileName">Globally-unique</con:setting>
     <con:setting id="4298bfcd-9815-4329-baff-39590bdbc869fileName">Globally-unique</con:setting>
+    <con:setting id="531b6916-8637-4391-914c-7091472c8f8afileName">Globally-unique</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
-  <con:testStep type="transfer" name="> transfer puuid to cleanup 2" id="30be4d14-ff32-4a9b-b4d8-f55ac5c7ee31">
+  <con:testStep type="transfer" name="> transfer puuid to cleanup" id="30be4d14-ff32-4a9b-b4d8-f55ac5c7ee31">
     <con:settings/>
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:transfers transferTextContent="true" setNullOnMissingSource="true" failOnError="true">
@@ -21,13 +21,13 @@
       </con:transfers>
     </con:config>
   </con:testStep>
-  <con:testStep type="delay" name="******** Account setup ******** 2" id="d93c1993-66da-4131-b16b-942a0c6d5871">
+  <con:testStep type="delay" name="******** Account setup ********" id="d93c1993-66da-4131-b16b-942a0c6d5871">
     <con:settings/>
     <con:config>
       <delay>10</delay>
     </con:config>
   </con:testStep>
-  <con:testStep type="properties" name="> thePuuid, theUsername, thePassword, uri 2" id="857d9c4d-97e0-40ca-8393-c78f61769eac">
+  <con:testStep type="properties" name="> thePuuid, theUsername, thePassword, uri" id="857d9c4d-97e0-40ca-8393-c78f61769eac">
     <con:settings/>
     <con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:properties>
@@ -50,7 +50,7 @@
       </con:properties>
     </con:config>
   </con:testStep>
-  <con:testStep type="transfer" name="> transfer 2" id="d8b90222-c6fd-4bc8-b57a-72a4ebe5d8ff">
+  <con:testStep type="transfer" name="> transfer" id="d8b90222-c6fd-4bc8-b57a-72a4ebe5d8ff">
     <con:settings/>
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:transfers transferToAll="false" transferTextContent="true" transferChildNodes="false" setNullOnMissingSource="true" ignoreEmpty="false" failOnError="true" entitize="false" disabled="false">
@@ -66,19 +66,19 @@
       </con:transfers>
     </con:config>
   </con:testStep>
-  <con:testStep type="delay" name="********** Atlas Auth ********** 2" id="17bcadd7-6e5a-42f9-8c59-4a575cd98efa">
+  <con:testStep type="delay" name="********** Atlas Auth **********" id="17bcadd7-6e5a-42f9-8c59-4a575cd98efa">
     <con:settings/>
     <con:config>
       <delay>10</delay>
     </con:config>
   </con:testStep>
-  <con:testStep type="delay" name="********** Claims API ********** 2" id="3f2b0194-96a0-4402-8ad4-dbf9919fcfec">
+  <con:testStep type="delay" name="********** Claims API **********" id="3f2b0194-96a0-4402-8ad4-dbf9919fcfec">
     <con:settings/>
     <con:config>
       <delay>10</delay>
     </con:config>
   </con:testStep>
-  <con:testStep type="calltestcase" name="Run | Get token (client creds) 2" id="3f5e83ac-43be-4ccb-a862-9122f003d076">
+  <con:testStep type="calltestcase" name="Run | Get token (client creds)" id="3f5e83ac-43be-4ccb-a862-9122f003d076">
     <con:settings/>
     <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:targetTestCase>8808d750-7ca6-49f7-a2f7-38494af92449</con:targetTestCase>
@@ -110,7 +110,7 @@
       <con:runMode>SINGLETON_AND_WAIT</con:runMode>
     </con:config>
   </con:testStep>
-  <con:testStep type="transfer" name="> transfer (2) 2" id="a0bcefe6-51f9-40b6-8f25-1ba079c0b600">
+  <con:testStep type="transfer" name="> transfer (2)" id="a0bcefe6-51f9-40b6-8f25-1ba079c0b600">
     <con:settings/>
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:transfers transferToAll="false" transferTextContent="true" transferChildNodes="false" setNullOnMissingSource="true" ignoreEmpty="false" failOnError="true" entitize="false">
@@ -125,7 +125,7 @@
       </con:transfers>
     </con:config>
   </con:testStep>
-  <con:testStep type="properties" name="> accessToken 2" id="6b47a458-feb7-4a57-8421-fff26cc3f415">
+  <con:testStep type="properties" name="> accessToken" id="6b47a458-feb7-4a57-8421-fff26cc3f415">
     <con:settings/>
     <con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:properties>
@@ -136,13 +136,13 @@
       </con:properties>
     </con:config>
   </con:testStep>
-  <con:testStep type="delay" name="****** RSO Auth (implicit) ****** 2" id="c5992c5f-67e6-4732-94f5-09041c395553">
+  <con:testStep type="delay" name="****** RSO Auth (implicit) ******" id="c5992c5f-67e6-4732-94f5-09041c395553">
     <con:settings/>
     <con:config>
       <delay>10</delay>
     </con:config>
   </con:testStep>
-  <con:testStep type="groovy" name="Clear Cookies 2" id="5a37a0d6-1c78-4b21-93c2-ac27359db93f">
+  <con:testStep type="groovy" name="Clear Cookies" id="5a37a0d6-1c78-4b21-93c2-ac27359db93f">
     <con:settings/>
     <con:config>
       <script>import org.apache.http.protocol.HttpContext
@@ -156,7 +156,7 @@ BasicCookieStore cookieStore = httpContext.getAttribute(HttpClientContext.COOKIE
 cookieStore.clear()</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="groovy" name="Clear Cookies (2) 2" id="3ee89639-2625-424d-b067-a79a8dd74026">
+  <con:testStep type="groovy" name="Clear Cookies (2)" id="3ee89639-2625-424d-b067-a79a8dd74026">
     <con:settings/>
     <con:config>
       <script>import org.apache.http.protocol.HttpContext
@@ -170,7 +170,7 @@ BasicCookieStore cookieStore = httpContext.getAttribute(HttpClientContext.COOKIE
 cookieStore.clear()</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="groovy" name="Clear Cookies (3) 2" id="a8e57be5-50f9-4877-9475-4aa1d68cbbb2">
+  <con:testStep type="groovy" name="Clear Cookies (3)" id="a8e57be5-50f9-4877-9475-4aa1d68cbbb2">
     <con:settings/>
     <con:config>
       <script>import org.apache.http.protocol.HttpContext
@@ -184,7 +184,7 @@ BasicCookieStore cookieStore = httpContext.getAttribute(HttpClientContext.COOKIE
 cookieStore.clear()</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="transfer" name="> transfer (5) 2" id="092b3e1f-d6f3-495e-91ea-e42d377ff995">
+  <con:testStep type="transfer" name="> transfer (5)" id="092b3e1f-d6f3-495e-91ea-e42d377ff995">
     <con:settings/>
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:transfers transferToAll="false" transferTextContent="true" transferChildNodes="false" setNullOnMissingSource="true" ignoreEmpty="false" failOnError="true" entitize="false" disabled="false">
@@ -198,282 +198,6 @@ cookieStore.clear()</script>
         <con:type>JSONPATH</con:type>
         <con:upgraded>true</con:upgraded>
       </con:transfers>
-    </con:config>
-  </con:testStep>
-  <con:testStep type="groovy" name="Decode | accessToken (3) 2" id="74622698-275c-4e69-9478-21f636a7c1b4">
-    <con:settings/>
-    <con:config>
-      <script>// create global library instance
-globals = testRunner.testCase.testSuite.project.testSuites["Library"].testCases["lib"].testSteps["Globals"]
-globals.run(testRunner, context)
-def globals = context.globals
-
-// decode URI
-String uri =testRunner.testCase.testSteps["> thePuuid, theUsername, thePassword, uri"].getPropertyValue( "uri" )
-def json = globals.DecodeToken(uri.substring(uri.indexOf("access_token=") + 13, uri.indexOf("&amp;scope")))
-
-// clear properties
-def decodedTokenTestStep = testRunner.testCase.getTestStepByName("> Decoded access token (3)");
-for( name in decodedTokenTestStep.propertyNames )
-    decodedTokenTestStep.removeProperty( name )
-    
-// populate data
-json.each 
-{
-	key, value ->
-
-	if (value in Map) {	
-		for (i=0;  i &lt; value.size(); i++) {
-			clm = value.keySet()[i]
-			decodedTokenTestStep.setPropertyValue(key.toString() + "." + clm, value.get(clm).toString())
-		}
-	} else if (value in List) {
-		for (i=0;  i &lt; value.size(); i++) {
-			def element = value[i];
-
-			if (element in Map)  {	
-				for (j=0;  j &lt; element.size(); j++) {
-					clm = element.keySet()[j]
-					decodedTokenTestStep.setPropertyValue(key.toString()+"["+i+"]" + "." + clm, element.get(clm).toString())
-				}
-			} else {
-				decodedTokenTestStep.setPropertyValue(key.toString()+"["+i+"]", value[i].toString())
-			}
-		}
-	} else {
-		decodedTokenTestStep.setPropertyValue(key.toString(), value.toString())	
-	}
-}</script>
-    </con:config>
-  </con:testStep>
-  <con:testStep type="properties" name="> Decoded access token (3) 2" id="e6ff3d01-8fb9-484b-9c0e-33880e1e34f7">
-    <con:settings/>
-    <con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:properties>
-        <con:property>
-          <con:name>cid</con:name>
-          <con:value/>
-        </con:property>
-        <con:property>
-          <con:name>clm[0]</con:name>
-          <con:value/>
-        </con:property>
-        <con:property>
-          <con:name>clm[1]</con:name>
-          <con:value/>
-        </con:property>
-        <con:property>
-          <con:name>clm[2]</con:name>
-          <con:value/>
-        </con:property>
-        <con:property>
-          <con:name>clm[3]</con:name>
-          <con:value/>
-        </con:property>
-        <con:property>
-          <con:name>clm[4]</con:name>
-          <con:value/>
-        </con:property>
-        <con:property>
-          <con:name>clm[5]</con:name>
-          <con:value/>
-        </con:property>
-        <con:property>
-          <con:name>clm[6]</con:name>
-          <con:value/>
-        </con:property>
-        <con:property>
-          <con:name>dat.c</con:name>
-          <con:value/>
-        </con:property>
-        <con:property>
-          <con:name>dat.lid</con:name>
-          <con:value/>
-        </con:property>
-        <con:property>
-          <con:name>dat.p</con:name>
-          <con:value/>
-        </con:property>
-        <con:property>
-          <con:name>dat.r</con:name>
-          <con:value/>
-        </con:property>
-        <con:property>
-          <con:name>dat.u</con:name>
-          <con:value/>
-        </con:property>
-        <con:property>
-          <con:name>exp</con:name>
-          <con:value/>
-        </con:property>
-        <con:property>
-          <con:name>iat</con:name>
-          <con:value/>
-        </con:property>
-        <con:property>
-          <con:name>iss</con:name>
-          <con:value/>
-        </con:property>
-        <con:property>
-          <con:name>jti</con:name>
-          <con:value/>
-        </con:property>
-        <con:property>
-          <con:name>scp[0]</con:name>
-          <con:value/>
-        </con:property>
-        <con:property>
-          <con:name>scp[1]</con:name>
-          <con:value/>
-        </con:property>
-        <con:property>
-          <con:name>scp[2]</con:name>
-          <con:value/>
-        </con:property>
-        <con:property>
-          <con:name>scp[3]</con:name>
-          <con:value/>
-        </con:property>
-        <con:property>
-          <con:name>sub</con:name>
-          <con:value/>
-        </con:property>
-      </con:properties>
-    </con:config>
-  </con:testStep>
-  <con:testStep type="groovy" name="Verify | access token -> no dat.r/u/p (3) 2" id="5de94a7c-8e7b-48db-b691-45b99965cef7" disabled="true">
-    <con:settings/>
-    <con:config>
-      <script>def json = testRunner.testCase.getTestStepByName("> Decoded access token (3)")
-
-// data
-assert !json.hasProperty("dat.u")
-assert !json.hasProperty("dat.r")
-assert json.getPropertyValue("dat.p")==""</script>
-    </con:config>
-  </con:testStep>
-  <con:testStep type="delay" name="********* Tear Down ********* 2" id="274cdf10-a1ca-4dfa-81ef-f0993b14aeaf">
-    <con:settings/>
-    <con:config>
-      <delay>10</delay>
-    </con:config>
-  </con:testStep>
-  <con:testStep type="groovy" name="Cleanup accessToken value" id="0639e65f-4996-456c-b862-38c1f3eff67c" disabled="true">
-    <con:settings/>
-    <con:config>
-      <script>testRunner.testCase.setPropertyValue("accessToken", '')</script>
-    </con:config>
-  </con:testStep>
-  <con:testStep type="delay" name="********* Tear Down *********" id="274cdf10-a1ca-4dfa-81ef-f0993b14aeaf">
-    <con:settings/>
-    <con:config>
-      <delay>10</delay>
-    </con:config>
-  </con:testStep>
-  <con:testStep type="groovy" name="Verify | access token -> no dat.r/u/p (3)" id="5de94a7c-8e7b-48db-b691-45b99965cef7" disabled="true">
-    <con:settings/>
-    <con:config>
-      <script>def json = testRunner.testCase.getTestStepByName("> Decoded access token (3)")
-
-// data
-assert !json.hasProperty("dat.u")
-assert !json.hasProperty("dat.r")
-assert json.getPropertyValue("dat.p")==""</script>
-    </con:config>
-  </con:testStep>
-  <con:testStep type="properties" name="> Decoded access token (3)" id="e6ff3d01-8fb9-484b-9c0e-33880e1e34f7">
-    <con:settings/>
-    <con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:properties>
-        <con:property>
-          <con:name>sub</con:name>
-          <con:value/>
-        </con:property>
-        <con:property>
-          <con:name>scp[3]</con:name>
-          <con:value/>
-        </con:property>
-        <con:property>
-          <con:name>scp[2]</con:name>
-          <con:value/>
-        </con:property>
-        <con:property>
-          <con:name>scp[1]</con:name>
-          <con:value/>
-        </con:property>
-        <con:property>
-          <con:name>scp[0]</con:name>
-          <con:value/>
-        </con:property>
-        <con:property>
-          <con:name>jti</con:name>
-          <con:value/>
-        </con:property>
-        <con:property>
-          <con:name>iss</con:name>
-          <con:value/>
-        </con:property>
-        <con:property>
-          <con:name>iat</con:name>
-          <con:value/>
-        </con:property>
-        <con:property>
-          <con:name>exp</con:name>
-          <con:value/>
-        </con:property>
-        <con:property>
-          <con:name>dat.u</con:name>
-          <con:value/>
-        </con:property>
-        <con:property>
-          <con:name>dat.r</con:name>
-          <con:value/>
-        </con:property>
-        <con:property>
-          <con:name>dat.p</con:name>
-          <con:value/>
-        </con:property>
-        <con:property>
-          <con:name>dat.lid</con:name>
-          <con:value/>
-        </con:property>
-        <con:property>
-          <con:name>dat.c</con:name>
-          <con:value/>
-        </con:property>
-        <con:property>
-          <con:name>clm[6]</con:name>
-          <con:value/>
-        </con:property>
-        <con:property>
-          <con:name>clm[5]</con:name>
-          <con:value/>
-        </con:property>
-        <con:property>
-          <con:name>clm[4]</con:name>
-          <con:value/>
-        </con:property>
-        <con:property>
-          <con:name>clm[3]</con:name>
-          <con:value/>
-        </con:property>
-        <con:property>
-          <con:name>clm[2]</con:name>
-          <con:value/>
-        </con:property>
-        <con:property>
-          <con:name>clm[1]</con:name>
-          <con:value/>
-        </con:property>
-        <con:property>
-          <con:name>clm[0]</con:name>
-          <con:value/>
-        </con:property>
-        <con:property>
-          <con:name>cid</con:name>
-          <con:value/>
-        </con:property>
-      </con:properties>
     </con:config>
   </con:testStep>
   <con:testStep type="groovy" name="Decode | accessToken (3)" id="74622698-275c-4e69-9478-21f636a7c1b4">
@@ -522,7 +246,283 @@ json.each
 }</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="transfer" name="> transfer (5)" id="092b3e1f-d6f3-495e-91ea-e42d377ff995">
+  <con:testStep type="properties" name="> Decoded access token (3)" id="e6ff3d01-8fb9-484b-9c0e-33880e1e34f7">
+    <con:settings/>
+    <con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:properties>
+        <con:property>
+          <con:name>cid</con:name>
+          <con:value/>
+        </con:property>
+        <con:property>
+          <con:name>clm[0]</con:name>
+          <con:value/>
+        </con:property>
+        <con:property>
+          <con:name>clm[1]</con:name>
+          <con:value/>
+        </con:property>
+        <con:property>
+          <con:name>clm[2]</con:name>
+          <con:value/>
+        </con:property>
+        <con:property>
+          <con:name>clm[3]</con:name>
+          <con:value/>
+        </con:property>
+        <con:property>
+          <con:name>clm[4]</con:name>
+          <con:value/>
+        </con:property>
+        <con:property>
+          <con:name>clm[5]</con:name>
+          <con:value/>
+        </con:property>
+        <con:property>
+          <con:name>clm[6]</con:name>
+          <con:value/>
+        </con:property>
+        <con:property>
+          <con:name>dat.c</con:name>
+          <con:value/>
+        </con:property>
+        <con:property>
+          <con:name>dat.lid</con:name>
+          <con:value/>
+        </con:property>
+        <con:property>
+          <con:name>dat.p</con:name>
+          <con:value/>
+        </con:property>
+        <con:property>
+          <con:name>dat.r</con:name>
+          <con:value/>
+        </con:property>
+        <con:property>
+          <con:name>dat.u</con:name>
+          <con:value/>
+        </con:property>
+        <con:property>
+          <con:name>exp</con:name>
+          <con:value/>
+        </con:property>
+        <con:property>
+          <con:name>iat</con:name>
+          <con:value/>
+        </con:property>
+        <con:property>
+          <con:name>iss</con:name>
+          <con:value/>
+        </con:property>
+        <con:property>
+          <con:name>jti</con:name>
+          <con:value/>
+        </con:property>
+        <con:property>
+          <con:name>scp[0]</con:name>
+          <con:value/>
+        </con:property>
+        <con:property>
+          <con:name>scp[1]</con:name>
+          <con:value/>
+        </con:property>
+        <con:property>
+          <con:name>scp[2]</con:name>
+          <con:value/>
+        </con:property>
+        <con:property>
+          <con:name>scp[3]</con:name>
+          <con:value/>
+        </con:property>
+        <con:property>
+          <con:name>sub</con:name>
+          <con:value/>
+        </con:property>
+      </con:properties>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="groovy" name="Verify | access token -> no dat.r/u/p (3)" id="5de94a7c-8e7b-48db-b691-45b99965cef7" disabled="true">
+    <con:settings/>
+    <con:config>
+      <script>def json = testRunner.testCase.getTestStepByName("> Decoded access token (3)")
+
+// data
+assert !json.hasProperty("dat.u")
+assert !json.hasProperty("dat.r")
+assert json.getPropertyValue("dat.p")==""</script>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="delay" name="********* Tear Down *********" id="274cdf10-a1ca-4dfa-81ef-f0993b14aeaf">
+    <con:settings/>
+    <con:config>
+      <delay>10</delay>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="groovy" name="Cleanup accessToken value" id="0639e65f-4996-456c-b862-38c1f3eff67c" disabled="true">
+    <con:settings/>
+    <con:config>
+      <script>testRunner.testCase.setPropertyValue("accessToken", '')</script>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="delay" name="********* Tear Down ********* 2" id="274cdf10-a1ca-4dfa-81ef-f0993b14aeaf">
+    <con:settings/>
+    <con:config>
+      <delay>10</delay>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="groovy" name="Verify | access token -> no dat.r/u/p (3) 2" id="5de94a7c-8e7b-48db-b691-45b99965cef7" disabled="true">
+    <con:settings/>
+    <con:config>
+      <script>def json = testRunner.testCase.getTestStepByName("> Decoded access token (3)")
+
+// data
+assert !json.hasProperty("dat.u")
+assert !json.hasProperty("dat.r")
+assert json.getPropertyValue("dat.p")==""</script>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="properties" name="> Decoded access token (3) 2" id="e6ff3d01-8fb9-484b-9c0e-33880e1e34f7">
+    <con:settings/>
+    <con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:properties>
+        <con:property>
+          <con:name>sub</con:name>
+          <con:value/>
+        </con:property>
+        <con:property>
+          <con:name>scp[3]</con:name>
+          <con:value/>
+        </con:property>
+        <con:property>
+          <con:name>scp[2]</con:name>
+          <con:value/>
+        </con:property>
+        <con:property>
+          <con:name>scp[1]</con:name>
+          <con:value/>
+        </con:property>
+        <con:property>
+          <con:name>scp[0]</con:name>
+          <con:value/>
+        </con:property>
+        <con:property>
+          <con:name>jti</con:name>
+          <con:value/>
+        </con:property>
+        <con:property>
+          <con:name>iss</con:name>
+          <con:value/>
+        </con:property>
+        <con:property>
+          <con:name>iat</con:name>
+          <con:value/>
+        </con:property>
+        <con:property>
+          <con:name>exp</con:name>
+          <con:value/>
+        </con:property>
+        <con:property>
+          <con:name>dat.u</con:name>
+          <con:value/>
+        </con:property>
+        <con:property>
+          <con:name>dat.r</con:name>
+          <con:value/>
+        </con:property>
+        <con:property>
+          <con:name>dat.p</con:name>
+          <con:value/>
+        </con:property>
+        <con:property>
+          <con:name>dat.lid</con:name>
+          <con:value/>
+        </con:property>
+        <con:property>
+          <con:name>dat.c</con:name>
+          <con:value/>
+        </con:property>
+        <con:property>
+          <con:name>clm[6]</con:name>
+          <con:value/>
+        </con:property>
+        <con:property>
+          <con:name>clm[5]</con:name>
+          <con:value/>
+        </con:property>
+        <con:property>
+          <con:name>clm[4]</con:name>
+          <con:value/>
+        </con:property>
+        <con:property>
+          <con:name>clm[3]</con:name>
+          <con:value/>
+        </con:property>
+        <con:property>
+          <con:name>clm[2]</con:name>
+          <con:value/>
+        </con:property>
+        <con:property>
+          <con:name>clm[1]</con:name>
+          <con:value/>
+        </con:property>
+        <con:property>
+          <con:name>clm[0]</con:name>
+          <con:value/>
+        </con:property>
+        <con:property>
+          <con:name>cid</con:name>
+          <con:value/>
+        </con:property>
+      </con:properties>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="groovy" name="Decode | accessToken (3) 2" id="74622698-275c-4e69-9478-21f636a7c1b4">
+    <con:settings/>
+    <con:config>
+      <script>// create global library instance
+globals = testRunner.testCase.testSuite.project.testSuites["Library"].testCases["lib"].testSteps["Globals"]
+globals.run(testRunner, context)
+def globals = context.globals
+
+// decode URI
+String uri =testRunner.testCase.testSteps["> thePuuid, theUsername, thePassword, uri"].getPropertyValue( "uri" )
+def json = globals.DecodeToken(uri.substring(uri.indexOf("access_token=") + 13, uri.indexOf("&amp;scope")))
+
+// clear properties
+def decodedTokenTestStep = testRunner.testCase.getTestStepByName("> Decoded access token (3)");
+for( name in decodedTokenTestStep.propertyNames )
+    decodedTokenTestStep.removeProperty( name )
+    
+// populate data
+json.each 
+{
+	key, value ->
+
+	if (value in Map) {	
+		for (i=0;  i &lt; value.size(); i++) {
+			clm = value.keySet()[i]
+			decodedTokenTestStep.setPropertyValue(key.toString() + "." + clm, value.get(clm).toString())
+		}
+	} else if (value in List) {
+		for (i=0;  i &lt; value.size(); i++) {
+			def element = value[i];
+
+			if (element in Map)  {	
+				for (j=0;  j &lt; element.size(); j++) {
+					clm = element.keySet()[j]
+					decodedTokenTestStep.setPropertyValue(key.toString()+"["+i+"]" + "." + clm, element.get(clm).toString())
+				}
+			} else {
+				decodedTokenTestStep.setPropertyValue(key.toString()+"["+i+"]", value[i].toString())
+			}
+		}
+	} else {
+		decodedTokenTestStep.setPropertyValue(key.toString(), value.toString())	
+	}
+}</script>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="transfer" name="> transfer (5) 2" id="092b3e1f-d6f3-495e-91ea-e42d377ff995">
     <con:settings/>
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:transfers transferToAll="false" transferTextContent="true" transferChildNodes="false" setNullOnMissingSource="true" ignoreEmpty="false" failOnError="true" entitize="false" disabled="false">
@@ -538,7 +538,7 @@ json.each
       </con:transfers>
     </con:config>
   </con:testStep>
-  <con:testStep type="groovy" name="Clear Cookies (3)" id="a8e57be5-50f9-4877-9475-4aa1d68cbbb2">
+  <con:testStep type="groovy" name="Clear Cookies (3) 2" id="a8e57be5-50f9-4877-9475-4aa1d68cbbb2">
     <con:settings/>
     <con:config>
       <script>import org.apache.http.protocol.HttpContext
@@ -552,7 +552,7 @@ BasicCookieStore cookieStore = httpContext.getAttribute(HttpClientContext.COOKIE
 cookieStore.clear()</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="groovy" name="Clear Cookies (2)" id="3ee89639-2625-424d-b067-a79a8dd74026">
+  <con:testStep type="groovy" name="Clear Cookies (2) 2" id="3ee89639-2625-424d-b067-a79a8dd74026">
     <con:settings/>
     <con:config>
       <script>import org.apache.http.protocol.HttpContext
@@ -566,7 +566,7 @@ BasicCookieStore cookieStore = httpContext.getAttribute(HttpClientContext.COOKIE
 cookieStore.clear()</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="groovy" name="Clear Cookies" id="5a37a0d6-1c78-4b21-93c2-ac27359db93f">
+  <con:testStep type="groovy" name="Clear Cookies 2" id="5a37a0d6-1c78-4b21-93c2-ac27359db93f">
     <con:settings/>
     <con:config>
       <script>import org.apache.http.protocol.HttpContext
@@ -580,13 +580,13 @@ BasicCookieStore cookieStore = httpContext.getAttribute(HttpClientContext.COOKIE
 cookieStore.clear()</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="delay" name="****** RSO Auth (implicit) ******" id="c5992c5f-67e6-4732-94f5-09041c395553">
+  <con:testStep type="delay" name="****** RSO Auth (implicit) ****** 2" id="c5992c5f-67e6-4732-94f5-09041c395553">
     <con:settings/>
     <con:config>
       <delay>10</delay>
     </con:config>
   </con:testStep>
-  <con:testStep type="properties" name="> accessToken" id="6b47a458-feb7-4a57-8421-fff26cc3f415">
+  <con:testStep type="properties" name="> accessToken 2" id="6b47a458-feb7-4a57-8421-fff26cc3f415">
     <con:settings/>
     <con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:properties>
@@ -597,7 +597,7 @@ cookieStore.clear()</script>
       </con:properties>
     </con:config>
   </con:testStep>
-  <con:testStep type="transfer" name="> transfer (2)" id="a0bcefe6-51f9-40b6-8f25-1ba079c0b600">
+  <con:testStep type="transfer" name="> transfer (2) 2" id="a0bcefe6-51f9-40b6-8f25-1ba079c0b600">
     <con:settings/>
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:transfers transferToAll="false" transferTextContent="true" transferChildNodes="false" setNullOnMissingSource="true" ignoreEmpty="false" failOnError="true" entitize="false">
@@ -612,7 +612,7 @@ cookieStore.clear()</script>
       </con:transfers>
     </con:config>
   </con:testStep>
-  <con:testStep type="calltestcase" name="Run | Get token (client creds)" id="3f5e83ac-43be-4ccb-a862-9122f003d076">
+  <con:testStep type="calltestcase" name="Run | Get token (client creds) 2" id="3f5e83ac-43be-4ccb-a862-9122f003d076">
     <con:settings/>
     <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:targetTestCase>8808d750-7ca6-49f7-a2f7-38494af92449</con:targetTestCase>
@@ -644,19 +644,19 @@ cookieStore.clear()</script>
       <con:runMode>SINGLETON_AND_WAIT</con:runMode>
     </con:config>
   </con:testStep>
-  <con:testStep type="delay" name="********** Claims API **********" id="3f2b0194-96a0-4402-8ad4-dbf9919fcfec">
+  <con:testStep type="delay" name="********** Claims API ********** 2" id="3f2b0194-96a0-4402-8ad4-dbf9919fcfec">
     <con:settings/>
     <con:config>
       <delay>10</delay>
     </con:config>
   </con:testStep>
-  <con:testStep type="delay" name="********** Atlas Auth **********" id="17bcadd7-6e5a-42f9-8c59-4a575cd98efa">
+  <con:testStep type="delay" name="********** Atlas Auth ********** 2" id="17bcadd7-6e5a-42f9-8c59-4a575cd98efa">
     <con:settings/>
     <con:config>
       <delay>10</delay>
     </con:config>
   </con:testStep>
-  <con:testStep type="transfer" name="> transfer" id="d8b90222-c6fd-4bc8-b57a-72a4ebe5d8ff">
+  <con:testStep type="transfer" name="> transfer 2" id="d8b90222-c6fd-4bc8-b57a-72a4ebe5d8ff">
     <con:settings/>
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:transfers transferToAll="false" transferTextContent="true" transferChildNodes="false" setNullOnMissingSource="true" ignoreEmpty="false" failOnError="true" entitize="false" disabled="false">
@@ -672,7 +672,7 @@ cookieStore.clear()</script>
       </con:transfers>
     </con:config>
   </con:testStep>
-  <con:testStep type="properties" name="> thePuuid, theUsername, thePassword, uri" id="857d9c4d-97e0-40ca-8393-c78f61769eac">
+  <con:testStep type="properties" name="> thePuuid, theUsername, thePassword, uri 2" id="857d9c4d-97e0-40ca-8393-c78f61769eac">
     <con:settings/>
     <con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:properties>
@@ -695,13 +695,13 @@ cookieStore.clear()</script>
       </con:properties>
     </con:config>
   </con:testStep>
-  <con:testStep type="delay" name="******** Account setup ********" id="d93c1993-66da-4131-b16b-942a0c6d5871">
+  <con:testStep type="delay" name="******** Account setup ******** 2" id="d93c1993-66da-4131-b16b-942a0c6d5871">
     <con:settings/>
     <con:config>
       <delay>10</delay>
     </con:config>
   </con:testStep>
-  <con:testStep type="transfer" name="> transfer puuid to cleanup" id="30be4d14-ff32-4a9b-b4d8-f55ac5c7ee31">
+  <con:testStep type="transfer" name="> transfer puuid to cleanup 2" id="30be4d14-ff32-4a9b-b4d8-f55ac5c7ee31">
     <con:settings/>
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:transfers transferTextContent="true" setNullOnMissingSource="true" failOnError="true">
@@ -725,162 +725,7 @@ cookieStore.clear()</script>
   </con:properties>
   <con:reportParameters/>
   <con:breakPoints>
-    <con:testStepId>d93c1993-66da-4131-b16b-942a0c6d5871</con:testStepId>
-    <con:status>NONE</con:status>
-    <con:properties/>
-  </con:breakPoints>
-  <con:breakPoints>
-    <con:testStepId>ba688cd9-e5b3-4258-ab52-ee84f59207b5</con:testStepId>
-    <con:status>NONE</con:status>
-    <con:properties/>
-  </con:breakPoints>
-  <con:breakPoints>
-    <con:testStepId>043153ae-4553-4787-bfc4-2504e32bc13d</con:testStepId>
-    <con:status>NONE</con:status>
-    <con:properties/>
-  </con:breakPoints>
-  <con:breakPoints>
-    <con:testStepId>de137c04-acaf-45c9-8aa2-be3506f117f8</con:testStepId>
-    <con:status>NONE</con:status>
-    <con:properties/>
-  </con:breakPoints>
-  <con:breakPoints>
-    <con:testStepId>4f088a77-a284-43ad-b1c8-583a2732de2c</con:testStepId>
-    <con:status>NONE</con:status>
-    <con:properties/>
-  </con:breakPoints>
-  <con:breakPoints>
-    <con:testStepId>22a64d3c-260f-4ebc-aa76-4e58319aec81</con:testStepId>
-    <con:status>NONE</con:status>
-    <con:properties/>
-  </con:breakPoints>
-  <con:breakPoints>
-    <con:testStepId>ecb9eaad-1368-427c-b65c-9c82d2579e1e</con:testStepId>
-    <con:status>NONE</con:status>
-    <con:properties/>
-  </con:breakPoints>
-  <con:breakPoints>
-    <con:testStepId>8f62b578-783d-4720-ae78-6281dff2539b</con:testStepId>
-    <con:status>NONE</con:status>
-    <con:properties/>
-  </con:breakPoints>
-  <con:breakPoints>
-    <con:testStepId>c8398701-a8ea-439c-a8a6-5828af7fa7e4</con:testStepId>
-    <con:status>NONE</con:status>
-    <con:properties/>
-  </con:breakPoints>
-  <con:breakPoints>
-    <con:testStepId>d94c1fad-9106-48a8-8d89-456df144b3f9</con:testStepId>
-    <con:status>NONE</con:status>
-    <con:properties/>
-  </con:breakPoints>
-  <con:breakPoints>
-    <con:testStepId>c8ed937c-fbb8-42b5-b913-68de893a8515</con:testStepId>
-    <con:status>NONE</con:status>
-    <con:properties/>
-  </con:breakPoints>
-  <con:breakPoints>
-    <con:testStepId>30d3a4ac-ef88-491e-96b8-348c4d26ae42</con:testStepId>
-    <con:status>NONE</con:status>
-    <con:properties/>
-  </con:breakPoints>
-  <con:breakPoints>
-    <con:testStepId>d40b08a5-f217-4bad-a57e-7d3aeebb286e</con:testStepId>
-    <con:status>NONE</con:status>
-    <con:properties/>
-  </con:breakPoints>
-  <con:breakPoints>
-    <con:testStepId>67b75f81-7ed5-4289-8a97-1d1ea7346659</con:testStepId>
-    <con:status>NONE</con:status>
-    <con:properties/>
-  </con:breakPoints>
-  <con:breakPoints>
-    <con:testStepId>6fa13a1c-db58-4281-925a-64b15e7f5382</con:testStepId>
-    <con:status>NONE</con:status>
-    <con:properties/>
-  </con:breakPoints>
-  <con:breakPoints>
-    <con:testStepId>c5620a0c-6ae9-4de5-9022-616d73378ac0</con:testStepId>
-    <con:status>NONE</con:status>
-    <con:properties/>
-  </con:breakPoints>
-  <con:breakPoints>
-    <con:testStepId>e90b1e58-41a8-4b2c-9e8b-b02dbe53d17e</con:testStepId>
-    <con:status>NONE</con:status>
-    <con:properties/>
-  </con:breakPoints>
-  <con:breakPoints>
-    <con:testStepId>decb937d-436a-4082-83c9-2551cea65dd7</con:testStepId>
-    <con:status>NONE</con:status>
-    <con:properties/>
-  </con:breakPoints>
-  <con:breakPoints>
-    <con:testStepId>bb44bcf5-8750-40fa-910d-cb945146a893</con:testStepId>
-    <con:status>NONE</con:status>
-    <con:properties/>
-  </con:breakPoints>
-  <con:breakPoints>
-    <con:testStepId>fadec2c3-d50d-4d84-8bf9-0cb6b568028a</con:testStepId>
-    <con:status>NONE</con:status>
-    <con:properties/>
-  </con:breakPoints>
-  <con:breakPoints>
-    <con:testStepId>24634c99-0fa0-45e7-9cb8-a566453f10f2</con:testStepId>
-    <con:status>NONE</con:status>
-    <con:properties/>
-  </con:breakPoints>
-  <con:breakPoints>
-    <con:testStepId>f82366a0-2402-4c15-acec-dd09e9131d1e</con:testStepId>
-    <con:status>NONE</con:status>
-    <con:properties/>
-  </con:breakPoints>
-  <con:breakPoints>
-    <con:testStepId>3edb1eeb-3782-4993-9931-0f184019bcf8</con:testStepId>
-    <con:status>NONE</con:status>
-    <con:properties/>
-  </con:breakPoints>
-  <con:breakPoints>
-    <con:testStepId>cbaffd07-1a8b-4853-b146-a3ccabcc1e5e</con:testStepId>
-    <con:status>NONE</con:status>
-    <con:properties/>
-  </con:breakPoints>
-  <con:breakPoints>
-    <con:testStepId>254518a2-7b94-40f2-b7c9-fe3fbda43ee4</con:testStepId>
-    <con:status>NONE</con:status>
-    <con:properties/>
-  </con:breakPoints>
-  <con:breakPoints>
-    <con:testStepId>c7237e98-1340-48a7-9248-a8d2ee488db2</con:testStepId>
-    <con:status>NONE</con:status>
-    <con:properties/>
-  </con:breakPoints>
-  <con:breakPoints>
-    <con:testStepId>525e702d-cd5f-4de8-ae37-74dfa7c4348a</con:testStepId>
-    <con:status>NONE</con:status>
-    <con:properties/>
-  </con:breakPoints>
-  <con:breakPoints>
-    <con:testStepId>c142b1b0-e773-4359-a1c7-4faa180e65d5</con:testStepId>
-    <con:status>NONE</con:status>
-    <con:properties/>
-  </con:breakPoints>
-  <con:breakPoints>
-    <con:testStepId>200cea0c-d951-46af-bf8b-2f04d6d63213</con:testStepId>
-    <con:status>NONE</con:status>
-    <con:properties/>
-  </con:breakPoints>
-  <con:breakPoints>
-    <con:testStepId>df141e7d-968f-4eca-83c4-cc82c99702b1</con:testStepId>
-    <con:status>NONE</con:status>
-    <con:properties/>
-  </con:breakPoints>
-  <con:breakPoints>
-    <con:testStepId>e0baa435-d9c2-44c7-9e94-d5a8963ee047</con:testStepId>
-    <con:status>NONE</con:status>
-    <con:properties/>
-  </con:breakPoints>
-  <con:breakPoints>
-    <con:testStepId>3fe0a391-b700-4299-a9a6-b44c305c0bc0</con:testStepId>
+    <con:testStepId>2adc67d7-5a2c-4fa2-91bf-18cdaf84a057</con:testStepId>
     <con:status>NONE</con:status>
     <con:properties/>
   </con:breakPoints>
@@ -890,15 +735,170 @@ cookieStore.clear()</script>
     <con:properties/>
   </con:breakPoints>
   <con:breakPoints>
-    <con:testStepId>2adc67d7-5a2c-4fa2-91bf-18cdaf84a057</con:testStepId>
+    <con:testStepId>3fe0a391-b700-4299-a9a6-b44c305c0bc0</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>e0baa435-d9c2-44c7-9e94-d5a8963ee047</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>df141e7d-968f-4eca-83c4-cc82c99702b1</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>200cea0c-d951-46af-bf8b-2f04d6d63213</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>c142b1b0-e773-4359-a1c7-4faa180e65d5</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>525e702d-cd5f-4de8-ae37-74dfa7c4348a</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>c7237e98-1340-48a7-9248-a8d2ee488db2</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>254518a2-7b94-40f2-b7c9-fe3fbda43ee4</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>cbaffd07-1a8b-4853-b146-a3ccabcc1e5e</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>3edb1eeb-3782-4993-9931-0f184019bcf8</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>f82366a0-2402-4c15-acec-dd09e9131d1e</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>24634c99-0fa0-45e7-9cb8-a566453f10f2</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>fadec2c3-d50d-4d84-8bf9-0cb6b568028a</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>bb44bcf5-8750-40fa-910d-cb945146a893</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>decb937d-436a-4082-83c9-2551cea65dd7</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>e90b1e58-41a8-4b2c-9e8b-b02dbe53d17e</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>c5620a0c-6ae9-4de5-9022-616d73378ac0</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>6fa13a1c-db58-4281-925a-64b15e7f5382</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>67b75f81-7ed5-4289-8a97-1d1ea7346659</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>d40b08a5-f217-4bad-a57e-7d3aeebb286e</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>30d3a4ac-ef88-491e-96b8-348c4d26ae42</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>c8ed937c-fbb8-42b5-b913-68de893a8515</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>d94c1fad-9106-48a8-8d89-456df144b3f9</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>c8398701-a8ea-439c-a8a6-5828af7fa7e4</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>8f62b578-783d-4720-ae78-6281dff2539b</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>ecb9eaad-1368-427c-b65c-9c82d2579e1e</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>22a64d3c-260f-4ebc-aa76-4e58319aec81</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>4f088a77-a284-43ad-b1c8-583a2732de2c</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>de137c04-acaf-45c9-8aa2-be3506f117f8</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>043153ae-4553-4787-bfc4-2504e32bc13d</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>ba688cd9-e5b3-4258-ab52-ee84f59207b5</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>d93c1993-66da-4131-b16b-942a0c6d5871</con:testStepId>
     <con:status>NONE</con:status>
     <con:properties/>
   </con:breakPoints>
   <con:environmentSpec>
-    <con:entry environmentId="cd04cfb9-4faf-4b69-9ec6-24af2181f7ae">
+    <con:entry environmentId="b407e352-14e8-440f-bf25-abe254c02b61">
       <con:authProfile>Inherit From Parent</con:authProfile>
     </con:entry>
-    <con:entry environmentId="b407e352-14e8-440f-bf25-abe254c02b61">
+    <con:entry environmentId="cd04cfb9-4faf-4b69-9ec6-24af2181f7ae">
       <con:authProfile>Inherit From Parent</con:authProfile>
     </con:entry>
   </con:environmentSpec>

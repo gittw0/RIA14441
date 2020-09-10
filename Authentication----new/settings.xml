@@ -1,34 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <con:testSuite name="Authentication -- new" id="4cbd21c6-1a95-4455-aa21-1aebdbdd25f6" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
-    <con:setting id="76372ab6-37a2-4483-b130-72fa55bcc4dafileName">Authentication</con:setting>
     <con:setting id="4cbd21c6-1a95-4455-aa21-1aebdbdd25f6fileName">Authentication----new</con:setting>
+    <con:setting id="76372ab6-37a2-4483-b130-72fa55bcc4dafileName">Authentication</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
   <con:runType>SEQUENTIAL</con:runType>
   <con:properties>
     <con:property>
-      <con:name>testRegion1</con:name>
-      <con:value/>
-    </con:property>
-    <con:property>
-      <con:name>testRegion2</con:name>
-      <con:value/>
-    </con:property>
-    <con:property>
-      <con:name>testRegion3</con:name>
-      <con:value/>
-    </con:property>
-    <con:property>
-      <con:name>testRegion4</con:name>
-      <con:value/>
-    </con:property>
-    <con:property>
-      <con:name>client</con:name>
-      <con:value/>
-    </con:property>
-    <con:property>
-      <con:name>client-secret</con:name>
+      <con:name>grant_type</con:name>
       <con:value/>
     </con:property>
     <con:property>
@@ -36,16 +16,36 @@
       <con:value/>
     </con:property>
     <con:property>
-      <con:name>grant_type</con:name>
+      <con:name>client-secret</con:name>
+      <con:value/>
+    </con:property>
+    <con:property>
+      <con:name>client</con:name>
+      <con:value/>
+    </con:property>
+    <con:property>
+      <con:name>testRegion4</con:name>
+      <con:value/>
+    </con:property>
+    <con:property>
+      <con:name>testRegion3</con:name>
+      <con:value/>
+    </con:property>
+    <con:property>
+      <con:name>testRegion2</con:name>
+      <con:value/>
+    </con:property>
+    <con:property>
+      <con:name>testRegion1</con:name>
       <con:value/>
     </con:property>
   </con:properties>
   <con:reportParameters/>
   <con:environmentSpec>
-    <con:entry environmentId="b407e352-14e8-440f-bf25-abe254c02b61">
+    <con:entry environmentId="cd04cfb9-4faf-4b69-9ec6-24af2181f7ae">
       <con:authProfile>Inherit From Parent</con:authProfile>
     </con:entry>
-    <con:entry environmentId="cd04cfb9-4faf-4b69-9ec6-24af2181f7ae">
+    <con:entry environmentId="b407e352-14e8-440f-bf25-abe254c02b61">
       <con:authProfile>Inherit From Parent</con:authProfile>
     </con:entry>
   </con:environmentSpec>

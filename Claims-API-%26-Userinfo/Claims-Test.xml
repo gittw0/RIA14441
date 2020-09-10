@@ -4,43 +4,21 @@
     <con:setting id="c4d7c597-e9f3-4cbb-9276-fd7f9f5a13b7fileName">Claims-Test</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
-  <con:testStep type="calltestcase" name="Run | openid" id="e08e457d-351c-476b-87ca-878310439db1">
+  <con:testStep type="groovy" name="Cleanup test data" id="18778fb5-1986-40f0-9bc0-5a837713e645" disabled="true">
     <con:settings/>
-    <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:targetTestCase>f4d2dff5-b59a-43bb-af32-fb91f8f2086b</con:targetTestCase>
-      <con:properties>
-        <con:property>
-          <con:name>client</con:name>
-          <con:value>${#Project#test-automation-env}</con:value>
-        </con:property>
-        <con:property>
-          <con:name>client-secret</con:name>
-          <con:value>${#Project#test-automation-env-secret}</con:value>
-        </con:property>
-        <con:property>
-          <con:name>scope</con:name>
-          <con:value>openid</con:value>
-        </con:property>
-        <con:property>
-          <con:name>thePuuid</con:name>
-          <con:value>${#TestCase#puuid}</con:value>
-        </con:property>
-      </con:properties>
-      <con:returnProperties/>
-      <con:runMode>SINGLETON_AND_WAIT</con:runMode>
+    <con:config>
+      <script>context.testCase.properties.each {
+	context.testCase.properties[it.key].value = ''
+}</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="calltestcase" name="Run | email" id="34b110df-ede8-4b20-80c3-d84b88f27c3d">
+  <con:testStep type="calltestcase" name="Run | cpid" id="684a7dcb-dda9-4417-adce-1fbab6ce4b27">
     <con:settings/>
     <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:targetTestCase>f996d20d-73e7-49e0-aa2e-ea40d78487b6</con:targetTestCase>
+      <con:targetTestCase>13c5355a-550e-4aff-9849-cf445a6d4a1c</con:targetTestCase>
       <con:properties>
         <con:property>
-          <con:name>client</con:name>
-          <con:value/>
-        </con:property>
-        <con:property>
-          <con:name>client-secret</con:name>
+          <con:name>thePuuid</con:name>
           <con:value/>
         </con:property>
         <con:property>
@@ -48,283 +26,11 @@
           <con:value/>
         </con:property>
         <con:property>
-          <con:name>thePuuid</con:name>
-          <con:value/>
-        </con:property>
-      </con:properties>
-      <con:returnProperties/>
-      <con:runMode>SINGLETON_AND_WAIT</con:runMode>
-    </con:config>
-  </con:testStep>
-  <con:testStep type="calltestcase" name="Run | account" id="798eb5b4-4ebf-4300-a0c7-b326e271db44">
-    <con:settings/>
-    <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:targetTestCase>57f1441f-db43-4e3a-9453-8bf34d5cd803</con:targetTestCase>
-      <con:properties>
-        <con:property>
-          <con:name>client</con:name>
-          <con:value/>
-        </con:property>
-        <con:property>
           <con:name>client-secret</con:name>
           <con:value/>
         </con:property>
         <con:property>
-          <con:name>scope</con:name>
-          <con:value/>
-        </con:property>
-        <con:property>
-          <con:name>thePuuid</con:name>
-          <con:value/>
-        </con:property>
-      </con:properties>
-      <con:returnProperties/>
-      <con:runMode>SINGLETON_AND_WAIT</con:runMode>
-    </con:config>
-  </con:testStep>
-  <con:testStep type="calltestcase" name="Run | lol" id="fdc60c0b-18bc-4b5c-b301-87cbbbca7bbe">
-    <con:settings/>
-    <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:targetTestCase>cbee035c-b673-47b9-a4b0-270c9d8407e6</con:targetTestCase>
-      <con:properties>
-        <con:property>
           <con:name>client</con:name>
-          <con:value/>
-        </con:property>
-        <con:property>
-          <con:name>client-secret</con:name>
-          <con:value/>
-        </con:property>
-        <con:property>
-          <con:name>scope</con:name>
-          <con:value/>
-        </con:property>
-        <con:property>
-          <con:name>thePuuid</con:name>
-          <con:value/>
-        </con:property>
-        <con:property>
-          <con:name>numberTotalRegions</con:name>
-          <con:value/>
-        </con:property>
-        <con:property>
-          <con:name>numberActiveRegions</con:name>
-          <con:value/>
-        </con:property>
-      </con:properties>
-      <con:returnProperties/>
-      <con:runMode>SINGLETON_AND_WAIT</con:runMode>
-    </con:config>
-  </con:testStep>
-  <con:testStep type="calltestcase" name="Run | ban" id="3c0df462-11dd-4c72-ac12-60973d7fd1f9">
-    <con:settings/>
-    <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:targetTestCase>e7a85360-ee6e-4ce4-87c5-f2ff3167c71d</con:targetTestCase>
-      <con:properties>
-        <con:property>
-          <con:name>client</con:name>
-          <con:value/>
-        </con:property>
-        <con:property>
-          <con:name>client-secret</con:name>
-          <con:value/>
-        </con:property>
-        <con:property>
-          <con:name>scope</con:name>
-          <con:value/>
-        </con:property>
-        <con:property>
-          <con:name>thePuuid</con:name>
-          <con:value/>
-        </con:property>
-        <con:property>
-          <con:name>numberRestrictions</con:name>
-          <con:value/>
-        </con:property>
-      </con:properties>
-      <con:returnProperties/>
-      <con:runMode>SINGLETON_AND_WAIT</con:runMode>
-    </con:config>
-  </con:testStep>
-  <con:testStep type="calltestcase" name="Run | gov" id="7a988fc3-0610-4d23-b8a4-6db00fb37fa4">
-    <con:settings/>
-    <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:targetTestCase>a54f9125-afad-4701-afe3-b2faeb9f0a1f</con:targetTestCase>
-      <con:properties>
-        <con:property>
-          <con:name>client</con:name>
-          <con:value/>
-        </con:property>
-        <con:property>
-          <con:name>client-secret</con:name>
-          <con:value/>
-        </con:property>
-        <con:property>
-          <con:name>scope</con:name>
-          <con:value/>
-        </con:property>
-        <con:property>
-          <con:name>thePuuid</con:name>
-          <con:value/>
-        </con:property>
-      </con:properties>
-      <con:returnProperties/>
-      <con:runMode>SINGLETON_AND_WAIT</con:runMode>
-    </con:config>
-  </con:testStep>
-  <con:testStep type="calltestcase" name="Run | phone" id="a7c72019-9375-470b-a9c8-974ab0832a0c">
-    <con:settings/>
-    <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:targetTestCase>dab9f4af-067e-46c3-bb0e-e160b3afbdbe</con:targetTestCase>
-      <con:properties>
-        <con:property>
-          <con:name>client</con:name>
-          <con:value/>
-        </con:property>
-        <con:property>
-          <con:name>client-secret</con:name>
-          <con:value/>
-        </con:property>
-        <con:property>
-          <con:name>scope</con:name>
-          <con:value/>
-        </con:property>
-        <con:property>
-          <con:name>thePuuid</con:name>
-          <con:value/>
-        </con:property>
-      </con:properties>
-      <con:returnProperties/>
-      <con:runMode>SINGLETON_AND_WAIT</con:runMode>
-    </con:config>
-  </con:testStep>
-  <con:testStep type="calltestcase" name="Run | summoner" id="90e68927-a7cd-4921-8e02-127192f89796">
-    <con:settings/>
-    <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:targetTestCase>773ee45e-7e45-4c4b-8252-7fcb9827f5a7</con:targetTestCase>
-      <con:properties>
-        <con:property>
-          <con:name>client</con:name>
-          <con:value/>
-        </con:property>
-        <con:property>
-          <con:name>client-secret</con:name>
-          <con:value/>
-        </con:property>
-        <con:property>
-          <con:name>scope</con:name>
-          <con:value/>
-        </con:property>
-        <con:property>
-          <con:name>thePuuid</con:name>
-          <con:value/>
-        </con:property>
-        <con:property>
-          <con:name>hasSummoner</con:name>
-          <con:value/>
-        </con:property>
-      </con:properties>
-      <con:returnProperties/>
-      <con:runMode>SINGLETON_AND_WAIT</con:runMode>
-    </con:config>
-  </con:testStep>
-  <con:testStep type="calltestcase" name="Run | birthdate" id="2a9062b5-6722-4066-95c9-a339529fcea8">
-    <con:settings/>
-    <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:targetTestCase>89fea369-9f53-4bc4-9c32-175280202ebb</con:targetTestCase>
-      <con:properties>
-        <con:property>
-          <con:name>client</con:name>
-          <con:value/>
-        </con:property>
-        <con:property>
-          <con:name>client-secret</con:name>
-          <con:value/>
-        </con:property>
-        <con:property>
-          <con:name>scope</con:name>
-          <con:value/>
-        </con:property>
-        <con:property>
-          <con:name>thePuuid</con:name>
-          <con:value/>
-        </con:property>
-      </con:properties>
-      <con:returnProperties/>
-      <con:runMode>SINGLETON_AND_WAIT</con:runMode>
-    </con:config>
-  </con:testStep>
-  <con:testStep type="calltestcase" name="Run | consent" id="b89fe56c-af31-4dfa-959b-2c3c79914365">
-    <con:settings/>
-    <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:targetTestCase>3ec00188-6ad6-4155-93a7-e925b61ea3ba</con:targetTestCase>
-      <con:properties>
-        <con:property>
-          <con:name>client</con:name>
-          <con:value/>
-        </con:property>
-        <con:property>
-          <con:name>client-secret</con:name>
-          <con:value/>
-        </con:property>
-        <con:property>
-          <con:name>scope</con:name>
-          <con:value/>
-        </con:property>
-        <con:property>
-          <con:name>thePuuid</con:name>
-          <con:value/>
-        </con:property>
-      </con:properties>
-      <con:returnProperties/>
-      <con:runMode>SINGLETON_AND_WAIT</con:runMode>
-    </con:config>
-  </con:testStep>
-  <con:testStep type="calltestcase" name="Run | loyalty" id="29b22873-aaf8-40d6-9b8f-3c0175030d3d">
-    <con:settings/>
-    <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:targetTestCase>f4482b5e-1d82-4b0c-89dc-a67bcddd8521</con:targetTestCase>
-      <con:properties>
-        <con:property>
-          <con:name>client</con:name>
-          <con:value/>
-        </con:property>
-        <con:property>
-          <con:name>client-secret</con:name>
-          <con:value/>
-        </con:property>
-        <con:property>
-          <con:name>scope</con:name>
-          <con:value/>
-        </con:property>
-        <con:property>
-          <con:name>thePuuid</con:name>
-          <con:value/>
-        </con:property>
-      </con:properties>
-      <con:returnProperties/>
-      <con:runMode>SINGLETON_AND_WAIT</con:runMode>
-    </con:config>
-  </con:testStep>
-  <con:testStep type="calltestcase" name="Run | link" id="5e3f5685-caac-45e0-8d56-3994c4a97fc3">
-    <con:settings/>
-    <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:targetTestCase>a761f0f7-60fc-4478-94fb-6f4f3d408e00</con:targetTestCase>
-      <con:properties>
-        <con:property>
-          <con:name>client</con:name>
-          <con:value/>
-        </con:property>
-        <con:property>
-          <con:name>client-secret</con:name>
-          <con:value/>
-        </con:property>
-        <con:property>
-          <con:name>scope</con:name>
-          <con:value/>
-        </con:property>
-        <con:property>
-          <con:name>thePuuid</con:name>
           <con:value/>
         </con:property>
       </con:properties>
@@ -338,11 +44,15 @@
       <con:targetTestCase>74c07577-27cb-4ce1-bdc0-72a797901397</con:targetTestCase>
       <con:properties>
         <con:property>
-          <con:name>client</con:name>
+          <con:name>numberTotalRegions</con:name>
           <con:value/>
         </con:property>
         <con:property>
-          <con:name>client-secret</con:name>
+          <con:name>numberActiveRegions</con:name>
+          <con:value/>
+        </con:property>
+        <con:property>
+          <con:name>thePuuid</con:name>
           <con:value/>
         </con:property>
         <con:property>
@@ -350,9 +60,239 @@
           <con:value/>
         </con:property>
         <con:property>
+          <con:name>client-secret</con:name>
+          <con:value/>
+        </con:property>
+        <con:property>
+          <con:name>client</con:name>
+          <con:value/>
+        </con:property>
+      </con:properties>
+      <con:returnProperties/>
+      <con:runMode>SINGLETON_AND_WAIT</con:runMode>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="calltestcase" name="Run | link" id="5e3f5685-caac-45e0-8d56-3994c4a97fc3">
+    <con:settings/>
+    <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:targetTestCase>a761f0f7-60fc-4478-94fb-6f4f3d408e00</con:targetTestCase>
+      <con:properties>
+        <con:property>
           <con:name>thePuuid</con:name>
           <con:value/>
         </con:property>
+        <con:property>
+          <con:name>scope</con:name>
+          <con:value/>
+        </con:property>
+        <con:property>
+          <con:name>client-secret</con:name>
+          <con:value/>
+        </con:property>
+        <con:property>
+          <con:name>client</con:name>
+          <con:value/>
+        </con:property>
+      </con:properties>
+      <con:returnProperties/>
+      <con:runMode>SINGLETON_AND_WAIT</con:runMode>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="calltestcase" name="Run | loyalty" id="29b22873-aaf8-40d6-9b8f-3c0175030d3d">
+    <con:settings/>
+    <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:targetTestCase>f4482b5e-1d82-4b0c-89dc-a67bcddd8521</con:targetTestCase>
+      <con:properties>
+        <con:property>
+          <con:name>thePuuid</con:name>
+          <con:value/>
+        </con:property>
+        <con:property>
+          <con:name>scope</con:name>
+          <con:value/>
+        </con:property>
+        <con:property>
+          <con:name>client-secret</con:name>
+          <con:value/>
+        </con:property>
+        <con:property>
+          <con:name>client</con:name>
+          <con:value/>
+        </con:property>
+      </con:properties>
+      <con:returnProperties/>
+      <con:runMode>SINGLETON_AND_WAIT</con:runMode>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="calltestcase" name="Run | consent" id="b89fe56c-af31-4dfa-959b-2c3c79914365">
+    <con:settings/>
+    <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:targetTestCase>3ec00188-6ad6-4155-93a7-e925b61ea3ba</con:targetTestCase>
+      <con:properties>
+        <con:property>
+          <con:name>thePuuid</con:name>
+          <con:value/>
+        </con:property>
+        <con:property>
+          <con:name>scope</con:name>
+          <con:value/>
+        </con:property>
+        <con:property>
+          <con:name>client-secret</con:name>
+          <con:value/>
+        </con:property>
+        <con:property>
+          <con:name>client</con:name>
+          <con:value/>
+        </con:property>
+      </con:properties>
+      <con:returnProperties/>
+      <con:runMode>SINGLETON_AND_WAIT</con:runMode>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="calltestcase" name="Run | birthdate" id="2a9062b5-6722-4066-95c9-a339529fcea8">
+    <con:settings/>
+    <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:targetTestCase>89fea369-9f53-4bc4-9c32-175280202ebb</con:targetTestCase>
+      <con:properties>
+        <con:property>
+          <con:name>thePuuid</con:name>
+          <con:value/>
+        </con:property>
+        <con:property>
+          <con:name>scope</con:name>
+          <con:value/>
+        </con:property>
+        <con:property>
+          <con:name>client-secret</con:name>
+          <con:value/>
+        </con:property>
+        <con:property>
+          <con:name>client</con:name>
+          <con:value/>
+        </con:property>
+      </con:properties>
+      <con:returnProperties/>
+      <con:runMode>SINGLETON_AND_WAIT</con:runMode>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="calltestcase" name="Run | summoner" id="90e68927-a7cd-4921-8e02-127192f89796">
+    <con:settings/>
+    <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:targetTestCase>773ee45e-7e45-4c4b-8252-7fcb9827f5a7</con:targetTestCase>
+      <con:properties>
+        <con:property>
+          <con:name>hasSummoner</con:name>
+          <con:value/>
+        </con:property>
+        <con:property>
+          <con:name>thePuuid</con:name>
+          <con:value/>
+        </con:property>
+        <con:property>
+          <con:name>scope</con:name>
+          <con:value/>
+        </con:property>
+        <con:property>
+          <con:name>client-secret</con:name>
+          <con:value/>
+        </con:property>
+        <con:property>
+          <con:name>client</con:name>
+          <con:value/>
+        </con:property>
+      </con:properties>
+      <con:returnProperties/>
+      <con:runMode>SINGLETON_AND_WAIT</con:runMode>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="calltestcase" name="Run | phone" id="a7c72019-9375-470b-a9c8-974ab0832a0c">
+    <con:settings/>
+    <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:targetTestCase>dab9f4af-067e-46c3-bb0e-e160b3afbdbe</con:targetTestCase>
+      <con:properties>
+        <con:property>
+          <con:name>thePuuid</con:name>
+          <con:value/>
+        </con:property>
+        <con:property>
+          <con:name>scope</con:name>
+          <con:value/>
+        </con:property>
+        <con:property>
+          <con:name>client-secret</con:name>
+          <con:value/>
+        </con:property>
+        <con:property>
+          <con:name>client</con:name>
+          <con:value/>
+        </con:property>
+      </con:properties>
+      <con:returnProperties/>
+      <con:runMode>SINGLETON_AND_WAIT</con:runMode>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="calltestcase" name="Run | gov" id="7a988fc3-0610-4d23-b8a4-6db00fb37fa4">
+    <con:settings/>
+    <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:targetTestCase>a54f9125-afad-4701-afe3-b2faeb9f0a1f</con:targetTestCase>
+      <con:properties>
+        <con:property>
+          <con:name>thePuuid</con:name>
+          <con:value/>
+        </con:property>
+        <con:property>
+          <con:name>scope</con:name>
+          <con:value/>
+        </con:property>
+        <con:property>
+          <con:name>client-secret</con:name>
+          <con:value/>
+        </con:property>
+        <con:property>
+          <con:name>client</con:name>
+          <con:value/>
+        </con:property>
+      </con:properties>
+      <con:returnProperties/>
+      <con:runMode>SINGLETON_AND_WAIT</con:runMode>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="calltestcase" name="Run | ban" id="3c0df462-11dd-4c72-ac12-60973d7fd1f9">
+    <con:settings/>
+    <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:targetTestCase>e7a85360-ee6e-4ce4-87c5-f2ff3167c71d</con:targetTestCase>
+      <con:properties>
+        <con:property>
+          <con:name>numberRestrictions</con:name>
+          <con:value/>
+        </con:property>
+        <con:property>
+          <con:name>thePuuid</con:name>
+          <con:value/>
+        </con:property>
+        <con:property>
+          <con:name>scope</con:name>
+          <con:value/>
+        </con:property>
+        <con:property>
+          <con:name>client-secret</con:name>
+          <con:value/>
+        </con:property>
+        <con:property>
+          <con:name>client</con:name>
+          <con:value/>
+        </con:property>
+      </con:properties>
+      <con:returnProperties/>
+      <con:runMode>SINGLETON_AND_WAIT</con:runMode>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="calltestcase" name="Run | lol" id="fdc60c0b-18bc-4b5c-b301-87cbbbca7bbe">
+    <con:settings/>
+    <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:targetTestCase>cbee035c-b673-47b9-a4b0-270c9d8407e6</con:targetTestCase>
+      <con:properties>
         <con:property>
           <con:name>numberActiveRegions</con:name>
           <con:value/>
@@ -361,22 +301,8 @@
           <con:name>numberTotalRegions</con:name>
           <con:value/>
         </con:property>
-      </con:properties>
-      <con:returnProperties/>
-      <con:runMode>SINGLETON_AND_WAIT</con:runMode>
-    </con:config>
-  </con:testStep>
-  <con:testStep type="calltestcase" name="Run | cpid" id="684a7dcb-dda9-4417-adce-1fbab6ce4b27">
-    <con:settings/>
-    <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:targetTestCase>13c5355a-550e-4aff-9849-cf445a6d4a1c</con:targetTestCase>
-      <con:properties>
         <con:property>
-          <con:name>client</con:name>
-          <con:value/>
-        </con:property>
-        <con:property>
-          <con:name>client-secret</con:name>
+          <con:name>thePuuid</con:name>
           <con:value/>
         </con:property>
         <con:property>
@@ -384,7 +310,11 @@
           <con:value/>
         </con:property>
         <con:property>
-          <con:name>thePuuid</con:name>
+          <con:name>client-secret</con:name>
+          <con:value/>
+        </con:property>
+        <con:property>
+          <con:name>client</con:name>
           <con:value/>
         </con:property>
       </con:properties>
@@ -392,29 +322,87 @@
       <con:runMode>SINGLETON_AND_WAIT</con:runMode>
     </con:config>
   </con:testStep>
-  <con:testStep type="groovy" name="Cleanup test data" id="18778fb5-1986-40f0-9bc0-5a837713e645" disabled="true">
+  <con:testStep type="calltestcase" name="Run | account" id="798eb5b4-4ebf-4300-a0c7-b326e271db44">
     <con:settings/>
-    <con:config>
-      <script>context.testCase.properties.each {
-	context.testCase.properties[it.key].value = ''
-}</script>
+    <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:targetTestCase>57f1441f-db43-4e3a-9453-8bf34d5cd803</con:targetTestCase>
+      <con:properties>
+        <con:property>
+          <con:name>thePuuid</con:name>
+          <con:value/>
+        </con:property>
+        <con:property>
+          <con:name>scope</con:name>
+          <con:value/>
+        </con:property>
+        <con:property>
+          <con:name>client-secret</con:name>
+          <con:value/>
+        </con:property>
+        <con:property>
+          <con:name>client</con:name>
+          <con:value/>
+        </con:property>
+      </con:properties>
+      <con:returnProperties/>
+      <con:runMode>SINGLETON_AND_WAIT</con:runMode>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="calltestcase" name="Run | email" id="34b110df-ede8-4b20-80c3-d84b88f27c3d">
+    <con:settings/>
+    <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:targetTestCase>f996d20d-73e7-49e0-aa2e-ea40d78487b6</con:targetTestCase>
+      <con:properties>
+        <con:property>
+          <con:name>thePuuid</con:name>
+          <con:value/>
+        </con:property>
+        <con:property>
+          <con:name>scope</con:name>
+          <con:value/>
+        </con:property>
+        <con:property>
+          <con:name>client-secret</con:name>
+          <con:value/>
+        </con:property>
+        <con:property>
+          <con:name>client</con:name>
+          <con:value/>
+        </con:property>
+      </con:properties>
+      <con:returnProperties/>
+      <con:runMode>SINGLETON_AND_WAIT</con:runMode>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="calltestcase" name="Run | openid" id="e08e457d-351c-476b-87ca-878310439db1">
+    <con:settings/>
+    <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:targetTestCase>f4d2dff5-b59a-43bb-af32-fb91f8f2086b</con:targetTestCase>
+      <con:properties>
+        <con:property>
+          <con:name>thePuuid</con:name>
+          <con:value>${#TestCase#puuid}</con:value>
+        </con:property>
+        <con:property>
+          <con:name>scope</con:name>
+          <con:value>openid</con:value>
+        </con:property>
+        <con:property>
+          <con:name>client-secret</con:name>
+          <con:value>${#Project#test-automation-env-secret}</con:value>
+        </con:property>
+        <con:property>
+          <con:name>client</con:name>
+          <con:value>${#Project#test-automation-env}</con:value>
+        </con:property>
+      </con:properties>
+      <con:returnProperties/>
+      <con:runMode>SINGLETON_AND_WAIT</con:runMode>
     </con:config>
   </con:testStep>
   <con:properties>
     <con:property>
-      <con:name>puuid</con:name>
-      <con:value/>
-    </con:property>
-    <con:property>
-      <con:name>hasLolRegion</con:name>
-      <con:value>false</con:value>
-    </con:property>
-    <con:property>
-      <con:name>hasSummoner</con:name>
-      <con:value>false</con:value>
-    </con:property>
-    <con:property>
-      <con:name>numberActiveRegions</con:name>
+      <con:name>numberTotalRegions</con:name>
       <con:value>0</con:value>
     </con:property>
     <con:property>
@@ -422,13 +410,25 @@
       <con:value>0</con:value>
     </con:property>
     <con:property>
-      <con:name>numberTotalRegions</con:name>
+      <con:name>numberActiveRegions</con:name>
       <con:value>0</con:value>
+    </con:property>
+    <con:property>
+      <con:name>hasSummoner</con:name>
+      <con:value>false</con:value>
+    </con:property>
+    <con:property>
+      <con:name>hasLolRegion</con:name>
+      <con:value>false</con:value>
+    </con:property>
+    <con:property>
+      <con:name>puuid</con:name>
+      <con:value/>
     </con:property>
   </con:properties>
   <con:reportParameters/>
   <con:breakPoints>
-    <con:testStepId>00e917eb-fc9a-49d7-a5ee-5c87f811197c</con:testStepId>
+    <con:testStepId>684a7dcb-dda9-4417-adce-1fbab6ce4b27</con:testStepId>
     <con:status>NONE</con:status>
     <con:properties/>
   </con:breakPoints>
@@ -438,15 +438,15 @@
     <con:properties/>
   </con:breakPoints>
   <con:breakPoints>
-    <con:testStepId>684a7dcb-dda9-4417-adce-1fbab6ce4b27</con:testStepId>
+    <con:testStepId>00e917eb-fc9a-49d7-a5ee-5c87f811197c</con:testStepId>
     <con:status>NONE</con:status>
     <con:properties/>
   </con:breakPoints>
   <con:environmentSpec>
-    <con:entry environmentId="b407e352-14e8-440f-bf25-abe254c02b61">
+    <con:entry environmentId="cd04cfb9-4faf-4b69-9ec6-24af2181f7ae">
       <con:authProfile>Inherit From Parent</con:authProfile>
     </con:entry>
-    <con:entry environmentId="cd04cfb9-4faf-4b69-9ec6-24af2181f7ae">
+    <con:entry environmentId="b407e352-14e8-440f-bf25-abe254c02b61">
       <con:authProfile>Inherit From Parent</con:authProfile>
     </con:entry>
   </con:environmentSpec>

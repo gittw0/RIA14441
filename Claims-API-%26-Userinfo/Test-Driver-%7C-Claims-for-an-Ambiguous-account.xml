@@ -4,18 +4,7 @@
     <con:setting id="9ab0af95-a42f-4247-a5a9-739285021aa7fileName">Test-Driver-%7C-Claims-for-an-Ambiguous-account</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
-  <con:testStep type="properties" name="> thePuuid" id="8a7336dd-a73d-4adf-b5b7-6d76113ea4a2">
-    <con:settings/>
-    <con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:properties>
-        <con:property>
-          <con:name>thePuuid</con:name>
-          <con:value/>
-        </con:property>
-      </con:properties>
-    </con:config>
-  </con:testStep>
-  <con:testStep type="transfer" name="> transfer > thePuuid [1/2]" id="280f7776-dbd6-4e81-80e6-98223d08d22c">
+  <con:testStep type="transfer" name="> transfer > thePuuid [2/2]" id="bae70c27-2867-4163-9b33-87a12a2c41f6">
     <con:settings/>
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:transfers transferToAll="false" transferTextContent="true" transferChildNodes="false" setNullOnMissingSource="true" ignoreEmpty="false" failOnError="true" entitize="false">
@@ -37,34 +26,34 @@
       <con:targetTestCase>c4d7c597-e9f3-4cbb-9276-fd7f9f5a13b7</con:targetTestCase>
       <con:properties>
         <con:property>
-          <con:name>puuid</con:name>
-          <con:value>${#thePuuid}</con:value>
-        </con:property>
-        <con:property>
-          <con:name>hasLolRegion</con:name>
-          <con:value>true</con:value>
-        </con:property>
-        <con:property>
-          <con:name>hasSummoner</con:name>
-          <con:value>false</con:value>
-        </con:property>
-        <con:property>
-          <con:name>numberActiveRegions</con:name>
-          <con:value>1</con:value>
+          <con:name>numberTotalRegions</con:name>
         </con:property>
         <con:property>
           <con:name>numberRestrictions</con:name>
           <con:value>0</con:value>
         </con:property>
         <con:property>
-          <con:name>numberTotalRegions</con:name>
+          <con:name>numberActiveRegions</con:name>
+          <con:value>1</con:value>
+        </con:property>
+        <con:property>
+          <con:name>hasSummoner</con:name>
+          <con:value>false</con:value>
+        </con:property>
+        <con:property>
+          <con:name>hasLolRegion</con:name>
+          <con:value>true</con:value>
+        </con:property>
+        <con:property>
+          <con:name>puuid</con:name>
+          <con:value>${#thePuuid}</con:value>
         </con:property>
       </con:properties>
       <con:returnProperties/>
       <con:runMode>SINGLETON_AND_WAIT</con:runMode>
     </con:config>
   </con:testStep>
-  <con:testStep type="transfer" name="> transfer > thePuuid [2/2]" id="bae70c27-2867-4163-9b33-87a12a2c41f6">
+  <con:testStep type="transfer" name="> transfer > thePuuid [1/2]" id="280f7776-dbd6-4e81-80e6-98223d08d22c">
     <con:settings/>
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:transfers transferToAll="false" transferTextContent="true" transferChildNodes="false" setNullOnMissingSource="true" ignoreEmpty="false" failOnError="true" entitize="false">
@@ -80,55 +69,21 @@
       </con:transfers>
     </con:config>
   </con:testStep>
+  <con:testStep type="properties" name="> thePuuid" id="8a7336dd-a73d-4adf-b5b7-6d76113ea4a2">
+    <con:settings/>
+    <con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:properties>
+        <con:property>
+          <con:name>thePuuid</con:name>
+          <con:value/>
+        </con:property>
+      </con:properties>
+    </con:config>
+  </con:testStep>
   <con:properties/>
   <con:reportParameters/>
   <con:breakPoints>
-    <con:testStepId>7ca72a09-8c51-40a9-9fac-23b3e1741449</con:testStepId>
-    <con:status>NONE</con:status>
-    <con:properties/>
-  </con:breakPoints>
-  <con:breakPoints>
-    <con:testStepId>e17ae672-8925-49cc-bed1-95a88b223976</con:testStepId>
-    <con:status>NONE</con:status>
-    <con:properties/>
-  </con:breakPoints>
-  <con:breakPoints>
-    <con:testStepId>8c3dc9a3-1010-45f1-87bc-96b21d8561bc</con:testStepId>
-    <con:status>NONE</con:status>
-    <con:properties/>
-  </con:breakPoints>
-  <con:breakPoints>
-    <con:testStepId>737cc186-b290-4fc0-9c84-5cdbd1263e81</con:testStepId>
-    <con:status>NONE</con:status>
-    <con:properties/>
-  </con:breakPoints>
-  <con:breakPoints>
-    <con:testStepId>f019e27f-7906-4450-85ce-a36230a08df4</con:testStepId>
-    <con:status>NONE</con:status>
-    <con:properties/>
-  </con:breakPoints>
-  <con:breakPoints>
-    <con:testStepId>71b5ee28-e29f-4590-a1a4-c3cee353160d</con:testStepId>
-    <con:status>NONE</con:status>
-    <con:properties/>
-  </con:breakPoints>
-  <con:breakPoints>
-    <con:testStepId>2c3f364a-e2e9-4db3-8ef4-0aab429c0723</con:testStepId>
-    <con:status>NONE</con:status>
-    <con:properties/>
-  </con:breakPoints>
-  <con:breakPoints>
-    <con:testStepId>05a34449-d56c-4fcf-a67a-0de2ac20b65d</con:testStepId>
-    <con:status>NONE</con:status>
-    <con:properties/>
-  </con:breakPoints>
-  <con:breakPoints>
-    <con:testStepId>4fc5d8aa-61a5-4d19-817e-f2ea9a50ae6e</con:testStepId>
-    <con:status>NONE</con:status>
-    <con:properties/>
-  </con:breakPoints>
-  <con:breakPoints>
-    <con:testStepId>0ea4e210-6f3e-4b97-9fa0-3b4191fe3104</con:testStepId>
+    <con:testStepId>f03d8636-4113-4afd-be10-25ed06adfd0a</con:testStepId>
     <con:status>NONE</con:status>
     <con:properties/>
   </con:breakPoints>
@@ -138,15 +93,60 @@
     <con:properties/>
   </con:breakPoints>
   <con:breakPoints>
-    <con:testStepId>f03d8636-4113-4afd-be10-25ed06adfd0a</con:testStepId>
+    <con:testStepId>0ea4e210-6f3e-4b97-9fa0-3b4191fe3104</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>4fc5d8aa-61a5-4d19-817e-f2ea9a50ae6e</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>05a34449-d56c-4fcf-a67a-0de2ac20b65d</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>2c3f364a-e2e9-4db3-8ef4-0aab429c0723</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>71b5ee28-e29f-4590-a1a4-c3cee353160d</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>f019e27f-7906-4450-85ce-a36230a08df4</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>737cc186-b290-4fc0-9c84-5cdbd1263e81</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>8c3dc9a3-1010-45f1-87bc-96b21d8561bc</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>e17ae672-8925-49cc-bed1-95a88b223976</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>7ca72a09-8c51-40a9-9fac-23b3e1741449</con:testStepId>
     <con:status>NONE</con:status>
     <con:properties/>
   </con:breakPoints>
   <con:environmentSpec>
-    <con:entry environmentId="b407e352-14e8-440f-bf25-abe254c02b61">
+    <con:entry environmentId="cd04cfb9-4faf-4b69-9ec6-24af2181f7ae">
       <con:authProfile>Inherit From Parent</con:authProfile>
     </con:entry>
-    <con:entry environmentId="cd04cfb9-4faf-4b69-9ec6-24af2181f7ae">
+    <con:entry environmentId="b407e352-14e8-440f-bf25-abe254c02b61">
       <con:authProfile>Inherit From Parent</con:authProfile>
     </con:entry>
   </con:environmentSpec>

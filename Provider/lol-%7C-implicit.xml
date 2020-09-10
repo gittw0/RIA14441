@@ -4,85 +4,264 @@
     <con:setting id="004d796e-ffe0-4658-9977-485f6dd2c844fileName">lol-%7C-implicit</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
-  <con:testStep type="transfer" name="> transfer" id="56087f76-fbe4-4c86-8e4d-ccfd46decaaf">
+  <con:testStep type="groovy" name="Verify | ID token | data" id="e21d1679-9d78-4d2b-ab5d-14b266a205c0">
     <con:settings/>
-    <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:transfers transferToAll="false" transferTextContent="true" transferChildNodes="false" setNullOnMissingSource="true" ignoreEmpty="false" failOnError="true" entitize="false">
-        <con:name>uri</con:name>
-        <con:sourceType/>
-        <con:sourceStep/>
-        <con:sourcePath>$['response']['parameters']['uri']</con:sourcePath>
-        <con:targetType>uri</con:targetType>
-        <con:targetStep>> uri</con:targetStep>
-        <con:targetPath/>
-        <con:type>JSONPATH</con:type>
-        <con:upgraded>true</con:upgraded>
-      </con:transfers>
+    <con:config>
+      <script>def json = testRunner.testCase.getTestStepByName("> Decoded ID token")
+
+// data
+assert json.hasProperty("jti")
+
+assert json.hasProperty("lol[0].cuid")
+assert json.hasProperty("lol[0].cpid")
+assert json.hasProperty("lol[0].uid")
+assert json.hasProperty("lol[0].uname")
+assert json.hasProperty("lol[0].ptrid")
+assert json.hasProperty("lol[0].pid")
+assert json.hasProperty("lol[0].state")
+
+assert json.hasProperty("acct.game_name")
+assert json.hasProperty("acct.tag_line")
+assert json.hasProperty("country")
+assert json.hasProperty("login_country")
+
+assert json.getPropertyCount() == 21</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="properties" name="> uri" id="413f9b9f-2866-4005-86d4-58d0d19b31cb">
+  <con:testStep type="groovy" name="Verify | access token | data" id="1db842eb-5681-4fa4-b71d-be8bc3e04de3">
+    <con:settings/>
+    <con:config>
+      <script>def json = testRunner.testCase.getTestStepByName("> Decoded access token")
+
+// data
+assert json.hasProperty("dat.r")
+assert json.hasProperty("dat.u")
+assert json.hasProperty("dat.p")
+assert json.hasProperty("dat.c")
+
+assert json.getPropertyCount() == 19</script>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="calltestcase" name="Verify | ID token | header" id="4d25e701-3423-48a0-849f-1790ef7fede9">
+    <con:settings/>
+    <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:targetTestCase>5343345c-d685-46c1-92df-234ba4e8fcbe</con:targetTestCase>
+      <con:properties>
+        <con:property>
+          <con:name>scope</con:name>
+          <con:value>${#TestCase#scope}</con:value>
+        </con:property>
+        <con:property>
+          <con:name>grant_type</con:name>
+          <con:value>${#TestCase#grant_type}</con:value>
+        </con:property>
+      </con:properties>
+      <con:returnProperties/>
+      <con:runMode>SINGLETON_AND_WAIT</con:runMode>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="calltestcase" name="Verify | access token | header" id="071eb303-84aa-44ca-99a3-b446e39915b9">
+    <con:settings/>
+    <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:targetTestCase>e8ca7958-1411-47dc-a85e-007bd1830787</con:targetTestCase>
+      <con:properties>
+        <con:property>
+          <con:name>scope</con:name>
+          <con:value>${#TestCase#scope}</con:value>
+        </con:property>
+        <con:property>
+          <con:name>grant_type</con:name>
+          <con:value>${#TestCase#grant_type}</con:value>
+        </con:property>
+      </con:properties>
+      <con:returnProperties/>
+      <con:runMode>SINGLETON_AND_WAIT</con:runMode>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="properties" name="> Decoded ID token" id="405d1825-747a-49be-ad84-fd63c715f556">
     <con:settings/>
     <con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:properties>
         <con:property>
-          <con:name>uri</con:name>
-          <con:value>http://localhost/redirect#access_token=eyJraWQiOiJzMSIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiJjNmM1ZjBiZS0zMGIwLTViNDMtYWRiYS1jYmI3Y2I2MzM0ZjkiLCJzY3AiOlsib3BlbmlkIiwibG9sIl0sImNsbSI6WyJyZ25fV1JJTlQiLCJvcGVuaWQiLCJwdyIsImxvbCIsImFjY3RfZ250IiwiYWNjdCIsIiFGQUFDIl0sImRhdCI6eyJwIjoiIiwiciI6IldSSU5UIiwiYyI6IndyaW50IiwidSI6MjQ4MzQ1NTE0ODk5MTk2OH0sImlzcyI6Imh0dHBzOlwvXC9hdXRoLndyLWludC5ycGcucmlvdGdhbWVzLmNvbSIsImV4cCI6MTU5NjA2NjAxMiwiaWF0IjoxNTk2MDYyNDEyLCJqdGkiOiJZZG1MeFEwYUhfYyIsImNpZCI6InRlc3QtYXV0b21hdGlvbi1sb2wtd3JpbnQifQ.xg2T77OG1YAVdRbYjUcZrL7U2-bLMh3IyIPg-jqSeq1u0NPpeyiAZZZZe5zQ__GWV1kYbP_iwH9pVYC3Rn1Ju8gxbQ-6N-3ULiCKx4KnlDF70aKqUhfASo5a8BJFecVhko7ml5yN8XBxyyyPSVX4w_cHU_RnIuBJxKdiLygwcr1rIxxxs0cFXFpp04VSm-BVM2fL-yUVbiIhgPbOoPGEIcm6kQCaKjyOeI-OUC9p68KvYeNsftvuB4_6BVwUo_WlkFr_drLCJr16e38MwbOpK9OTNfts0e9K1_WOA2vjOyGmLd0pVkeqivkmXphdeMbcwyEXwqm9o88neb0mIFHR-Q&amp;scope=openid+lol&amp;id_token=eyJraWQiOiJzMSIsImFsZyI6IlJTMjU2In0.eyJhdF9oYXNoIjoiOVQyeVVCN2diZ0lBR3lUTGdjUUlIZyIsInN1YiI6ImM2YzVmMGJlLTMwYjAtNWI0My1hZGJhLWNiYjdjYjYzMzRmOSIsImNvdW50cnkiOiJ1c2EiLCJwbGF5ZXJfcGxvY2FsZSI6ImVuLUVOIiwiY291bnRyeV9hdCI6MTU5MTk5MTEyMDAwMCwiYW1yIjpbInBhc3N3b3JkIl0sImlzcyI6Imh0dHBzOlwvXC9hdXRoLndyLWludC5ycGcucmlvdGdhbWVzLmNvbSIsImxvbCI6W3siY3VpZCI6MjQ4MzQ1NTE0ODk5MTk2OCwiY3BpZCI6IldSSU5UIiwidWlkIjoyNDgzNDU1MTQ4OTkxOTY4LCJ1bmFtZSI6InJpcG1heHdyaW50IiwicHRyaWQiOm51bGwsInBpZCI6IldSSU5UIiwic3RhdGUiOiJFTkFCTEVEIn1dLCJub25jZSI6IjhCMzZDMEY0QUI0RDRENTFCMDVGMUY4OTY4NDg4RDcwIiwiYXVkIjoidGVzdC1hdXRvbWF0aW9uLWxvbC13cmludCIsImFjciI6InVybjpyaW90OmJyb256ZSIsInBsYXllcl9sb2NhbGUiOiJlbi1FTiIsImV4cCI6MTU5NjA2MzMxMiwiaWF0IjoxNTk2MDYyNDEyLCJhY2N0Ijp7ImdhbWVfbmFtZSI6IndyaW50ZXN0IiwidGFnX2xpbmUiOiJOQTEifSwianRpIjoiN3VDVTVRbjZubjgiLCJsb2dpbl9jb3VudHJ5IjoidXNhIn0.rT1uJc3MBUlwPpV3xfNSjUGXHBSn_tn2wVVOqxhXw9HX7AcuCwSJn3fJU_dkSWKzCqp1n5St30roSbe4010C8ybw1_Kfz9TnTwx6GHpFGY8uvai1WrkTiOxBFoOd7yJlxQ3NbfKCw_HNZXiFD1ZyqWLO3oNZ_GQ1zdGzI7-_nWcqr-h9COa6TdgKryVDmGyGZfHeZ7AtNJ_jR_hP97_x5ts-GGe5LAmVdTwIcWi-meIgoLt9V39TZxQnEm0t8HYp7LvugUGr2FDhLGfb3u699y8rIJjKHSjoqhtq_zsmefKO4FDikg-0hF221s22H7O6V-8ZZgo96QXnoRdYbcMJzg&amp;token_type=Bearer&amp;expires_in=3600</con:value>
+          <con:name>sub</con:name>
+          <con:value>c6c5f0be-30b0-5b43-adba-cbb7cb6334f9</con:value>
+        </con:property>
+        <con:property>
+          <con:name>player_plocale</con:name>
+          <con:value>en-EN</con:value>
+        </con:property>
+        <con:property>
+          <con:name>player_locale</con:name>
+          <con:value>en-EN</con:value>
+        </con:property>
+        <con:property>
+          <con:name>nonce</con:name>
+          <con:value>8B36C0F4AB4D4D51B05F1F8968488D70</con:value>
+        </con:property>
+        <con:property>
+          <con:name>lol[0].uname</con:name>
+          <con:value>ripmaxwrint</con:value>
+        </con:property>
+        <con:property>
+          <con:name>lol[0].uid</con:name>
+          <con:value>2483455148991968</con:value>
+        </con:property>
+        <con:property>
+          <con:name>lol[0].state</con:name>
+          <con:value>ENABLED</con:value>
+        </con:property>
+        <con:property>
+          <con:name>lol[0].ptrid</con:name>
+          <con:value>null</con:value>
+        </con:property>
+        <con:property>
+          <con:name>lol[0].pid</con:name>
+          <con:value>WRINT</con:value>
+        </con:property>
+        <con:property>
+          <con:name>lol[0].cuid</con:name>
+          <con:value>2483455148991968</con:value>
+        </con:property>
+        <con:property>
+          <con:name>lol[0].cpid</con:name>
+          <con:value>WRINT</con:value>
+        </con:property>
+        <con:property>
+          <con:name>login_country</con:name>
+          <con:value>usa</con:value>
+        </con:property>
+        <con:property>
+          <con:name>jti</con:name>
+          <con:value>7uCU5Qn6nn8</con:value>
+        </con:property>
+        <con:property>
+          <con:name>iss</con:name>
+          <con:value>https://auth.wr-int.rpg.riotgames.com</con:value>
+        </con:property>
+        <con:property>
+          <con:name>iat</con:name>
+          <con:value>1596062412</con:value>
+        </con:property>
+        <con:property>
+          <con:name>exp</con:name>
+          <con:value>1596063312</con:value>
+        </con:property>
+        <con:property>
+          <con:name>country_at</con:name>
+          <con:value>1591991120000</con:value>
+        </con:property>
+        <con:property>
+          <con:name>country</con:name>
+          <con:value>usa</con:value>
+        </con:property>
+        <con:property>
+          <con:name>aud</con:name>
+          <con:value>test-automation-lol-wrint</con:value>
+        </con:property>
+        <con:property>
+          <con:name>at_hash</con:name>
+          <con:value>9T2yUB7gbgIAGyTLgcQIHg</con:value>
+        </con:property>
+        <con:property>
+          <con:name>amr[0]</con:name>
+          <con:value>password</con:value>
+        </con:property>
+        <con:property>
+          <con:name>acr</con:name>
+          <con:value>urn:riot:bronze</con:value>
+        </con:property>
+        <con:property>
+          <con:name>acct.tag_line</con:name>
+          <con:value>NA1</con:value>
+        </con:property>
+        <con:property>
+          <con:name>acct.game_name</con:name>
+          <con:value>wrintest</con:value>
         </con:property>
       </con:properties>
     </con:config>
   </con:testStep>
-  <con:testStep type="groovy" name="Decode | accessToken" id="17a90119-f989-4913-8feb-d8cace731f95">
+  <con:testStep type="properties" name="> Decoded access token" id="b2b950d2-591f-4f3b-8078-76c008867a52">
     <con:settings/>
-    <con:config>
-      <script>// create global library instance
-globals = testRunner.testCase.testSuite.project.testSuites["Library"].testCases["lib"].testSteps["Globals"]
-globals.run(testRunner, context)
-def globals = context.globals
-
-// decode URI
-String uri =testRunner.testCase.testSteps["> uri"].getPropertyValue( "uri" )
-def json = globals.DecodeToken(uri.substring(uri.indexOf("access_token=") + 13, uri.indexOf("&amp;scope")))
-
-// clear properties
-def decodedTokenTestStep = testRunner.testCase.getTestStepByName("> Decoded access token");
-for( name in decodedTokenTestStep.propertyNames )
-    decodedTokenTestStep.removeProperty( name )
-
-def verifyTokenHeaderTestStep = context.testCase.testSuite.getTestCaseByName("Verify | access token | header").getTestStepByName("json")
-for( name in verifyTokenHeaderTestStep.propertyNames )
-    verifyTokenHeaderTestStep.removeProperty( name )
-    
-// populate data
-json.each 
-{
-	key, value ->
-
-	if (value in Map) {	
-		for (i=0;  i &lt; value.size(); i++) {
-			clm = value.keySet()[i]
-			decodedTokenTestStep.setPropertyValue(key.toString() + "." + clm, value.get(clm).toString())
-			verifyTokenHeaderTestStep.setPropertyValue(key.toString() + "." + clm, value.get(clm).toString())
-		}
-	} else if (value in List) {
-		for (i=0;  i &lt; value.size(); i++) {
-			def element = value[i];
-
-			if (element in Map)  {	
-				for (j=0;  j &lt; element.size(); j++) {
-					clm = element.keySet()[j]
-					decodedTokenTestStep.setPropertyValue(key.toString()+"["+i+"]" + "." + clm, element.get(clm).toString())
-					verifyTokenHeaderTestStep.setPropertyValue(key.toString()+"["+i+"]" + "." + clm, element.get(clm).toString())
-				}
-			} else {
-				decodedTokenTestStep.setPropertyValue(key.toString()+"["+i+"]", value[i].toString())
-				verifyTokenHeaderTestStep.setPropertyValue(key.toString()+"["+i+"]", value[i].toString())
-			}
-		}
-	} else {
-		decodedTokenTestStep.setPropertyValue(key.toString(), value.toString())
-		verifyTokenHeaderTestStep.setPropertyValue(key.toString(), value.toString())	
-	}
-}</script>
+    <con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:properties>
+        <con:property>
+          <con:name>sub</con:name>
+          <con:value>c6c5f0be-30b0-5b43-adba-cbb7cb6334f9</con:value>
+        </con:property>
+        <con:property>
+          <con:name>scp[1]</con:name>
+          <con:value>lol</con:value>
+        </con:property>
+        <con:property>
+          <con:name>scp[0]</con:name>
+          <con:value>openid</con:value>
+        </con:property>
+        <con:property>
+          <con:name>jti</con:name>
+          <con:value>YdmLxQ0aH_c</con:value>
+        </con:property>
+        <con:property>
+          <con:name>iss</con:name>
+          <con:value>https://auth.wr-int.rpg.riotgames.com</con:value>
+        </con:property>
+        <con:property>
+          <con:name>iat</con:name>
+          <con:value>1596062412</con:value>
+        </con:property>
+        <con:property>
+          <con:name>exp</con:name>
+          <con:value>1596066012</con:value>
+        </con:property>
+        <con:property>
+          <con:name>dat.u</con:name>
+          <con:value>2483455148991968</con:value>
+        </con:property>
+        <con:property>
+          <con:name>dat.r</con:name>
+          <con:value>WRINT</con:value>
+        </con:property>
+        <con:property>
+          <con:name>dat.p</con:name>
+          <con:value/>
+        </con:property>
+        <con:property>
+          <con:name>dat.c</con:name>
+          <con:value>wrint</con:value>
+        </con:property>
+        <con:property>
+          <con:name>clm[6]</con:name>
+          <con:value>!FAAC</con:value>
+        </con:property>
+        <con:property>
+          <con:name>clm[5]</con:name>
+          <con:value>acct</con:value>
+        </con:property>
+        <con:property>
+          <con:name>clm[4]</con:name>
+          <con:value>acct_gnt</con:value>
+        </con:property>
+        <con:property>
+          <con:name>clm[3]</con:name>
+          <con:value>lol</con:value>
+        </con:property>
+        <con:property>
+          <con:name>clm[2]</con:name>
+          <con:value>pw</con:value>
+        </con:property>
+        <con:property>
+          <con:name>clm[1]</con:name>
+          <con:value>openid</con:value>
+        </con:property>
+        <con:property>
+          <con:name>clm[0]</con:name>
+          <con:value>rgn_WRINT</con:value>
+        </con:property>
+        <con:property>
+          <con:name>cid</con:name>
+          <con:value>test-automation-lol-wrint</con:value>
+        </con:property>
+      </con:properties>
     </con:config>
   </con:testStep>
   <con:testStep type="groovy" name="Decode | idToken" id="aeb4f3a1-d60c-4e7a-a9d7-0f8515ee08a4">
@@ -139,309 +318,120 @@ json.each
 }</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="properties" name="> Decoded access token" id="b2b950d2-591f-4f3b-8078-76c008867a52">
+  <con:testStep type="groovy" name="Decode | accessToken" id="17a90119-f989-4913-8feb-d8cace731f95">
+    <con:settings/>
+    <con:config>
+      <script>// create global library instance
+globals = testRunner.testCase.testSuite.project.testSuites["Library"].testCases["lib"].testSteps["Globals"]
+globals.run(testRunner, context)
+def globals = context.globals
+
+// decode URI
+String uri =testRunner.testCase.testSteps["> uri"].getPropertyValue( "uri" )
+def json = globals.DecodeToken(uri.substring(uri.indexOf("access_token=") + 13, uri.indexOf("&amp;scope")))
+
+// clear properties
+def decodedTokenTestStep = testRunner.testCase.getTestStepByName("> Decoded access token");
+for( name in decodedTokenTestStep.propertyNames )
+    decodedTokenTestStep.removeProperty( name )
+
+def verifyTokenHeaderTestStep = context.testCase.testSuite.getTestCaseByName("Verify | access token | header").getTestStepByName("json")
+for( name in verifyTokenHeaderTestStep.propertyNames )
+    verifyTokenHeaderTestStep.removeProperty( name )
+    
+// populate data
+json.each 
+{
+	key, value ->
+
+	if (value in Map) {	
+		for (i=0;  i &lt; value.size(); i++) {
+			clm = value.keySet()[i]
+			decodedTokenTestStep.setPropertyValue(key.toString() + "." + clm, value.get(clm).toString())
+			verifyTokenHeaderTestStep.setPropertyValue(key.toString() + "." + clm, value.get(clm).toString())
+		}
+	} else if (value in List) {
+		for (i=0;  i &lt; value.size(); i++) {
+			def element = value[i];
+
+			if (element in Map)  {	
+				for (j=0;  j &lt; element.size(); j++) {
+					clm = element.keySet()[j]
+					decodedTokenTestStep.setPropertyValue(key.toString()+"["+i+"]" + "." + clm, element.get(clm).toString())
+					verifyTokenHeaderTestStep.setPropertyValue(key.toString()+"["+i+"]" + "." + clm, element.get(clm).toString())
+				}
+			} else {
+				decodedTokenTestStep.setPropertyValue(key.toString()+"["+i+"]", value[i].toString())
+				verifyTokenHeaderTestStep.setPropertyValue(key.toString()+"["+i+"]", value[i].toString())
+			}
+		}
+	} else {
+		decodedTokenTestStep.setPropertyValue(key.toString(), value.toString())
+		verifyTokenHeaderTestStep.setPropertyValue(key.toString(), value.toString())	
+	}
+}</script>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="properties" name="> uri" id="413f9b9f-2866-4005-86d4-58d0d19b31cb">
     <con:settings/>
     <con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:properties>
         <con:property>
-          <con:name>cid</con:name>
-          <con:value>test-automation-lol-wrint</con:value>
-        </con:property>
-        <con:property>
-          <con:name>clm[0]</con:name>
-          <con:value>rgn_WRINT</con:value>
-        </con:property>
-        <con:property>
-          <con:name>clm[1]</con:name>
-          <con:value>openid</con:value>
-        </con:property>
-        <con:property>
-          <con:name>clm[2]</con:name>
-          <con:value>pw</con:value>
-        </con:property>
-        <con:property>
-          <con:name>clm[3]</con:name>
-          <con:value>lol</con:value>
-        </con:property>
-        <con:property>
-          <con:name>clm[4]</con:name>
-          <con:value>acct_gnt</con:value>
-        </con:property>
-        <con:property>
-          <con:name>clm[5]</con:name>
-          <con:value>acct</con:value>
-        </con:property>
-        <con:property>
-          <con:name>clm[6]</con:name>
-          <con:value>!FAAC</con:value>
-        </con:property>
-        <con:property>
-          <con:name>dat.c</con:name>
-          <con:value>wrint</con:value>
-        </con:property>
-        <con:property>
-          <con:name>dat.p</con:name>
-          <con:value/>
-        </con:property>
-        <con:property>
-          <con:name>dat.r</con:name>
-          <con:value>WRINT</con:value>
-        </con:property>
-        <con:property>
-          <con:name>dat.u</con:name>
-          <con:value>2483455148991968</con:value>
-        </con:property>
-        <con:property>
-          <con:name>exp</con:name>
-          <con:value>1596066012</con:value>
-        </con:property>
-        <con:property>
-          <con:name>iat</con:name>
-          <con:value>1596062412</con:value>
-        </con:property>
-        <con:property>
-          <con:name>iss</con:name>
-          <con:value>https://auth.wr-int.rpg.riotgames.com</con:value>
-        </con:property>
-        <con:property>
-          <con:name>jti</con:name>
-          <con:value>YdmLxQ0aH_c</con:value>
-        </con:property>
-        <con:property>
-          <con:name>scp[0]</con:name>
-          <con:value>openid</con:value>
-        </con:property>
-        <con:property>
-          <con:name>scp[1]</con:name>
-          <con:value>lol</con:value>
-        </con:property>
-        <con:property>
-          <con:name>sub</con:name>
-          <con:value>c6c5f0be-30b0-5b43-adba-cbb7cb6334f9</con:value>
+          <con:name>uri</con:name>
+          <con:value>http://localhost/redirect#access_token=eyJraWQiOiJzMSIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiJjNmM1ZjBiZS0zMGIwLTViNDMtYWRiYS1jYmI3Y2I2MzM0ZjkiLCJzY3AiOlsib3BlbmlkIiwibG9sIl0sImNsbSI6WyJyZ25fV1JJTlQiLCJvcGVuaWQiLCJwdyIsImxvbCIsImFjY3RfZ250IiwiYWNjdCIsIiFGQUFDIl0sImRhdCI6eyJwIjoiIiwiciI6IldSSU5UIiwiYyI6IndyaW50IiwidSI6MjQ4MzQ1NTE0ODk5MTk2OH0sImlzcyI6Imh0dHBzOlwvXC9hdXRoLndyLWludC5ycGcucmlvdGdhbWVzLmNvbSIsImV4cCI6MTU5NjA2NjAxMiwiaWF0IjoxNTk2MDYyNDEyLCJqdGkiOiJZZG1MeFEwYUhfYyIsImNpZCI6InRlc3QtYXV0b21hdGlvbi1sb2wtd3JpbnQifQ.xg2T77OG1YAVdRbYjUcZrL7U2-bLMh3IyIPg-jqSeq1u0NPpeyiAZZZZe5zQ__GWV1kYbP_iwH9pVYC3Rn1Ju8gxbQ-6N-3ULiCKx4KnlDF70aKqUhfASo5a8BJFecVhko7ml5yN8XBxyyyPSVX4w_cHU_RnIuBJxKdiLygwcr1rIxxxs0cFXFpp04VSm-BVM2fL-yUVbiIhgPbOoPGEIcm6kQCaKjyOeI-OUC9p68KvYeNsftvuB4_6BVwUo_WlkFr_drLCJr16e38MwbOpK9OTNfts0e9K1_WOA2vjOyGmLd0pVkeqivkmXphdeMbcwyEXwqm9o88neb0mIFHR-Q&amp;scope=openid+lol&amp;id_token=eyJraWQiOiJzMSIsImFsZyI6IlJTMjU2In0.eyJhdF9oYXNoIjoiOVQyeVVCN2diZ0lBR3lUTGdjUUlIZyIsInN1YiI6ImM2YzVmMGJlLTMwYjAtNWI0My1hZGJhLWNiYjdjYjYzMzRmOSIsImNvdW50cnkiOiJ1c2EiLCJwbGF5ZXJfcGxvY2FsZSI6ImVuLUVOIiwiY291bnRyeV9hdCI6MTU5MTk5MTEyMDAwMCwiYW1yIjpbInBhc3N3b3JkIl0sImlzcyI6Imh0dHBzOlwvXC9hdXRoLndyLWludC5ycGcucmlvdGdhbWVzLmNvbSIsImxvbCI6W3siY3VpZCI6MjQ4MzQ1NTE0ODk5MTk2OCwiY3BpZCI6IldSSU5UIiwidWlkIjoyNDgzNDU1MTQ4OTkxOTY4LCJ1bmFtZSI6InJpcG1heHdyaW50IiwicHRyaWQiOm51bGwsInBpZCI6IldSSU5UIiwic3RhdGUiOiJFTkFCTEVEIn1dLCJub25jZSI6IjhCMzZDMEY0QUI0RDRENTFCMDVGMUY4OTY4NDg4RDcwIiwiYXVkIjoidGVzdC1hdXRvbWF0aW9uLWxvbC13cmludCIsImFjciI6InVybjpyaW90OmJyb256ZSIsInBsYXllcl9sb2NhbGUiOiJlbi1FTiIsImV4cCI6MTU5NjA2MzMxMiwiaWF0IjoxNTk2MDYyNDEyLCJhY2N0Ijp7ImdhbWVfbmFtZSI6IndyaW50ZXN0IiwidGFnX2xpbmUiOiJOQTEifSwianRpIjoiN3VDVTVRbjZubjgiLCJsb2dpbl9jb3VudHJ5IjoidXNhIn0.rT1uJc3MBUlwPpV3xfNSjUGXHBSn_tn2wVVOqxhXw9HX7AcuCwSJn3fJU_dkSWKzCqp1n5St30roSbe4010C8ybw1_Kfz9TnTwx6GHpFGY8uvai1WrkTiOxBFoOd7yJlxQ3NbfKCw_HNZXiFD1ZyqWLO3oNZ_GQ1zdGzI7-_nWcqr-h9COa6TdgKryVDmGyGZfHeZ7AtNJ_jR_hP97_x5ts-GGe5LAmVdTwIcWi-meIgoLt9V39TZxQnEm0t8HYp7LvugUGr2FDhLGfb3u699y8rIJjKHSjoqhtq_zsmefKO4FDikg-0hF221s22H7O6V-8ZZgo96QXnoRdYbcMJzg&amp;token_type=Bearer&amp;expires_in=3600</con:value>
         </con:property>
       </con:properties>
     </con:config>
   </con:testStep>
-  <con:testStep type="properties" name="> Decoded ID token" id="405d1825-747a-49be-ad84-fd63c715f556">
+  <con:testStep type="transfer" name="> transfer" id="56087f76-fbe4-4c86-8e4d-ccfd46decaaf">
     <con:settings/>
-    <con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:properties>
-        <con:property>
-          <con:name>acct.game_name</con:name>
-          <con:value>wrintest</con:value>
-        </con:property>
-        <con:property>
-          <con:name>acct.tag_line</con:name>
-          <con:value>NA1</con:value>
-        </con:property>
-        <con:property>
-          <con:name>acr</con:name>
-          <con:value>urn:riot:bronze</con:value>
-        </con:property>
-        <con:property>
-          <con:name>amr[0]</con:name>
-          <con:value>password</con:value>
-        </con:property>
-        <con:property>
-          <con:name>at_hash</con:name>
-          <con:value>9T2yUB7gbgIAGyTLgcQIHg</con:value>
-        </con:property>
-        <con:property>
-          <con:name>aud</con:name>
-          <con:value>test-automation-lol-wrint</con:value>
-        </con:property>
-        <con:property>
-          <con:name>country</con:name>
-          <con:value>usa</con:value>
-        </con:property>
-        <con:property>
-          <con:name>country_at</con:name>
-          <con:value>1591991120000</con:value>
-        </con:property>
-        <con:property>
-          <con:name>exp</con:name>
-          <con:value>1596063312</con:value>
-        </con:property>
-        <con:property>
-          <con:name>iat</con:name>
-          <con:value>1596062412</con:value>
-        </con:property>
-        <con:property>
-          <con:name>iss</con:name>
-          <con:value>https://auth.wr-int.rpg.riotgames.com</con:value>
-        </con:property>
-        <con:property>
-          <con:name>jti</con:name>
-          <con:value>7uCU5Qn6nn8</con:value>
-        </con:property>
-        <con:property>
-          <con:name>login_country</con:name>
-          <con:value>usa</con:value>
-        </con:property>
-        <con:property>
-          <con:name>lol[0].cpid</con:name>
-          <con:value>WRINT</con:value>
-        </con:property>
-        <con:property>
-          <con:name>lol[0].cuid</con:name>
-          <con:value>2483455148991968</con:value>
-        </con:property>
-        <con:property>
-          <con:name>lol[0].pid</con:name>
-          <con:value>WRINT</con:value>
-        </con:property>
-        <con:property>
-          <con:name>lol[0].ptrid</con:name>
-          <con:value>null</con:value>
-        </con:property>
-        <con:property>
-          <con:name>lol[0].state</con:name>
-          <con:value>ENABLED</con:value>
-        </con:property>
-        <con:property>
-          <con:name>lol[0].uid</con:name>
-          <con:value>2483455148991968</con:value>
-        </con:property>
-        <con:property>
-          <con:name>lol[0].uname</con:name>
-          <con:value>ripmaxwrint</con:value>
-        </con:property>
-        <con:property>
-          <con:name>nonce</con:name>
-          <con:value>8B36C0F4AB4D4D51B05F1F8968488D70</con:value>
-        </con:property>
-        <con:property>
-          <con:name>player_locale</con:name>
-          <con:value>en-EN</con:value>
-        </con:property>
-        <con:property>
-          <con:name>player_plocale</con:name>
-          <con:value>en-EN</con:value>
-        </con:property>
-        <con:property>
-          <con:name>sub</con:name>
-          <con:value>c6c5f0be-30b0-5b43-adba-cbb7cb6334f9</con:value>
-        </con:property>
-      </con:properties>
-    </con:config>
-  </con:testStep>
-  <con:testStep type="calltestcase" name="Verify | access token | header" id="071eb303-84aa-44ca-99a3-b446e39915b9">
-    <con:settings/>
-    <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:targetTestCase>e8ca7958-1411-47dc-a85e-007bd1830787</con:targetTestCase>
-      <con:properties>
-        <con:property>
-          <con:name>grant_type</con:name>
-          <con:value>${#TestCase#grant_type}</con:value>
-        </con:property>
-        <con:property>
-          <con:name>scope</con:name>
-          <con:value>${#TestCase#scope}</con:value>
-        </con:property>
-      </con:properties>
-      <con:returnProperties/>
-      <con:runMode>SINGLETON_AND_WAIT</con:runMode>
-    </con:config>
-  </con:testStep>
-  <con:testStep type="calltestcase" name="Verify | ID token | header" id="4d25e701-3423-48a0-849f-1790ef7fede9">
-    <con:settings/>
-    <con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:targetTestCase>5343345c-d685-46c1-92df-234ba4e8fcbe</con:targetTestCase>
-      <con:properties>
-        <con:property>
-          <con:name>grant_type</con:name>
-          <con:value>${#TestCase#grant_type}</con:value>
-        </con:property>
-        <con:property>
-          <con:name>scope</con:name>
-          <con:value>${#TestCase#scope}</con:value>
-        </con:property>
-      </con:properties>
-      <con:returnProperties/>
-      <con:runMode>SINGLETON_AND_WAIT</con:runMode>
-    </con:config>
-  </con:testStep>
-  <con:testStep type="groovy" name="Verify | access token | data" id="1db842eb-5681-4fa4-b71d-be8bc3e04de3">
-    <con:settings/>
-    <con:config>
-      <script>def json = testRunner.testCase.getTestStepByName("> Decoded access token")
-
-// data
-assert json.hasProperty("dat.r")
-assert json.hasProperty("dat.u")
-assert json.hasProperty("dat.p")
-assert json.hasProperty("dat.c")
-
-assert json.getPropertyCount() == 19</script>
-    </con:config>
-  </con:testStep>
-  <con:testStep type="groovy" name="Verify | ID token | data" id="e21d1679-9d78-4d2b-ab5d-14b266a205c0">
-    <con:settings/>
-    <con:config>
-      <script>def json = testRunner.testCase.getTestStepByName("> Decoded ID token")
-
-// data
-assert json.hasProperty("jti")
-
-assert json.hasProperty("lol[0].cuid")
-assert json.hasProperty("lol[0].cpid")
-assert json.hasProperty("lol[0].uid")
-assert json.hasProperty("lol[0].uname")
-assert json.hasProperty("lol[0].ptrid")
-assert json.hasProperty("lol[0].pid")
-assert json.hasProperty("lol[0].state")
-
-assert json.hasProperty("acct.game_name")
-assert json.hasProperty("acct.tag_line")
-assert json.hasProperty("country")
-assert json.hasProperty("login_country")
-
-assert json.getPropertyCount() == 21</script>
+    <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:transfers transferToAll="false" transferTextContent="true" transferChildNodes="false" setNullOnMissingSource="true" ignoreEmpty="false" failOnError="true" entitize="false">
+        <con:name>uri</con:name>
+        <con:sourceType/>
+        <con:sourceStep/>
+        <con:sourcePath>$['response']['parameters']['uri']</con:sourcePath>
+        <con:targetType>uri</con:targetType>
+        <con:targetStep>> uri</con:targetStep>
+        <con:targetPath/>
+        <con:type>JSONPATH</con:type>
+        <con:upgraded>true</con:upgraded>
+      </con:transfers>
     </con:config>
   </con:testStep>
   <con:properties>
     <con:property>
-      <con:name>client</con:name>
-      <con:value>qa2</con:value>
-    </con:property>
-    <con:property>
-      <con:name>client-secret</con:name>
-      <con:value>aqPass2</con:value>
-    </con:property>
-    <con:property>
-      <con:name>scope</con:name>
-      <con:value>openid lol</con:value>
-    </con:property>
-    <con:property>
-      <con:name>grant_type</con:name>
-      <con:value>implicit</con:value>
-    </con:property>
-    <con:property>
-      <con:name>username</con:name>
-      <con:value/>
+      <con:name>testRegion1</con:name>
+      <con:value>US</con:value>
     </con:property>
     <con:property>
       <con:name>password</con:name>
       <con:value/>
     </con:property>
     <con:property>
-      <con:name>testRegion1</con:name>
-      <con:value>US</con:value>
+      <con:name>username</con:name>
+      <con:value/>
+    </con:property>
+    <con:property>
+      <con:name>grant_type</con:name>
+      <con:value>implicit</con:value>
+    </con:property>
+    <con:property>
+      <con:name>scope</con:name>
+      <con:value>openid lol</con:value>
+    </con:property>
+    <con:property>
+      <con:name>client-secret</con:name>
+      <con:value>aqPass2</con:value>
+    </con:property>
+    <con:property>
+      <con:name>client</con:name>
+      <con:value>qa2</con:value>
     </con:property>
   </con:properties>
   <con:reportParameters/>
   <con:breakPoints>
-    <con:testStepId>56bda2c2-ccf2-4b3e-bc6a-6e57b04f65bf</con:testStepId>
-    <con:status>NONE</con:status>
-    <con:properties/>
-  </con:breakPoints>
-  <con:breakPoints>
-    <con:testStepId>00d68df8-2f05-4c71-a21d-412d023cbc23</con:testStepId>
-    <con:status>NONE</con:status>
-    <con:properties/>
-  </con:breakPoints>
-  <con:breakPoints>
-    <con:testStepId>e93a353f-8b51-4ffe-8c17-5f82376619dc</con:testStepId>
+    <con:testStepId>ef4d7b03-f8d6-4361-88b1-73d26e19a9ea</con:testStepId>
     <con:status>NONE</con:status>
     <con:properties/>
   </con:breakPoints>
@@ -451,15 +441,25 @@ assert json.getPropertyCount() == 21</script>
     <con:properties/>
   </con:breakPoints>
   <con:breakPoints>
-    <con:testStepId>ef4d7b03-f8d6-4361-88b1-73d26e19a9ea</con:testStepId>
+    <con:testStepId>e93a353f-8b51-4ffe-8c17-5f82376619dc</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>00d68df8-2f05-4c71-a21d-412d023cbc23</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>56bda2c2-ccf2-4b3e-bc6a-6e57b04f65bf</con:testStepId>
     <con:status>NONE</con:status>
     <con:properties/>
   </con:breakPoints>
   <con:environmentSpec>
-    <con:entry environmentId="b407e352-14e8-440f-bf25-abe254c02b61">
+    <con:entry environmentId="cd04cfb9-4faf-4b69-9ec6-24af2181f7ae">
       <con:authProfile>Inherit From Parent</con:authProfile>
     </con:entry>
-    <con:entry environmentId="cd04cfb9-4faf-4b69-9ec6-24af2181f7ae">
+    <con:entry environmentId="b407e352-14e8-440f-bf25-abe254c02b61">
       <con:authProfile>Inherit From Parent</con:authProfile>
     </con:entry>
   </con:environmentSpec>

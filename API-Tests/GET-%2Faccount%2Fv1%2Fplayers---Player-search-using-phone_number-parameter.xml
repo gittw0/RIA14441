@@ -4,17 +4,6 @@
     <con:setting id="04718b52-3cf1-4a82-b57b-a619a9cab6c0fileName">GET-%2Faccount%2Fv1%2Fplayers---Player-search-using-phone_number-parameter</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
-  <con:testStep type="properties" name="Properties" id="ce6ff4bf-2b65-49be-916a-6af32c89f187">
-    <con:settings/>
-    <con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:properties>
-        <con:property>
-          <con:name>phoneNum</con:name>
-          <con:value/>
-        </con:property>
-      </con:properties>
-    </con:config>
-  </con:testStep>
   <con:testStep type="transfer" name="PropertyTransfer 1" id="486aa436-7dac-4b69-b820-7c9fb3de1c9c">
     <con:settings/>
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -31,18 +20,29 @@
       </con:transfers>
     </con:config>
   </con:testStep>
+  <con:testStep type="properties" name="Properties" id="ce6ff4bf-2b65-49be-916a-6af32c89f187">
+    <con:settings/>
+    <con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:properties>
+        <con:property>
+          <con:name>phoneNum</con:name>
+          <con:value/>
+        </con:property>
+      </con:properties>
+    </con:config>
+  </con:testStep>
   <con:properties>
     <con:property>
-      <con:name>username</con:name>
-      <con:value>${#Project#username}</con:value>
+      <con:name>puuid</con:name>
+      <con:value>${#Project#puuid}</con:value>
     </con:property>
     <con:property>
       <con:name>email_address</con:name>
       <con:value>${#Project#defaultEmail}</con:value>
     </con:property>
     <con:property>
-      <con:name>puuid</con:name>
-      <con:value>${#Project#puuid}</con:value>
+      <con:name>username</con:name>
+      <con:value>${#Project#username}</con:value>
     </con:property>
   </con:properties>
   <con:reportParameters/>

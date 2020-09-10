@@ -1,84 +1,93 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <con:testCase timeout="0" searchProperties="true" name="Create Google account using Atlas API" keepSession="false" id="0514eb93-4bdc-4035-b7f1-566a7a7fa340" failTestCaseOnErrors="true" failOnError="true" discardOkResults="false" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
-    <con:setting id="3351abf5-5200-4df2-b863-d066f0282b6cfileName">Create-Google-account-using-Atlas-API</con:setting>
     <con:setting id="0514eb93-4bdc-4035-b7f1-566a7a7fa340fileName">Create-Google-account-using-Atlas-API</con:setting>
+    <con:setting id="3351abf5-5200-4df2-b863-d066f0282b6cfileName">Create-Google-account-using-Atlas-API</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
-  <con:testStep type="properties" name="Google JWT Assertion" id="5d52d5b3-1757-4d41-b845-ba7f812dadd6">
-    <con:settings/>
-    <con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:properties>
-        <con:property>
-          <con:name>jwtAssertion</con:name>
-          <con:value/>
-        </con:property>
-      </con:properties>
-    </con:config>
-  </con:testStep>
-  <con:testStep type="restrequest" name="Fetch Google Access Token" id="c9462c47-e03b-4936-96e4-c4258e33f4ca">
-    <con:settings/>
-    <con:config xsi:type="con:RestRequestStep" service="https://oauth2.googleapis.com" resourcePath="/token" methodName="Token" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:restRequest postQueryString="true" name="Fetch Google Access Token" mediaType="application/x-www-form-urlencoded" id="a161e9be-b674-41f5-bd31-11296bfdea39">
-        <con:settings>
-          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Content-Type" value="application/x-www-form-urlencoded" xmlns="http://eviware.com/soapui/config"/></con:setting>
-        </con:settings>
-        <con:request/>
-        <con:originalUri>https://oauth2.googleapis.com/token</con:originalUri>
-        <con:assertion type="Valid HTTP Status Codes" name="Valid HTTP Status Codes" id="d87b4f3c-9b11-48d0-b14f-6dc2a7420d57">
-          <con:settings/>
-          <con:configuration>
-            <codes>200</codes>
-          </con:configuration>
-        </con:assertion>
-        <con:credentials>
-          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
-          <con:authType>No Authorization</con:authType>
-        </con:credentials>
-        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
-        <con:parameters>
-          <con:entry value="${Google JWT Assertion#jwtAssertion}" key="assertion"/>
-        </con:parameters>
-        <con:parameterOrder>
-          <con:entry>grant_type</con:entry>
-          <con:entry>assertion</con:entry>
-        </con:parameterOrder>
-        <con:environmentSpec>
-          <con:entry environmentId="0b8178c0-3fb5-4680-af02-7d8c4e2b75fb">
-            <con:authProfile>No Authorization</con:authProfile>
-          </con:entry>
-          <con:entry environmentId="7453f232-4f30-426e-be59-5ccef1cc3293">
-            <con:authProfile>No Authorization</con:authProfile>
-          </con:entry>
-        </con:environmentSpec>
-      </con:restRequest>
-    </con:config>
-  </con:testStep>
-  <con:testStep type="properties" name="Google access_token" id="ea06cec0-a296-473b-8f91-872a87d8bc97">
-    <con:settings/>
-    <con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:properties>
-        <con:property>
-          <con:name>access_token</con:name>
-          <con:value/>
-        </con:property>
-      </con:properties>
-    </con:config>
-  </con:testStep>
-  <con:testStep type="transfer" name="Google Access Token Transfer" id="a27d2fe4-559b-49da-9d23-6eb12292dad2">
+  <con:testStep type="transfer" name="transfer puuid2" id="2a5cd46c-f515-4a94-be5e-d88cf85ccea7">
     <con:settings/>
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:transfers transferToAll="false" transferTextContent="true" transferChildNodes="false" setNullOnMissingSource="true" ignoreEmpty="false" failOnError="true" entitize="false">
-        <con:name>access_token</con:name>
-        <con:sourceType>Response</con:sourceType>
-        <con:sourceStep>Fetch Google Access Token</con:sourceStep>
-        <con:sourcePath>$.access_token</con:sourcePath>
-        <con:targetType>access_token</con:targetType>
-        <con:targetStep>Google access_token</con:targetStep>
+        <con:name>puuid2</con:name>
+        <con:sourceType/>
+        <con:sourceStep>Fetch Google Id Token</con:sourceStep>
+        <con:sourcePath>$.puuid</con:sourcePath>
+        <con:targetType>puuid2</con:targetType>
+        <con:targetStep>puuid2</con:targetStep>
         <con:targetPath/>
         <con:type>JSONPATH</con:type>
         <con:upgraded>true</con:upgraded>
       </con:transfers>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="properties" name="puuid2" id="bafc9053-d0d9-45ec-8baf-58d7f4f07888">
+    <con:settings/>
+    <con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:properties>
+        <con:property>
+          <con:name>puuid2</con:name>
+          <con:value/>
+        </con:property>
+      </con:properties>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="transfer" name="transfer created puuid" id="fba2e4b4-463f-4be5-a347-8765b9210609">
+    <con:settings/>
+    <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:transfers transferToAll="false" transferTextContent="true" transferChildNodes="false" setNullOnMissingSource="true" ignoreEmpty="false" failOnError="true" entitize="false">
+        <con:name>puuid</con:name>
+        <con:sourceType/>
+        <con:sourceStep>Fetch Google Id Token</con:sourceStep>
+        <con:sourcePath>$.puuid</con:sourcePath>
+        <con:targetType>puuid</con:targetType>
+        <con:targetStep>puuid</con:targetStep>
+        <con:targetPath/>
+        <con:type>JSONPATH</con:type>
+        <con:upgraded>true</con:upgraded>
+      </con:transfers>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="properties" name="puuid" id="05fc26a8-4b2f-467a-bd37-7b8e93acc564">
+    <con:settings/>
+    <con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:properties>
+        <con:property>
+          <con:name>puuid</con:name>
+          <con:value/>
+        </con:property>
+      </con:properties>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="transfer" name="> transfer accessToken, id" id="215e4957-e075-4ef0-a5c7-abe3bcebcabe">
+    <con:settings/>
+    <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:transfers transferToAll="false" transferTextContent="true" transferChildNodes="false" setNullOnMissingSource="true" ignoreEmpty="false" failOnError="true" entitize="false">
+        <con:name>Google Id Token</con:name>
+        <con:sourceType>Response</con:sourceType>
+        <con:sourceStep>Fetch Google Id Token</con:sourceStep>
+        <con:sourcePath>$.token</con:sourcePath>
+        <con:targetType>id_token</con:targetType>
+        <con:targetStep>Google id_token client_id</con:targetStep>
+        <con:targetPath/>
+        <con:type>JSONPATH</con:type>
+        <con:upgraded>true</con:upgraded>
+      </con:transfers>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="properties" name="Google id_token client_id" id="74c7fde6-d3d7-4860-91c5-be688b57b9f5">
+    <con:settings/>
+    <con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:properties>
+        <con:property>
+          <con:name>client_id</con:name>
+          <con:value/>
+        </con:property>
+        <con:property>
+          <con:name>id_token</con:name>
+          <con:value/>
+        </con:property>
+      </con:properties>
     </con:config>
   </con:testStep>
   <con:testStep type="restrequest" name="Fetch Google Id Token" id="6f991b24-9e5c-498a-a811-aff7ee047821">
@@ -115,140 +124,96 @@
           <con:entry>serviceAccount</con:entry>
         </con:parameterOrder>
         <con:environmentSpec>
-          <con:entry environmentId="0b8178c0-3fb5-4680-af02-7d8c4e2b75fb">
+          <con:entry environmentId="7453f232-4f30-426e-be59-5ccef1cc3293">
             <con:authProfile>No Authorization</con:authProfile>
           </con:entry>
-          <con:entry environmentId="7453f232-4f30-426e-be59-5ccef1cc3293">
+          <con:entry environmentId="0b8178c0-3fb5-4680-af02-7d8c4e2b75fb">
             <con:authProfile>No Authorization</con:authProfile>
           </con:entry>
         </con:environmentSpec>
       </con:restRequest>
     </con:config>
   </con:testStep>
-  <con:testStep type="properties" name="Google id_token client_id" id="74c7fde6-d3d7-4860-91c5-be688b57b9f5">
-    <con:settings/>
-    <con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:properties>
-        <con:property>
-          <con:name>id_token</con:name>
-          <con:value/>
-        </con:property>
-        <con:property>
-          <con:name>client_id</con:name>
-          <con:value/>
-        </con:property>
-      </con:properties>
-    </con:config>
-  </con:testStep>
-  <con:testStep type="transfer" name="> transfer accessToken, id" id="215e4957-e075-4ef0-a5c7-abe3bcebcabe">
+  <con:testStep type="transfer" name="Google Access Token Transfer" id="a27d2fe4-559b-49da-9d23-6eb12292dad2">
     <con:settings/>
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:transfers transferToAll="false" transferTextContent="true" transferChildNodes="false" setNullOnMissingSource="true" ignoreEmpty="false" failOnError="true" entitize="false">
-        <con:name>Google Id Token</con:name>
+        <con:name>access_token</con:name>
         <con:sourceType>Response</con:sourceType>
-        <con:sourceStep>Fetch Google Id Token</con:sourceStep>
-        <con:sourcePath>$.token</con:sourcePath>
-        <con:targetType>id_token</con:targetType>
-        <con:targetStep>Google id_token client_id</con:targetStep>
+        <con:sourceStep>Fetch Google Access Token</con:sourceStep>
+        <con:sourcePath>$.access_token</con:sourcePath>
+        <con:targetType>access_token</con:targetType>
+        <con:targetStep>Google access_token</con:targetStep>
         <con:targetPath/>
         <con:type>JSONPATH</con:type>
         <con:upgraded>true</con:upgraded>
       </con:transfers>
     </con:config>
   </con:testStep>
-  <con:testStep type="properties" name="puuid" id="05fc26a8-4b2f-467a-bd37-7b8e93acc564">
+  <con:testStep type="properties" name="Google access_token" id="ea06cec0-a296-473b-8f91-872a87d8bc97">
     <con:settings/>
     <con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:properties>
         <con:property>
-          <con:name>puuid</con:name>
+          <con:name>access_token</con:name>
           <con:value/>
         </con:property>
       </con:properties>
     </con:config>
   </con:testStep>
-  <con:testStep type="transfer" name="transfer created puuid" id="fba2e4b4-463f-4be5-a347-8765b9210609">
+  <con:testStep type="restrequest" name="Fetch Google Access Token" id="c9462c47-e03b-4936-96e4-c4258e33f4ca">
     <con:settings/>
-    <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:transfers transferToAll="false" transferTextContent="true" transferChildNodes="false" setNullOnMissingSource="true" ignoreEmpty="false" failOnError="true" entitize="false">
-        <con:name>puuid</con:name>
-        <con:sourceType/>
-        <con:sourceStep>Fetch Google Id Token</con:sourceStep>
-        <con:sourcePath>$.puuid</con:sourcePath>
-        <con:targetType>puuid</con:targetType>
-        <con:targetStep>puuid</con:targetStep>
-        <con:targetPath/>
-        <con:type>JSONPATH</con:type>
-        <con:upgraded>true</con:upgraded>
-      </con:transfers>
+    <con:config xsi:type="con:RestRequestStep" service="https://oauth2.googleapis.com" resourcePath="/token" methodName="Token" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest postQueryString="true" name="Fetch Google Access Token" mediaType="application/x-www-form-urlencoded" id="a161e9be-b674-41f5-bd31-11296bfdea39">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Content-Type" value="application/x-www-form-urlencoded" xmlns="http://eviware.com/soapui/config"/></con:setting>
+        </con:settings>
+        <con:request/>
+        <con:originalUri>https://oauth2.googleapis.com/token</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" name="Valid HTTP Status Codes" id="d87b4f3c-9b11-48d0-b14f-6dc2a7420d57">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry value="${Google JWT Assertion#jwtAssertion}" key="assertion"/>
+        </con:parameters>
+        <con:parameterOrder>
+          <con:entry>assertion</con:entry>
+          <con:entry>grant_type</con:entry>
+        </con:parameterOrder>
+        <con:environmentSpec>
+          <con:entry environmentId="7453f232-4f30-426e-be59-5ccef1cc3293">
+            <con:authProfile>No Authorization</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="0b8178c0-3fb5-4680-af02-7d8c4e2b75fb">
+            <con:authProfile>No Authorization</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:restRequest>
     </con:config>
   </con:testStep>
-  <con:testStep type="properties" name="puuid2" id="bafc9053-d0d9-45ec-8baf-58d7f4f07888">
+  <con:testStep type="properties" name="Google JWT Assertion" id="5d52d5b3-1757-4d41-b845-ba7f812dadd6">
     <con:settings/>
     <con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:properties>
         <con:property>
-          <con:name>puuid2</con:name>
+          <con:name>jwtAssertion</con:name>
           <con:value/>
         </con:property>
       </con:properties>
-    </con:config>
-  </con:testStep>
-  <con:testStep type="transfer" name="transfer puuid2" id="2a5cd46c-f515-4a94-be5e-d88cf85ccea7">
-    <con:settings/>
-    <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:transfers transferToAll="false" transferTextContent="true" transferChildNodes="false" setNullOnMissingSource="true" ignoreEmpty="false" failOnError="true" entitize="false">
-        <con:name>puuid2</con:name>
-        <con:sourceType/>
-        <con:sourceStep>Fetch Google Id Token</con:sourceStep>
-        <con:sourcePath>$.puuid</con:sourcePath>
-        <con:targetType>puuid2</con:targetType>
-        <con:targetStep>puuid2</con:targetStep>
-        <con:targetPath/>
-        <con:type>JSONPATH</con:type>
-        <con:upgraded>true</con:upgraded>
-      </con:transfers>
     </con:config>
   </con:testStep>
   <con:properties/>
   <con:reportParameters/>
   <con:breakPoints>
-    <con:testStepId>5d56cc4e-5ce1-4018-b667-f8410aa53981</con:testStepId>
-    <con:status>NONE</con:status>
-    <con:properties/>
-  </con:breakPoints>
-  <con:breakPoints>
-    <con:testStepId>ad601b73-99ce-4c0a-80de-dd9ba20fc72e</con:testStepId>
-    <con:status>NONE</con:status>
-    <con:properties/>
-  </con:breakPoints>
-  <con:breakPoints>
-    <con:testStepId>0e0e43aa-f028-416a-9244-fb5c2d3b1567</con:testStepId>
-    <con:status>NONE</con:status>
-    <con:properties/>
-  </con:breakPoints>
-  <con:breakPoints>
-    <con:testStepId>68e181d1-75f4-4374-af4a-0d50cbc0acaf</con:testStepId>
-    <con:status>NONE</con:status>
-    <con:properties/>
-  </con:breakPoints>
-  <con:breakPoints>
-    <con:testStepId>0673a7c7-11a0-40d3-a2d5-43605ce9144d</con:testStepId>
-    <con:status>NONE</con:status>
-    <con:properties/>
-  </con:breakPoints>
-  <con:breakPoints>
-    <con:testStepId>11ee1803-7587-4138-b914-c0bb67f34498</con:testStepId>
-    <con:status>NONE</con:status>
-    <con:properties/>
-  </con:breakPoints>
-  <con:breakPoints>
-    <con:testStepId>98f75426-76b0-4b53-ad89-1adcaf74bc0f</con:testStepId>
-    <con:status>NONE</con:status>
-    <con:properties/>
-  </con:breakPoints>
-  <con:breakPoints>
-    <con:testStepId>fb3d71a3-cab0-42fc-b50c-0d847093abda</con:testStepId>
+    <con:testStepId>6a6f1c65-258f-4de3-890a-d3e8039d8558</con:testStepId>
     <con:status>NONE</con:status>
     <con:properties/>
   </con:breakPoints>
@@ -258,7 +223,42 @@
     <con:properties/>
   </con:breakPoints>
   <con:breakPoints>
-    <con:testStepId>6a6f1c65-258f-4de3-890a-d3e8039d8558</con:testStepId>
+    <con:testStepId>fb3d71a3-cab0-42fc-b50c-0d847093abda</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>98f75426-76b0-4b53-ad89-1adcaf74bc0f</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>11ee1803-7587-4138-b914-c0bb67f34498</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>0673a7c7-11a0-40d3-a2d5-43605ce9144d</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>68e181d1-75f4-4374-af4a-0d50cbc0acaf</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>0e0e43aa-f028-416a-9244-fb5c2d3b1567</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>ad601b73-99ce-4c0a-80de-dd9ba20fc72e</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>5d56cc4e-5ce1-4018-b667-f8410aa53981</con:testStepId>
     <con:status>NONE</con:status>
     <con:properties/>
   </con:breakPoints>

@@ -1,38 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <con:testCase timeout="0" searchProperties="true" name="Google auth v2" keepSession="false" id="1e4296ae-3eef-4af1-8a39-4c5d2c7c0a13" failTestCaseOnErrors="true" failOnError="true" discardOkResults="false" disabled="true" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
-    <con:setting id="65b85fdf-cb7c-465a-8362-530820e6919efileName">Google-auth-v2</con:setting>
     <con:setting id="1e4296ae-3eef-4af1-8a39-4c5d2c7c0a13fileName">Google-auth-v2</con:setting>
+    <con:setting id="65b85fdf-cb7c-465a-8362-530820e6919efileName">Google-auth-v2</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
-  <con:testStep type="properties" name="idToken, thePuuid, theEmail" id="bffad328-a6dc-4782-a1f9-6553ee9073a8">
+  <con:testStep type="transfer" name="> transfer puuid" id="09ab32c5-daf6-43e2-a7f5-8b696560af40">
     <con:settings/>
-    <con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:properties>
-        <con:property>
-          <con:name>idToken</con:name>
-          <con:value/>
-        </con:property>
-        <con:property>
-          <con:name>theEmail</con:name>
-          <con:value/>
-        </con:property>
-        <con:property>
-          <con:name>thePuuid</con:name>
-          <con:value/>
-        </con:property>
-      </con:properties>
+    <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:transfers transferToAll="false" transferTextContent="true" transferChildNodes="false" setNullOnMissingSource="true" ignoreEmpty="false" failOnError="true" entitize="false">
+        <con:name>puuid</con:name>
+        <con:sourceType/>
+        <con:sourceStep/>
+        <con:sourcePath>$['puuid']</con:sourcePath>
+        <con:targetType>thePuuid</con:targetType>
+        <con:targetStep>idToken, thePuuid, theEmail</con:targetStep>
+        <con:targetPath/>
+        <con:type>JSONPATH</con:type>
+        <con:upgraded>true</con:upgraded>
+      </con:transfers>
     </con:config>
   </con:testStep>
   <con:testStep type="transfer" name="> transfer idToken, email" id="d030af24-a5c1-49ad-a165-b03d67fef3e1">
     <con:settings/>
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:transfers transferTextContent="true" setNullOnMissingSource="true" failOnError="true">
-        <con:name>access_token</con:name>
+      <con:transfers transferToAll="false" transferTextContent="true" transferChildNodes="false" setNullOnMissingSource="true" ignoreEmpty="false" failOnError="true" entitize="false">
+        <con:name>email</con:name>
         <con:sourceType/>
         <con:sourceStep/>
-        <con:sourcePath>$['access_token']</con:sourcePath>
-        <con:targetType>idToken</con:targetType>
+        <con:sourcePath>$['email']</con:sourcePath>
+        <con:targetType>theEmail</con:targetType>
         <con:targetStep>idToken, thePuuid, theEmail</con:targetStep>
         <con:targetPath/>
         <con:type>JSONPATH</con:type>
@@ -48,12 +45,12 @@
         <con:type>JSONPATH</con:type>
         <con:upgraded>true</con:upgraded>
       </con:transfers>
-      <con:transfers transferToAll="false" transferTextContent="true" transferChildNodes="false" setNullOnMissingSource="true" ignoreEmpty="false" failOnError="true" entitize="false">
-        <con:name>email</con:name>
+      <con:transfers transferTextContent="true" setNullOnMissingSource="true" failOnError="true">
+        <con:name>access_token</con:name>
         <con:sourceType/>
         <con:sourceStep/>
-        <con:sourcePath>$['email']</con:sourcePath>
-        <con:targetType>theEmail</con:targetType>
+        <con:sourcePath>$['access_token']</con:sourcePath>
+        <con:targetType>idToken</con:targetType>
         <con:targetStep>idToken, thePuuid, theEmail</con:targetStep>
         <con:targetPath/>
         <con:type>JSONPATH</con:type>
@@ -61,20 +58,23 @@
       </con:transfers>
     </con:config>
   </con:testStep>
-  <con:testStep type="transfer" name="> transfer puuid" id="09ab32c5-daf6-43e2-a7f5-8b696560af40">
+  <con:testStep type="properties" name="idToken, thePuuid, theEmail" id="bffad328-a6dc-4782-a1f9-6553ee9073a8">
     <con:settings/>
-    <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:transfers transferToAll="false" transferTextContent="true" transferChildNodes="false" setNullOnMissingSource="true" ignoreEmpty="false" failOnError="true" entitize="false">
-        <con:name>puuid</con:name>
-        <con:sourceType/>
-        <con:sourceStep/>
-        <con:sourcePath>$['puuid']</con:sourcePath>
-        <con:targetType>thePuuid</con:targetType>
-        <con:targetStep>idToken, thePuuid, theEmail</con:targetStep>
-        <con:targetPath/>
-        <con:type>JSONPATH</con:type>
-        <con:upgraded>true</con:upgraded>
-      </con:transfers>
+    <con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:properties>
+        <con:property>
+          <con:name>thePuuid</con:name>
+          <con:value/>
+        </con:property>
+        <con:property>
+          <con:name>theEmail</con:name>
+          <con:value/>
+        </con:property>
+        <con:property>
+          <con:name>idToken</con:name>
+          <con:value/>
+        </con:property>
+      </con:properties>
     </con:config>
   </con:testStep>
   <con:properties/>

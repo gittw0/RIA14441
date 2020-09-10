@@ -4,17 +4,6 @@
     <con:setting id="968c1c54-3fe0-4c0c-9b57-5d354f3334cafileName">GET-%2Faccount%2Fv1%2Fplayers---Player-search-using-parent_govt_id-parameter</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
-  <con:testStep type="properties" name="Properties" id="ef2db91f-19e6-4217-9cf7-c2a02ad7e6c0">
-    <con:settings/>
-    <con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:properties>
-        <con:property>
-          <con:name>parentGovtId</con:name>
-          <con:value>parentgov1</con:value>
-        </con:property>
-      </con:properties>
-    </con:config>
-  </con:testStep>
   <con:testStep type="transfer" name="PropertyTransfer 1" id="fd52a920-c5c0-4212-a7e2-f882072acb5e">
     <con:settings/>
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -31,18 +20,29 @@
       </con:transfers>
     </con:config>
   </con:testStep>
+  <con:testStep type="properties" name="Properties" id="ef2db91f-19e6-4217-9cf7-c2a02ad7e6c0">
+    <con:settings/>
+    <con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:properties>
+        <con:property>
+          <con:name>parentGovtId</con:name>
+          <con:value>parentgov1</con:value>
+        </con:property>
+      </con:properties>
+    </con:config>
+  </con:testStep>
   <con:properties>
     <con:property>
-      <con:name>username</con:name>
-      <con:value>${#Project#username}</con:value>
+      <con:name>puuid</con:name>
+      <con:value>${#Project#puuid}</con:value>
     </con:property>
     <con:property>
       <con:name>email_address</con:name>
       <con:value>${#Project#defaultEmail}</con:value>
     </con:property>
     <con:property>
-      <con:name>puuid</con:name>
-      <con:value>${#Project#puuid}</con:value>
+      <con:name>username</con:name>
+      <con:value>${#Project#username}</con:value>
     </con:property>
   </con:properties>
   <con:reportParameters/>

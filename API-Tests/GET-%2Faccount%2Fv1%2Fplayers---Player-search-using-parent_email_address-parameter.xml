@@ -4,17 +4,6 @@
     <con:setting id="5a903570-e32b-44b0-a594-fa9ae022abd3fileName">GET-%2Faccount%2Fv1%2Fplayers---Player-search-using-parent_email_address-parameter</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
-  <con:testStep type="properties" name="Properties" id="4d1fc8ec-051f-49e1-8c16-d304776dcaa6">
-    <con:settings/>
-    <con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:properties>
-        <con:property>
-          <con:name>parentEmail</con:name>
-          <con:value/>
-        </con:property>
-      </con:properties>
-    </con:config>
-  </con:testStep>
   <con:testStep type="transfer" name="PropertyTransfer 1" id="93ffd753-ef85-4d83-becc-78586607ee71">
     <con:settings/>
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -31,18 +20,29 @@
       </con:transfers>
     </con:config>
   </con:testStep>
+  <con:testStep type="properties" name="Properties" id="4d1fc8ec-051f-49e1-8c16-d304776dcaa6">
+    <con:settings/>
+    <con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:properties>
+        <con:property>
+          <con:name>parentEmail</con:name>
+          <con:value/>
+        </con:property>
+      </con:properties>
+    </con:config>
+  </con:testStep>
   <con:properties>
     <con:property>
-      <con:name>username</con:name>
-      <con:value>${#Project#username}</con:value>
+      <con:name>puuid</con:name>
+      <con:value>${#Project#puuid}</con:value>
     </con:property>
     <con:property>
       <con:name>email_address</con:name>
       <con:value>${#Project#defaultEmail}</con:value>
     </con:property>
     <con:property>
-      <con:name>puuid</con:name>
-      <con:value>${#Project#puuid}</con:value>
+      <con:name>username</con:name>
+      <con:value>${#Project#username}</con:value>
     </con:property>
   </con:properties>
   <con:reportParameters/>
