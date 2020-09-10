@@ -10,8 +10,8 @@
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:transfers transferToAll="false" transferTextContent="true" transferChildNodes="false" setNullOnMissingSource="true" ignoreEmpty="false" failOnError="true" entitize="false">
         <con:name>puuid2</con:name>
-        <con:sourceType/>
-        <con:sourceStep>Fetch Google Id Token</con:sourceStep>
+        <con:sourceType>numberRestrictions</con:sourceType>
+        <con:sourceStep>#Project#</con:sourceStep>
         <con:sourcePath>$.puuid</con:sourcePath>
         <con:targetType>puuid2</con:targetType>
         <con:targetStep>puuid2</con:targetStep>
@@ -37,8 +37,8 @@
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:transfers transferToAll="false" transferTextContent="true" transferChildNodes="false" setNullOnMissingSource="true" ignoreEmpty="false" failOnError="true" entitize="false">
         <con:name>puuid</con:name>
-        <con:sourceType/>
-        <con:sourceStep>Fetch Google Id Token</con:sourceStep>
+        <con:sourceType>numberRestrictions</con:sourceType>
+        <con:sourceStep>#Project#</con:sourceStep>
         <con:sourcePath>$.puuid</con:sourcePath>
         <con:targetType>puuid</con:targetType>
         <con:targetStep>puuid</con:targetStep>

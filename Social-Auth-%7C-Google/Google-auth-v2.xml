@@ -10,8 +10,8 @@
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:transfers transferToAll="false" transferTextContent="true" transferChildNodes="false" setNullOnMissingSource="true" ignoreEmpty="false" failOnError="true" entitize="false">
         <con:name>puuid</con:name>
-        <con:sourceType/>
-        <con:sourceStep/>
+        <con:sourceType>numberRestrictions</con:sourceType>
+        <con:sourceStep>#Project#</con:sourceStep>
         <con:sourcePath>$['puuid']</con:sourcePath>
         <con:targetType>thePuuid</con:targetType>
         <con:targetStep>idToken, thePuuid, theEmail</con:targetStep>
@@ -26,8 +26,8 @@
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:transfers transferToAll="false" transferTextContent="true" transferChildNodes="false" setNullOnMissingSource="true" ignoreEmpty="false" failOnError="true" entitize="false">
         <con:name>email</con:name>
-        <con:sourceType/>
-        <con:sourceStep/>
+        <con:sourceType>numberRestrictions</con:sourceType>
+        <con:sourceStep>#Project#</con:sourceStep>
         <con:sourcePath>$['email']</con:sourcePath>
         <con:targetType>theEmail</con:targetType>
         <con:targetStep>idToken, thePuuid, theEmail</con:targetStep>

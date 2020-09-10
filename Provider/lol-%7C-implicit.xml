@@ -388,8 +388,8 @@ json.each
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:transfers transferToAll="false" transferTextContent="true" transferChildNodes="false" setNullOnMissingSource="true" ignoreEmpty="false" failOnError="true" entitize="false">
         <con:name>uri</con:name>
-        <con:sourceType/>
-        <con:sourceStep/>
+        <con:sourceType>numberRestrictions</con:sourceType>
+        <con:sourceStep>#Project#</con:sourceStep>
         <con:sourcePath>$['response']['parameters']['uri']</con:sourcePath>
         <con:targetType>uri</con:targetType>
         <con:targetStep>> uri</con:targetStep>

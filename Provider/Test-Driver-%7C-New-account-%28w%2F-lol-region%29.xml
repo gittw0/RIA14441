@@ -29,7 +29,7 @@
   <con:testStep type="transfer" name="> transfer > thePuuid" id="b3ac19e5-c71a-401b-9439-dc36ea81e3ef">
     <con:settings/>
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:transfers transferToAll="false" transferTextContent="true" transferChildNodes="false" setNullOnMissingSource="true" ignoreEmpty="false" failOnError="true" entitize="false">
+      <con:transfers transferToAll="false" transferTextContent="true" transferChildNodes="false" setNullOnMissingSource="true" ignoreEmpty="false" failOnError="true" entitize="false" disabled="true">
         <con:name>sub</con:name>
         <con:sourceType/>
         <con:sourceStep/>

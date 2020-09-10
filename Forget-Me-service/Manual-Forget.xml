@@ -39,7 +39,7 @@
         <con:type>XPATH</con:type>
         <con:upgraded>true</con:upgraded>
       </con:transfers>
-      <con:transfers transferToAll="false" transferTextContent="true" transferChildNodes="false" setNullOnMissingSource="true" ignoreEmpty="false" failOnError="true" entitize="false">
+      <con:transfers transferToAll="false" transferTextContent="true" transferChildNodes="false" setNullOnMissingSource="true" ignoreEmpty="false" failOnError="true" entitize="false" disabled="true">
         <con:name>access_token</con:name>
         <con:sourceType/>
         <con:sourceStep/>

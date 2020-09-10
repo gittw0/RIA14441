@@ -7,7 +7,7 @@
   <con:testStep type="transfer" name=">transfer access token" id="a2c55f99-8f73-40a3-b71d-e19908aeef10">
     <con:settings/>
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:transfers transferToAll="false" transferTextContent="true" transferChildNodes="false" setNullOnMissingSource="true" ignoreEmpty="false" failOnError="true" entitize="false">
+      <con:transfers transferToAll="false" transferTextContent="true" transferChildNodes="false" setNullOnMissingSource="true" ignoreEmpty="false" failOnError="true" entitize="false" disabled="true">
         <con:name>access_token</con:name>
         <con:sourceType/>
         <con:sourceStep/>
@@ -25,8 +25,8 @@
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:transfers transferToAll="false" transferTextContent="true" transferChildNodes="false" setNullOnMissingSource="true" ignoreEmpty="false" failOnError="true" entitize="false">
         <con:name>puuid</con:name>
-        <con:sourceType/>
-        <con:sourceStep/>
+        <con:sourceType>numberRestrictions</con:sourceType>
+        <con:sourceStep>#Project#</con:sourceStep>
         <con:sourcePath>$['puuid']</con:sourcePath>
         <con:targetType>thePuuid</con:targetType>
         <con:targetStep>>thePuuid, accessToken</con:targetStep>
@@ -41,11 +41,11 @@
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:transfers transferTextContent="true" setNullOnMissingSource="true" failOnError="true">
         <con:name>puuid</con:name>
-        <con:sourceType/>
-        <con:sourceStep/>
+        <con:sourceType>numberRestrictions</con:sourceType>
+        <con:sourceStep>#Project#</con:sourceStep>
         <con:sourcePath>$[0]['puuid']</con:sourcePath>
-        <con:targetType/>
-        <con:targetStep/>
+        <con:targetType>numberRestrictions</con:targetType>
+        <con:targetStep>#Project#</con:targetStep>
         <con:targetPath/>
         <con:type>JSONPATH</con:type>
         <con:upgraded>true</con:upgraded>

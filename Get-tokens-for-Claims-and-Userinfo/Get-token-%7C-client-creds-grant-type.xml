@@ -9,8 +9,8 @@
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:transfers transferToAll="false" transferTextContent="true" transferChildNodes="false" setNullOnMissingSource="true" ignoreEmpty="false" failOnError="true" entitize="false">
         <con:name>access_token</con:name>
-        <con:sourceType/>
-        <con:sourceStep/>
+        <con:sourceType>ServiceEndpoint_Skjema</con:sourceType>
+        <con:sourceStep>#Global#</con:sourceStep>
         <con:sourcePath>$['access_token']</con:sourcePath>
         <con:targetType>accessToken</con:targetType>
         <con:targetStep>#TestCase#</con:targetStep>
