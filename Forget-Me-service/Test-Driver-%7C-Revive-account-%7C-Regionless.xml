@@ -67,7 +67,12 @@
       </con:transfers>
     </con:config>
   </con:testStep>
-  <con:properties/>
+  <con:properties>
+    <con:property>
+      <con:name>newProperty</con:name>
+      <con:value>testValue</con:value>
+    </con:property>
+  </con:properties>
   <con:reportParameters/>
   <con:breakPoints>
     <con:testStepId>73698acb-ca4d-4925-b942-7fc5ffd50273</con:testStepId>
