@@ -1,10 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <con:testCase timeout="0" searchProperties="true" name="Google identity Linking and Unlinking" keepSession="false" id="8aa90418-f986-4859-8a2d-4c9d7bd08e18" failTestCaseOnErrors="true" failOnError="true" discardOkResults="false" disabled="true" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
-    <con:setting id="8aa90418-f986-4859-8a2d-4c9d7bd08e18fileName">Google-identity-Linking-and-Unlinking</con:setting>
     <con:setting id="f4861cbb-893c-4a3a-9f68-e605b0b60260fileName">Google-identity-Linking-and-Unlinking</con:setting>
+    <con:setting id="8aa90418-f986-4859-8a2d-4c9d7bd08e18fileName">Google-identity-Linking-and-Unlinking</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:testStep type="properties" name="idToken, thePuuid" id="736200f3-b099-42f9-9961-5cbae8f402e2">
+    <con:settings/>
+    <con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:properties>
+        <con:property>
+          <con:name>idToken</con:name>
+          <con:value/>
+        </con:property>
+        <con:property>
+          <con:name>thePuuid</con:name>
+          <con:value/>
+        </con:property>
+        <con:property>
+          <con:name>theUid</con:name>
+          <con:value/>
+        </con:property>
+      </con:properties>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="transfer" name="> transfer accessToken, id" id="62e3adb2-66d3-4a75-a3eb-f97d95b4c607">
+    <con:settings/>
+    <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:transfers transferToAll="false" transferTextContent="true" transferChildNodes="false" setNullOnMissingSource="true" ignoreEmpty="false" failOnError="true" entitize="false">
+        <con:name>access_token</con:name>
+        <con:sourceType/>
+        <con:sourceStep/>
+        <con:sourcePath>$['access_token']</con:sourcePath>
+        <con:targetType>idToken</con:targetType>
+        <con:targetStep>idToken, thePuuid</con:targetStep>
+        <con:targetPath/>
+        <con:type>JSONPATH</con:type>
+        <con:upgraded>true</con:upgraded>
+      </con:transfers>
+      <con:transfers transferTextContent="true" setNullOnMissingSource="true" failOnError="true">
+        <con:name>id</con:name>
+        <con:sourceType/>
+        <con:sourceStep/>
+        <con:sourcePath>$['id']</con:sourcePath>
+        <con:targetType>theUid</con:targetType>
+        <con:targetStep>idToken, thePuuid</con:targetStep>
+        <con:targetPath/>
+        <con:type>JSONPATH</con:type>
+        <con:upgraded>true</con:upgraded>
+      </con:transfers>
+    </con:config>
+  </con:testStep>
   <con:testStep type="transfer" name="> transfer puuid" id="4377700a-baf0-4045-ae4b-ba4848bdaade">
     <con:settings/>
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -21,7 +67,7 @@
       </con:transfers>
     </con:config>
   </con:testStep>
-  <con:testStep type="transfer" name="> transfer accessToken, id" id="62e3adb2-66d3-4a75-a3eb-f97d95b4c607">
+  <con:testStep type="transfer" name="> transfer accessToken, id 2" id="62e3adb2-66d3-4a75-a3eb-f97d95b4c607">
     <con:settings/>
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:transfers transferTextContent="true" setNullOnMissingSource="true" failOnError="true">
@@ -48,7 +94,7 @@
       </con:transfers>
     </con:config>
   </con:testStep>
-  <con:testStep type="properties" name="idToken, thePuuid" id="736200f3-b099-42f9-9961-5cbae8f402e2">
+  <con:testStep type="properties" name="idToken, thePuuid 2" id="736200f3-b099-42f9-9961-5cbae8f402e2">
     <con:settings/>
     <con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:properties>
@@ -70,7 +116,7 @@
   <con:properties/>
   <con:reportParameters/>
   <con:breakPoints>
-    <con:testStepId>93bf8665-f4f4-4cc0-8c1a-814a58a1bdb8</con:testStepId>
+    <con:testStepId>d4772302-7ea1-43f7-8f38-cca7acfbc75d</con:testStepId>
     <con:status>NONE</con:status>
     <con:properties/>
   </con:breakPoints>
@@ -80,7 +126,7 @@
     <con:properties/>
   </con:breakPoints>
   <con:breakPoints>
-    <con:testStepId>d4772302-7ea1-43f7-8f38-cca7acfbc75d</con:testStepId>
+    <con:testStepId>93bf8665-f4f4-4cc0-8c1a-814a58a1bdb8</con:testStepId>
     <con:status>NONE</con:status>
     <con:properties/>
   </con:breakPoints>

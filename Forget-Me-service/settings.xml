@@ -7,29 +7,29 @@
   <con:runType>SEQUENTIAL</con:runType>
   <con:properties>
     <con:property>
-      <con:name>region</con:name>
-      <con:value>${#Project#srcRegion}</con:value>
-    </con:property>
-    <con:property>
-      <con:name>scope</con:name>
-      <con:value/>
+      <con:name>client</con:name>
+      <con:value>${#Project#test-automation-env}</con:value>
     </con:property>
     <con:property>
       <con:name>client-secret</con:name>
       <con:value>${#Project#test-automation-env-secret}</con:value>
     </con:property>
     <con:property>
-      <con:name>client</con:name>
-      <con:value>${#Project#test-automation-env}</con:value>
+      <con:name>scope</con:name>
+      <con:value/>
+    </con:property>
+    <con:property>
+      <con:name>region</con:name>
+      <con:value>${#Project#srcRegion}</con:value>
     </con:property>
   </con:properties>
   <con:setupScript/>
   <con:reportParameters/>
   <con:environmentSpec>
-    <con:entry environmentId="cd04cfb9-4faf-4b69-9ec6-24af2181f7ae">
+    <con:entry environmentId="b407e352-14e8-440f-bf25-abe254c02b61">
       <con:authProfile>Inherit From Parent</con:authProfile>
     </con:entry>
-    <con:entry environmentId="b407e352-14e8-440f-bf25-abe254c02b61">
+    <con:entry environmentId="cd04cfb9-4faf-4b69-9ec6-24af2181f7ae">
       <con:authProfile>Inherit From Parent</con:authProfile>
     </con:entry>
   </con:environmentSpec>

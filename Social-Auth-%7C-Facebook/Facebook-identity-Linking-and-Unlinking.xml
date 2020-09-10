@@ -4,6 +4,123 @@
     <con:setting id="a39db873-4e8b-4464-b50a-d0a0a49b18b5fileName">Facebook-identity-Linking-and-Unlinking</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:testStep type="transfer" name="> transfer puuid0" id="f6ad9230-e729-4bad-9320-b199efb7291c">
+    <con:settings/>
+    <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:transfers transferTextContent="true" setNullOnMissingSource="true" failOnError="true">
+        <con:name>puuid</con:name>
+        <con:sourceType/>
+        <con:sourceStep/>
+        <con:sourcePath>$[0]['puuid']</con:sourcePath>
+        <con:targetType/>
+        <con:targetStep/>
+        <con:targetPath/>
+        <con:type>JSONPATH</con:type>
+        <con:upgraded>true</con:upgraded>
+      </con:transfers>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="properties" name="accessToken, thePuuid, theUid" id="d4772302-7ea1-43f7-8f38-cca7acfbc75d">
+    <con:settings/>
+    <con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:properties>
+        <con:property>
+          <con:name>accessToken</con:name>
+          <con:value/>
+        </con:property>
+        <con:property>
+          <con:name>thePuuid</con:name>
+          <con:value/>
+        </con:property>
+        <con:property>
+          <con:name>theUid</con:name>
+          <con:value/>
+        </con:property>
+        <con:property>
+          <con:name>accessToken2</con:name>
+          <con:value/>
+        </con:property>
+        <con:property>
+          <con:name>theUid2</con:name>
+          <con:value/>
+        </con:property>
+        <con:property>
+          <con:name>thePuuid2</con:name>
+          <con:value/>
+        </con:property>
+      </con:properties>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="transfer" name="> transfer accessToken, id" id="8e9fe644-31a0-44c7-ae51-ab2e2fbe9b69">
+    <con:settings/>
+    <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:transfers transferTextContent="true" setNullOnMissingSource="true" failOnError="true">
+        <con:name>access_token</con:name>
+        <con:sourceType/>
+        <con:sourceStep/>
+        <con:sourcePath>$['access_token']</con:sourcePath>
+        <con:targetType>accessToken</con:targetType>
+        <con:targetStep>accessToken, thePuuid, theUid</con:targetStep>
+        <con:targetPath/>
+        <con:type>JSONPATH</con:type>
+        <con:upgraded>true</con:upgraded>
+      </con:transfers>
+      <con:transfers transferTextContent="true" setNullOnMissingSource="true" failOnError="true">
+        <con:name>id</con:name>
+        <con:sourceType/>
+        <con:sourceStep/>
+        <con:sourcePath>$['id']</con:sourcePath>
+        <con:targetType>theUid</con:targetType>
+        <con:targetStep>accessToken, thePuuid, theUid</con:targetStep>
+        <con:targetPath/>
+        <con:type>JSONPATH</con:type>
+        <con:upgraded>true</con:upgraded>
+      </con:transfers>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="transfer" name="> transfer puuid" id="60db6da4-6d51-47d0-bfc4-17c492cf2406">
+    <con:settings/>
+    <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:transfers transferTextContent="true" setNullOnMissingSource="true" failOnError="true">
+        <con:name>puuid</con:name>
+        <con:sourceType/>
+        <con:sourceStep/>
+        <con:sourcePath>$['puuid']</con:sourcePath>
+        <con:targetType>thePuuid</con:targetType>
+        <con:targetStep>accessToken, thePuuid, theUid</con:targetStep>
+        <con:targetPath/>
+        <con:type>JSONPATH</con:type>
+        <con:upgraded>true</con:upgraded>
+      </con:transfers>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="transfer" name="> transfer access token2, id" id="6df1f585-3571-4783-bd4f-d680c231dbbf">
+    <con:settings/>
+    <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:transfers transferTextContent="true" setNullOnMissingSource="true" failOnError="true">
+        <con:name>access_token</con:name>
+        <con:sourceType/>
+        <con:sourceStep/>
+        <con:sourcePath>$['access_token']</con:sourcePath>
+        <con:targetType>accessToken2</con:targetType>
+        <con:targetStep>accessToken, thePuuid, theUid</con:targetStep>
+        <con:targetPath/>
+        <con:type>JSONPATH</con:type>
+        <con:upgraded>true</con:upgraded>
+      </con:transfers>
+      <con:transfers transferToAll="false" transferTextContent="true" transferChildNodes="false" setNullOnMissingSource="true" ignoreEmpty="false" failOnError="true" entitize="false">
+        <con:name>id</con:name>
+        <con:sourceType/>
+        <con:sourceStep/>
+        <con:sourcePath>$['id']</con:sourcePath>
+        <con:targetType>theUid2</con:targetType>
+        <con:targetStep>accessToken, thePuuid, theUid</con:targetStep>
+        <con:targetPath/>
+        <con:type>JSONPATH</con:type>
+        <con:upgraded>true</con:upgraded>
+      </con:transfers>
+    </con:config>
+  </con:testStep>
   <con:testStep type="transfer" name="> transfer puuid2" id="965a1579-123d-4d4a-9502-40ee5aef37c6">
     <con:settings/>
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -20,7 +137,7 @@
       </con:transfers>
     </con:config>
   </con:testStep>
-  <con:testStep type="transfer" name="> transfer access token2, id" id="6df1f585-3571-4783-bd4f-d680c231dbbf">
+  <con:testStep type="transfer" name="> transfer access token2, id 2" id="6df1f585-3571-4783-bd4f-d680c231dbbf">
     <con:settings/>
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:transfers transferToAll="false" transferTextContent="true" transferChildNodes="false" setNullOnMissingSource="true" ignoreEmpty="false" failOnError="true" entitize="false">
@@ -47,7 +164,7 @@
       </con:transfers>
     </con:config>
   </con:testStep>
-  <con:testStep type="transfer" name="> transfer puuid" id="60db6da4-6d51-47d0-bfc4-17c492cf2406">
+  <con:testStep type="transfer" name="> transfer puuid 3" id="60db6da4-6d51-47d0-bfc4-17c492cf2406">
     <con:settings/>
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:transfers transferTextContent="true" setNullOnMissingSource="true" failOnError="true">
@@ -63,7 +180,7 @@
       </con:transfers>
     </con:config>
   </con:testStep>
-  <con:testStep type="transfer" name="> transfer accessToken, id" id="8e9fe644-31a0-44c7-ae51-ab2e2fbe9b69">
+  <con:testStep type="transfer" name="> transfer accessToken, id 2" id="8e9fe644-31a0-44c7-ae51-ab2e2fbe9b69">
     <con:settings/>
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:transfers transferTextContent="true" setNullOnMissingSource="true" failOnError="true">
@@ -90,7 +207,7 @@
       </con:transfers>
     </con:config>
   </con:testStep>
-  <con:testStep type="properties" name="accessToken, thePuuid, theUid" id="d4772302-7ea1-43f7-8f38-cca7acfbc75d">
+  <con:testStep type="properties" name="accessToken, thePuuid, theUid 2" id="d4772302-7ea1-43f7-8f38-cca7acfbc75d">
     <con:settings/>
     <con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:properties>
@@ -121,7 +238,7 @@
       </con:properties>
     </con:config>
   </con:testStep>
-  <con:testStep type="transfer" name="> transfer puuid0" id="f6ad9230-e729-4bad-9320-b199efb7291c">
+  <con:testStep type="transfer" name="> transfer puuid0 2" id="f6ad9230-e729-4bad-9320-b199efb7291c">
     <con:settings/>
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:transfers transferTextContent="true" setNullOnMissingSource="true" failOnError="true">

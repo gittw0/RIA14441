@@ -4,13 +4,55 @@
     <con:setting id="129877e4-c1c3-459e-84c5-632140161c0efileName">Underage-Signup</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:testStep type="transfer" name="> transfer access token" id="04279cdf-f925-4a4b-b046-23e3df459245">
+    <con:settings/>
+    <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:transfers transferToAll="false" transferTextContent="true" transferChildNodes="false" setNullOnMissingSource="true" ignoreEmpty="false" failOnError="true" entitize="false">
+        <con:name>access_token</con:name>
+        <con:sourceType/>
+        <con:sourceStep/>
+        <con:sourcePath>$['access_token']</con:sourcePath>
+        <con:targetType>accessToken</con:targetType>
+        <con:targetStep>> thePuuid, accessToken</con:targetStep>
+        <con:targetPath/>
+        <con:type>JSONPATH</con:type>
+        <con:upgraded>true</con:upgraded>
+      </con:transfers>
+      <con:transfers transferToAll="false" transferTextContent="true" transferChildNodes="false" setNullOnMissingSource="true" ignoreEmpty="false" failOnError="true" entitize="false">
+        <con:name>sub</con:name>
+        <con:sourceType>thePuuid</con:sourceType>
+        <con:sourceStep>#TestCase#</con:sourceStep>
+        <con:sourcePath/>
+        <con:targetType>thePuuid</con:targetType>
+        <con:targetStep>> thePuuid, accessToken</con:targetStep>
+        <con:targetPath/>
+        <con:type>XPATH</con:type>
+        <con:upgraded>true</con:upgraded>
+      </con:transfers>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="properties" name="> thePuuid, accessToken" id="f10ba2e4-a52e-447d-aed8-85964b95c851">
+    <con:settings/>
+    <con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:properties>
+        <con:property>
+          <con:name>thePuuid</con:name>
+          <con:value/>
+        </con:property>
+        <con:property>
+          <con:name>accessToken</con:name>
+          <con:value/>
+        </con:property>
+      </con:properties>
+    </con:config>
+  </con:testStep>
   <con:testStep type="delay" name="Delay | Wait for replication delay" id="f6d65da2-c356-41a3-bd48-a4ef1f430952">
     <con:settings/>
     <con:config>
       <delay>38000</delay>
     </con:config>
   </con:testStep>
-  <con:testStep type="properties" name="> thePuuid, accessToken" id="f10ba2e4-a52e-447d-aed8-85964b95c851">
+  <con:testStep type="properties" name="> thePuuid, accessToken 2" id="f10ba2e4-a52e-447d-aed8-85964b95c851">
     <con:settings/>
     <con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:properties>
@@ -25,7 +67,7 @@
       </con:properties>
     </con:config>
   </con:testStep>
-  <con:testStep type="transfer" name="> transfer access token" id="04279cdf-f925-4a4b-b046-23e3df459245">
+  <con:testStep type="transfer" name="> transfer access token 2" id="04279cdf-f925-4a4b-b046-23e3df459245">
     <con:settings/>
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:transfers transferToAll="false" transferTextContent="true" transferChildNodes="false" setNullOnMissingSource="true" ignoreEmpty="false" failOnError="true" entitize="false">
@@ -60,37 +102,7 @@
   </con:properties>
   <con:reportParameters/>
   <con:breakPoints>
-    <con:testStepId>d619c4cc-7abf-423e-8f4c-6aaf2d359d42</con:testStepId>
-    <con:status>NONE</con:status>
-    <con:properties/>
-  </con:breakPoints>
-  <con:breakPoints>
-    <con:testStepId>3bdc6df9-9f22-47d2-ab21-27d2617ac032</con:testStepId>
-    <con:status>NONE</con:status>
-    <con:properties/>
-  </con:breakPoints>
-  <con:breakPoints>
-    <con:testStepId>2c55a3da-018f-4ed9-920e-cf96ccfa0c4b</con:testStepId>
-    <con:status>NONE</con:status>
-    <con:properties/>
-  </con:breakPoints>
-  <con:breakPoints>
-    <con:testStepId>dfdc8511-10ce-4cec-92b1-18238ada996a</con:testStepId>
-    <con:status>NONE</con:status>
-    <con:properties/>
-  </con:breakPoints>
-  <con:breakPoints>
-    <con:testStepId>3169a058-7bac-4326-82de-d992aa34f0c6</con:testStepId>
-    <con:status>NONE</con:status>
-    <con:properties/>
-  </con:breakPoints>
-  <con:breakPoints>
-    <con:testStepId>a8fd492a-91a2-411b-a54b-623b0e41fc5b</con:testStepId>
-    <con:status>NONE</con:status>
-    <con:properties/>
-  </con:breakPoints>
-  <con:breakPoints>
-    <con:testStepId>c136d00e-ec2d-4358-8c57-48d902a672d5</con:testStepId>
+    <con:testStepId>f6eea3fa-f56c-4a86-8264-4e91c1fd9abb</con:testStepId>
     <con:status>NONE</con:status>
     <con:properties/>
   </con:breakPoints>
@@ -100,15 +112,45 @@
     <con:properties/>
   </con:breakPoints>
   <con:breakPoints>
-    <con:testStepId>f6eea3fa-f56c-4a86-8264-4e91c1fd9abb</con:testStepId>
+    <con:testStepId>c136d00e-ec2d-4358-8c57-48d902a672d5</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>a8fd492a-91a2-411b-a54b-623b0e41fc5b</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>3169a058-7bac-4326-82de-d992aa34f0c6</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>dfdc8511-10ce-4cec-92b1-18238ada996a</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>2c55a3da-018f-4ed9-920e-cf96ccfa0c4b</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>3bdc6df9-9f22-47d2-ab21-27d2617ac032</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>d619c4cc-7abf-423e-8f4c-6aaf2d359d42</con:testStepId>
     <con:status>NONE</con:status>
     <con:properties/>
   </con:breakPoints>
   <con:environmentSpec>
-    <con:entry environmentId="cd04cfb9-4faf-4b69-9ec6-24af2181f7ae">
+    <con:entry environmentId="b407e352-14e8-440f-bf25-abe254c02b61">
       <con:authProfile>Inherit From Parent</con:authProfile>
     </con:entry>
-    <con:entry environmentId="b407e352-14e8-440f-bf25-abe254c02b61">
+    <con:entry environmentId="cd04cfb9-4faf-4b69-9ec6-24af2181f7ae">
       <con:authProfile>Inherit From Parent</con:authProfile>
     </con:entry>
   </con:environmentSpec>
