@@ -182,7 +182,7 @@ cookieStore.clear()</script>
         </con:property>
         <con:property>
           <con:name>thePuuid</con:name>
-          <con:value/>
+          <con:value xsi:nil="true"/>
         </con:property>
       </con:properties>
     </con:config>
@@ -217,7 +217,12 @@ cookieStore.clear()</script>
       </con:transfers>
     </con:config>
   </con:testStep>
-  <con:properties/>
+  <con:properties>
+    <con:property>
+      <con:name>check</con:name>
+      <con:value>check1</con:value>
+    </con:property>
+  </con:properties>
   <con:reportParameters/>
   <con:breakPoints>
     <con:testStepId>87fe1871-73b8-4e41-be8d-57de94f40021</con:testStepId>

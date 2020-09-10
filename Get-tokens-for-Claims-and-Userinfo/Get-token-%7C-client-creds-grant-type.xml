@@ -29,23 +29,23 @@
   <con:properties>
     <con:property>
       <con:name>client</con:name>
-      <con:value>client-token3</con:value>
+      <con:value>QA</con:value>
     </con:property>
     <con:property>
       <con:name>client-secret</con:name>
-      <con:value>client-secret3</con:value>
+      <con:value>aqPass</con:value>
     </con:property>
     <con:property>
       <con:name>scope</con:name>
-      <con:value>scope3</con:value>
+      <con:value>openid</con:value>
     </con:property>
     <con:property>
       <con:name>grant_type</con:name>
-      <con:value>grant_type3</con:value>
+      <con:value>client_credentials</con:value>
     </con:property>
     <con:property>
       <con:name>accessToken</con:name>
-      <con:value>dflkdalfja.ljflkdsaflajksz</con:value>
+      <con:value/>
     </con:property>
   </con:properties>
   <con:reportParameters/>

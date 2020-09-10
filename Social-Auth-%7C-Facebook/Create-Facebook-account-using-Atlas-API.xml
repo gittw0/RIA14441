@@ -73,11 +73,11 @@
         </con:property>
         <con:property>
           <con:name>thePuuid2</con:name>
-          <con:value/>
+          <con:value xsi:nil="true"/>
         </con:property>
         <con:property>
           <con:name>thePuuid</con:name>
-          <con:value/>
+          <con:value xsi:nil="true"/>
         </con:property>
         <con:property>
           <con:name>accessToken</con:name>

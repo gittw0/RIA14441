@@ -723,11 +723,11 @@
     </con:property>
     <con:property>
       <con:name>password</con:name>
-      <con:value>zxasqw12!@</con:value>
+      <con:value/>
     </con:property>
     <con:property>
       <con:name>username</con:name>
-      <con:value>ripambiguous93isksk</con:value>
+      <con:value/>
     </con:property>
   </con:properties>
   <con:reportParameters/>

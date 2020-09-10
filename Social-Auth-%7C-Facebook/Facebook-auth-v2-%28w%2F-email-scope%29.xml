@@ -79,11 +79,11 @@
       <con:properties>
         <con:property>
           <con:name>thePuuid</con:name>
-          <con:value/>
+          <con:value xsi:nil="true"/>
         </con:property>
         <con:property>
           <con:name>theEmail</con:name>
-          <con:value/>
+          <con:value xsi:nil="true"/>
         </con:property>
         <con:property>
           <con:name>theUid</con:name>

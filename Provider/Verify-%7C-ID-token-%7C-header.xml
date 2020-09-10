@@ -103,7 +103,7 @@ assert json.hasProperty("iat")
     </con:property>
     <con:property>
       <con:name>grant_type</con:name>
-      <con:value>implicit</con:value>
+      <con:value>password</con:value>
     </con:property>
   </con:properties>
   <con:reportParameters/>

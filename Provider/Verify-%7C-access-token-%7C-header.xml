@@ -96,7 +96,7 @@ for (i=0; i&lt;expectedScopes.size(); i++) {
     </con:property>
     <con:property>
       <con:name>grant_type</con:name>
-      <con:value>implicit</con:value>
+      <con:value>password</con:value>
     </con:property>
   </con:properties>
   <con:reportParameters/>
