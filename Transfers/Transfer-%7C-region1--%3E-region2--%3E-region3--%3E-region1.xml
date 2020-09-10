@@ -71,7 +71,12 @@
       </con:transfers>
     </con:config>
   </con:testStep>
-  <con:properties/>
+  <con:properties>
+    <con:property>
+      <con:name>test</con:name>
+      <con:value>test</con:value>
+    </con:property>
+  </con:properties>
   <con:reportParameters/>
   <con:breakPoints>
     <con:testStepId>6ec1ec96-3301-40da-a8b1-bd9a0fdc51f2</con:testStepId>

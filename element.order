@@ -1,6 +1,5 @@
 https%3A%2F%2Foauth2.googleapis.com
 https%3A%2F%2Fiamcredentials.googleapis.com
-https%3A%2F%2Foauth2.googleapis.com
 Get-tokens-for-Claims-and-Userinfo
 Healthchecks
 Status-Checks
@@ -14,14 +13,3 @@ Social-Auth-%7C-Google
 Setting-player-alias
 RSO-Authenticator
 Authentication----new
-RSO-Authenticator
-Setting-player-alias
-Social-Auth-%7C-Google
-Social-Auth-%7C-Facebook
-Provider
-Forget-Me-service
-API-Tests
-Transfers
-Claims-API-%26-Userinfo
-Status-Checks
-Healthchecks
