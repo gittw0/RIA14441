@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:soapui-project updated="3.3.2" runType="SEQUENTIAL" resourceRoot="${projectDir}" name="Riot Identity Platform - SoapUI Support Team" id="eb1bccae-3383-465b-9a4a-397e18300fe8" encryptionMode="Not encrypted" created="3.0.0" compositeProjectFormat="1.3" activeEnvironment="clone_of_test" abortOnError="false" xmlns:con="http://eviware.com/soapui/config">
+<con:soapui-project updated="3.5.1-AT" runType="SEQUENTIAL" resourceRoot="${projectDir}" name="Riot Identity Platform - SoapUI Support Team" id="eb1bccae-3383-465b-9a4a-397e18300fe8" encryptionMode="Not encrypted" created="3.0.0" compositeProjectFormat="1.3" activeEnvironment="clone_of_test" abortOnError="false" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="eb1bccae-3383-465b-9a4a-397e18300fe8fileName">Riot-Identity-Platform</con:setting>
     <con:setting id="com.eviware.soapui.impl.wsdl.actions.iface.tools.soapui.ProTestRunnerUIAction@values-local"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
